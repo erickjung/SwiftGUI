@@ -52,7 +52,7 @@ Window("Hello world") {
 
 ## License
 
- * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+ * MIT
 
 Uses [Dear ImGui](https://github.com/ocornut/imgui) and
 [cimgui](https://github.com/cimgui/cimgui).
