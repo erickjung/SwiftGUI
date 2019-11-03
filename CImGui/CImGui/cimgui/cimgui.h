@@ -29,7 +29,6 @@
 #define CIMGUI_API EXTERN API
 #define CONST const
 
-
 #ifdef _MSC_VER
 typedef unsigned __int64 ImU64;
 #else
