@@ -20,8 +20,6 @@
 		B67E1CB8236BB2F000216EA2 /* cimgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B67E1CAC236BB2F000216EA2 /* cimgui.cpp */; };
 		B67E1CB9236BB2F000216EA2 /* cimgui.h in Headers */ = {isa = PBXBuildFile; fileRef = B67E1CAD236BB2F000216EA2 /* cimgui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B67E1CBB236BB34400216EA2 /* CImGuiProj.h in Headers */ = {isa = PBXBuildFile; fileRef = B67E1CBA236BB34400216EA2 /* CImGuiProj.h */; };
-		B6E3BD23236DA35500C1E1CF /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = B6E3BD21236DA35500C1E1CF /* Test.h */; };
-		B6E3BD24236DA35500C1E1CF /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E3BD22236DA35500C1E1CF /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +38,6 @@
 		B67E1CAC236BB2F000216EA2 /* cimgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cimgui.cpp; sourceTree = "<group>"; };
 		B67E1CAD236BB2F000216EA2 /* cimgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cimgui.h; sourceTree = "<group>"; };
 		B67E1CBA236BB34400216EA2 /* CImGuiProj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CImGuiProj.h; sourceTree = "<group>"; };
-		B6E3BD21236DA35500C1E1CF /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		B6E3BD22236DA35500C1E1CF /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +74,6 @@
 				B67E1CAB236BB2F000216EA2 /* cimgui */,
 				B67E1CA0236BB2F000216EA2 /* imgui */,
 				B67E1C99236BB2AF00216EA2 /* Info.plist */,
-				B6E3BD21236DA35500C1E1CF /* Test.h */,
-				B6E3BD22236DA35500C1E1CF /* Test.m */,
 			);
 			path = CImGui;
 			sourceTree = "<group>";
@@ -119,7 +113,6 @@
 			files = (
 				B67E1CAE236BB2F000216EA2 /* imgui.h in Headers */,
 				B67E1CB9236BB2F000216EA2 /* cimgui.h in Headers */,
-				B6E3BD23236DA35500C1E1CF /* Test.h in Headers */,
 				B67E1CB0236BB2F000216EA2 /* imconfig.h in Headers */,
 				B67E1CB2236BB2F000216EA2 /* imstb_truetype.h in Headers */,
 				B67E1CBB236BB34400216EA2 /* CImGuiProj.h in Headers */,
@@ -200,7 +193,6 @@
 				B67E1CB1236BB2F000216EA2 /* imgui_widgets.cpp in Sources */,
 				B67E1CB3236BB2F000216EA2 /* imgui.cpp in Sources */,
 				B67E1CB6236BB2F000216EA2 /* imgui_demo.cpp in Sources */,
-				B6E3BD24236DA35500C1E1CF /* Test.m in Sources */,
 				B67E1CB8236BB2F000216EA2 /* cimgui.cpp in Sources */,
 				B67E1CB7236BB2F000216EA2 /* imgui_draw.cpp in Sources */,
 			);

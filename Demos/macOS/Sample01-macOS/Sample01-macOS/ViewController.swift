@@ -12,14 +12,8 @@ import MetalKit
 import SwiftGui
 import SwiftGui_PlatformOSX
 
-var showWindow: Bool = false
-var sliderState: Float = 0.5
-var checkboxState1: Bool = true
-var checkboxState2: Bool = true
-var colorState: NSColor = .red
-var counter = 0
-var radiosel: Int = 0
-var text: String = "Hello"
+var counterState = 0
+var radioState = 0
 
 class ViewController: NSViewController {
     
@@ -226,8 +220,8 @@ extension ViewController: SGRendererDelegate {
 
             HStack {
                 RadioButtonGroup(["radio a", "radio b", "radio c"],
-                                 selectedState: radiosel) { val in
-                    radiosel = val
+                                 selectedState: radioState) {
+                    radioState = $0
                 }
             }
 
@@ -247,16 +241,16 @@ extension ViewController: SGRendererDelegate {
                 PushButtonGroup {
                     HStack {
                         ArrowButton("##left", direction: .left) {
-                            counter -= 1
+                            counterState -= 1
                         }
 
                         ArrowButton("##right", direction: .right) {
-                            counter += 1
+                            counterState += 1
                         }
                     }
                 }
 
-                Text("\(counter)")
+                Text("\(counterState)")
             }
 
             Text("Hover over me")
