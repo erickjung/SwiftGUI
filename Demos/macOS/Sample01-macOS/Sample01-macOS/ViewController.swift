@@ -76,6 +76,29 @@ class ViewController: NSViewController {
     }
 }
 extension ViewController: SGRendererDelegate {
+
+    func viewTest2() -> GuiView {
+        Window("Hello world") {
+            Text("Hello world!")
+            
+            HStack {
+                RadioButtonGroup(["radio a", "radio b", "radio c"],
+                                 selectedState: radioState) {
+                    radioState = $0
+                }
+            }
+            
+            HStack {
+                ForEach((1...7)) { _ in
+                    Button("Click")
+                        .color(.button, color: .blue)
+                        .color(.buttonHovered, color: .yellow)
+                        .color(.buttonActive, color: .orange)
+                }
+            }
+        }
+    }
+
     
     func viewTest1() -> GuiView {
         Window("buttons") {
@@ -134,7 +157,7 @@ extension ViewController: SGRendererDelegate {
     
     func viewTest3() -> GuiNode {
         
-        Window("Dear ImGui Demo", flags: .menuBar) {
+        Window("SwiftGUI Demo", flags: .menuBar) {
             
             MenuBar {
                 MenuGroup("Menu1") {
@@ -143,7 +166,7 @@ extension ViewController: SGRendererDelegate {
                 }
             }
             
-            Text("dear imgui says hello.")
+            Text("SwiftGUI says hello.")
             Spacing()
             
             CollapsingHeader(title: "Help") {
@@ -483,6 +506,7 @@ extension ViewController: SGRendererDelegate {
         
     func draw() {
 //        viewTest1().render()
+//        viewTest2().render()
         viewTest3().render()
     }
 }

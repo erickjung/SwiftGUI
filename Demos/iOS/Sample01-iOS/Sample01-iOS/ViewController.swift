@@ -10,6 +10,8 @@ import UIKit
 import SwiftGui
 import SwiftGui_PlatformiOS
 
+var radioState = 0
+
 class ViewController: UIViewController {
     
     var renderer: SGRenderer?
@@ -52,11 +54,24 @@ class ViewController: UIViewController {
 extension ViewController: SGRendererDelegate {
     
     func viewTest1() -> GuiView {
-        Window("buttons") {
-            Button("button")
-            SmallButton("smallbutton")
-            ArrowButton("#1", direction: .left)
-            Bullet()
+        Window("Hello world") {
+            Text("Hello world!")
+            
+            HStack {
+                RadioButtonGroup(["radio a", "radio b", "radio c"],
+                                 selectedState: radioState) {
+                    radioState = $0
+                }
+            }
+            
+            HStack {
+                ForEach((1...7)) { _ in
+                    Button("Click")
+                        .color(.button, color: .blue)
+                        .color(.buttonHovered, color: .yellow)
+                        .color(.buttonActive, color: .orange)
+                }
+            }
         }
     }
     

@@ -50,7 +50,7 @@
 
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
 
-    static float clear_color[4] = { 0.5, 0.5, 0.5, 1.0f };
+    static float clear_color[4] = { 1.0, 1.0, 1.0, 1.0f };
 
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
     if (renderPassDescriptor != nil)
