@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CImGui
+import SwiftGUI_Core
 
 public func Button(_ title: String,
                    size: SGSize = .zero,

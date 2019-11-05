@@ -18,7 +18,7 @@
 //  2018-07-05: Metal: Added new Metal backend implementation.
 
 //#include "imgui.h"
-#include <cimgui/imgui.h>
+#include <SwiftGUI_Core/imgui.h>
 #include "imgui_impl_metal.h"
 
 #import <Metal/Metal.h>

@@ -1,7 +1,7 @@
 #import "SGRenderer.h"
 #import <Metal/Metal.h>
 
-#include <cimgui/imgui.h>
+#include <SwiftGUI_Core/imgui.h>
 #include "imgui_impl_metal.h"
 
 #if TARGET_OS_OSX
@@ -50,7 +50,7 @@
 
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
 
-    static float clear_color[4] = { 1.0, 1.0, 1.0, 1.0f };
+    static float clear_color[4] = { 0.5, 0.5, 0.5, 1.0f };
 
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
     if (renderPassDescriptor != nil)

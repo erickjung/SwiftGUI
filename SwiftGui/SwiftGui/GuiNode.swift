@@ -6,7 +6,7 @@
 //  Copyright © 2019 Erick Jung. All rights reserved.
 //
 
-import CImGui
+import SwiftGUI_Core
 
 public class GuiNode: GuiView, Hashable {
 

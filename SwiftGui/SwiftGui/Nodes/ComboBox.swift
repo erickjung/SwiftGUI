@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CImGui
+import SwiftGUI_Core
 
 public func ComboBox(_ title: String,
                      currentItemState: Int,

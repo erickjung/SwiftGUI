@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CImGui
+import SwiftGUI_Core
 
 public func ShowDemoWindowDebug() -> GuiNode {
     

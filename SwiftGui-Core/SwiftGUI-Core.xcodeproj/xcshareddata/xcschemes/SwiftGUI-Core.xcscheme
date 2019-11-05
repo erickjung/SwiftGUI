@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B67E1D1C236BB8F800216EA2"
-               BuildableName = "Sample01-macOS.app"
-               BlueprintName = "Sample01-macOS"
-               ReferencedContainer = "container:Sample01-macOS.xcodeproj">
+               BlueprintIdentifier = "B6F49E812371CF1B00A6D48C"
+               BuildableName = "SwiftGUI_Core.framework"
+               BlueprintName = "SwiftGUI-Core"
+               ReferencedContainer = "container:SwiftGUI-Core.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B67E1D1C236BB8F800216EA2"
-            BuildableName = "Sample01-macOS.app"
-            BlueprintName = "Sample01-macOS"
-            ReferencedContainer = "container:Sample01-macOS.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B67E1D1C236BB8F800216EA2"
-            BuildableName = "Sample01-macOS.app"
-            BlueprintName = "Sample01-macOS"
-            ReferencedContainer = "container:Sample01-macOS.xcodeproj">
+            BlueprintIdentifier = "B6F49E812371CF1B00A6D48C"
+            BuildableName = "SwiftGUI_Core.framework"
+            BlueprintName = "SwiftGUI-Core"
+            ReferencedContainer = "container:SwiftGUI-Core.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

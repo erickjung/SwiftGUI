@@ -30,19 +30,19 @@
 		B67E1C83236BB23C00216EA2 /* GuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6D236BB23C00216EA2 /* GuiView.swift */; };
 		B67E1C84236BB23C00216EA2 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* Builder.swift */; };
 		B67E1C85236BB23C00216EA2 /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
-		B6E3BE5A236ECFA100C1E1CF /* CImGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE59236ECFA100C1E1CF /* CImGui.framework */; };
-		B6E3BE5B236ECFA100C1E1CF /* CImGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE59236ECFA100C1E1CF /* CImGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6E3BE8C236ED5BF00C1E1CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */; };
+		B6F49E9A2371D70000A6D48C /* SwiftGUI_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; };
+		B6F49E9B2371D70000A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B6E3BE5C236ECFA100C1E1CF /* Embed Frameworks */ = {
+		B6F49E9C2371D70000A6D48C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6E3BE5B236ECFA100C1E1CF /* CImGui.framework in Embed Frameworks */,
+				B6F49E9B2371D70000A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +82,7 @@
 		B6E3BCFE236D9B4C00C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BE59236ECFA100C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGUI_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E3BE5A236ECFA100C1E1CF /* CImGui.framework in Frameworks */,
+				B6F49E9A2371D70000A6D48C /* SwiftGUI_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +165,7 @@
 		B67E1C86236BB24B00216EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */,
 				B6E3BE59236ECFA100C1E1CF /* CImGui.framework */,
 				B6E3BCFE236D9B4C00C1E1CF /* CImGui.framework */,
 				B6E3BCCD236D99ED00C1E1CF /* libCImGuiLib.a */,
@@ -196,7 +198,7 @@
 				B67E1C49236BB20400216EA2 /* Sources */,
 				B67E1C4A236BB20400216EA2 /* Frameworks */,
 				B67E1C4B236BB20400216EA2 /* Resources */,
-				B6E3BE5C236ECFA100C1E1CF /* Embed Frameworks */,
+				B6F49E9C2371D70000A6D48C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

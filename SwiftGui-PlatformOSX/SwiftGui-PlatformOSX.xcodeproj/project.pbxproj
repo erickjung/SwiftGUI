@@ -17,18 +17,18 @@
 		B6E3BE80236ED0F700C1E1CF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE7F236ED0F700C1E1CF /* AppKit.framework */; };
 		B6E3BE83236ED0FC00C1E1CF /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE81236ED0FC00C1E1CF /* Metal.framework */; };
 		B6E3BE84236ED0FC00C1E1CF /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE82236ED0FC00C1E1CF /* MetalKit.framework */; };
-		B6E3BE86236ED0FE00C1E1CF /* CImGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE85236ED0FE00C1E1CF /* CImGui.framework */; };
-		B6E3BE87236ED0FE00C1E1CF /* CImGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE85236ED0FE00C1E1CF /* CImGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6F49E922371D6DD00A6D48C /* SwiftGUI_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E912371D6DD00A6D48C /* SwiftGUI_Core.framework */; };
+		B6F49E932371D6DD00A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E912371D6DD00A6D48C /* SwiftGUI_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B6E3BE88236ED0FF00C1E1CF /* Embed Frameworks */ = {
+		B6F49E942371D6DD00A6D48C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6E3BE87236ED0FE00C1E1CF /* CImGui.framework in Embed Frameworks */,
+				B6F49E932371D6DD00A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +49,7 @@
 		B6E3BE81236ED0FC00C1E1CF /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		B6E3BE82236ED0FC00C1E1CF /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		B6E3BE85236ED0FE00C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F49E912371D6DD00A6D48C /* SwiftGUI_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGUI_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +58,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E3BE84236ED0FC00C1E1CF /* MetalKit.framework in Frameworks */,
+				B6F49E922371D6DD00A6D48C /* SwiftGUI_Core.framework in Frameworks */,
 				B6E3BE83236ED0FC00C1E1CF /* Metal.framework in Frameworks */,
-				B6E3BE86236ED0FE00C1E1CF /* CImGui.framework in Frameworks */,
 				B6E3BE80236ED0F700C1E1CF /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +102,7 @@
 		B6E3BE7E236ED0F600C1E1CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6F49E912371D6DD00A6D48C /* SwiftGUI_Core.framework */,
 				B6E3BE85236ED0FE00C1E1CF /* CImGui.framework */,
 				B6E3BE81236ED0FC00C1E1CF /* Metal.framework */,
 				B6E3BE82236ED0FC00C1E1CF /* MetalKit.framework */,
@@ -134,7 +136,7 @@
 				B6E3BE63236ED08900C1E1CF /* Sources */,
 				B6E3BE64236ED08900C1E1CF /* Frameworks */,
 				B6E3BE65236ED08900C1E1CF /* Resources */,
-				B6E3BE88236ED0FF00C1E1CF /* Embed Frameworks */,
+				B6F49E942371D6DD00A6D48C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

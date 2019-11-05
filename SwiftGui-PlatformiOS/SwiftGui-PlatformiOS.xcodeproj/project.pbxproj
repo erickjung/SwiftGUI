@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B67E1D7A236C42CE00216EA2 /* SwiftGui_PlatformiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B67E1D78236C42CE00216EA2 /* SwiftGui_PlatformiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B67E1D82236C434200216EA2 /* CImGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D81236C434200216EA2 /* CImGui.framework */; platformFilter = ios; };
-		B67E1D83236C434200216EA2 /* CImGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D81236C434200216EA2 /* CImGui.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D89236C436700216EA2 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D85236C436700216EA2 /* imgui_impl_metal.mm */; };
 		B67E1D8A236C436700216EA2 /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B67E1D86236C436700216EA2 /* imgui_impl_metal.h */; };
 		B67E1D8B236C436700216EA2 /* SGRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D87236C436700216EA2 /* SGRenderer.mm */; };
@@ -17,16 +15,18 @@
 		B67E1D8F236C45BF00216EA2 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D8D236C45BF00216EA2 /* Metal.framework */; };
 		B67E1D90236C45BF00216EA2 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D8E236C45BF00216EA2 /* MetalKit.framework */; };
 		B67E1D92236C45DA00216EA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D91236C45DA00216EA2 /* UIKit.framework */; };
+		B6F49E962371D6E700A6D48C /* SwiftGUI_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E952371D6E700A6D48C /* SwiftGUI_Core.framework */; platformFilter = ios; };
+		B6F49E972371D6E700A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E952371D6E700A6D48C /* SwiftGUI_Core.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B67E1D84236C434300216EA2 /* Embed Frameworks */ = {
+		B6F49E982371D6E700A6D48C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B67E1D83236C434200216EA2 /* CImGui.framework in Embed Frameworks */,
+				B6F49E972371D6E700A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +45,7 @@
 		B67E1D8D236C45BF00216EA2 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		B67E1D8E236C45BF00216EA2 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		B67E1D91236C45DA00216EA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B6F49E952371D6E700A6D48C /* SwiftGUI_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGUI_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +54,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67E1D90236C45BF00216EA2 /* MetalKit.framework in Frameworks */,
+				B6F49E962371D6E700A6D48C /* SwiftGUI_Core.framework in Frameworks */,
 				B67E1D92236C45DA00216EA2 /* UIKit.framework in Frameworks */,
 				B67E1D8F236C45BF00216EA2 /* Metal.framework in Frameworks */,
-				B67E1D82236C434200216EA2 /* CImGui.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +96,7 @@
 		B67E1D80236C434200216EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6F49E952371D6E700A6D48C /* SwiftGUI_Core.framework */,
 				B67E1D91236C45DA00216EA2 /* UIKit.framework */,
 				B67E1D8D236C45BF00216EA2 /* Metal.framework */,
 				B67E1D8E236C45BF00216EA2 /* MetalKit.framework */,
@@ -127,7 +129,7 @@
 				B67E1D71236C42CE00216EA2 /* Sources */,
 				B67E1D72236C42CE00216EA2 /* Frameworks */,
 				B67E1D73236C42CE00216EA2 /* Resources */,
-				B67E1D84236C434300216EA2 /* Embed Frameworks */,
+				B6F49E982371D6E700A6D48C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
