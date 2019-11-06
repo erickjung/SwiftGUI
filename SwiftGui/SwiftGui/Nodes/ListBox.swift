@@ -12,13 +12,17 @@ import SwiftGUI_Core
 public func ListBox(_ title: String,
                     currentItemState: Int,
                     items: [String],
-                    onSelect: ((Int) -> Void)? = nil) -> GuiNode {
+                    onChange: ((Int) -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
         
         var _currentItem = Int32(currentItemState)
         if igListBoxStr_arr(title.cStr(), &_currentItem, items.map { $0.cStr() }, Int32(items.count), -1) {
-            onSelect?(Int(_currentItem))
+            
+            if _currentItem != currentItemState {
+                
+                onChange?(Int(_currentItem))
+            }
         }
     }
 }

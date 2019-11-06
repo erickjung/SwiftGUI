@@ -20,7 +20,11 @@ public func SliderFloat(_ title: String,
         
         var _value = valueState
         if igSliderFloat(title, &_value, min, max, format, 1.0) {
-            onChange?(_value)
+            
+            if _value != valueState {
+                
+                onChange?(_value)
+            }
         }
     }
 }

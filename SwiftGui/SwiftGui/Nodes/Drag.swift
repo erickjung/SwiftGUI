@@ -21,7 +21,11 @@ public func DragInt(_ title: String,
         
         var _value = Int32(valueState)
         if igDragInt(title.cStr(), &_value, valueSpeed, Int32(min), Int32(max), format) {
-            onChange?(Int(_value))
+            
+            if _value != valueState {
+                
+                onChange?(Int(_value))
+            }
         }
     }
 }

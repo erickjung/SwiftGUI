@@ -11,6 +11,7 @@
 
 ```swift
 Window("Hello world") {
+
     Text("Hello world!")
     
     HStack {
@@ -38,7 +39,7 @@ Window("Hello world") {
 To integrate `SwiftGUI` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "erickjung/SwiftGUI" "0.0.3"
+github "erickjung/SwiftGUI" "0.1.0"
 ```
 
 For `OSX` project, run:

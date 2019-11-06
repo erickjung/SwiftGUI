@@ -85,6 +85,7 @@ extension ViewController: SGRendererDelegate {
                 RadioButtonGroup(["radio a", "radio b", "radio c"],
                                  selectedState: radioState) {
                     radioState = $0
+                    print("test")
                 }
             }
             
@@ -506,7 +507,7 @@ extension ViewController: SGRendererDelegate {
         
     func draw() {
 //        viewTest1().render()
-//        viewTest2().render()
-        viewTest3().render()
+        viewTest2().render()
+//        viewTest3().render()
     }
 }

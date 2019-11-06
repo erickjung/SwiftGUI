@@ -11,12 +11,12 @@ import SwiftGUI_Core
 
 public func RadioButton(_ title: String,
                         active: Bool,
-                        onSelect: (() -> Void)? = nil) -> GuiNode {
+                        onChange: (() -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
         
         if igRadioButtonBool(title, active) {
-            onSelect?()
+            onChange?()
         }
     }
 }
@@ -24,25 +24,29 @@ public func RadioButton(_ title: String,
 public func RadioButtonSequential(_ title: String,
                                   selectedState: Int,
                                   order: Int,
-                                  onSelect: ((Int) -> Void)? = nil) -> GuiNode {
+                                  onChange: ((Int) -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
         
         var _value = Int32(selectedState)
         if igRadioButtonIntPtr(title, &_value, Int32(order)) {
-            onSelect?(Int(_value))
+            
+            if _value != selectedState {
+                
+                onChange?(Int(_value))
+            }
         }
     }
 }
 
 public func RadioButtonGroup(_ values: [String],
                              selectedState: Int,
-                             onSelect: ((Int) -> Void)? = nil) -> GuiView {
+                             onChange: ((Int) -> Void)? = nil) -> GuiView {
 
     var list = [GuiView]()
     for (index, element) in values.enumerated() {
         
-        list.append(RadioButtonSequential(element, selectedState: selectedState, order: index, onSelect: onSelect))
+        list.append(RadioButtonSequential(element, selectedState: selectedState, order: index, onChange: onChange))
     }
     return GuiMultiNode(children: list)
 }

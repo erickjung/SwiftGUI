@@ -20,6 +20,7 @@ public func InputText(_ title: String,
         var _value = textState.cChars(with: maxLength)
         
         if igInputText(title.cStr(), &_value, maxLength, flags.rawValue, nil, nil) {
+
             onChange?(String(cString: _value))
         }
     }

@@ -18,7 +18,11 @@ public func ComboBox(_ title: String,
         
         var _currentItem = Int32(currentItemState)
         if igCombo(title.cStr(), &_currentItem, items.map { $0.cStr() }, Int32(items.count), -1) {
-            onChange?(Int(_currentItem))
+            
+            if _currentItem != currentItemState {
+                
+                onChange?(Int(_currentItem))
+            }
         }
     }
 }

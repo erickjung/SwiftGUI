@@ -17,7 +17,11 @@ public func CheckBox(_ title: String,
         
         var _value = selectedState
         if igCheckbox(title.cStr(), &_value) {
-            onChange?(_value)
+            
+            if _value != selectedState {
+                
+                onChange?(_value)
+            }
         }
     }
 }
