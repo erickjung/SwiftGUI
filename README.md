@@ -60,23 +60,30 @@ carthage update --platform iOS
 * SwiftGUI-PlatformiOS: Specific iOS renderer/handler code
 * SwiftGUI-PlatformOSX: Specific OSX renderer/handler code
 * SwiftGUI: The SwiftUI inspired API code
-* Demos: Sample for OSX and iOS
+* Demos: Samples for OSX and iOS
+    * Sample01-OSX: General app to show how widgets works
+    * Sample02-OSX: Simple functional TODO app
+    * Sample01-iOS: Example of iOS integration
 
-## Demo
 
-* Screenshot 01 (OSX)
-![screenshot01](Docs/screenshot_01.png)
+## Samples
 
-* Screenshot 02 (OSX)
-![screenshot02](Docs/screenshot_02.png)
+### Sample01 (OSX)
 
-* Screenshot 01 (iOS)
+![screenshot01](Docs/sample01.gif)
+
+### Sample 02 (OSX) - Simple TODO application
+
+![screenshot02](Docs/sample02.gif)
+
+### Screenshot 01 (iOS)
 ![screenshotios](Docs/screenshot_ios.jpg)
 
 ## License
 
  * MIT
 
-Uses [Dear ImGui](https://github.com/ocornut/imgui) and
-[cimgui](https://github.com/cimgui/cimgui).
+## Uses 
+* [Dear ImGui](https://github.com/ocornut/imgui) (1.74)
+* [cimgui](https://github.com/cimgui/cimgui)
 
