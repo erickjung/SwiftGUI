@@ -22,3 +22,19 @@ public func Window(_ title: String,
         igEnd()
     }
 }
+
+public func SubWindow(_ id: String,
+                      size: SGSize = .zero,
+                      border: Bool = false,
+                      flags: ImGuiWindowFlags = .none,
+                      @GuiBuilder child: () -> GuiView?) -> GuiNode {
+    
+    GuiNode(tag: #function, child: child()).onRender { child in
+        
+        if igBeginChild(id.cStr(), size.convertToVec2(), border, flags.rawValue) {
+        
+            child?.render()
+        }
+        igEndChild()
+    }
+}

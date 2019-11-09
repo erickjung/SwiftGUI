@@ -14,11 +14,20 @@ public func Empty() -> GuiNode {
     GuiNode(tag: #function)
 }
 
-public func Group(@GuiBuilder child: () -> GuiView?) -> GuiNode {
+public func Group(id: String? = nil, @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
         
-        child?.render()
+        if let id = id {
+
+            igPushIDStr(id.cStr())
+                child?.render()
+            igPopID()
+            
+        } else {
+            
+            child?.render()
+        }
     }
 }
 
@@ -36,12 +45,16 @@ public func HStack(@GuiBuilder child: () -> GuiView?) -> GuiNode {
                 igSameLine(0.0, -1.0)
             }
             igNewLine()
+            
+        } else {
+            
+            child?.render()
         }
     }
 }
 
 public func ForEach<T:Sequence>(_ data: T,
-                                @GuiBuilder child: (T.Element) -> GuiNode?) -> GuiView {
+                                @GuiBuilder child: (T.Element) -> GuiView?) -> GuiView {
     
     var list = [GuiView]()
     for (index, element) in data.enumerated() {
@@ -52,6 +65,7 @@ public func ForEach<T:Sequence>(_ data: T,
     }
     return GuiMultiNode(children: list)
 }
+
 
 public func Separator() -> GuiNode {
     
@@ -94,15 +108,5 @@ public func Indent(indentW: Float = 0,
         igIndent(indentW)
         child?.render()
         igUnindent(indentW)
-    }
-}
-
-public func IsItemHovered(@GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
-    GuiNode(tag: #function, child: child()).onRender { child in
-        
-        if igIsItemHovered(0) {
-            child?.render()
-        }
     }
 }

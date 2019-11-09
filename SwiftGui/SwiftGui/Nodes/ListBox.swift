@@ -27,3 +27,18 @@ public func ListBox(_ title: String,
     }
 }
 
+public func List(id: String = "##list",
+                 size: SGSize = .zero,
+                 border: Bool = false,
+                 flags: ImGuiWindowFlags = .none,
+                 @GuiBuilder child: () -> GuiView?) -> GuiNode {
+    
+    GuiNode(tag: #function, child: child()).onRender { child in
+        
+        if igBeginChild(id.cStr(), size.convertToVec2(), border, flags.rawValue) {
+        
+            child?.render()
+        }
+        igEndChild()
+    }
+}

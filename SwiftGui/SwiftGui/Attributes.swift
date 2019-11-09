@@ -200,3 +200,15 @@ public enum ImGuiDir: Int32
     case up    = 2
     case down  = 3
 }
+
+
+// SwiftGUI
+
+public enum GUIEdge
+{
+    case all
+    case top
+    case leading
+    case bottom
+    case trailing
+}

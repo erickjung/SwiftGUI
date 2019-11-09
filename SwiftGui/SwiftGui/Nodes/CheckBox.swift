@@ -9,18 +9,37 @@
 import Foundation
 import SwiftGUI_Core
 
-public func CheckBox(_ title: String,
+public func CheckBox(_ title: String = "",
+                     id: String? = nil,
                      selectedState: Bool,
                      onChange: ((Bool) -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
         
         var _value = selectedState
-        if igCheckbox(title.cStr(), &_value) {
+        
+        if let id = id {
             
-            if _value != selectedState {
+            igPushIDStr(id.cStr())
+            
+            if igCheckbox(title.cStr(), &_value) {
                 
-                onChange?(_value)
+                if _value != selectedState {
+                    
+                    onChange?(_value)
+                }
+            }
+            
+            igPopID()
+
+        } else {
+            
+            if igCheckbox(title.cStr(), &_value) {
+                
+                if _value != selectedState {
+                    
+                    onChange?(_value)
+                }
             }
         }
     }

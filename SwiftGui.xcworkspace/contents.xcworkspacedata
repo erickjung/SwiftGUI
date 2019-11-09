@@ -20,6 +20,9 @@
       location = "group:Demos/macOS/Sample01-macOS/Sample01-macOS.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Demos/macOS/Sample02-macOS/Sample02-macOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Demos/iOS/Sample01-iOS/Sample01-iOS.xcodeproj">
    </FileRef>
 </Workspace>

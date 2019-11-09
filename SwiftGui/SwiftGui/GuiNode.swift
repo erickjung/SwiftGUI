@@ -10,6 +10,8 @@ import SwiftGUI_Core
 
 public class GuiNode: GuiView, Hashable {
 
+    private var onHover: (() -> GuiView?)?
+    
     private var onRender: ((GuiView?) -> Void)?
 
     private var child: GuiView?
@@ -53,6 +55,8 @@ public class GuiNode: GuiView, Hashable {
             }
             
             onRender(child)
+                    
+            self.checkHovered()
             
             self.posAttributes?.forEach { node in
                 node.render()
@@ -69,55 +73,24 @@ public class GuiNode: GuiView, Hashable {
     }
 }
 
-public extension GuiNode {
+// events
+extension GuiNode {
 
-    func color(_ property: ImGuiCol, color: SGColor) -> GuiNode {
-        
-        let id = UUID().hashValue
-        self.insertPreAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
-            
-            igPushStyleColor(property.rawValue, color.convertToVec4())
-        })
-        self.insertPosAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
-            
-            igPopStyleColor(1)
-        })
+    public func onHover(_ callback: @escaping () -> GuiView?) -> Self {
+        self.onHover = callback
         return self
     }
 
-    func position(_ position: SGPoint, condition: ImGuiCond) -> GuiNode {
+    private func checkHovered() {
         
-        self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
-
-            igSetNextWindowPos(position.convertToVec2(), condition.rawValue, SGPoint.zero.convertToVec2())
-        })
-        return self
-    }
-    
-    func size(_ size: SGSize, condition: ImGuiCond) -> GuiNode {
-        
-        self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
-
-            igSetNextWindowSize(size.convertToVec2(), condition.rawValue)
-        })
-        return self
-    }
-    
-    func property(_ property: ImGuiStyleVar, set number: Float) -> GuiNode {
-        
-        let id = UUID().hashValue
-        self.insertPreAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
+        if let onHover = self.onHover {
             
-            igPushStyleVarFloat(property.rawValue, number)
-        })
-        self.insertPosAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
-            
-            igPopStyleVar(1)
-        })
-        return self
+            if igIsItemHovered(0) {
+                onHover()?.render()
+            }
+        }
     }
 }
-
 
 struct GuiMultiNode: GuiView {
 

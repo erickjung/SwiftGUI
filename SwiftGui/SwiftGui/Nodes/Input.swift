@@ -9,8 +9,9 @@
 import Foundation
 import SwiftGUI_Core
 
-public func InputText(_ title: String,
+public func InputText(_ title: String = "",
                       textState: String,
+                      placeHolder: String? = nil,
                       maxLength: Int = 256,
                       flags: ImGuiInputTextFlags = .none,
                       onChange: ((String) -> Void)? = nil) -> GuiNode {
@@ -19,26 +20,17 @@ public func InputText(_ title: String,
 
         var _value = textState.cChars(with: maxLength)
         
-        if igInputText(title.cStr(), &_value, maxLength, flags.rawValue, nil, nil) {
+        if let placeHolder = placeHolder {
 
-            onChange?(String(cString: _value))
-        }
-    }
-}
+            if igInputTextWithHint(title.cStr(), placeHolder, &_value, maxLength, flags.rawValue, nil, nil) {
+                onChange?(String(cString: _value))
+            }
 
-public func InputTextWithHint(_ title: String,
-                              textState: String,
-                              hint: String,
-                              maxLength: Int = 256,
-                              flags: ImGuiInputTextFlags = .none,
-                              onChange: ((String) -> Void)? = nil) -> GuiNode {
-    
-    GuiNode(tag: #function).onRender { _ in
-
-        var _value = textState.cChars(with: maxLength)
-        
-        if igInputTextWithHint(title.cStr(), hint, &_value, maxLength, flags.rawValue, nil, nil) {
-            onChange?(String(cString: _value))
+        } else {
+            
+            if igInputText(title.cStr(), &_value, maxLength, flags.rawValue, nil, nil) {
+                onChange?(String(cString: _value))
+            }
         }
     }
 }

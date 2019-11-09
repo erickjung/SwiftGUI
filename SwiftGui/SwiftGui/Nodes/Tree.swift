@@ -23,7 +23,7 @@ public func Tree(_ title: String,
     }
 }
 
-public func CollapsingHeader(title: String,
+public func CollapsingHeader(_ title: String,
                              options: ImGuiTreeNodeFlags = .none,
                              @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
@@ -36,7 +36,7 @@ public func CollapsingHeader(title: String,
     }
 }
 
-public func CollapsingHeaderClosable(title: String,
+public func CollapsingHeaderClosable(_ title: String,
                                      closeState: Bool = false,
                                      options: ImGuiTreeNodeFlags = .none,
                                      onClose: ((Bool) -> Void)? = nil,

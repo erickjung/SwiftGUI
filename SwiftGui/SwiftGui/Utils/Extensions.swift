@@ -65,6 +65,11 @@ public extension SGColor {
 
         if let c = self.cgColor.components {
 
+            if c.count == 2 {
+            
+                return ImVec4(x: Float(c[0]), y: Float(c[0]), z: Float(c[0]), w: Float(c[1]))
+            }
+            
             return ImVec4(x: Float(c[0]), y: Float(c[1]), z: Float(c[2]), w: Float(c[3]))
         }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61C76012373802C008DB346 /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76002373802C008DB346 /* Perform.swift */; };
+		B61C76132374532A008DB346 /* GuiNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76122374532A008DB346 /* GuiNode+Extensions.swift */; };
+		B625A1A42375BDE60077717D /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625A1A32375BDE60077717D /* Popup.swift */; };
 		B67E1C52236BB20400216EA2 /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B67E1C50236BB20400216EA2 /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B67E1C70236BB23C00216EA2 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C58236BB23C00216EA2 /* Attributes.swift */; };
 		B67E1C71236BB23C00216EA2 /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B61C76002373802C008DB346 /* Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perform.swift; sourceTree = "<group>"; };
+		B61C76122374532A008DB346 /* GuiNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GuiNode+Extensions.swift"; sourceTree = "<group>"; };
+		B625A1A32375BDE60077717D /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		B67E1C4D236BB20400216EA2 /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1C50236BB20400216EA2 /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B67E1C51236BB20400216EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 				B67E1C58236BB23C00216EA2 /* Attributes.swift */,
 				B67E1C6E236BB23C00216EA2 /* Builder.swift */,
 				B67E1C6F236BB23C00216EA2 /* GuiNode.swift */,
+				B61C76122374532A008DB346 /* GuiNode+Extensions.swift */,
 				B67E1C6D236BB23C00216EA2 /* GuiView.swift */,
 				B67E1C51236BB20400216EA2 /* Info.plist */,
 				B67E1C50236BB20400216EA2 /* SwiftGui.h */,
@@ -151,7 +158,9 @@
 				B67E1C64236BB23C00216EA2 /* Input.swift */,
 				B67E1C5D236BB23C00216EA2 /* ListBox.swift */,
 				B67E1C68236BB23C00216EA2 /* Menu.swift */,
+				B61C76002373802C008DB346 /* Perform.swift */,
 				B67E1C60236BB23C00216EA2 /* Plot.swift */,
+				B625A1A32375BDE60077717D /* Popup.swift */,
 				B67E1C63236BB23C00216EA2 /* RadioButton.swift */,
 				B67E1C66236BB23C00216EA2 /* Slider.swift */,
 				B67E1C6A236BB23C00216EA2 /* Text.swift */,
@@ -260,8 +269,10 @@
 				B6E3BE8C236ED5BF00C1E1CF /* Extensions.swift in Sources */,
 				B67E1C83236BB23C00216EA2 /* GuiView.swift in Sources */,
 				B67E1C7F236BB23C00216EA2 /* CheckBox.swift in Sources */,
+				B61C76012373802C008DB346 /* Perform.swift in Sources */,
 				B67E1C84236BB23C00216EA2 /* Builder.swift in Sources */,
 				B67E1C71236BB23C00216EA2 /* OrderedSet.swift in Sources */,
+				B61C76132374532A008DB346 /* GuiNode+Extensions.swift in Sources */,
 				B67E1C73236BB23C00216EA2 /* ListBox.swift in Sources */,
 				B67E1C70236BB23C00216EA2 /* Attributes.swift in Sources */,
 				B67E1C7A236BB23C00216EA2 /* Input.swift in Sources */,
@@ -269,6 +280,7 @@
 				B67E1C7D236BB23C00216EA2 /* Debug.swift in Sources */,
 				B67E1C85236BB23C00216EA2 /* GuiNode.swift in Sources */,
 				B67E1C81236BB23C00216EA2 /* Button.swift in Sources */,
+				B625A1A42375BDE60077717D /* Popup.swift in Sources */,
 				B67E1C72236BB23C00216EA2 /* Tooltip.swift in Sources */,
 				B67E1C75236BB23C00216EA2 /* Common.swift in Sources */,
 				B67E1C74236BB23C00216EA2 /* Drag.swift in Sources */,

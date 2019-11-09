@@ -77,39 +77,6 @@ class ViewController: NSViewController {
 }
 extension ViewController: SGRendererDelegate {
 
-    func viewTest2() -> GuiView {
-        Window("Hello world") {
-            Text("Hello world!")
-            
-            HStack {
-                RadioButtonGroup(["radio a", "radio b", "radio c"],
-                                 selectedState: radioState) {
-                    radioState = $0
-                    print("test")
-                }
-            }
-            
-            HStack {
-                ForEach((1...7)) { _ in
-                    Button("Click")
-                        .color(.button, color: .blue)
-                        .color(.buttonHovered, color: .yellow)
-                        .color(.buttonActive, color: .orange)
-                }
-            }
-        }
-    }
-
-    
-    func viewTest1() -> GuiView {
-        Window("buttons") {
-            Button("button")
-            SmallButton("smallbutton")
-            ArrowButton("#1", direction: .left)
-            Bullet()
-        }
-    }
-
     func showProgrammerGuide() -> GuiNode {
         Group {
             Text("PROGRAMMER GUIDE:")
@@ -146,9 +113,8 @@ extension ViewController: SGRendererDelegate {
     func helpMarker(_ text: String, atSameLine: Bool = true) -> GuiNode {
         Group {
             atSameLine ? SameLine() : Empty()
-            TextDisabled("(?)")
-            
-            IsItemHovered {
+            TextDisabled("(?)").onHover {
+                
                 Tooltip {
                     Text(text)
                 }
@@ -156,12 +122,12 @@ extension ViewController: SGRendererDelegate {
         }
     }
     
-    func viewTest3() -> GuiNode {
+    func mainView() -> GuiNode {
         
         Window("SwiftGUI Demo", flags: .menuBar) {
             
             MenuBar {
-                MenuGroup("Menu1") {
+                MenuGroup("Menu") {
                     MenuItem("item1")
                     MenuItem("item2")
                 }
@@ -170,13 +136,13 @@ extension ViewController: SGRendererDelegate {
             Text("SwiftGUI says hello.")
             Spacing()
             
-            CollapsingHeader(title: "Help") {
+            CollapsingHeader("Help") {
                 showProgrammerGuide()
                 Separator()
                 showUserGuide()
             }
             
-            CollapsingHeader(title: "Configuration") {
+            CollapsingHeader("Configuration") {
                 Tree("Configuration##2") {
                     CheckBox("io.ConfigFlags: NavEnableKeyboard", selectedState: false)
 
@@ -210,11 +176,6 @@ extension ViewController: SGRendererDelegate {
                     
                     TextWrapped("You can also call ImGui::LogText() to output directly to the log without a visual output.")
                     Button("Copy \"Hello, world!\" to clipboard")
-//                    {
-//                        LogToClipboard() {
-//                            LogText("Hello, world!123")
-//                        }
-//                    }
                 }
                 Separator()
 
@@ -277,16 +238,16 @@ extension ViewController: SGRendererDelegate {
                 Text("\(counterState)")
             }
 
-            Text("Hover over me")
-            IsItemHovered {
+            Text("Hover over me").onHover {
+
                 Tooltip {
                     Text("I am a tooltip")
                 }
             }
 
             SameLine()
-            Text("- or me")
-            IsItemHovered {
+            Text("- or me").onHover {
+
                 Tooltip {
                     Text("I am a fancy tooltip")
                     Plot("Curve", type: .line, values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2])
@@ -302,7 +263,7 @@ extension ViewController: SGRendererDelegate {
             InputText("input text", textState: "Hello, world!")
             helpMarker("USER:\nHold SHIFT or use mouse to select text.\nCTRL+Left/Right to word jump.\nCTRL+A or double-click to select all.\nCTRL+X,CTRL+C,CTRL+V clipboard.\nCTRL+Z,CTRL+Y undo/redo.\nESCAPE to revert.\n\nPROGRAMMER:\nYou can use the ImGuiInputTextFlags_CallbackResize facility if you need to wire InputText() to a dynamic string type. See misc/cpp/imgui_stdlib.h for an example (this is not demonstrated in imgui_demo.cpp).")
 
-            InputTextWithHint("input text (w/ hint)", textState: "", hint: "enter text here")
+            InputText("input text (w/ hint)", textState: "", placeHolder: "enter text here")
 
             InputInt("input int", valueState: 0)
             helpMarker("You can apply arithmetic operators +,*,/ on numerical values.\n  e.g. [ 100 ], input \'*2\', result becomes [ 200 ]\nUse +- to subtract.\n")
@@ -353,18 +314,14 @@ extension ViewController: SGRendererDelegate {
     
     func showDemoWindowWidgets_Collapsing() -> GuiNode {
         Tree("Collapsing Headers") {
-            CollapsingHeader(title: "Header") {
-                IsItemHovered {
-                    ForEach((1...5)) { value in
-                        Text("Some content \(value)")
-                    }
+            CollapsingHeader("Header") {
+                ForEach((1...5)) { value in
+                    Text("Some content \(value)")
                 }
             }
-            CollapsingHeaderClosable(title: "Header with a close button", closeState: true) {
-                IsItemHovered {
-                    ForEach((1...5)) { value in
-                        Text("Some content \(value)")
-                    }
+            CollapsingHeaderClosable("Header with a close button", closeState: true) {
+                ForEach((1...5)) { value in
+                    Text("Some content \(value)")
                 }
             }
         }
@@ -414,36 +371,6 @@ extension ViewController: SGRendererDelegate {
             }
         }
     }
-    
-    func showDemoWindowWidgets_Images() -> GuiNode {
-        Tree("TODO: Images") {
-            Text("TODO")
-        }
-    }
-
-    func showDemoWindowWidgets_Combo() -> GuiNode {
-        Tree("TODO: Combo") {
-            Text("TODO")
-        }
-    }
-    
-    func showDemoWindowWidgets_Selectables() -> GuiNode {
-        Tree("TODO: Selectables") {
-            Text("TODO")
-        }
-    }
-
-    func showDemoWindowWidgets_TextInput() -> GuiNode {
-        Tree("TODO: Text Input") {
-            Text("TODO")
-        }
-    }
-
-    func showDemoWindowWidgets_ResizeCallback() -> GuiNode {
-        Tree("TODO: Resize Callback") {
-            Text("TODO")
-        }
-    }
 
     func showDemoWindowWidgets_Plots() -> GuiNode {
         Tree("Plots Widgets") {
@@ -465,49 +392,20 @@ extension ViewController: SGRendererDelegate {
         }
     }
 
-    func showDemoWindowWidgets_Range() -> GuiNode {
-        Tree("TODO: Range Widgets") {
-            Text("TODO")
-        }
-    }
-
-    func showDemoWindowWidgets_DataTypes() -> GuiNode {
-        Tree("TODO: Data Types") {
-            Text("TODO")
-        }
-    }
-
-    func showDemoWindowWidgets_MultiComponent() -> GuiNode {
-        Tree("TODO: Multi-component Widgets") {
-            Text("TODO")
-//                    .color(.text, color: .red)
-        }
-    }
-
     func showDemoWindowWidgets() -> GuiNode {
         
-        CollapsingHeader(title: "Widgets") {
+        CollapsingHeader("Widgets") {
             showDemoWindowWidgets_Basic()
             showDemoWindowWidgets_Tree()
             showDemoWindowWidgets_Collapsing()
             showDemoWindowWidgets_Bullets()
             showDemoWindowWidgets_Text()
-            showDemoWindowWidgets_Images()
-            showDemoWindowWidgets_Combo()
-            showDemoWindowWidgets_Selectables()
-            showDemoWindowWidgets_TextInput()
-            showDemoWindowWidgets_ResizeCallback()
             showDemoWindowWidgets_Plots()
             showDemoWindowWidgets_Color()
-            showDemoWindowWidgets_Range()
-            showDemoWindowWidgets_DataTypes()
-            showDemoWindowWidgets_MultiComponent()
         }
     }
         
     func draw() {
-//        viewTest1().render()
-        viewTest2().render()
-//        viewTest3().render()
+        mainView().render()
     }
 }
