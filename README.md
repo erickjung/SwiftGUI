@@ -39,7 +39,7 @@ Window("Hello world") {
 To integrate `SwiftGUI` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "erickjung/SwiftGUI" "0.1.0"
+github "erickjung/SwiftGUI" "0.2.0"
 ```
 
 For `OSX` project, run:
