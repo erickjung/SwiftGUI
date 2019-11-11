@@ -119,11 +119,12 @@ extension ViewController: SGRendererDelegate {
                 }
             }
             
-            SmallButton("remove") {
+            Button("remove") {
                     
                 PopupOpenCall(name)
             }
             .color(.button, color: color)
+            .color(.text, color: .white)
             
             confirmationPopup(name: name)
             

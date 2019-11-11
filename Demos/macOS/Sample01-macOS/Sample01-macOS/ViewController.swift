@@ -47,6 +47,8 @@ class ViewController: NSViewController {
         }
         
         SGRenderer.initializePlatform()
+        
+        DarculaTheme().apply()
     }
 
     override func mouseMoved(with event: NSEvent) {

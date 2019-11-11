@@ -36,6 +36,9 @@
 		B6E3BE8C236ED5BF00C1E1CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */; };
 		B6F49E9A2371D70000A6D48C /* SwiftGUI_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; };
 		B6F49E9B2371D70000A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6F9347C2379473B00F4129B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347B2379473B00F4129B /* Theme.swift */; };
+		B6F9347F237948BB00F4129B /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347E237948BB00F4129B /* LightTheme.swift */; };
+		B6F934892379959200F4129B /* DarculaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F934882379959200F4129B /* DarculaTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +92,9 @@
 		B6E3BE59236ECFA100C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGUI_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F9347B2379473B00F4129B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B6F9347E237948BB00F4129B /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		B6F934882379959200F4129B /* DarculaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarculaTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,15 +129,16 @@
 		B67E1C4F236BB20400216EA2 /* SwiftGui */ = {
 			isa = PBXGroup;
 			children = (
-				B67E1C5B236BB23C00216EA2 /* Nodes */,
-				B67E1C59236BB23C00216EA2 /* Utils */,
 				B67E1C58236BB23C00216EA2 /* Attributes.swift */,
 				B67E1C6E236BB23C00216EA2 /* Builder.swift */,
 				B67E1C6F236BB23C00216EA2 /* GuiNode.swift */,
 				B61C76122374532A008DB346 /* GuiNode+Extensions.swift */,
 				B67E1C6D236BB23C00216EA2 /* GuiView.swift */,
 				B67E1C51236BB20400216EA2 /* Info.plist */,
+				B67E1C5B236BB23C00216EA2 /* Nodes */,
 				B67E1C50236BB20400216EA2 /* SwiftGui.h */,
+				B6F9347D237947C000F4129B /* Theme */,
+				B67E1C59236BB23C00216EA2 /* Utils */,
 			);
 			path = SwiftGui;
 			sourceTree = "<group>";
@@ -183,6 +190,16 @@
 				B67E1C87236BB24B00216EA2 /* ImGui.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6F9347D237947C000F4129B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B6F934882379959200F4129B /* DarculaTheme.swift */,
+				B6F9347E237948BB00F4129B /* LightTheme.swift */,
+				B6F9347B2379473B00F4129B /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F9347C2379473B00F4129B /* Theme.swift in Sources */,
 				B6E3BE8C236ED5BF00C1E1CF /* Extensions.swift in Sources */,
 				B67E1C83236BB23C00216EA2 /* GuiView.swift in Sources */,
 				B67E1C7F236BB23C00216EA2 /* CheckBox.swift in Sources */,
@@ -281,6 +299,7 @@
 				B67E1C85236BB23C00216EA2 /* GuiNode.swift in Sources */,
 				B67E1C81236BB23C00216EA2 /* Button.swift in Sources */,
 				B625A1A42375BDE60077717D /* Popup.swift in Sources */,
+				B6F934892379959200F4129B /* DarculaTheme.swift in Sources */,
 				B67E1C72236BB23C00216EA2 /* Tooltip.swift in Sources */,
 				B67E1C75236BB23C00216EA2 /* Common.swift in Sources */,
 				B67E1C74236BB23C00216EA2 /* Drag.swift in Sources */,
@@ -291,6 +310,7 @@
 				B67E1C7B236BB23C00216EA2 /* Tree.swift in Sources */,
 				B67E1C77236BB23C00216EA2 /* Window.swift in Sources */,
 				B67E1C78236BB23C00216EA2 /* ComboBox.swift in Sources */,
+				B6F9347F237948BB00F4129B /* LightTheme.swift in Sources */,
 				B67E1C7C236BB23C00216EA2 /* Slider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
