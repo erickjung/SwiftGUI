@@ -34,7 +34,8 @@ class MTKViewController: NSViewController {
         
         NSEvent.addLocalMonitorForEvents(matching: [ .keyDown, .keyUp, .flagsChanged, .scrollWheel ]) { event -> NSEvent? in
             
-            if SGRenderer.handle(event, view: self.view) {
+            if let renderer = self.renderer,
+                renderer.handle(event, view: self.view) {
                 
                 return nil
             }
@@ -42,29 +43,27 @@ class MTKViewController: NSViewController {
             return event
         }
         
-        SGRenderer.initializePlatform()
         
-        DarculaTheme().apply()
     }
 
     override func mouseMoved(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func mouseDown(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func mouseUp(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func mouseDragged(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func scrollWheel(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override var representedObject: Any? {

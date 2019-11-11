@@ -39,6 +39,7 @@
 		B6F9347C2379473B00F4129B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347B2379473B00F4129B /* Theme.swift */; };
 		B6F9347F237948BB00F4129B /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347E237948BB00F4129B /* LightTheme.swift */; };
 		B6F934892379959200F4129B /* DarculaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F934882379959200F4129B /* DarculaTheme.swift */; };
+		B6F9348D237A10C100F4129B /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6F9348C237A10C100F4129B /* DroidSans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,6 +96,7 @@
 		B6F9347B2379473B00F4129B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B6F9347E237948BB00F4129B /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		B6F934882379959200F4129B /* DarculaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarculaTheme.swift; sourceTree = "<group>"; };
+		B6F9348C237A10C100F4129B /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				B67E1C6D236BB23C00216EA2 /* GuiView.swift */,
 				B67E1C51236BB20400216EA2 /* Info.plist */,
 				B67E1C5B236BB23C00216EA2 /* Nodes */,
+				B6F9348A237A10C100F4129B /* Resources */,
 				B67E1C50236BB20400216EA2 /* SwiftGui.h */,
 				B6F9347D237947C000F4129B /* Theme */,
 				B67E1C59236BB23C00216EA2 /* Utils */,
@@ -200,6 +203,22 @@
 				B6F9347B2379473B00F4129B /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		B6F9348A237A10C100F4129B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9348B237A10C100F4129B /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6F9348B237A10C100F4129B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9348C237A10C100F4129B /* DroidSans.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F9348D237A10C100F4129B /* DroidSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,7 @@ class ViewController: MTKViewController {
         super.viewDidLoad()
         
         self.renderer?.delegate = self
+        self.renderer?.initializePlatform()
     }
     
     override var representedObject: Any? {
@@ -51,6 +52,10 @@ extension ViewController {
 }
 
 extension ViewController: SGRendererDelegate {
+
+    func setup() {
+        DarculaTheme().apply()
+    }
 
     func todoInput() -> GuiView {
 
@@ -179,7 +184,7 @@ extension ViewController: SGRendererDelegate {
                      height: self.view.frame.height), condition: .always)
         .property(.windowRounding, set: 0)
     }
-    
+        
     func draw() {
         mainView().render()
     }

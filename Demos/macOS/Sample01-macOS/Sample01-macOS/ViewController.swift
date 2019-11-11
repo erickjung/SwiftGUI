@@ -38,37 +38,37 @@ class ViewController: NSViewController {
         
         NSEvent.addLocalMonitorForEvents(matching: [ .keyDown, .keyUp, .flagsChanged, .scrollWheel ]) { event -> NSEvent? in
             
-            if event.type == .keyDown && SGRenderer.handle(event, view: self.view) {
-                
+            if let renderer = self.renderer,
+                renderer.handle(event, view: self.view) {
+
                 return nil
             }
             
             return event
         }
         
-        SGRenderer.initializePlatform()
+        self.renderer?.initializePlatform()
         
-        DarculaTheme().apply()
     }
 
     override func mouseMoved(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func mouseDown(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func mouseUp(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func mouseDragged(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func scrollWheel(with event: NSEvent) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override var representedObject: Any? {
@@ -78,6 +78,10 @@ class ViewController: NSViewController {
     }
 }
 extension ViewController: SGRendererDelegate {
+
+    func setup() {
+        DarculaTheme().apply()
+    }
 
     func showProgrammerGuide() -> GuiNode {
         Group {
@@ -213,10 +217,9 @@ extension ViewController: SGRendererDelegate {
             }
 
             HStack {
-                ForEach((1...7)) { _ in
-                    Button("Click")
-                        .color(.button, color: .blue)
-                        .color(.buttonHovered, color: .yellow)
+                ForEach((1...7)) { val in
+                    Button("Click \(val)")
+                        .color(.buttonHovered, color: .brown)
                         .color(.buttonActive, color: .orange)
                 }
             }
@@ -406,7 +409,7 @@ extension ViewController: SGRendererDelegate {
             showDemoWindowWidgets_Color()
         }
     }
-        
+            
     func draw() {
         mainView().render()
     }

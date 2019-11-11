@@ -23,8 +23,6 @@
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
         ImGui::StyleColorsDark();
-
-        ImGui_ImplMetal_Init(_device);
     }
 
     return self;
@@ -82,7 +80,21 @@
 {
 }
 
-+(void)handleEvent:(UIEvent *_Nullable)event view:(UIView *_Nullable)view {
+-(void)initializePlatform {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(setup)]) {
+
+        [self.delegate setup];
+    }
+
+    ImGui_ImplMetal_Init(_device);
+}
+
+-(void)shutdownPlatform {
+    
+}
+
+-(void)handleEvent:(UIEvent *_Nullable)event view:(UIView *_Nullable)view {
  
     UITouch *anyTouch = event.allTouches.anyObject;
     CGPoint touchLocation = [anyTouch locationInView:view];

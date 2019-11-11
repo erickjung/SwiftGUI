@@ -32,26 +32,32 @@ class ViewController: UIViewController {
             self.renderer?.delegate = self
             mtkView.delegate = self.renderer
         }
+        
+        self.renderer?.initializePlatform()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        SGRenderer.handle(event, view: self.view)
+        self.renderer?.handle(event, view: self.view)
     }
 }
 
 extension ViewController: SGRendererDelegate {
+    
+    func setup() {
+        DarculaTheme().apply()
+    }
     
     func viewTest1() -> GuiView {
         Window("Hello world") {

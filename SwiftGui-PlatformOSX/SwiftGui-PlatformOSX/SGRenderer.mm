@@ -27,7 +27,6 @@
         ImGui::CreateContext();
         ImGui::StyleColorsDark();
 
-        ImGui_ImplMetal_Init(_device);
     }
 
     return self;
@@ -88,21 +87,27 @@
     [commandBuffer commit];
 }
 
-- (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size
-{
+- (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size {
 }
 
-+(void)initializePlatform {
+-(void)initializePlatform {
     
+    if (self.delegate && [self.delegate respondsToSelector:@selector(setup)]) {
+
+        [self.delegate setup];
+    }
+
+    ImGui_ImplMetal_Init(_device);
+
     ImGui_ImplOSX_Init();
 }
 
-+(void)shutdownPlatform {
+-(void)shutdownPlatform {
     
     ImGui_ImplOSX_Shutdown();
 }
 
-+(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view {
+-(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view {
  
     return ImGui_ImplOSX_HandleEvent(event, view);
 }
