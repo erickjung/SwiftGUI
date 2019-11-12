@@ -16,7 +16,8 @@ import AppKit
 public typealias SGColor = NSColor
 public typealias SGPoint = CGPoint
 public typealias SGSize = CGSize
-    
+public typealias SGImage = AnyObject
+
 #else
     
 import AVFoundation
@@ -25,6 +26,7 @@ import UIKit
 public typealias SGColor = UIColor
 public typealias SGPoint = CGPoint
 public typealias SGSize = CGSize
+public typealias SGImage = AnyObject
     
 #endif
 

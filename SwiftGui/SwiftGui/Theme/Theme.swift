@@ -13,8 +13,8 @@ public protocol Theme {
  
     var colors: [ImGuiCol: SGColor] { get }
     
-    var fontSize: Float { get }
-    var fontPath: String? { get }
+    /// Global fonts [font path : font size]
+    var fonts: [String: Float]? { get }
     
     /// Global alpha applies to everything in ImGui
     var alpha: Float { get }
@@ -121,20 +121,17 @@ public protocol Theme {
 
 extension Theme {
     
-    public var fontSize: Float {
-        return 14
-    }
-    
-    public var fontPath: String? {
+    public var fonts: [String: Float]? {
         
-        if let cls = type(of: self) as? AnyClass {
+        if let cls = type(of: self) as? AnyClass,
+            let path = Bundle(for: cls).path(forResource: "DroidSans", ofType: "ttf") {
             
-            return Bundle(for: cls).path(forResource: "DroidSans", ofType: "ttf")
+            return [path: 14]
         }
         
         return nil
     }
-
+    
     public var alpha: Float {
         return 1
     }
@@ -273,10 +270,12 @@ extension Theme {
     
     public func apply() {
      
-        if let fontPath = self.fontPath,
-            let io = igGetIO() {
+        if let io = igGetIO() {
 
-            ImFontAtlas_AddFontFromFileTTF(io.pointee.Fonts, fontPath.cStr(), self.fontSize, nil, nil)
+            self.fonts?.forEach { font in
+                
+                ImFontAtlas_AddFontFromFileTTF(io.pointee.Fonts, font.key.cStr(), font.value, nil, nil)
+            }
         }
 
         if let style = igGetStyle() {

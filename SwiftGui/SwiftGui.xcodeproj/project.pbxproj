@@ -33,6 +33,7 @@
 		B67E1C83236BB23C00216EA2 /* GuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6D236BB23C00216EA2 /* GuiView.swift */; };
 		B67E1C84236BB23C00216EA2 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* Builder.swift */; };
 		B67E1C85236BB23C00216EA2 /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
+		B6DF8B5A237AB53300374675 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF8B59237AB53300374675 /* Image.swift */; };
 		B6E3BE8C236ED5BF00C1E1CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */; };
 		B6F49E9A2371D70000A6D48C /* SwiftGUI_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; };
 		B6F49E9B2371D70000A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -88,6 +89,7 @@
 		B67E1C87236BB24B00216EA2 /* ImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1CBF236BB36E00216EA2 /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1CF1236BB71A00216EA2 /* libCImGui.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libCImGui.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6DF8B59237AB53300374675 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B6E3BCCD236D99ED00C1E1CF /* libCImGuiLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCImGuiLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BCFE236D9B4C00C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BE59236ECFA100C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +167,7 @@
 				B67E1C5F236BB23C00216EA2 /* Common.swift */,
 				B67E1C67236BB23C00216EA2 /* Debug.swift */,
 				B67E1C5E236BB23C00216EA2 /* Drag.swift */,
+				B6DF8B59237AB53300374675 /* Image.swift */,
 				B67E1C64236BB23C00216EA2 /* Input.swift */,
 				B67E1C5D236BB23C00216EA2 /* ListBox.swift */,
 				B67E1C68236BB23C00216EA2 /* Menu.swift */,
@@ -322,6 +325,7 @@
 				B6F934892379959200F4129B /* DarculaTheme.swift in Sources */,
 				B67E1C72236BB23C00216EA2 /* Tooltip.swift in Sources */,
 				B67E1C75236BB23C00216EA2 /* Common.swift in Sources */,
+				B6DF8B5A237AB53300374675 /* Image.swift in Sources */,
 				B67E1C74236BB23C00216EA2 /* Drag.swift in Sources */,
 				B67E1C82236BB23C00216EA2 /* Color.swift in Sources */,
 				B67E1C7E236BB23C00216EA2 /* Menu.swift in Sources */,

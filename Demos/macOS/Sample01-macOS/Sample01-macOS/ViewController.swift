@@ -12,13 +12,13 @@ import MetalKit
 import SwiftGui
 import SwiftGui_PlatformOSX
 
-var counterState = 0
-var radioState = 0
-
 class ViewController: NSViewController {
     
     var renderer: SGRenderer?
-    
+    var counterState = 0
+    var radioState = 0
+    var logo: SGImage?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,6 +49,7 @@ class ViewController: NSViewController {
         
         self.renderer?.initializePlatform()
         
+        self.loadResources()
     }
 
     override func mouseMoved(with event: NSEvent) {
@@ -75,6 +76,11 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    private func loadResources() {
+        
+        logo = self.renderer?.loadTexture(withName: "swiftgui")
     }
 }
 extension ViewController: SGRendererDelegate {
@@ -139,8 +145,7 @@ extension ViewController: SGRendererDelegate {
                 }
             }
             
-            Text("SwiftGUI says hello.")
-            Spacing()
+            Image(imageId: logo, size: SGSize(width: 250, height: 65))
             
             CollapsingHeader("Help") {
                 showProgrammerGuide()
@@ -162,17 +167,10 @@ extension ViewController: SGRendererDelegate {
                     CheckBox("io.ConfigFlags: NoMouseCursorChange", selectedState: false)
                     helpMarker("Instruct back-end to not alter mouse cursor shape and visibility.")
                 }
-                Separator()
-
-                Tree("Backend Flags") {
-                    Empty()
-                }
-                Separator()
 
                 Tree("Style") {
                     ShowStyleEditorDebug()
                 }
-                Separator()
 
                 Tree("Capture/Logging") {
                     TextWrapped("The logging API redirects all text output so you can easily capture the content of a window or a block. Tree nodes can be automatically expanded.")
@@ -183,7 +181,6 @@ extension ViewController: SGRendererDelegate {
                     TextWrapped("You can also call ImGui::LogText() to output directly to the log without a visual output.")
                     Button("Copy \"Hello, world!\" to clipboard")
                 }
-                Separator()
 
                 Tree("Window options") {
                     
@@ -195,7 +192,6 @@ extension ViewController: SGRendererDelegate {
                         CheckBox("No resize", selectedState: false)
                     }
                 }
-                Separator()
             }
             
             showDemoWindowWidgets()
@@ -212,7 +208,7 @@ extension ViewController: SGRendererDelegate {
             HStack {
                 RadioButtonGroup(["radio a", "radio b", "radio c"],
                                  selectedState: radioState) {
-                    radioState = $0
+                    self.radioState = $0
                 }
             }
 
@@ -231,16 +227,16 @@ extension ViewController: SGRendererDelegate {
                 PushButtonGroup {
                     HStack {
                         ArrowButton("##left", direction: .left) {
-                            counterState -= 1
+                            self.counterState -= 1
                         }
 
                         ArrowButton("##right", direction: .right) {
-                            counterState += 1
+                            self.counterState += 1
                         }
                     }
                 }
 
-                Text("\(counterState)")
+                Text("\(self.counterState)")
             }
 
             Text("Hover over me").onHover {
