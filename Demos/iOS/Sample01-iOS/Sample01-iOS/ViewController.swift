@@ -10,10 +10,12 @@ import UIKit
 import SwiftGui
 import SwiftGui_PlatformiOS
 
-var radioState = 0
 
 class ViewController: UIViewController {
     
+    var logo: SGImage?
+    var radioState = 0
+
     var renderer: SGRenderer?
     let mtkView = MTKView()
 
@@ -34,6 +36,8 @@ class ViewController: UIViewController {
         }
         
         self.renderer?.initializePlatform()
+        
+        self.loadResources()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -51,6 +55,11 @@ class ViewController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.renderer?.handle(event, view: self.view)
     }
+    
+    private func loadResources() {
+        
+        logo = self.renderer?.loadTexture(withName: "swiftgui")
+    }
 }
 
 extension ViewController: SGRendererDelegate {
@@ -61,20 +70,20 @@ extension ViewController: SGRendererDelegate {
     
     func viewTest1() -> GuiView {
         Window("Hello world") {
-            Text("Hello world!")
+            
+            Image(imageId: logo, size: SGSize(width: 250, height: 65))
             
             HStack {
                 RadioButtonGroup(["radio a", "radio b", "radio c"],
                                  selectedState: radioState) {
-                    radioState = $0
+                    self.radioState = $0
                 }
             }
             
             HStack {
-                ForEach((1...7)) { _ in
-                    Button("Click")
-                        .color(.button, color: .blue)
-                        .color(.buttonHovered, color: .yellow)
+                ForEach((1...5)) { val in
+                    Button("Click \(val)")
+                        .color(.buttonHovered, color: .brown)
                         .color(.buttonActive, color: .orange)
                 }
             }
