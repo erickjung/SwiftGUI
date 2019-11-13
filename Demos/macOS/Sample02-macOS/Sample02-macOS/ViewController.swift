@@ -54,6 +54,7 @@ extension ViewController {
 extension ViewController: SGRendererDelegate {
 
     func setup() {
+        DefaultFontGroup().load()
         DarculaTheme().apply()
     }
 
@@ -158,7 +159,7 @@ extension ViewController: SGRendererDelegate {
         
         CollapsingHeader("DONE", options: .defaultOpen) {
          
-            List(id: "##done", size: SGSize(width: 0, height: 150)) {
+            List(id: "##done") {
                 
                 ForEach(items) { val in
                    
@@ -183,6 +184,7 @@ extension ViewController: SGRendererDelegate {
         .size(CGSize(width: self.view.frame.width,
                      height: self.view.frame.height), condition: .always)
         .property(.windowRounding, set: 0)
+        .font(DefaultFontGroup.Types.FiraCode_18)
     }
         
     func draw() {
