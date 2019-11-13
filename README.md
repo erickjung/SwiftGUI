@@ -7,7 +7,7 @@
 <b>SwiftGUI</b> is an experimental API inspired by <b>SwiftUI</b> declarative code, using Dear ImGui and running on OSX and iOS.
 
 
-![Hello world](Docs/hellow_world.png)
+![Hello world](Docs/hellow_world.jpg)
 
 ```swift
 Window("SwiftGUI") {
