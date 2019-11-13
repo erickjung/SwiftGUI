@@ -10,36 +10,33 @@
 ![Hello world](Docs/hellow_world.png)
 
 ```swift
-Window("Hello world") {
+Window("SwiftGUI") {
 
     Text("Hello world!")
     
     HStack {
-        RadioButtonGroup(["radio a", 
-                          "radio b", 
-                          "radio c"],
+        RadioButtonGroup(["radio a", "radio b","radio c"],
                          selectedState: radioState) {
-            radioState = $0
+            self.radioState = $0
         }
     }
     
     HStack {
-        ForEach((1...7)) { _ in
-            Button("Click")
-                .color(.button, color: .blue)
+        ForEach(1...7) { val in
+            Button("Click \(val)")
         }
     }
 }
 ```
 
-### Carthage
+# Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is intended to be the simplest way to add frameworks to your Cocoa application. Builds your dependencies and provides you with binary frameworks, but you retain full control over your project structure and setup. Carthage does not automatically modify your project files or your build settings.
 
 To integrate `SwiftGUI` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "erickjung/SwiftGUI" "0.2.0"
+github "erickjung/SwiftGUI" "0.3.0"
 ```
 
 For `OSX` project, run:
@@ -54,7 +51,40 @@ For `iOS` project, run:
 carthage update --platform iOS
 ```
 
-## Projects
+
+# Features
+
+### Theme support
+    - Color scheme (embedded Darcula and Light)
+    - Custom Fonts (embedded FiraCode and DroidSans)
+
+### Widgets
+    - Buttons
+    - CheckBox
+    - Color Selection
+    - ComboBox
+    - Drag
+    - Image
+    - InputFields
+    - Lists
+    - Menu
+    - Plotting
+    - Popup
+    - RadioButton
+    - Sliders
+    - Texts
+    - Tooltips
+    - Tree
+    - Window
+    - General 
+        - Group
+        - HStack
+        - Separator/NewLine/Spacing/Indent
+        - ForEach
+        - Perform
+
+
+# Projects
 
 * SwiftGUI-Core: Internal framework abstraction for cimgui
 * SwiftGUI-PlatformiOS: Specific iOS renderer/handler code
@@ -63,21 +93,21 @@ carthage update --platform iOS
 * Demos: Samples for OSX and iOS
     * Sample01-OSX: General app to show how widgets works
     * Sample02-OSX: Simple functional TODO app
-    * Sample01-iOS: Example of iOS integration
+    * Sample01-iOS: General app to show how widgets works
 
 
-## Samples
+# Samples
 
 ### Sample01 (OSX)
 
-![screenshot01](Docs/sample01.gif)
+![screenshot01](Docs/sample01-osx.gif)
 
 ### Sample 02 (OSX) - Simple TODO application
 
-![screenshot02](Docs/sample02.gif)
+![screenshot02](Docs/sample02-osx.gif)
 
 ### Screenshot 01 (iOS)
-![screenshotios](Docs/screenshot_ios.jpg)
+![screenshotios](Docs/sample01-ios.jpg)
 
 ## License
 
