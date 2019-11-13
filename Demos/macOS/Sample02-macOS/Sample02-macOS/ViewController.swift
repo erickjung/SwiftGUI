@@ -25,6 +25,7 @@ class ViewController: MTKViewController {
         super.viewDidLoad()
         
         self.renderer?.delegate = self
+        self.renderer?.initializePlatform()
     }
     
     override var representedObject: Any? {
@@ -51,6 +52,11 @@ extension ViewController {
 }
 
 extension ViewController: SGRendererDelegate {
+
+    func setup() {
+        DefaultFontGroup().load()
+        DarculaTheme().apply()
+    }
 
     func todoInput() -> GuiView {
 
@@ -119,11 +125,12 @@ extension ViewController: SGRendererDelegate {
                 }
             }
             
-            SmallButton("remove") {
+            Button("remove") {
                     
                 PopupOpenCall(name)
             }
             .color(.button, color: color)
+            .color(.text, color: .white)
             
             confirmationPopup(name: name)
             
@@ -152,7 +159,7 @@ extension ViewController: SGRendererDelegate {
         
         CollapsingHeader("DONE", options: .defaultOpen) {
          
-            List(id: "##done", size: SGSize(width: 0, height: 150)) {
+            List(id: "##done") {
                 
                 ForEach(items) { val in
                    
@@ -177,8 +184,9 @@ extension ViewController: SGRendererDelegate {
         .size(CGSize(width: self.view.frame.width,
                      height: self.view.frame.height), condition: .always)
         .property(.windowRounding, set: 0)
+        .font(DefaultFontGroup.Types.FiraCode_18)
     }
-    
+        
     func draw() {
         mainView().render()
     }

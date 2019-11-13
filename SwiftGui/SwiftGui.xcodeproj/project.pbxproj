@@ -33,9 +33,17 @@
 		B67E1C83236BB23C00216EA2 /* GuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6D236BB23C00216EA2 /* GuiView.swift */; };
 		B67E1C84236BB23C00216EA2 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* Builder.swift */; };
 		B67E1C85236BB23C00216EA2 /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
+		B6A158CD237C1C9300E3F016 /* FontGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A158CC237C1C9300E3F016 /* FontGroup.swift */; };
+		B6A158D1237C1D6700E3F016 /* DefaultFontGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A158D0237C1D6700E3F016 /* DefaultFontGroup.swift */; };
+		B6A158D3237C288100E3F016 /* FiraCodeRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6A158D2237C288100E3F016 /* FiraCodeRegular.ttf */; };
+		B6DF8B5A237AB53300374675 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF8B59237AB53300374675 /* Image.swift */; };
 		B6E3BE8C236ED5BF00C1E1CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */; };
 		B6F49E9A2371D70000A6D48C /* SwiftGUI_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; };
 		B6F49E9B2371D70000A6D48C /* SwiftGUI_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6F9347C2379473B00F4129B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347B2379473B00F4129B /* Theme.swift */; };
+		B6F9347F237948BB00F4129B /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347E237948BB00F4129B /* LightTheme.swift */; };
+		B6F934892379959200F4129B /* DarculaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F934882379959200F4129B /* DarculaTheme.swift */; };
+		B6F9348D237A10C100F4129B /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6F9348C237A10C100F4129B /* DroidSans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,11 +92,19 @@
 		B67E1C87236BB24B00216EA2 /* ImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1CBF236BB36E00216EA2 /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1CF1236BB71A00216EA2 /* libCImGui.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libCImGui.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A158CC237C1C9300E3F016 /* FontGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontGroup.swift; sourceTree = "<group>"; };
+		B6A158D0237C1D6700E3F016 /* DefaultFontGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFontGroup.swift; sourceTree = "<group>"; };
+		B6A158D2237C288100E3F016 /* FiraCodeRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FiraCodeRegular.ttf; sourceTree = "<group>"; };
+		B6DF8B59237AB53300374675 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B6E3BCCD236D99ED00C1E1CF /* libCImGuiLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCImGuiLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BCFE236D9B4C00C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BE59236ECFA100C1E1CF /* CImGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CImGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B6F49E992371D70000A6D48C /* SwiftGUI_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGUI_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F9347B2379473B00F4129B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B6F9347E237948BB00F4129B /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		B6F934882379959200F4129B /* DarculaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarculaTheme.swift; sourceTree = "<group>"; };
+		B6F9348C237A10C100F4129B /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,15 +139,17 @@
 		B67E1C4F236BB20400216EA2 /* SwiftGui */ = {
 			isa = PBXGroup;
 			children = (
-				B67E1C5B236BB23C00216EA2 /* Nodes */,
-				B67E1C59236BB23C00216EA2 /* Utils */,
 				B67E1C58236BB23C00216EA2 /* Attributes.swift */,
 				B67E1C6E236BB23C00216EA2 /* Builder.swift */,
 				B67E1C6F236BB23C00216EA2 /* GuiNode.swift */,
 				B61C76122374532A008DB346 /* GuiNode+Extensions.swift */,
 				B67E1C6D236BB23C00216EA2 /* GuiView.swift */,
 				B67E1C51236BB20400216EA2 /* Info.plist */,
+				B67E1C5B236BB23C00216EA2 /* Nodes */,
+				B6F9348A237A10C100F4129B /* Resources */,
 				B67E1C50236BB20400216EA2 /* SwiftGui.h */,
+				B6F9347D237947C000F4129B /* Theme */,
+				B67E1C59236BB23C00216EA2 /* Utils */,
 			);
 			path = SwiftGui;
 			sourceTree = "<group>";
@@ -155,6 +173,7 @@
 				B67E1C5F236BB23C00216EA2 /* Common.swift */,
 				B67E1C67236BB23C00216EA2 /* Debug.swift */,
 				B67E1C5E236BB23C00216EA2 /* Drag.swift */,
+				B6DF8B59237AB53300374675 /* Image.swift */,
 				B67E1C64236BB23C00216EA2 /* Input.swift */,
 				B67E1C5D236BB23C00216EA2 /* ListBox.swift */,
 				B67E1C68236BB23C00216EA2 /* Menu.swift */,
@@ -183,6 +202,51 @@
 				B67E1C87236BB24B00216EA2 /* ImGui.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6A158CE237C1D3E00E3F016 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9347E237948BB00F4129B /* LightTheme.swift */,
+				B6F934882379959200F4129B /* DarculaTheme.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		B6A158CF237C1D5700E3F016 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B6A158D0237C1D6700E3F016 /* DefaultFontGroup.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		B6F9347D237947C000F4129B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B6A158CE237C1D3E00E3F016 /* Color */,
+				B6A158CF237C1D5700E3F016 /* Font */,
+				B6A158CC237C1C9300E3F016 /* FontGroup.swift */,
+				B6F9347B2379473B00F4129B /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		B6F9348A237A10C100F4129B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9348B237A10C100F4129B /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6F9348B237A10C100F4129B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B6A158D2237C288100E3F016 /* FiraCodeRegular.ttf */,
+				B6F9348C237A10C100F4129B /* DroidSans.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A158D3237C288100E3F016 /* FiraCodeRegular.ttf in Resources */,
+				B6F9348D237A10C100F4129B /* DroidSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F9347C2379473B00F4129B /* Theme.swift in Sources */,
 				B6E3BE8C236ED5BF00C1E1CF /* Extensions.swift in Sources */,
 				B67E1C83236BB23C00216EA2 /* GuiView.swift in Sources */,
 				B67E1C7F236BB23C00216EA2 /* CheckBox.swift in Sources */,
@@ -273,6 +340,7 @@
 				B67E1C84236BB23C00216EA2 /* Builder.swift in Sources */,
 				B67E1C71236BB23C00216EA2 /* OrderedSet.swift in Sources */,
 				B61C76132374532A008DB346 /* GuiNode+Extensions.swift in Sources */,
+				B6A158D1237C1D6700E3F016 /* DefaultFontGroup.swift in Sources */,
 				B67E1C73236BB23C00216EA2 /* ListBox.swift in Sources */,
 				B67E1C70236BB23C00216EA2 /* Attributes.swift in Sources */,
 				B67E1C7A236BB23C00216EA2 /* Input.swift in Sources */,
@@ -281,16 +349,20 @@
 				B67E1C85236BB23C00216EA2 /* GuiNode.swift in Sources */,
 				B67E1C81236BB23C00216EA2 /* Button.swift in Sources */,
 				B625A1A42375BDE60077717D /* Popup.swift in Sources */,
+				B6F934892379959200F4129B /* DarculaTheme.swift in Sources */,
 				B67E1C72236BB23C00216EA2 /* Tooltip.swift in Sources */,
 				B67E1C75236BB23C00216EA2 /* Common.swift in Sources */,
+				B6DF8B5A237AB53300374675 /* Image.swift in Sources */,
 				B67E1C74236BB23C00216EA2 /* Drag.swift in Sources */,
 				B67E1C82236BB23C00216EA2 /* Color.swift in Sources */,
 				B67E1C7E236BB23C00216EA2 /* Menu.swift in Sources */,
 				B67E1C80236BB23C00216EA2 /* Text.swift in Sources */,
+				B6A158CD237C1C9300E3F016 /* FontGroup.swift in Sources */,
 				B67E1C79236BB23C00216EA2 /* RadioButton.swift in Sources */,
 				B67E1C7B236BB23C00216EA2 /* Tree.swift in Sources */,
 				B67E1C77236BB23C00216EA2 /* Window.swift in Sources */,
 				B67E1C78236BB23C00216EA2 /* ComboBox.swift in Sources */,
+				B6F9347F237948BB00F4129B /* LightTheme.swift in Sources */,
 				B67E1C7C236BB23C00216EA2 /* Slider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +511,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -470,7 +542,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

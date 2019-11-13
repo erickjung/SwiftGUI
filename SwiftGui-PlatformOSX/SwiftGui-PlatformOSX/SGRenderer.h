@@ -2,6 +2,7 @@
 
 @protocol SGRendererDelegate<NSObject>
 
+- (void)setup;
 - (void)draw;
 
 @end
@@ -12,9 +13,12 @@
 
 -(nonnull instancetype)initWithView:(nonnull MTKView *)view;
 
-+(void)initializePlatform;
-+(void)shutdownPlatform;
-+(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view;
+-(void)initializePlatform;
+-(void)shutdownPlatform;
+-(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view;
+
+-(id<MTLTexture>_Nullable)loadTextureWithURL:(NSURL *_Nonnull)url;
+-(id<MTLTexture>_Nullable)loadTextureWithName:(NSString *_Nonnull)name;
 
 @end
 

@@ -11,7 +11,9 @@
 @interface SGRenderer ()
 @property (nonatomic, strong) id <MTLDevice> device;
 @property (nonatomic, strong) id <MTLCommandQueue> commandQueue;
+@property (nonatomic, strong) MTKTextureLoader *loader;
 @end
+
 
 @implementation SGRenderer
 
@@ -22,12 +24,12 @@
     {
         _device = view.device;
         _commandQueue = [_device newCommandQueue];
-
+        _loader = [[MTKTextureLoader alloc] initWithDevice: _device];
+        
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
         ImGui::StyleColorsDark();
 
-        ImGui_ImplMetal_Init(_device);
     }
 
     return self;
@@ -88,23 +90,53 @@
     [commandBuffer commit];
 }
 
-- (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size
-{
+- (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size {
 }
 
-+(void)initializePlatform {
+-(void)initializePlatform {
     
+    if (self.delegate && [self.delegate respondsToSelector:@selector(setup)]) {
+
+        [self.delegate setup];
+    }
+
+    ImGui_ImplMetal_Init(_device);
+
     ImGui_ImplOSX_Init();
 }
 
-+(void)shutdownPlatform {
+-(void)shutdownPlatform {
     
     ImGui_ImplOSX_Shutdown();
 }
 
-+(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view {
+-(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view {
  
     return ImGui_ImplOSX_HandleEvent(event, view);
+}
+
+-(id<MTLTexture>)loadTextureWithURL:(NSURL *)url {
+
+    id<MTLTexture> texture = [self.loader newTextureWithContentsOfURL:url options:nil error:nil];
+    
+    if(!texture)
+    {
+        NSLog(@"Failed to create the texture from %@", url.absoluteString);
+        return nil;
+    }
+    return texture;
+}
+
+-(id<MTLTexture>)loadTextureWithName:(NSString *)name {
+
+    id<MTLTexture> texture = [self.loader newTextureWithName:name scaleFactor:1.0 bundle:nil options:nil error:nil];
+
+    if(!texture)
+    {
+        NSLog(@"Failed to create the texture from %@", name);
+        return nil;
+    }
+    return texture;
 }
 
 @end
