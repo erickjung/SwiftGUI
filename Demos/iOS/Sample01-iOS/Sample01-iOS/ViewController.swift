@@ -391,7 +391,7 @@ extension ViewController: SGRendererDelegate {
         .size(CGSize(width: self.view.frame.width,
                      height: self.view.frame.height - 20), condition: .always)
         .property(.windowRounding, set: 0)
-        .font(DefaultFontGroup.Types.FiraCode_22)
+        .font(DefaultFontGroup.Types.FiraCode_18)
     }
     
     func draw() {

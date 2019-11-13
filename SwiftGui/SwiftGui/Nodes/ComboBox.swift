@@ -9,7 +9,7 @@
 import Foundation
 import SwiftGUI_Core
 
-public func ComboBox(_ title: String,
+public func ComboBox(_ title: String = "",
                      currentItemState: Int,
                      items: [String],
                      onChange: ((Int) -> Void)? = nil) -> GuiNode {

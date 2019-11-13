@@ -136,82 +136,6 @@ extension ViewController: SGRendererDelegate {
         }
     }
     
-    func mainView() -> GuiNode {
-        
-        Window("SwiftGUI Demo", flags: .menuBar) {
-            
-            MenuBar {
-                MenuGroup("Menu") {
-                    MenuItem("item1")
-                    MenuItem("item2")
-                }
-            }
-            
-            Image(imageId: logo, size: SGSize(width: 250, height: 65))
-            
-            CollapsingHeader("Help") {
-                showProgrammerGuide()
-                Separator()
-                showUserGuide()
-            }
-            
-            CollapsingHeader("Configuration") {
-                Tree("Configuration##2") {
-                    CheckBox("io.ConfigFlags: NavEnableKeyboard", selectedState: false)
-
-                    CheckBox("io.ConfigFlags: NavEnableGamepad", selectedState: false)
-                    helpMarker("Required back-end to feed in gamepad inputs in io.NavInputs[] and set io.BackendFlags |= ImGuiBackendFlags_HasGamepad.\n\nRead instructions in imgui.cpp for details.")
-
-                    CheckBox("io.ConfigFlags: NavEnableSetMousePos", selectedState: false)
-                    helpMarker("Instruct navigation to move the mouse cursor. See comment for ImGuiConfigFlags_NavEnableSetMousePos.")
-                    
-                    CheckBox("io.ConfigFlags: NoMouse", selectedState: false)
-                    CheckBox("io.ConfigFlags: NoMouseCursorChange", selectedState: false)
-                    helpMarker("Instruct back-end to not alter mouse cursor shape and visibility.")
-                }
-
-                Tree("Style") {
-                    ShowStyleEditorDebug()
-                }
-
-                Tree("Capture/Logging") {
-                    TextWrapped("The logging API redirects all text output so you can easily capture the content of a window or a block. Tree nodes can be automatically expanded.")
-                    helpMarker("Try opening any of the contents below in this window and then click one of the \"Log To\" button.", atSameLine: false)
-                    
-                    LogButtons()
-                    
-                    TextWrapped("You can also call ImGui::LogText() to output directly to the log without a visual output.")
-                    Button("Copy \"Hello, world!\" to clipboard")
-                }
-
-                Tree("Window options") {
-                    
-                    HStack {
-                        CheckBox("No titlebar", selectedState: false)
-                        CheckBox("No scrollbar", selectedState: false)
-                        CheckBox("No menu", selectedState: false)
-                        CheckBox("No move", selectedState: false)
-                        CheckBox("No resize", selectedState: false)
-                    }
-                }
-            }
-            
-            CollapsingHeader("Font") {
-                
-                Text("FiraCode font 14").font(DefaultFontGroup.Types.FiraCode_14)
-                Text("FiraCode font 18").font(DefaultFontGroup.Types.FiraCode_18)
-                Text("FiraCode font 22").font(DefaultFontGroup.Types.FiraCode_22)
-                
-                Text("DroidSans font 14").font(DefaultFontGroup.Types.DroidSans_14)
-                Text("DroidSans font 18").font(DefaultFontGroup.Types.DroidSans_18)
-                Text("DroidSans font 22").font(DefaultFontGroup.Types.DroidSans_22)
-            }
-
-            showDemoWindowWidgets()
-        }
-        .position(.zero, condition: .appearing)
-    }
-    
     func showDemoWindowWidgets_Basic() -> GuiNode {
         Tree("Basic") {
             
@@ -418,7 +342,90 @@ extension ViewController: SGRendererDelegate {
             showDemoWindowWidgets_Color()
         }
     }
+      
+    func mainView() -> GuiNode {
+        
+        Window("SwiftGUI Demo", flags: .menuBar) {
             
+            MenuBar {
+                MenuGroup("Theme") {
+                    MenuItem("Darcula") {
+                     
+                        DarculaTheme().apply()
+                    }
+                    
+                    MenuItem("Light") {
+                        
+                        LightTheme().apply()
+                    }
+                }
+            }
+            
+            Image(imageId: logo, size: SGSize(width: 250, height: 65))
+            
+            CollapsingHeader("Help") {
+                showProgrammerGuide()
+                Separator()
+                showUserGuide()
+            }
+            
+            CollapsingHeader("Configuration") {
+                Tree("Configuration##2") {
+                    CheckBox("io.ConfigFlags: NavEnableKeyboard", selectedState: false)
+
+                    CheckBox("io.ConfigFlags: NavEnableGamepad", selectedState: false)
+                    helpMarker("Required back-end to feed in gamepad inputs in io.NavInputs[] and set io.BackendFlags |= ImGuiBackendFlags_HasGamepad.\n\nRead instructions in imgui.cpp for details.")
+
+                    CheckBox("io.ConfigFlags: NavEnableSetMousePos", selectedState: false)
+                    helpMarker("Instruct navigation to move the mouse cursor. See comment for ImGuiConfigFlags_NavEnableSetMousePos.")
+                    
+                    CheckBox("io.ConfigFlags: NoMouse", selectedState: false)
+                    CheckBox("io.ConfigFlags: NoMouseCursorChange", selectedState: false)
+                    helpMarker("Instruct back-end to not alter mouse cursor shape and visibility.")
+                }
+
+                Tree("Style") {
+                    ShowStyleEditorDebug()
+                }
+
+                Tree("Capture/Logging") {
+                    TextWrapped("The logging API redirects all text output so you can easily capture the content of a window or a block. Tree nodes can be automatically expanded.")
+                    helpMarker("Try opening any of the contents below in this window and then click one of the \"Log To\" button.", atSameLine: false)
+                    
+                    LogButtons()
+                    
+                    TextWrapped("You can also call ImGui::LogText() to output directly to the log without a visual output.")
+                    Button("Copy \"Hello, world!\" to clipboard")
+                }
+
+                Tree("Window options") {
+                    
+                    HStack {
+                        CheckBox("No titlebar", selectedState: false)
+                        CheckBox("No scrollbar", selectedState: false)
+                        CheckBox("No menu", selectedState: false)
+                        CheckBox("No move", selectedState: false)
+                        CheckBox("No resize", selectedState: false)
+                    }
+                }
+            }
+            
+            CollapsingHeader("Font") {
+                
+                Text("FiraCode font 14").font(DefaultFontGroup.Types.FiraCode_14)
+                Text("FiraCode font 18").font(DefaultFontGroup.Types.FiraCode_18)
+                Text("FiraCode font 22").font(DefaultFontGroup.Types.FiraCode_22)
+                
+                Text("DroidSans font 14").font(DefaultFontGroup.Types.DroidSans_14)
+                Text("DroidSans font 18").font(DefaultFontGroup.Types.DroidSans_18)
+                Text("DroidSans font 22").font(DefaultFontGroup.Types.DroidSans_22)
+            }
+
+            showDemoWindowWidgets()
+        }
+        .position(.zero, condition: .appearing)
+    }
+    
     func draw() {
         mainView().render()
     }
