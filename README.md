@@ -15,7 +15,7 @@ Window("SwiftGUI") {
     Text("Hello world!")
     
     HStack {
-        RadioButtonGroup(["radio a", "radio b","radio c"],
+        RadioButtonGroup(["radio a", "radio b", "radio c"],
                          selectedState: radioState) {
             self.radioState = $0
         }
