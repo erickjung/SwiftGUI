@@ -68,6 +68,29 @@ public extension GuiNode {
         })
         return self
     }
+
+    func font(_ type: Int) -> GuiNode {
+
+        if let io = igGetIO() {
+
+            if let fonts = io.pointee.Fonts,
+            type < fonts.pointee.Fonts.Size {
+                
+                let font = fonts.pointee.Fonts.Data[type]
+                self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
+                    
+                    igPushFont(font)
+                })
+                
+                self.insertPosAttribute(GuiNode(tag: #function).onRender { _ in
+                    
+                    igPopFont()
+                })
+            }
+        }
+        
+        return self
+    }
     
     func padding(_ edge: GUIEdge = .all,
                  value: Float) -> GuiNode {

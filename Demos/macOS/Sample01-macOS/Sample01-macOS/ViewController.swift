@@ -86,6 +86,8 @@ class ViewController: NSViewController {
 extension ViewController: SGRendererDelegate {
 
     func setup() {
+        
+        DefaultFont().load()
         DarculaTheme().apply()
     }
 
@@ -194,6 +196,17 @@ extension ViewController: SGRendererDelegate {
                 }
             }
             
+            CollapsingHeader("Font") {
+                
+                Text("FiraCode font 14").font(DefaultFont.Types.FiraCode_14)
+                Text("FiraCode font 18").font(DefaultFont.Types.FiraCode_18)
+                Text("FiraCode font 22").font(DefaultFont.Types.FiraCode_22)
+                
+                Text("DroidSans font 14").font(DefaultFont.Types.DroidSans_14)
+                Text("DroidSans font 18").font(DefaultFont.Types.DroidSans_18)
+                Text("DroidSans font 22").font(DefaultFont.Types.DroidSans_22)
+            }
+
             showDemoWindowWidgets()
         }
         .position(.zero, condition: .appearing)
