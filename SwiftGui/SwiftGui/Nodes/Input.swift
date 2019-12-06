@@ -35,6 +35,27 @@ public func InputText(_ title: String = "",
     }
 }
 
+public func InputTextMultiline(id: String,
+                               textState: String,
+                               size: SGSize = .zero,
+                               flags: ImGuiInputTextFlags = .none,
+                               onChange: ((String) -> Void)? = nil) -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+        
+        var _value = textState.cChars(with: textState.count + 2048)
+        if igInputTextMultiline(id.cStr(), &_value, _value.count, size.convertToVec2(), flags.rawValue, { (data) -> Int32 in
+
+            return 0
+
+        }, nil) {
+
+            onChange?(String(cString: _value))
+        }
+    }
+}
+
+
 public func InputFloat(_ title: String,
                        valueState: Float,
                        step: Float = 0,

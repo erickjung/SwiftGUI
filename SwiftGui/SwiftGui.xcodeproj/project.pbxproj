@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B603BBDA238E038A0059D1AD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603BBD9238E038A0059D1AD /* TabBar.swift */; };
+		B603BBDE238E20500059D1AD /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603BBDD238E20500059D1AD /* Dock.swift */; };
 		B61C76012373802C008DB346 /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76002373802C008DB346 /* Perform.swift */; };
 		B61C76132374532A008DB346 /* GuiNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76122374532A008DB346 /* GuiNode+Extensions.swift */; };
 		B625A1A42375BDE60077717D /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625A1A32375BDE60077717D /* Popup.swift */; };
@@ -43,7 +45,6 @@
 		B6F9347C2379473B00F4129B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347B2379473B00F4129B /* Theme.swift */; };
 		B6F9347F237948BB00F4129B /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347E237948BB00F4129B /* LightTheme.swift */; };
 		B6F934892379959200F4129B /* DarculaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F934882379959200F4129B /* DarculaTheme.swift */; };
-		B6F9348D237A10C100F4129B /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6F9348C237A10C100F4129B /* DroidSans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B603BBD9238E038A0059D1AD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B603BBDD238E20500059D1AD /* Dock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dock.swift; sourceTree = "<group>"; };
 		B61C76002373802C008DB346 /* Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perform.swift; sourceTree = "<group>"; };
 		B61C76122374532A008DB346 /* GuiNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GuiNode+Extensions.swift"; sourceTree = "<group>"; };
 		B625A1A32375BDE60077717D /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
@@ -104,7 +107,6 @@
 		B6F9347B2379473B00F4129B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B6F9347E237948BB00F4129B /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		B6F934882379959200F4129B /* DarculaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarculaTheme.swift; sourceTree = "<group>"; };
-		B6F9348C237A10C100F4129B /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				B67E1C62236BB23C00216EA2 /* ComboBox.swift */,
 				B67E1C5F236BB23C00216EA2 /* Common.swift */,
 				B67E1C67236BB23C00216EA2 /* Debug.swift */,
+				B603BBDD238E20500059D1AD /* Dock.swift */,
 				B67E1C5E236BB23C00216EA2 /* Drag.swift */,
 				B6DF8B59237AB53300374675 /* Image.swift */,
 				B67E1C64236BB23C00216EA2 /* Input.swift */,
@@ -182,6 +185,7 @@
 				B625A1A32375BDE60077717D /* Popup.swift */,
 				B67E1C63236BB23C00216EA2 /* RadioButton.swift */,
 				B67E1C66236BB23C00216EA2 /* Slider.swift */,
+				B603BBD9238E038A0059D1AD /* TabBar.swift */,
 				B67E1C6A236BB23C00216EA2 /* Text.swift */,
 				B67E1C5C236BB23C00216EA2 /* Tooltip.swift */,
 				B67E1C65236BB23C00216EA2 /* Tree.swift */,
@@ -244,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				B6A158D2237C288100E3F016 /* FiraCodeRegular.ttf */,
-				B6F9348C237A10C100F4129B /* DroidSans.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -321,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A158D3237C288100E3F016 /* FiraCodeRegular.ttf in Resources */,
-				B6F9348D237A10C100F4129B /* DroidSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +352,7 @@
 				B67E1C81236BB23C00216EA2 /* Button.swift in Sources */,
 				B625A1A42375BDE60077717D /* Popup.swift in Sources */,
 				B6F934892379959200F4129B /* DarculaTheme.swift in Sources */,
+				B603BBDE238E20500059D1AD /* Dock.swift in Sources */,
 				B67E1C72236BB23C00216EA2 /* Tooltip.swift in Sources */,
 				B67E1C75236BB23C00216EA2 /* Common.swift in Sources */,
 				B6DF8B5A237AB53300374675 /* Image.swift in Sources */,
@@ -362,6 +365,7 @@
 				B67E1C7B236BB23C00216EA2 /* Tree.swift in Sources */,
 				B67E1C77236BB23C00216EA2 /* Window.swift in Sources */,
 				B67E1C78236BB23C00216EA2 /* ComboBox.swift in Sources */,
+				B603BBDA238E038A0059D1AD /* TabBar.swift in Sources */,
 				B6F9347F237948BB00F4129B /* LightTheme.swift in Sources */,
 				B67E1C7C236BB23C00216EA2 /* Slider.swift in Sources */,
 			);
@@ -511,7 +515,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -542,7 +546,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

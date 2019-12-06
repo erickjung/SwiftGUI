@@ -13,7 +13,7 @@
 
 -(nonnull instancetype)initWithView:(nonnull MTKView *)view;
 
--(void)initializePlatform;
+-(void)initializePlatform:(BOOL)withDock;
 -(void)shutdownPlatform;
 -(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view;
 

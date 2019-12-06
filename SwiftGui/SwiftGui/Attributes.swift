@@ -8,6 +8,46 @@
 
 import SwiftGUI_Core
 
+public struct ImGuiConfigFlags: OptionSet {
+
+    public let rawValue: Int32
+
+    public init(rawValue: Int32) {
+        self.rawValue = rawValue
+    }
+
+    public static let none                    = ImGuiConfigFlags(rawValue: 0)
+    public static let navEnableKeyboard       = ImGuiConfigFlags(rawValue: 1 << 0)
+    public static let navEnableGamepad        = ImGuiConfigFlags(rawValue: 1 << 1)
+    public static let navEnableSetMousePos    = ImGuiConfigFlags(rawValue: 1 << 2)
+    public static let navNoCaptureKeyboard    = ImGuiConfigFlags(rawValue: 1 << 3)
+    public static let noMouse                 = ImGuiConfigFlags(rawValue: 1 << 4)
+    public static let noMouseCursorChange     = ImGuiConfigFlags(rawValue: 1 << 5)
+    public static let dockingEnable           = ImGuiConfigFlags(rawValue: 1 << 6)
+    public static let viewportsEnable         = ImGuiConfigFlags(rawValue: 1 << 10)
+    public static let dpiEnableScaleViewports = ImGuiConfigFlags(rawValue: 1 << 14)
+    public static let dpiEnableScaleFonts     = ImGuiConfigFlags(rawValue: 1 << 15)
+    public static let isSRGB                  = ImGuiConfigFlags(rawValue: 1 << 20)
+    public static let isTouchScreen           = ImGuiConfigFlags(rawValue: 1 << 21)
+}
+
+
+public struct ImGuiDockNodeFlags: OptionSet {
+
+    public let rawValue: Int32
+
+    public init(rawValue: Int32) {
+        self.rawValue = rawValue
+    }
+
+    public static let none                   = ImGuiDockNodeFlags(rawValue: 0)
+    public static let keepAliveOnly          = ImGuiDockNodeFlags(rawValue: 1 << 0)
+    public static let noDockingInCentralNode = ImGuiDockNodeFlags(rawValue: 1 << 2)
+    public static let passthruCentralNode    = ImGuiDockNodeFlags(rawValue: 1 << 3)
+    public static let noSplit                = ImGuiDockNodeFlags(rawValue: 1 << 4)
+    public static let noResize               = ImGuiDockNodeFlags(rawValue: 1 << 5)
+    public static let autoHideTabBar         = ImGuiDockNodeFlags(rawValue: 1 << 6)
+}
 
 public struct ImGuiWindowFlags: OptionSet {
 
@@ -109,6 +149,58 @@ public struct ImGuiTreeNodeFlags: OptionSet {
     public static let spanFullWidth        = ImGuiTreeNodeFlags(rawValue: 1 << 12)  // Extend hit box to the left-most and right-most edges (bypass the indented area).
     public static let navLeftJumpsBackHere = ImGuiTreeNodeFlags(rawValue: 1 << 13)  // (WIP) Nav: left direction may move to this TreeNode() from any of its child (items submitted between TreeNode and TreePop)
 //    public static let CollapsingHeader     = public static let Framed | public static let NoTreePushOnOpen | public static let NoAutoOpenOnLog
+}
+
+public struct ImGuiTabBarFlags: OptionSet {
+
+    public let rawValue: Int32
+
+    public init(rawValue: Int32) {
+        self.rawValue = rawValue
+    }
+
+    public static let none                         = ImGuiTabBarFlags(rawValue: 0)
+    public static let reorderable                  = ImGuiTabBarFlags(rawValue: 1 << 0)
+    public static let autoSelectNewTabs            = ImGuiTabBarFlags(rawValue: 1 << 1)
+    public static let tabListPopupButton           = ImGuiTabBarFlags(rawValue: 1 << 2)
+    public static let noCloseWithMiddleMouseButton = ImGuiTabBarFlags(rawValue: 1 << 3)
+    public static let noTabListScrollingButtons    = ImGuiTabBarFlags(rawValue: 1 << 4)
+    public static let noTooltip                    = ImGuiTabBarFlags(rawValue: 1 << 5)
+    public static let fittingPolicyResizeDown      = ImGuiTabBarFlags(rawValue: 1 << 6)
+    public static let fittingPolicyScroll          = ImGuiTabBarFlags(rawValue: 1 << 7)
+//    public static let fittingPolicyMask
+//    public static let fittingPolicyDefault
+}
+
+public struct ImGuiTabItemFlags: OptionSet {
+
+    public let rawValue: Int32
+
+    public init(rawValue: Int32) {
+        self.rawValue = rawValue
+    }
+
+    public static let none                         = ImGuiTabItemFlags(rawValue: 0)
+    public static let unsavedDocument              = ImGuiTabItemFlags(rawValue: 1 << 0)
+    public static let setSelected                  = ImGuiTabItemFlags(rawValue: 1 << 1)
+    public static let noCloseWithMiddleMouseButton = ImGuiTabItemFlags(rawValue: 1 << 2)
+    public static let noPushId                     = ImGuiTabItemFlags(rawValue: 1 << 3)
+}
+
+public struct ImGuiSelectableFlags: OptionSet {
+
+    public let rawValue: Int32
+
+    public init(rawValue: Int32) {
+        self.rawValue = rawValue
+    }
+
+    public static let none             = ImGuiSelectableFlags(rawValue: 0)
+    public static let dontClosePopups  = ImGuiSelectableFlags(rawValue: 1 << 0)
+    public static let spanAllColumns   = ImGuiSelectableFlags(rawValue: 1 << 1)
+    public static let allowDoubleClick = ImGuiSelectableFlags(rawValue: 1 << 2)
+    public static let disabled         = ImGuiSelectableFlags(rawValue: 1 << 3)
+    public static let allowItemOverlap = ImGuiSelectableFlags(rawValue: 1 << 4)
 }
 
 public enum ImGuiCol: Int32 {
