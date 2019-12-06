@@ -12,13 +12,10 @@ public class DefaultFontGroup: FontGroup {
     
     public enum Types {
         
-        public static let FiraCode_14 = 0 // default
-        public static let FiraCode_18 = 1
-        public static let FiraCode_22 = 2
-
-        public static let DroidSans_14 = 3
-        public static let DroidSans_18 = 4
-        public static let DroidSans_22 = 5
+        public static let FiraCode_12 = 0 // default
+        public static let FiraCode_14 = 1
+        public static let FiraCode_18 = 2
+        public static let FiraCode_22 = 3
     }
     
     public var fonts: [[String: [Float]]]? {
@@ -28,12 +25,7 @@ public class DefaultFontGroup: FontGroup {
         
         if let path = bundle.path(forResource: "FiraCodeRegular", ofType: "ttf") {
             
-            fontList.append([path: [14, 18, 22]])
-        }
-            
-        if let path = bundle.path(forResource: "DroidSans", ofType: "ttf") {
-
-            fontList.append([path: [14, 18, 22]])
+            fontList.append([path: [12, 14, 18, 22]])
         }
 
         return fontList.count > 0 ? fontList : nil

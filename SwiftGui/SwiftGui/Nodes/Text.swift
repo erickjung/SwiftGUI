@@ -17,6 +17,14 @@ public func Text(_ title: String, _ args: CVarArg...) -> GuiNode {
     }
 }
 
+public func TextUnformatted(_ text: String) -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+        
+        igTextUnformatted(text.cStr(), nil)
+    }
+}
+
 public func TextDisabled(_ title: String, _ args: CVarArg...) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in

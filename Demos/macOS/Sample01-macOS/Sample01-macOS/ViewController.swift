@@ -47,7 +47,7 @@ class ViewController: NSViewController {
             return event
         }
         
-        self.renderer?.initializePlatform()
+        self.renderer?.initializePlatform(false)
         
         self.loadResources()
     }
@@ -415,10 +415,6 @@ extension ViewController: SGRendererDelegate {
                 Text("FiraCode font 14").font(DefaultFontGroup.Types.FiraCode_14)
                 Text("FiraCode font 18").font(DefaultFontGroup.Types.FiraCode_18)
                 Text("FiraCode font 22").font(DefaultFontGroup.Types.FiraCode_22)
-                
-                Text("DroidSans font 14").font(DefaultFontGroup.Types.DroidSans_14)
-                Text("DroidSans font 18").font(DefaultFontGroup.Types.DroidSans_18)
-                Text("DroidSans font 22").font(DefaultFontGroup.Types.DroidSans_22)
             }
 
             showDemoWindowWidgets()

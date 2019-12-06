@@ -25,7 +25,7 @@ class ViewController: MTKViewController {
         super.viewDidLoad()
         
         self.renderer?.delegate = self
-        self.renderer?.initializePlatform()
+        self.renderer?.initializePlatform(false)
     }
     
     override var representedObject: Any? {

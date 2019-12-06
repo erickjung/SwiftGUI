@@ -63,3 +63,18 @@ public func Bullet() -> GuiNode {
         igBullet()
     }
 }
+
+public func Selectable(_ title: String,
+                       selectedState: Bool,
+                       size: SGSize = .zero,
+                       flags: ImGuiSelectableFlags = .none,
+                       onChange: ((Bool) -> Void)? = nil) -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+
+        var _value = selectedState
+        if igSelectableBoolPtr(title.cStr(), &_value, flags.rawValue, size.convertToVec2()) {
+            onChange?(_value)
+        }
+    }
+}

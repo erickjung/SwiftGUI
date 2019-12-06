@@ -75,12 +75,12 @@ public func Separator() -> GuiNode {
     }
 }
 
-public func SameLine(offsetX: Float = 0.0,
+public func SameLine(offsetX: SGPoint = .zero,
                      spacing: Float = -1.0) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
 
-        igSameLine(offsetX, spacing)
+        igSameLine(Float(offsetX.x), spacing)
     }
 }
 
@@ -108,5 +108,42 @@ public func Indent(indentW: Float = 0,
         igIndent(indentW)
         child?.render()
         igUnindent(indentW)
+    }
+}
+
+// temp
+public func Column(id: String? = nil,
+                   count: Int = 1,
+                   border: Bool = true) -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+        
+        igColumns(Int32(count), id?.cStr(), border)
+    }
+}
+
+public func ColumnWidth(index: Int,
+                        width: Float) -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+        
+        igSetColumnWidth(Int32(index), width)
+    }
+}
+
+public func ColumnOffset(index: Int,
+                         offset: Float) -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+        
+        igSetColumnOffset(Int32(index), offset)
+    }
+}
+
+public func ColumnNext() -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+        
+        igNextColumn()
     }
 }

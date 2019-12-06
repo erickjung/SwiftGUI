@@ -93,7 +93,7 @@
 - (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size {
 }
 
--(void)initializePlatform {
+-(void)initializePlatform:(BOOL)withDock {
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(setup)]) {
 
@@ -103,6 +103,11 @@
     ImGui_ImplMetal_Init(_device);
 
     ImGui_ImplOSX_Init();
+    
+    if (withDock) {
+        ImGuiIO& io = ImGui::GetIO();
+        io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    }
 }
 
 -(void)shutdownPlatform {
