@@ -9,11 +9,18 @@
 import Foundation
 import SwiftGUI_Core
 
-public func TextEditor(_ title: String) -> GuiNode {
+public func TextEditor(_ title: String,
+                       onChange: ((String) -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
         
         TextEditorWrapper.render(title)
+        
+        if let onChange = onChange,
+            TextEditorWrapper.isTextChanged() {
+            
+            onChange(TextEditorWrapper.getText())
+        }
     }
 }
 
