@@ -36,7 +36,7 @@ Window("SwiftGUI") {
 To integrate `SwiftGUI` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "erickjung/SwiftGUI" "0.4.0"
+github "erickjung/SwiftGUI" "0.5.0"
 ```
 
 For `OSX` project, run:
@@ -64,6 +64,7 @@ carthage update --platform iOS
     - Color Selection
     - ComboBox
     - Drag
+    - Dock
     - Image
     - InputFields
     - Lists
@@ -71,8 +72,11 @@ carthage update --platform iOS
     - Plotting
     - Popup
     - RadioButton
+    - SelectableFields
     - Sliders
+    - TabBar
     - Texts
+    - Text Editor (Code editor)
     - Tooltips
     - Tree
     - Window
@@ -102,11 +106,14 @@ carthage update --platform iOS
 
 ![screenshot01](Docs/sample01-osx.gif)
 
+![screenshot02_code_editor](Docs/sample02-osx_code_editor.png)
+
 ### Sample 02 (OSX) - Simple TODO application
 
 ![screenshot02](Docs/sample02-osx.gif)
 
 ### Screenshot 01 (iOS)
+
 ![screenshotios](Docs/sample01-ios.jpg)
 
 ## License
@@ -114,6 +121,8 @@ carthage update --platform iOS
  * MIT
 
 ## Uses 
+
 * [Dear ImGui](https://github.com/ocornut/imgui) (1.74)
 * [cimgui](https://github.com/cimgui/cimgui)
+* [ImGuiColorTextEdit](https://github.com/BalazsJako/ImGuiColorTextEdit)
 

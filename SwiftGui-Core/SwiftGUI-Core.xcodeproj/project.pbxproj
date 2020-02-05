@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6DF966023EAF2CF00662401 /* TextEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6DF965B23EAF2CF00662401 /* TextEditor.cpp */; };
+		B6DF966423EAF2CF00662401 /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B6DF965F23EAF2CF00662401 /* TextEditor.h */; };
+		B6DF966723EAF4DE00662401 /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6DF966523EAF4DE00662401 /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6DF966823EAF4DE00662401 /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6DF966623EAF4DE00662401 /* TextEditorWrapper.mm */; };
 		B6F49E872371CF1B00A6D48C /* SwiftGUI_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F49E852371CF1B00A6D48C /* SwiftGUI_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6F49EAB2371D74500A6D48C /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F49E9E2371D74400A6D48C /* imgui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6F49EAC2371D74500A6D48C /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F49E9F2371D74400A6D48C /* imstb_textedit.h */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6DF965B23EAF2CF00662401 /* TextEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextEditor.cpp; sourceTree = "<group>"; };
+		B6DF965F23EAF2CF00662401 /* TextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditor.h; sourceTree = "<group>"; };
+		B6DF966523EAF4DE00662401 /* TextEditorWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextEditorWrapper.h; sourceTree = "<group>"; };
+		B6DF966623EAF4DE00662401 /* TextEditorWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TextEditorWrapper.mm; sourceTree = "<group>"; };
 		B6F49E822371CF1B00A6D48C /* SwiftGUI_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGUI_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F49E852371CF1B00A6D48C /* SwiftGUI_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGUI_Core.h; sourceTree = "<group>"; };
 		B6F49E862371CF1B00A6D48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +59,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6DF965923EAF2CF00662401 /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				B6DF965A23EAF2CF00662401 /* ImGuiColorTextEdit */,
+			);
+			path = thirdparty;
+			sourceTree = "<group>";
+		};
+		B6DF965A23EAF2CF00662401 /* ImGuiColorTextEdit */ = {
+			isa = PBXGroup;
+			children = (
+				B6DF965B23EAF2CF00662401 /* TextEditor.cpp */,
+				B6DF965F23EAF2CF00662401 /* TextEditor.h */,
+				B6DF966523EAF4DE00662401 /* TextEditorWrapper.h */,
+				B6DF966623EAF4DE00662401 /* TextEditorWrapper.mm */,
+			);
+			path = ImGuiColorTextEdit;
+			sourceTree = "<group>";
+		};
 		B6F49E782371CF1B00A6D48C = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +97,7 @@
 		B6F49E842371CF1B00A6D48C /* SwiftGUI-Core */ = {
 			isa = PBXGroup;
 			children = (
+				B6DF965923EAF2CF00662401 /* thirdparty */,
 				B6F49EA82371D74400A6D48C /* cimgui */,
 				B6F49E9D2371D74400A6D48C /* imgui */,
 				B6F49E852371CF1B00A6D48C /* SwiftGUI_Core.h */,
@@ -113,10 +141,12 @@
 			files = (
 				B6F49EAD2371D74500A6D48C /* imconfig.h in Headers */,
 				B6F49EAF2371D74500A6D48C /* imstb_truetype.h in Headers */,
+				B6DF966723EAF4DE00662401 /* TextEditorWrapper.h in Headers */,
 				B6F49EAB2371D74500A6D48C /* imgui.h in Headers */,
 				B6F49EB62371D74500A6D48C /* cimgui.h in Headers */,
 				B6F49EB22371D74500A6D48C /* imstb_rectpack.h in Headers */,
 				B6F49EAC2371D74500A6D48C /* imstb_textedit.h in Headers */,
+				B6DF966423EAF2CF00662401 /* TextEditor.h in Headers */,
 				B6F49E872371CF1B00A6D48C /* SwiftGUI_Core.h in Headers */,
 				B6F49EB12371D74500A6D48C /* imgui_internal.h in Headers */,
 			);
@@ -194,7 +224,9 @@
 				B6F49EB02371D74500A6D48C /* imgui.cpp in Sources */,
 				B6F49EB32371D74500A6D48C /* imgui_demo.cpp in Sources */,
 				B6F49EB52371D74500A6D48C /* cimgui.cpp in Sources */,
+				B6DF966823EAF4DE00662401 /* TextEditorWrapper.mm in Sources */,
 				B6F49EB42371D74500A6D48C /* imgui_draw.cpp in Sources */,
+				B6DF966023EAF2CF00662401 /* TextEditor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +353,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -337,7 +369,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erickjung.SwiftGUI-Core";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -351,7 +383,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -367,7 +399,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erickjung.SwiftGUI-Core";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -9,16 +9,6 @@
 import Foundation
 import SwiftGUI_Core
 
-public func PopupOpenCall(_ id: String) {
-
-    igOpenPopup(id.cStr())
-}
-
-public func PopupCloseCall() {
-
-    igCloseCurrentPopup()
-}
-
 public func Popup(id: String,
                   flags: ImGuiWindowFlags = .none,
                   @GuiBuilder child: () -> GuiView?) -> GuiNode {
@@ -33,3 +23,14 @@ public func Popup(id: String,
         }
     }
 }
+
+public func PopupOpenCall(_ id: String) {
+
+    igOpenPopup(id.cStr())
+}
+
+public func PopupCloseCall() {
+
+    igCloseCurrentPopup()
+}
+
