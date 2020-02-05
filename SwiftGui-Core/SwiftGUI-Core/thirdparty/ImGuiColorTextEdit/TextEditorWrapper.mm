@@ -53,6 +53,16 @@ static TextEditor::ErrorMarkers markers;
     return textEditor.IsReadOnly();
 }
 
++ (bool)isTextChanged {
+    
+    return textEditor.IsTextChanged();
+}
+
++ (bool)isCursorPositionChanged {
+    
+    return textEditor.IsCursorPositionChanged();
+}
+
 + (void)setShowWhitespaces:(bool)value {
     
     textEditor.SetShowWhitespaces(value);

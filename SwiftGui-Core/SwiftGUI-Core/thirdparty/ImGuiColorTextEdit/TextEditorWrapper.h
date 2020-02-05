@@ -34,6 +34,8 @@ typedef NS_ENUM(NSUInteger, TextEditorWrapperPallete) {
 + (bool)isOverwrite;
 + (void)setReadOnly:(bool)value;
 + (bool)isReadOnly;
++ (bool)isTextChanged;
++ (bool)isCursorPositionChanged;
 + (void)setShowWhitespaces:(bool)value;
 + (bool)isShowingWhitespaces;
 + (void)setColorizerEnable:(bool)value;
