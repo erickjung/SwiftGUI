@@ -248,6 +248,24 @@ bool ImGui_ImplOSX_HandleEvent(NSEvent* event, NSView* view)
     if (event.type == NSEventTypeKeyDown)
     {
         NSString* str = [event characters];
+        
+        if(io.KeyShift && event.keyCode == 39) {
+            
+           str = [str stringByAppendingString:@"\""];
+        }
+        else if(event.keyCode == 39) {
+            
+           str = [str stringByAppendingString:@"'"];
+        }
+        else if(io.KeyShift && event.keyCode == 50) {
+            
+           str = [str stringByAppendingString:@"~"];
+        }
+        else if(event.keyCode == 50) {
+            
+           str = [str stringByAppendingString:@"`"];
+        }
+
         int len = (int)[str length];
         for (int i = 0; i < len; i++)
         {

@@ -362,7 +362,65 @@ extension ViewController: SGRendererDelegate {
             }
             
             Image(imageId: logo, size: SGSize(width: 250, height: 65))
-            
+
+            CollapsingHeader("Editor", options: .defaultOpen) {
+                
+                Text("Colors: ")
+                
+                HStack {
+                    
+                    Button("default") { TextEditorSetPalleteCall(.dflt) }
+                    Button("retroBlue") { TextEditorSetPalleteCall(.retroBlue) }
+                    Button("light") { TextEditorSetPalleteCall(.light) }
+                    Button("dark") { TextEditorSetPalleteCall(.dark) }
+                }
+                
+                Text("Examples: ")
+                
+                HStack {
+                    
+                    Button("json") {
+                        let code = "{\n  \"id\": \"XP-8YTH-NNP3-WSVN-3C76\",\n  \"name\": \"exampleProfile\",\n  \"temporary\": false,\n  \"flow_config\": {\n    \"landing_page_type\": \"billing\",\n    \"bank_txn_pending_url\": \"https://example.com/flow_config/\"\n  },\n  \"input_fields\": {\n    \"no_shipping\": 1,\n    \"address_override\": 1\n  },\n  \"presentation\": {\n    \"logo_image\": \"https://example.com/logo_image/\"\n  }\n}\n"
+                        TextEditorSetTextCall(code)
+                        TextEditorSetLanguageDefinitionCall(.cpp)
+                    }
+                    
+                    Button("cpp") {
+                        
+                        let code = "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int n, t1 = 0, t2 = 1, nextTerm = 0;\r\n    cout << \"Enter the number of terms: \";\r\n    cin >> n;\r\n    cout << \"Fibonacci Series: \";\r\n    for (int i = 1; i <= n; ++i)\r\n    {\r\n        // Prints the first two terms.\r\n        if(i == 1)\r\n        {\r\n            cout << \" \" << t1;\r\n            continue;\r\n        }\r\n        if(i == 2)\r\n        {\r\n            cout << t2 << \" \";\r\n            continue;\r\n        }\r\n        nextTerm = t1 + t2;\r\n        t1 = t2;\r\n        t2 = nextTerm;\r\n        \r\n        cout << nextTerm << \" \";\r\n    }\r\n    return 0;\r\n}"
+                        TextEditorSetTextCall(code)
+                        TextEditorSetLanguageDefinitionCall(.cpp)
+                    }
+                    
+                    Button("c") {
+                        
+                        let code = "#include <stdio.h> \r\nint fib(int n) \r\n{ \r\n    if (n <= 1) \r\n        return n; \r\n    return fib(n - 1) + fib(n - 2); \r\n} \r\n  \r\nint main() \r\n{ \r\n    int n = 9; \r\n    printf(\"%d\", fib(n)); \r\n    getchar(); \r\n    return 0; \r\n} "
+                        TextEditorSetTextCall(code)
+                        TextEditorSetLanguageDefinitionCall(.c)
+                    }
+                    
+                    Button("lua") {
+                        
+                        let code = "function fibonacci(n)\r\n    if n<3 then\r\n        return 1\r\n    else\r\n        return fibonacci(n-1) + fibonacci(n-2)\r\n    end\r\nend\r\n\r\nfor n = 1, 16 do\r\n    io.write(fibonacci(n), \", \")\r\nend"
+                        TextEditorSetTextCall(code)
+                        TextEditorSetLanguageDefinitionCall(.lua)
+                    }
+                    
+                    Button("insert errors") {
+                        
+                        TextEditorInsertErrorMarkerCall(2, "test error")
+                        TextEditorInsertErrorMarkerCall(10, "test error")
+                    }
+                    
+                    Button("clear errors") {
+                        
+                        TextEditorClearErrorMarkersCall()
+                    }
+                }
+                
+                TextEditor("editor").font(DefaultFontGroup.Types.FiraCode_14)
+            }
+
             CollapsingHeader("Help") {
                 showProgrammerGuide()
                 Separator()

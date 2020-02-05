@@ -14,8 +14,11 @@ public class DefaultFontGroup: FontGroup {
         
         public static let FiraCode_12 = 0 // default
         public static let FiraCode_14 = 1
-        public static let FiraCode_18 = 2
-        public static let FiraCode_22 = 3
+        public static let FiraCode_16 = 2
+        public static let FiraCode_18 = 3
+        public static let FiraCode_20 = 4
+        public static let FiraCode_22 = 5
+        public static let FiraCode_24 = 6
     }
     
     public var fonts: [[String: [Float]]]? {
@@ -25,7 +28,7 @@ public class DefaultFontGroup: FontGroup {
         
         if let path = bundle.path(forResource: "FiraCodeRegular", ofType: "ttf") {
             
-            fontList.append([path: [12, 14, 18, 22]])
+            fontList.append([path: [12, 14, 16, 18, 20, 22, 24]])
         }
 
         return fontList.count > 0 ? fontList : nil
