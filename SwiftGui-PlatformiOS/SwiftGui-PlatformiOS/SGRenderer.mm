@@ -39,8 +39,6 @@
     CGFloat framebufferScale = view.window.screen.scale ?: UIScreen.mainScreen.scale;
     io.DisplayFramebufferScale = ImVec2(framebufferScale, framebufferScale);
 
-    io.DeltaTime = 1 / float(view.preferredFramesPerSecond ?: 60);
-
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
 
     static float clear_color[4] = { 0.5, 0.5, 0.5, 1.0f };
@@ -53,7 +51,7 @@
         // Here, you could do additional rendering work, including other passes as necessary.
 
         id <MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor];
-        [renderEncoder pushDebugGroup:@"ImGui demo"];
+        [renderEncoder pushDebugGroup:@"SwiftGUI"];
 
         // Start the Dear ImGui frame
         ImGui_ImplMetal_NewFrame(renderPassDescriptor);
