@@ -67,6 +67,8 @@ public func ListBuffer<T>(id: String = "##list_buffer",
                     }
                 }
                 
+                ImGuiListClipper_End(clipper)
+                
                 ImGuiListClipper_destroy(clipper)
             }
         }

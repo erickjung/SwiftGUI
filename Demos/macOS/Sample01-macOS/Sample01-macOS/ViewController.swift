@@ -368,7 +368,7 @@ extension ViewController: SGRendererDelegate {
 
             CollapsingHeader("BigList") {
 
-                ListBuffer(buffer: bigList) { index, item in
+                ListBuffer(buffer: bigList, itemHeight: 20) { index, item in
                     
                     Button("\(item)_\(index)")
                 }
