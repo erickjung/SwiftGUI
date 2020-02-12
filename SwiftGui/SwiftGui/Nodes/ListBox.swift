@@ -42,3 +42,35 @@ public func List(id: String = "##list",
         igEndChild()
     }
 }
+
+public func ListBuffer<T>(id: String = "##list_buffer",
+                          buffer: [T],
+                          itemHeight: Float = -1,
+                          size: SGSize = .zero,
+                          border: Bool = false,
+                          flags: ImGuiWindowFlags = .none,
+                          onLoop: @escaping ((Int, T) -> GuiNode?)) -> GuiNode {
+    
+    GuiNode(tag: #function).onRender { _ in
+        
+        if igBeginChild(id.cStr(), size.convertToVec2(), border, flags.rawValue) {
+            
+            if let clipper = ImGuiListClipper_ImGuiListClipper(0, itemHeight) {
+                
+                ImGuiListClipper_Begin(clipper, Int32(buffer.count), itemHeight)
+                
+                while(ImGuiListClipper_Step(clipper)) {
+                    
+                    for i in (clipper.pointee.DisplayStart..<clipper.pointee.DisplayEnd) {
+                      
+                        onLoop(Int(i), buffer[Int(i)])?.render()
+                    }
+                }
+                
+                ImGuiListClipper_destroy(clipper)
+            }
+        }
+        
+        igEndChild()
+    }
+}

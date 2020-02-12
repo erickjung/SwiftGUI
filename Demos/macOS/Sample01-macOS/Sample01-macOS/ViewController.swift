@@ -18,6 +18,7 @@ class ViewController: NSViewController {
     var counterState = 0
     var radioState = 0
     var logo: SGImage?
+    var bigList = [String](repeating: "test", count: 2000)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -149,11 +150,13 @@ extension ViewController: SGRendererDelegate {
                 }
             }
 
-            HStack {
-                ForEach((1...7)) { val in
+            ForEach((1...7)) { val in
+                Group {
+                    
                     Button("Click \(val)")
                         .color(.buttonHovered, color: .brown)
                         .color(.buttonActive, color: .orange)
+                    SameLine()
                 }
             }
             NewLine()
@@ -363,7 +366,15 @@ extension ViewController: SGRendererDelegate {
             
             Image(imageId: logo, size: SGSize(width: 250, height: 65))
 
-            CollapsingHeader("Editor", options: .defaultOpen) {
+            CollapsingHeader("BigList") {
+
+                ListBuffer(buffer: bigList) { index, item in
+                    
+                    Button("\(item)_\(index)")
+                }
+            }
+
+            CollapsingHeader("Editor") {
                 
                 Text("Colors: ")
                 
