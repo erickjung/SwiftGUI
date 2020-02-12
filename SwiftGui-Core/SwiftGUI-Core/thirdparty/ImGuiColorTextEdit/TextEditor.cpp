@@ -855,10 +855,7 @@ void TextEditor::HandleMouseInputs()
 			else if (click)
 			{
 				mState.mCursorPosition = mInteractiveStart = mInteractiveEnd = ScreenPosToCoordinates(ImGui::GetMousePos());
-				if (ctrl)
-					mSelectionMode = SelectionMode::Word;
-				else
-					mSelectionMode = SelectionMode::Normal;
+                mSelectionMode = SelectionMode::Normal;
 				SetSelection(mInteractiveStart, mInteractiveEnd, mSelectionMode);
 
 				mLastClick = (float)ImGui::GetTime();
