@@ -150,7 +150,7 @@ extension ViewController: SGRendererDelegate {
                 }
             }
 
-            ForEach2((1...7)) { val in
+            ForEach((1...7)) { val in
                 Group {
                     
                     Button("Click \(val)")

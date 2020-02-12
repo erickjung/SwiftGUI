@@ -54,19 +54,6 @@ public func HStack(@GuiBuilder child: () -> GuiView?) -> GuiNode {
 }
 
 public func ForEach<T:Sequence>(_ data: T,
-                                @GuiBuilder child: (T.Element) -> GuiView?) -> GuiView {
-
-    var list = [GuiView]()
-    for (index, element) in data.enumerated() {
-        list.append(GuiNode(tag: "ForEach_\(index)", child: child(element)).onRender { child in
-
-            child?.render()
-        })
-    }
-    return GuiMultiNode(children: list)
-}
-
-public func ForEach2<T:Sequence>(_ data: T,
                                  onLoop: @escaping (T.Element) -> GuiNode?) -> GuiView {
     
     GuiNode(tag: #function).onRender { _ in
