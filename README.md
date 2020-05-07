@@ -44,7 +44,7 @@ Window("SwiftGUI") {
     - Color scheme (embedded Darcula and Light)
     - Custom Fonts (embedded FiraCode)
 
-### Widgets
+### Components
     - Buttons
     - CheckBox
     - Color Selection
