@@ -1,36 +1,46 @@
 //
-//  TabBar.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 27/11/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
+/// TabBar node.
+/// - parameter id: Node id
+/// - parameter options: Node options
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func TabBar(id: String,
-                   flags: ImGuiTabBarFlags = .none,
+                   options: GuiTabBarConfig = .none,
                    @GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
-        if igBeginTabBar(id.cStr(), flags.rawValue) {
-            
+
+        if igBeginTabBar(id.cStr(), options.rawValue) {
+
             child?.render()
             igEndTabBar()
         }
     }
 }
 
+/// TabItem node.
+/// - parameter title: Text for node
+/// - parameter options: Node options
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func TabItem(_ title: String,
-                    flags: ImGuiTabItemFlags = .none,
+                    options: GuiTabItemConfig = .none,
                     @GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
-        if igBeginTabItem(title.cStr(), nil, flags.rawValue) {
-            
+
+        if igBeginTabItem(title.cStr(), nil, options.rawValue) {
+
             child?.render()
             igEndTabItem()
         }

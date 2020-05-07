@@ -5,24 +5,9 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:SwiftGui-Core/SwiftGUI-Core.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SwiftGui-PlatformOSX/SwiftGui-PlatformOSX.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SwiftGui-PlatformiOS/SwiftGui-PlatformiOS.xcodeproj">
+      location = "group:SwiftGuiCore/SwiftGuiCore.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SwiftGui/SwiftGui.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Demos/macOS/Sample01-macOS/Sample01-macOS.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Demos/macOS/Sample02-macOS/Sample02-macOS.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Demos/iOS/Sample01-iOS/Sample01-iOS.xcodeproj">
    </FileRef>
 </Workspace>

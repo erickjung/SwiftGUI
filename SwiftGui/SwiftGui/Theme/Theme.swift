@@ -1,23 +1,23 @@
 //
-//  Theme.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 11/11/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 public protocol Theme {
- 
-    var colors: [ImGuiCol: SGColor] { get }
-    
+
+    var colors: [GuiColorProperty: GuiColor] { get }
+
     /// Global alpha applies to everything in ImGui
     var alpha: Float { get }
 
     /// Padding within a window
-    var windowPadding: SGPoint { get }
+    var windowPadding: GuiPoint { get }
 
     /// Radius of window corners rounding. Set to 0.0f to have rectangular windows
     var windowRounding: Float { get }
@@ -26,13 +26,13 @@ public protocol Theme {
     var windowBorderSize: Float { get }
 
     /// Minimum window size
-    var windowMinSize: SGSize { get }
+    var windowMinSize: GuiSize { get }
 
     /// Alignment for title bar text
-    var windowTitleAlign: SGPoint { get }
+    var windowTitleAlign: GuiPoint { get }
 
-    /// Position of the collapsing/docking button in the title bar (left/right). Defaults to ImGuiDir_Left.
-    var windowMenuButtonPosition: ImGuiDir { get }
+    /// Position of the collapsing/docking button in the title bar (left/right). Defaults to GuiDirection Left.
+    var windowMenuButtonPosition: GuiDirection { get }
 
     /// Radius of child window corners rounding. Set to 0.0f to have rectangular child windows
     var childRounding: Float { get }
@@ -45,9 +45,9 @@ public protocol Theme {
 
     /// Thickness of border around popup or tooltip windows. Generally set to 0.0f or 1.0f. Other values not well tested.
     var popupBorderSize: Float { get }
-    
+
     /// Padding within a framed rectangle (used by most widgets)
-    var framePadding: SGPoint { get }
+    var framePadding: GuiPoint { get }
 
     /// Radius of frame corners rounding. Set to 0.0f to have rectangular frames (used by most widgets).
     var frameRounding: Float { get }
@@ -56,13 +56,13 @@ public protocol Theme {
     var frameBorderSize: Float { get }
 
     /// Horizontal and vertical spacing between widgets/lines
-    var itemSpacing: SGPoint { get }
+    var itemSpacing: GuiPoint { get }
 
     /// Horizontal and vertical spacing between within elements of a composed widget (e.g. a slider and its label)
-    var itemInnerSpacing: SGPoint { get }
+    var itemInnerSpacing: GuiPoint { get }
 
     /// Expand reactive bounding box for touch-based system where touch position is not accurate enough. Unfortunately we don't sort widgets so priority on overlap will always be given to the first widget. So don't grow this too much!
-    var touchExtraPadding: SGPoint { get }
+    var touchExtraPadding: GuiPoint { get }
 
     /// Horizontal spacing when e.g. entering a tree node. Generally == (FontSize + FramePadding.x*2).
     var indentSpacing: Float { get }
@@ -88,21 +88,21 @@ public protocol Theme {
     /// Thickness of border around tabs.
     var tabBorderSize: Float { get }
 
-    /// Side of the color button in the ColorEdit4 widget (left/right). Defaults to ImGuiDir_Right.
-    var colorButtonPosition: ImGuiDir { get }
-    
+    /// Side of the color button in the ColorEdit4 widget (left/right). Defaults to GuiDirection Right.
+    var colorButtonPosition: GuiDirection { get }
+
     /// Alignment of button text when button is larger than text.
-    var buttonTextAlign: SGPoint { get }
+    var buttonTextAlign: GuiPoint { get }
 
     /// Alignment of selectable text when button is larger than text.
-    var selectableTextAlign: SGPoint { get }
+    var selectableTextAlign: GuiPoint { get }
 
     /// Window position are clamped to be visible within the display area or monitors by at least this amount. Only applies to regular windows.
-    var displayWindowPadding: SGPoint { get }
+    var displayWindowPadding: GuiPoint { get }
 
     /// If you cannot see the edge of your screen (e.g. on a TV) increase the safe area padding. Covers popups/tooltips as well regular windows.
-    var displaySafeAreaPadding: SGPoint { get }
-    
+    var displaySafeAreaPadding: GuiPoint { get }
+
     /// Scale software rendered mouse cursor (when io.MouseDrawCursor is enabled). May be removed later.
     var mouseCursorScale: Float { get }
 
@@ -117,13 +117,13 @@ public protocol Theme {
 }
 
 extension Theme {
-    
+
     public var alpha: Float {
         return 1
     }
 
-    public var windowPadding: SGPoint {
-        return SGPoint(x: 8, y: 8)
+    public var windowPadding: GuiPoint {
+        return GuiPoint(x: 8, y: 8)
     }
 
     public var windowRounding: Float {
@@ -134,15 +134,15 @@ extension Theme {
         return 1
     }
 
-    public var windowMinSize: SGSize {
-        return SGSize(width: 32, height: 32)
+    public var windowMinSize: GuiSize {
+        return GuiSize(width: 32, height: 32)
     }
 
-    public var windowTitleAlign: SGPoint {
-        return SGPoint(x: 0, y: 0.5)
+    public var windowTitleAlign: GuiPoint {
+        return GuiPoint(x: 0, y: 0.5)
     }
 
-    public var windowMenuButtonPosition: ImGuiDir {
+    public var windowMenuButtonPosition: GuiDirection {
         return .left
     }
 
@@ -161,9 +161,9 @@ extension Theme {
     public var popupBorderSize: Float {
         return 1
     }
-    
-    public var framePadding: SGPoint {
-        return SGPoint(x: 4, y: 3)
+
+    public var framePadding: GuiPoint {
+        return GuiPoint(x: 4, y: 3)
     }
 
     public var frameRounding: Float {
@@ -174,15 +174,15 @@ extension Theme {
         return 0
     }
 
-    public var itemSpacing: SGPoint {
-        return SGPoint(x: 8, y: 4)
+    public var itemSpacing: GuiPoint {
+        return GuiPoint(x: 8, y: 4)
     }
 
-    public var itemInnerSpacing: SGPoint {
-        return SGPoint(x: 4, y: 4)
+    public var itemInnerSpacing: GuiPoint {
+        return GuiPoint(x: 4, y: 4)
     }
 
-    public var touchExtraPadding: SGPoint {
+    public var touchExtraPadding: GuiPoint {
         return .zero
     }
 
@@ -218,26 +218,26 @@ extension Theme {
         return 0
     }
 
-    public var colorButtonPosition: ImGuiDir {
+    public var colorButtonPosition: GuiDirection {
         return .right
     }
 
-    public var buttonTextAlign: SGPoint {
-        return SGPoint(x: 0.5, y: 0.5)
+    public var buttonTextAlign: GuiPoint {
+        return GuiPoint(x: 0.5, y: 0.5)
     }
 
-    public var selectableTextAlign: SGPoint {
+    public var selectableTextAlign: GuiPoint {
         return .zero
     }
 
-    public var displayWindowPadding: SGPoint {
-        return SGPoint(x: 19, y: 19)
+    public var displayWindowPadding: GuiPoint {
+        return GuiPoint(x: 19, y: 19)
     }
 
-    public var displaySafeAreaPadding: SGPoint {
-        return SGPoint(x: 3, y: 3)
+    public var displaySafeAreaPadding: GuiPoint {
+        return GuiPoint(x: 3, y: 3)
     }
-    
+
     public var mouseCursorScale: Float {
         return 1
     }
@@ -253,9 +253,9 @@ extension Theme {
     public var curveTessellationTol: Float {
         return 1.25
     }
-    
+
     public func apply() {
-     
+
         if let style = igGetStyle() {
 
             style.pointee.Alpha = self.alpha
@@ -294,9 +294,9 @@ extension Theme {
             style.pointee.CurveTessellationTol = self.curveTessellationTol
 
             colors.forEach { data in
-                
+
                 switch data.key {
-                    
+
                 case .text: style.pointee.Colors.0 = data.value.convertToVec4()
                 case .textDisabled: style.pointee.Colors.1 = data.value.convertToVec4()
                 case .windowBg: style.pointee.Colors.2 = data.value.convertToVec4()

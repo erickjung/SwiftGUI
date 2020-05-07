@@ -1,62 +1,46 @@
-![SwiftGUI (Dear ImGui + SwiftUI inspired API)](https://raw.githubusercontent.com/erickjung/SwiftGUI/master/swiftgui.png)
+<center>
+
+![SwiftGUI](Docs/swiftgui.png)
 
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![swift version](https://img.shields.io/badge/swift-5.0+-brightgreen.svg)](https://swift.org/download)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-<b>SwiftGUI</b> is an experimental API inspired by <b>SwiftUI</b> declarative code, using Dear ImGui and running on OSX and iOS.
+</center>
+<b>SwiftGUI</b> is an experimental API inspired by <b>SwiftUI</b> DSL, using Dear ImGui as renderer and running on OSX and iOS.
 
-
-![Hello world](Docs/hellow_world.jpg)
+![Hello world](Docs/hellow_world.png)
 
 ```swift
 Window("SwiftGUI") {
 
     Text("Hello world!")
-    
+
     HStack {
-        RadioButtonGroup(["radio a", "radio b", "radio c"],
-                         selectedState: radioState) {
-            self.radioState = $0
-        }
-    }
-    
-    HStack {
-        ForEach(1...7) { val in
+        ForEach(1...2) { val in
             Button("Click \(val)")
+        }
+
+        ForEach(1...2) { val in
+            CheckBox("Check \(val)", selectedState: true)
+        }
+
+        ForEach(1...2) { val in
+            RadioButton("Radio \(val)", activeState: true)
         }
     }
 }
 ```
 
-# Carthage
+## Highlights
 
-[Carthage](https://github.com/Carthage/Carthage) is intended to be the simplest way to add frameworks to your Cocoa application. Builds your dependencies and provides you with binary frameworks, but you retain full control over your project structure and setup. Carthage does not automatically modify your project files or your build settings.
-
-To integrate `SwiftGUI` into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "erickjung/SwiftGUI" "0.6.1"
-```
-
-For `OSX` project, run:
-
-```ogdl
-carthage update --platform macOS
-```
-
-For `iOS` project, run:
-
-```ogdl
-carthage update --platform iOS
-```
-
-
-# Features
+* Easy to use abstraction for Dear ImGui
+* Multi-platform support (iOS 11+ and macOS 10.13+)
+* Huge list of UI components already available
 
 ### Theme support
     - Color scheme (embedded Darcula and Light)
-    - Custom Fonts (embedded FiraCode and DroidSans)
+    - Custom Fonts (embedded FiraCode)
 
 ### Widgets
     - Buttons
@@ -88,39 +72,53 @@ carthage update --platform iOS
         - Perform
 
 
-# Projects
+## Installation
 
-* SwiftGUI-Core: Internal framework abstraction for cimgui
-* SwiftGUI-PlatformiOS: Specific iOS renderer/handler code
-* SwiftGUI-PlatformOSX: Specific OSX renderer/handler code
-* SwiftGUI: The SwiftUI inspired API code
-* Demos: Samples for OSX and iOS
-    * Sample01-OSX: General app to show how widgets works
-    * Sample02-OSX: Simple functional TODO app
-    * Sample01-iOS: General app to show how widgets works
+### Carthage
 
+[Carthage](https://github.com/Carthage/Carthage) is intended to be the simplest way to add frameworks to your Cocoa application. Builds your dependencies and provides you with binary frameworks, but you retain full control over your project structure and setup. Carthage does not automatically modify your project files or your build settings.
 
-# Samples
+To integrate `SwiftGUI` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
-### Sample01 (OSX)
+```ogdl
+github "erickjung/SwiftGUI" "0.7.0"
+```
 
-![screenshot01](Docs/sample01-osx.gif)
+For `OSX` project, run:
 
-![screenshot02_code_editor](Docs/sample02-osx_code_editor.png)
+```ogdl
+carthage update --platform macOS
+```
 
-### Sample 02 (OSX) - Simple TODO application
+For `iOS` project, run:
 
-![screenshot02](Docs/sample02-osx.gif)
+```ogdl
+carthage update --platform iOS
+```
+
+## Samples
+
+### Sample01 (macOS)
+
+![sample01](Docs/sample01-osx.gif)
+
+### Sample 02 (macOS) - Simple TODO application
+
+![sample02](Docs/sample02-osx.gif)
 
 ### Screenshot 01 (iOS)
 
-![screenshotios](Docs/sample01-ios.jpg)
+![sample03](Docs/sample01-ios.jpg)
+
+## Contributing
+
+Read the [Contributing guidelines](CONTRIBUTING.md)
 
 ## License
 
- * MIT
+ [MIT](LICENSE)
 
-## Uses 
+## Using 
 
 * [Dear ImGui](https://github.com/ocornut/imgui) (1.74)
 * [cimgui](https://github.com/cimgui/cimgui)

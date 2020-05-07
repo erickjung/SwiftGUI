@@ -1,26 +1,32 @@
 //
-//  Color.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 24/10/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
-public func ColorEdit3(_ title: String,
-                       color: SGColor,
-                       onChange: ((SGColor) -> Void)? = nil) -> GuiNode {
-    
+/// ColorEdit node.
+/// This is an editable node with 3 floats fields.
+/// - parameter title: Text for node
+/// - parameter colorState: Color state
+/// - parameter onChange: Callback for state changing
+/// - returns: New node
+public func ColorEdit(_ title: String,
+                       colorState: GuiColor,
+                       onChange: ((GuiColor) -> Void)? = nil) -> GuiNode {
+
     GuiNode(tag: #function).onRender { _ in
 
-        var _color = color.convertToFloats()
+        var _color = colorState.convertToFloats()
         if igColorEdit3(title.cStr(), &_color, 0) {
-            
+
             if let onChange = onChange {
 
-                onChange(SGColor(r: _color[0], g: _color[1], b: _color[2], a: 1.0))
+                onChange(GuiColor(r: _color[0], g: _color[1], b: _color[2], a: 1.0))
             }
         }
     }

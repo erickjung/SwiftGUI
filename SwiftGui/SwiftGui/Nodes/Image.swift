@@ -1,25 +1,33 @@
 //
-//  Image.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 12/11/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
-public func Image(imageId: SGImage?,
-                  size: SGSize,
-                  uv0: SGSize = .zero,
-                  uv1: SGSize = SGSize(width: 1, height: 1),
-                  tintColor: SGColor = .white,
-                  borderColor: SGColor = SGColor(r: 0, g: 0, b: 0, a: 0)) -> GuiNode {
-    
-    GuiNode(tag: #function).onRender { child in
-        
+/// Image node.
+/// - parameter imageId: A Texture handler
+/// - parameter size: Image size
+/// - parameter uv0: UV0 size position
+/// - parameter uv1: UV1 size position
+/// - parameter tintColor: Image tint color
+/// - parameter borderColor: Image border color
+/// - returns: New node
+public func Image(imageId: GuiImage?,
+                  size: GuiSize,
+                  uv0: GuiSize = .zero,
+                  uv1: GuiSize = GuiSize(width: 1, height: 1),
+                  tintColor: GuiColor = .white,
+                  borderColor: GuiColor = GuiColor(r: 0, g: 0, b: 0, a: 0)) -> GuiNode {
+
+    GuiNode(tag: #function).onRender { _ in
+
         if let imageId = imageId {
-            
+
             igImage(Unmanaged.passUnretained(imageId).toOpaque(),
                     size.convertToVec2(),
                     uv0.convertToVec2(),
