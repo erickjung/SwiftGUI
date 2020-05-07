@@ -6,10 +6,11 @@
 [![swift version](https://img.shields.io/badge/swift-5.0+-brightgreen.svg)](https://swift.org/download)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-</center>
 <b>SwiftGUI</b> is an experimental API inspired by <b>SwiftUI</b> DSL, using Dear ImGui as renderer and running on OSX and iOS.
 
 ![Hello world](Docs/hellow_world.png)
+
+</center>
 
 ```swift
 Window("SwiftGUI") {
