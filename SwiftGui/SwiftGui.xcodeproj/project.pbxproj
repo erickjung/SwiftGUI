@@ -17,7 +17,6 @@
 		B65195B6246366A300E0EB6A /* SGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195B0246366A300E0EB6A /* SGRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195B7246366A300E0EB6A /* SGRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195B1246366A300E0EB6A /* SGRenderer.mm */; };
 		B65195B8246366A300E0EB6A /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195B2246366A300E0EB6A /* imgui_impl_metal.h */; };
-		B65195BC2463686900E0EB6A /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C58236BB23C00216EA2 /* Attributes.swift */; };
 		B65195BD2463686900E0EB6A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* Builder.swift */; };
 		B65195BE2463686900E0EB6A /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
 		B65195BF2463686900E0EB6A /* GuiNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76122374532A008DB346 /* GuiNode+Extensions.swift */; };
@@ -60,7 +59,6 @@
 		B65195F4246369AD00E0EB6A /* SGRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195F0246369AD00E0EB6A /* SGRenderer.mm */; };
 		B65195F5246369AD00E0EB6A /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195F1246369AD00E0EB6A /* imgui_impl_metal.h */; };
 		B65195F6246369AD00E0EB6A /* SGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195F2246369AD00E0EB6A /* SGRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65195F7246369D600E0EB6A /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C58236BB23C00216EA2 /* Attributes.swift */; };
 		B65195F8246369D600E0EB6A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* Builder.swift */; };
 		B65195F9246369D600E0EB6A /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
 		B65195FA246369D600E0EB6A /* GuiNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76122374532A008DB346 /* GuiNode+Extensions.swift */; };
@@ -122,6 +120,32 @@
 		B651996524640F8700E0EB6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651996324640F8700E0EB6A /* Main.storyboard */; };
 		B651996724640F8800E0EB6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B651996624640F8800E0EB6A /* Assets.xcassets */; };
 		B651996A24640F8800E0EB6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651996824640F8800E0EB6A /* LaunchScreen.storyboard */; };
+		B6519975246412C600E0EB6A /* ConfigFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519974246412C600E0EB6A /* ConfigFlags.swift */; };
+		B6519976246412CB00E0EB6A /* ConfigFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519974246412C600E0EB6A /* ConfigFlags.swift */; };
+		B65199782464132C00E0EB6A /* DockNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199772464132C00E0EB6A /* DockNodeFlags.swift */; };
+		B65199792464132C00E0EB6A /* DockNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199772464132C00E0EB6A /* DockNodeFlags.swift */; };
+		B651997B2464138000E0EB6A /* WindowFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997A2464138000E0EB6A /* WindowFlags.swift */; };
+		B651997C2464138000E0EB6A /* WindowFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997A2464138000E0EB6A /* WindowFlags.swift */; };
+		B651997E246413B900E0EB6A /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997D246413B900E0EB6A /* Cond.swift */; };
+		B651997F246413B900E0EB6A /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997D246413B900E0EB6A /* Cond.swift */; };
+		B6519981246413D500E0EB6A /* InputTextFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519980246413D500E0EB6A /* InputTextFlags.swift */; };
+		B6519982246413D500E0EB6A /* InputTextFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519980246413D500E0EB6A /* InputTextFlags.swift */; };
+		B65199842464141000E0EB6A /* TreeNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199832464141000E0EB6A /* TreeNodeFlags.swift */; };
+		B65199852464141000E0EB6A /* TreeNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199832464141000E0EB6A /* TreeNodeFlags.swift */; };
+		B65199872464143000E0EB6A /* TabBarFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199862464143000E0EB6A /* TabBarFlags.swift */; };
+		B65199882464143000E0EB6A /* TabBarFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199862464143000E0EB6A /* TabBarFlags.swift */; };
+		B651998A2464144800E0EB6A /* TabItemFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199892464144800E0EB6A /* TabItemFlags.swift */; };
+		B651998B2464144800E0EB6A /* TabItemFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199892464144800E0EB6A /* TabItemFlags.swift */; };
+		B651998D2464146500E0EB6A /* SelectableFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998C2464146500E0EB6A /* SelectableFlags.swift */; };
+		B651998E2464146500E0EB6A /* SelectableFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998C2464146500E0EB6A /* SelectableFlags.swift */; };
+		B65199902464148600E0EB6A /* GuiCol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998F2464148600E0EB6A /* GuiCol.swift */; };
+		B65199912464148600E0EB6A /* GuiCol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998F2464148600E0EB6A /* GuiCol.swift */; };
+		B6519993246414A600E0EB6A /* StyleVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519992246414A600E0EB6A /* StyleVar.swift */; };
+		B6519994246414A600E0EB6A /* StyleVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519992246414A600E0EB6A /* StyleVar.swift */; };
+		B6519996246414C600E0EB6A /* Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519995246414C600E0EB6A /* Dir.swift */; };
+		B6519997246414C600E0EB6A /* Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519995246414C600E0EB6A /* Dir.swift */; };
+		B6519999246414DF00E0EB6A /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* Edge.swift */; };
+		B651999A246414DF00E0EB6A /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* Edge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,9 +247,21 @@
 		B651996624640F8800E0EB6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B651996924640F8800E0EB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B651996B24640F8800E0EB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6519974246412C600E0EB6A /* ConfigFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFlags.swift; sourceTree = "<group>"; };
+		B65199772464132C00E0EB6A /* DockNodeFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockNodeFlags.swift; sourceTree = "<group>"; };
+		B651997A2464138000E0EB6A /* WindowFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowFlags.swift; sourceTree = "<group>"; };
+		B651997D246413B900E0EB6A /* Cond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cond.swift; sourceTree = "<group>"; };
+		B6519980246413D500E0EB6A /* InputTextFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFlags.swift; sourceTree = "<group>"; };
+		B65199832464141000E0EB6A /* TreeNodeFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNodeFlags.swift; sourceTree = "<group>"; };
+		B65199862464143000E0EB6A /* TabBarFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlags.swift; sourceTree = "<group>"; };
+		B65199892464144800E0EB6A /* TabItemFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemFlags.swift; sourceTree = "<group>"; };
+		B651998C2464146500E0EB6A /* SelectableFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableFlags.swift; sourceTree = "<group>"; };
+		B651998F2464148600E0EB6A /* GuiCol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiCol.swift; sourceTree = "<group>"; };
+		B6519992246414A600E0EB6A /* StyleVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleVar.swift; sourceTree = "<group>"; };
+		B6519995246414C600E0EB6A /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
+		B6519998246414DF00E0EB6A /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		B67E1C50236BB20400216EA2 /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B67E1C51236BB20400216EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B67E1C58236BB23C00216EA2 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
 		B67E1C5C236BB23C00216EA2 /* Tooltip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		B67E1C5D236BB23C00216EA2 /* ListBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBox.swift; sourceTree = "<group>"; };
@@ -375,6 +411,26 @@
 			path = Sample01iOS;
 			sourceTree = "<group>";
 		};
+		B6519973246412B400E0EB6A /* Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				B6519974246412C600E0EB6A /* ConfigFlags.swift */,
+				B65199772464132C00E0EB6A /* DockNodeFlags.swift */,
+				B651997A2464138000E0EB6A /* WindowFlags.swift */,
+				B651997D246413B900E0EB6A /* Cond.swift */,
+				B6519980246413D500E0EB6A /* InputTextFlags.swift */,
+				B65199832464141000E0EB6A /* TreeNodeFlags.swift */,
+				B65199862464143000E0EB6A /* TabBarFlags.swift */,
+				B65199892464144800E0EB6A /* TabItemFlags.swift */,
+				B651998C2464146500E0EB6A /* SelectableFlags.swift */,
+				B651998F2464148600E0EB6A /* GuiCol.swift */,
+				B6519992246414A600E0EB6A /* StyleVar.swift */,
+				B6519995246414C600E0EB6A /* Dir.swift */,
+				B6519998246414DF00E0EB6A /* Edge.swift */,
+			);
+			path = Attributes;
+			sourceTree = "<group>";
+		};
 		B67E1C43236BB20400216EA2 = {
 			isa = PBXGroup;
 			children = (
@@ -404,7 +460,7 @@
 		B67E1C4F236BB20400216EA2 /* SwiftGui */ = {
 			isa = PBXGroup;
 			children = (
-				B67E1C58236BB23C00216EA2 /* Attributes.swift */,
+				B6519973246412B400E0EB6A /* Attributes */,
 				B67E1C6E236BB23C00216EA2 /* Builder.swift */,
 				B67E1C6F236BB23C00216EA2 /* GuiNode.swift */,
 				B61C76122374532A008DB346 /* GuiNode+Extensions.swift */,
@@ -735,29 +791,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65195BC2463686900E0EB6A /* Attributes.swift in Sources */,
 				B65195BD2463686900E0EB6A /* Builder.swift in Sources */,
 				B65195BE2463686900E0EB6A /* GuiNode.swift in Sources */,
+				B651998D2464146500E0EB6A /* SelectableFlags.swift in Sources */,
 				B65195BF2463686900E0EB6A /* GuiNode+Extensions.swift in Sources */,
+				B651998A2464144800E0EB6A /* TabItemFlags.swift in Sources */,
 				B65195C02463686900E0EB6A /* GuiView.swift in Sources */,
 				B65195C12463686900E0EB6A /* Button.swift in Sources */,
 				B65195C22463686900E0EB6A /* CheckBox.swift in Sources */,
 				B65195C32463686900E0EB6A /* Color.swift in Sources */,
+				B65199902464148600E0EB6A /* GuiCol.swift in Sources */,
+				B6519993246414A600E0EB6A /* StyleVar.swift in Sources */,
 				B65195C42463686900E0EB6A /* Column.swift in Sources */,
 				B65195C52463686900E0EB6A /* ComboBox.swift in Sources */,
 				B65195C62463686900E0EB6A /* Common.swift in Sources */,
 				B65195C72463686900E0EB6A /* Debug.swift in Sources */,
 				B65195C82463686900E0EB6A /* Dock.swift in Sources */,
+				B6519981246413D500E0EB6A /* InputTextFlags.swift in Sources */,
+				B6519975246412C600E0EB6A /* ConfigFlags.swift in Sources */,
+				B65199782464132C00E0EB6A /* DockNodeFlags.swift in Sources */,
 				B65195C92463686900E0EB6A /* Drag.swift in Sources */,
 				B65195CA2463686900E0EB6A /* Image.swift in Sources */,
 				B65195CB2463686900E0EB6A /* Input.swift in Sources */,
+				B651997E246413B900E0EB6A /* Cond.swift in Sources */,
 				B65195CC2463686900E0EB6A /* ListBox.swift in Sources */,
 				B65195CD2463686900E0EB6A /* Menu.swift in Sources */,
+				B6519999246414DF00E0EB6A /* Edge.swift in Sources */,
 				B65195CE2463686900E0EB6A /* Perform.swift in Sources */,
+				B651997B2464138000E0EB6A /* WindowFlags.swift in Sources */,
 				B65195CF2463686900E0EB6A /* Plot.swift in Sources */,
 				B65195D02463686900E0EB6A /* Popup.swift in Sources */,
 				B65195D12463686900E0EB6A /* RadioButton.swift in Sources */,
 				B65195D22463686900E0EB6A /* Slider.swift in Sources */,
+				B65199842464141000E0EB6A /* TreeNodeFlags.swift in Sources */,
 				B65195D32463686900E0EB6A /* TabBar.swift in Sources */,
 				B65195D42463686900E0EB6A /* Text.swift in Sources */,
 				B65195D52463686900E0EB6A /* TextEditor.swift in Sources */,
@@ -766,9 +832,11 @@
 				B65195D82463686900E0EB6A /* Window.swift in Sources */,
 				B65195D92463686900E0EB6A /* FiraCodeRegular.ttf in Sources */,
 				B65195DA2463686900E0EB6A /* SwiftGui.h in Sources */,
+				B65199872464143000E0EB6A /* TabBarFlags.swift in Sources */,
 				B65195DB2463686900E0EB6A /* LightTheme.swift in Sources */,
 				B65195DC2463686900E0EB6A /* DarculaTheme.swift in Sources */,
 				B65195DD2463686900E0EB6A /* DefaultFontGroup.swift in Sources */,
+				B6519996246414C600E0EB6A /* Dir.swift in Sources */,
 				B65195DE2463686900E0EB6A /* FontGroup.swift in Sources */,
 				B65195DF2463686900E0EB6A /* Theme.swift in Sources */,
 				B65195E02463686900E0EB6A /* Extensions.swift in Sources */,
@@ -783,36 +851,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65195F7246369D600E0EB6A /* Attributes.swift in Sources */,
+				B65199792464132C00E0EB6A /* DockNodeFlags.swift in Sources */,
+				B6519994246414A600E0EB6A /* StyleVar.swift in Sources */,
 				B65195F8246369D600E0EB6A /* Builder.swift in Sources */,
 				B65195F9246369D600E0EB6A /* GuiNode.swift in Sources */,
 				B65195FA246369D600E0EB6A /* GuiNode+Extensions.swift in Sources */,
 				B65195FB246369D600E0EB6A /* GuiView.swift in Sources */,
 				B65195FC246369D600E0EB6A /* Button.swift in Sources */,
 				B65195FD246369D600E0EB6A /* CheckBox.swift in Sources */,
+				B651999A246414DF00E0EB6A /* Edge.swift in Sources */,
 				B65195FE246369D600E0EB6A /* Color.swift in Sources */,
 				B65195FF246369D600E0EB6A /* Column.swift in Sources */,
 				B6519600246369D600E0EB6A /* ComboBox.swift in Sources */,
+				B6519982246413D500E0EB6A /* InputTextFlags.swift in Sources */,
 				B6519601246369D600E0EB6A /* Common.swift in Sources */,
 				B6519602246369D600E0EB6A /* Debug.swift in Sources */,
 				B6519603246369D600E0EB6A /* Dock.swift in Sources */,
 				B6519604246369D600E0EB6A /* Drag.swift in Sources */,
+				B651998B2464144800E0EB6A /* TabItemFlags.swift in Sources */,
 				B6519605246369D600E0EB6A /* Image.swift in Sources */,
 				B6519606246369D600E0EB6A /* Input.swift in Sources */,
 				B6519607246369D600E0EB6A /* ListBox.swift in Sources */,
 				B6519608246369D600E0EB6A /* Menu.swift in Sources */,
+				B651998E2464146500E0EB6A /* SelectableFlags.swift in Sources */,
+				B651997C2464138000E0EB6A /* WindowFlags.swift in Sources */,
 				B6519609246369D600E0EB6A /* Perform.swift in Sources */,
+				B65199912464148600E0EB6A /* GuiCol.swift in Sources */,
 				B651960A246369D600E0EB6A /* Plot.swift in Sources */,
+				B6519997246414C600E0EB6A /* Dir.swift in Sources */,
 				B651960B246369D600E0EB6A /* Popup.swift in Sources */,
 				B651960C246369D600E0EB6A /* RadioButton.swift in Sources */,
 				B651960D246369D600E0EB6A /* Slider.swift in Sources */,
 				B651960E246369D600E0EB6A /* TabBar.swift in Sources */,
 				B651960F246369D600E0EB6A /* Text.swift in Sources */,
 				B6519610246369D600E0EB6A /* TextEditor.swift in Sources */,
+				B65199852464141000E0EB6A /* TreeNodeFlags.swift in Sources */,
 				B6519611246369D600E0EB6A /* Tooltip.swift in Sources */,
 				B6519612246369D600E0EB6A /* Tree.swift in Sources */,
+				B6519976246412CB00E0EB6A /* ConfigFlags.swift in Sources */,
 				B6519613246369D600E0EB6A /* Window.swift in Sources */,
 				B6519614246369D600E0EB6A /* FiraCodeRegular.ttf in Sources */,
+				B65199882464143000E0EB6A /* TabBarFlags.swift in Sources */,
 				B6519615246369D600E0EB6A /* SwiftGui.h in Sources */,
 				B6519616246369D600E0EB6A /* LightTheme.swift in Sources */,
 				B6519617246369D600E0EB6A /* DarculaTheme.swift in Sources */,
@@ -821,6 +900,7 @@
 				B651961A246369D600E0EB6A /* Theme.swift in Sources */,
 				B651961B246369D600E0EB6A /* Extensions.swift in Sources */,
 				B651961C246369D600E0EB6A /* OrderedSet.swift in Sources */,
+				B651997F246413B900E0EB6A /* Cond.swift in Sources */,
 				B65195F4246369AD00E0EB6A /* SGRenderer.mm in Sources */,
 				B65195F3246369AD00E0EB6A /* imgui_impl_metal.mm in Sources */,
 			);
