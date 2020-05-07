@@ -23,11 +23,11 @@ public func InputText(_ title: String = "",
                       maxLength: Int = 256,
                       options: GuiInputTextConfig = .none,
                       onChange: ((String) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         var _value = textState.cChars(with: maxLength)
-        
+
         if let placeHolder = placeHolder {
 
             if igInputTextWithHint(title.cStr(), placeHolder, &_value, maxLength, options.rawValue, nil, nil) {
@@ -35,7 +35,7 @@ public func InputText(_ title: String = "",
             }
 
         } else {
-            
+
             if igInputText(title.cStr(), &_value, maxLength, options.rawValue, nil, nil) {
                 onChange?(String(cString: _value))
             }
@@ -55,11 +55,11 @@ public func InputTextMultiline(id: String,
                                size: GuiSize = .zero,
                                options: GuiInputTextConfig = .none,
                                onChange: ((String) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         var _value = textState.cChars(with: textState.count + 2048)
-        if igInputTextMultiline(id.cStr(), &_value, _value.count, size.convertToVec2(), options.rawValue, { (data) -> Int32 in
+        if igInputTextMultiline(id.cStr(), &_value, _value.count, size.convertToVec2(), options.rawValue, { _ in
 
             return 0
 
@@ -87,7 +87,7 @@ public func InputFloat(_ title: String,
                        format: String,
                        options: GuiInputTextConfig = .none,
                        onChange: ((Float) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         var _value = Float32(valueState)
@@ -112,7 +112,7 @@ public func InputInt(_ title: String,
                      stepFast: Int = 100,
                      options: GuiInputTextConfig = .none,
                      onChange: ((Int) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         var _value = Int32(valueState)

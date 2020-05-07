@@ -19,16 +19,16 @@ public struct GuiSelectable: OptionSet {
     }
 
     public static let none             = GuiSelectable(rawValue: 0)
-    
+
     /// Clicking this don't close parent popup window
     public static let dontClosePopups  = GuiSelectable(rawValue: 1 << 0)
-    
+
     /// Selectable frame can span all columns (text will still fit in current column)
     public static let spanAllColumns   = GuiSelectable(rawValue: 1 << 1)
-    
+
     /// Generate press events on double clicks too
     public static let allowDoubleClick = GuiSelectable(rawValue: 1 << 2)
-    
+
     /// Cannot be selected, display greyed out text
     public static let disabled         = GuiSelectable(rawValue: 1 << 3)
     public static let allowItemOverlap = GuiSelectable(rawValue: 1 << 4)

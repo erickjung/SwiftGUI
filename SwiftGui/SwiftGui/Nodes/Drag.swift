@@ -26,14 +26,14 @@ public func Drag(_ title: String,
                  max: Int = 0,
                  format: String = "%d",
                  onChange: ((Int) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         var _value = Int32(valueState)
         if igDragInt(title.cStr(), &_value, speed, Int32(min), Int32(max), format) {
-            
+
             if _value != valueState {
-                
+
                 onChange?(Int(_value))
             }
         }

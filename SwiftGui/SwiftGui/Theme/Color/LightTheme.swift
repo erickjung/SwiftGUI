@@ -9,9 +9,9 @@
 import Foundation
 
 public class LightTheme: Theme {
-    
+
     public var colors: [GuiColorProperty : GuiColor] {
-     
+
         return [
             .text: GuiColor(r: 0, g: 0, b: 0, a: 1),
             .textDisabled: GuiColor(r: 0.6, g: 0.6, b: 0.6, a: 1),
@@ -62,10 +62,10 @@ public class LightTheme: Theme {
             .navHighlight: GuiColor(r: 0.26, g: 0.59, b: 0.98, a: 0.80),
             .navWindowingHighlight: GuiColor(r: 0.7, g: 0.7, b: 0.7, a: 0.7),
             .navWindowingDimBg: GuiColor(r: 0.2, g: 0.2, b: 0.2, a: 0.2),
-            .modalWindowDimBg: GuiColor(r: 0.2, g: 0.2, b: 0.2, a: 0.35),
+            .modalWindowDimBg: GuiColor(r: 0.2, g: 0.2, b: 0.2, a: 0.35)
         ]
     }
-    
+
     public var windowRounding: Float {
         return 5.3
     }
@@ -89,6 +89,6 @@ public class LightTheme: Theme {
     public var itemSpacing: GuiPoint {
         return GuiPoint(x: 8, y: 6.5)
     }
-    
+
     public init() {}
 }

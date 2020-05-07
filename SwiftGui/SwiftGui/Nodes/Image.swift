@@ -23,11 +23,11 @@ public func Image(imageId: GuiImage?,
                   uv1: GuiSize = GuiSize(width: 1, height: 1),
                   tintColor: GuiColor = .white,
                   borderColor: GuiColor = GuiColor(r: 0, g: 0, b: 0, a: 0)) -> GuiNode {
-    
-    GuiNode(tag: #function).onRender { child in
-        
+
+    GuiNode(tag: #function).onRender { _ in
+
         if let imageId = imageId {
-            
+
             igImage(Unmanaged.passUnretained(imageId).toOpaque(),
                     size.convertToVec2(),
                     uv0.convertToVec2(),

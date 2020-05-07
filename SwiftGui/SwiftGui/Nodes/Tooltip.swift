@@ -14,9 +14,9 @@ import SwiftGuiCore
 /// - parameter child: List of child nodes
 /// - returns: New node
 public func Tooltip(@GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
+
         igBeginTooltip()
         child?.render()
         igEndTooltip()

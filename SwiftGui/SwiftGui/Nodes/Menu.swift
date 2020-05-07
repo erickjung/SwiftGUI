@@ -13,11 +13,11 @@ import SwiftGuiCore
 /// - parameter child: List of child nodes
 /// - returns: New node
 public func MenuBar(@GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
+
         if igBeginMenuBar() {
-            
+
             child?.render()
             igEndMenuBar()
         }
@@ -32,11 +32,11 @@ public func MenuBar(@GuiBuilder child: () -> GuiView?) -> GuiNode {
 public func MenuGroup(_ title: String,
                       enabled: Bool = true,
                       @GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
+
         if igBeginMenu(title.cStr(), enabled) {
-            
+
             child?.render()
             igEndMenu()
         }
@@ -55,9 +55,9 @@ public func MenuItem(_ title: String,
                      selected: Bool = false,
                      enabled: Bool = true,
                      onTap: (() -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         if igMenuItemBool(title.cStr(), shortcut, selected, enabled) {
             onTap?()
         }

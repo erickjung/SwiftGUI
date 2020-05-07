@@ -10,9 +10,9 @@ import Foundation
 import SwiftGuiCore
 
 public protocol Theme {
- 
+
     var colors: [GuiColorProperty: GuiColor] { get }
-    
+
     /// Global alpha applies to everything in ImGui
     var alpha: Float { get }
 
@@ -45,7 +45,7 @@ public protocol Theme {
 
     /// Thickness of border around popup or tooltip windows. Generally set to 0.0f or 1.0f. Other values not well tested.
     var popupBorderSize: Float { get }
-    
+
     /// Padding within a framed rectangle (used by most widgets)
     var framePadding: GuiPoint { get }
 
@@ -90,7 +90,7 @@ public protocol Theme {
 
     /// Side of the color button in the ColorEdit4 widget (left/right). Defaults to GuiDirection Right.
     var colorButtonPosition: GuiDirection { get }
-    
+
     /// Alignment of button text when button is larger than text.
     var buttonTextAlign: GuiPoint { get }
 
@@ -102,7 +102,7 @@ public protocol Theme {
 
     /// If you cannot see the edge of your screen (e.g. on a TV) increase the safe area padding. Covers popups/tooltips as well regular windows.
     var displaySafeAreaPadding: GuiPoint { get }
-    
+
     /// Scale software rendered mouse cursor (when io.MouseDrawCursor is enabled). May be removed later.
     var mouseCursorScale: Float { get }
 
@@ -117,7 +117,7 @@ public protocol Theme {
 }
 
 extension Theme {
-    
+
     public var alpha: Float {
         return 1
     }
@@ -161,7 +161,7 @@ extension Theme {
     public var popupBorderSize: Float {
         return 1
     }
-    
+
     public var framePadding: GuiPoint {
         return GuiPoint(x: 4, y: 3)
     }
@@ -237,7 +237,7 @@ extension Theme {
     public var displaySafeAreaPadding: GuiPoint {
         return GuiPoint(x: 3, y: 3)
     }
-    
+
     public var mouseCursorScale: Float {
         return 1
     }
@@ -253,9 +253,9 @@ extension Theme {
     public var curveTessellationTol: Float {
         return 1.25
     }
-    
+
     public func apply() {
-     
+
         if let style = igGetStyle() {
 
             style.pointee.Alpha = self.alpha
@@ -294,9 +294,9 @@ extension Theme {
             style.pointee.CurveTessellationTol = self.curveTessellationTol
 
             colors.forEach { data in
-                
+
                 switch data.key {
-                    
+
                 case .text: style.pointee.Colors.0 = data.value.convertToVec4()
                 case .textDisabled: style.pointee.Colors.1 = data.value.convertToVec4()
                 case .windowBg: style.pointee.Colors.2 = data.value.convertToVec4()

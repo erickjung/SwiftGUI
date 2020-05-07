@@ -14,19 +14,19 @@ import SwiftGui
 class ViewController: MTKViewController {
 
     enum States {
-    
+
         static var inputTask: String = ""
     }
-    
+
     var items = [ "Test todo app": false ]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.renderer?.delegate = self
         self.renderer?.initializePlatform(false)
     }
-    
+
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -36,7 +36,7 @@ class ViewController: MTKViewController {
 
 // data
 extension ViewController {
-    
+
     func insertItem(key: String) {
         self.items[key] = false
     }
@@ -44,7 +44,7 @@ extension ViewController {
     func updateItem(key: String, value: Bool) {
         self.items[key] = value
     }
-    
+
     func removeItem(key: String) {
         self.items.removeValue(forKey: key)
     }
@@ -60,93 +60,93 @@ extension ViewController: SGRendererDelegate {
     func todoInput() -> GuiNode {
 
         Group {
-         
+
             Text("Task Description:")
-            
+
             InputText(textState: States.inputTask, placeHolder: "ex. buy milk") {
                 States.inputTask = $0
             }
             .width(-1)
-            
+
             Button("Create") {
-                
+
                 if States.inputTask.count > 0 {
-                    
+
                     self.insertItem(key: States.inputTask)
                     States.inputTask = ""
                 }
             }
-            
+
             NewLine()
         }
         .padding(.top, value: 10)
     }
-    
+
     func confirmationPopup(name: String) -> GuiNode {
-        
+
         Popup(id: name) {
-            
+
             Text("Remove this task?")
-            
+
             HStack {
-                
+
                 Button("No") {
-                    
+
                     PopupCloseCall()
                 }
-                
+
                 Button("Yes") {
-                    
+
                     self.removeItem(key: name)
                 }
             }
         }
     }
-    
+
     func cell(name: String, value: Bool, color: GuiColor) -> GuiNode {
-        
+
         Group(id: name) {
-            
+
             HStack {
-                
+
                 CheckBox(selectedState: value) {
-                    
+
                     self.updateItem(key: name, value: $0)
                 }
-                
+
                 if !value {
-                
+
                     Text(name)
-                    
+
                 } else {
-                    
+
                     TextDisabled(name)
                 }
             }
-            
+
             Button("remove") {
-                    
+
                 PopupOpenCall(name)
             }
             .color(.button, color: color)
             .color(.text, color: .white)
-            
+
             confirmationPopup(name: name)
-            
+
             Separator()
         }
     }
-    
+
     func todoList() -> GuiNode {
-        
+
         CollapsingHeader("TODO", options: .defaultOpen) {
-         
+
             List(id: "##todo", size: GuiSize(width: 0, height: 150)) {
-                
+
                 ForEach(items) { val in
-                   
+
                     if !val.1 {
-                        
+
                         return self.cell(name: val.0, value: val.1, color: .orange)
                     }
                     return nil
@@ -154,17 +154,17 @@ extension ViewController: SGRendererDelegate {
             }
         }
     }
-    
+
     func doneList() -> GuiNode {
-        
+
         CollapsingHeader("DONE", options: .defaultOpen) {
-         
+
             List(id: "##done") {
-                
+
                 ForEach(items) { val in
-                   
+
                     if val.1 {
-                        
+
                         return self.cell(name: val.0, value: val.1, color: .gray)
                     }
                     return nil
@@ -172,11 +172,11 @@ extension ViewController: SGRendererDelegate {
             }
         }
     }
-    
+
     func mainView() -> GuiNode {
-        
+
         Window("TODO", options: .noTitleBar) {
-            
+
             todoInput()
             todoList()
             doneList()
@@ -187,7 +187,7 @@ extension ViewController: SGRendererDelegate {
         .property(.windowRounding, set: 0)
         .font(DefaultFontGroup.Types.FiraCode_18)
     }
-        
+
     func draw() {
         mainView().render()
     }

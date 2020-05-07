@@ -13,11 +13,11 @@ import Foundation
 /// - parameter onPerform: Callback for arbitrary code execution. Can return a new node.
 /// - returns: New node
 public func Perform(onPerform: (() -> GuiView?)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         if let child = onPerform?() {
-            
+
             child.render()
         }
     }

@@ -13,9 +13,9 @@ import SwiftGuiCore
 /// - parameter title: Text for node
 /// - returns: New node
 public func Text(_ title: String, _ args: CVarArg...) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         igTextV(title.cStr(), withVaList(args, { $0 }))
     }
 }
@@ -25,9 +25,9 @@ public func Text(_ title: String, _ args: CVarArg...) -> GuiNode {
 /// - parameter title: Text for node
 /// - returns: New node
 public func TextDisabled(_ title: String, _ args: CVarArg...) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         igTextDisabledV(title.cStr(), withVaList(args, { $0 }))
     }
 }
@@ -37,9 +37,9 @@ public func TextDisabled(_ title: String, _ args: CVarArg...) -> GuiNode {
 /// - parameter title: Text for node
 /// - returns: New node
 public func TextWrapped(_ title: String, _ args: CVarArg...) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         igTextWrappedV(title.cStr(), withVaList(args, { $0 }))
     }
 }
@@ -51,9 +51,9 @@ public func TextWrapped(_ title: String, _ args: CVarArg...) -> GuiNode {
 /// - returns: New node
 public func LabelText(_ title: String,
                       format: String, _ args: CVarArg...) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         igLabelTextV(title.cStr(), format.cStr(), withVaList(args, { $0 }))
     }
 }
@@ -63,9 +63,9 @@ public func LabelText(_ title: String,
 /// - parameter title: Text for node
 /// - returns: New node
 public func BulletText(_ title: String, _ args: CVarArg...) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         igBulletTextV(title.cStr(), withVaList(args, { $0 }))
     }
 }

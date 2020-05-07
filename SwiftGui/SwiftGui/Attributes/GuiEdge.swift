@@ -9,8 +9,8 @@
 import Foundation
 
 /// A screen edges.
-public enum GuiEdge
-{
+public enum GuiEdge {
+
     case all
     case top
     case leading

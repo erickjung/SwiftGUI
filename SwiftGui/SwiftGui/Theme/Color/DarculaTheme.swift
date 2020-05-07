@@ -9,9 +9,9 @@
 import Foundation
 
 public class DarculaTheme: Theme {
-    
+
     public var colors: [GuiColorProperty : GuiColor] {
-     
+
         return [
             .text: .white,
             .textDisabled: GuiColor(r: 0.54, g: 0.54, b: 0.54, a: 1),
@@ -51,21 +51,15 @@ public class DarculaTheme: Theme {
             .tabActive: GuiColor(r: 0.21, g: 0.34, b: 0.5, a: 1),
             .tabUnfocused: GuiColor(r: 0.06, g: 0.53, b: 0.98, a: 0.8),
             .tabUnfocusedActive: GuiColor(r: 0.06, g: 0.53, b: 0.98, a: 0.4),
-//            .dockingPreview: SGColor(r: 0.14, g: 0.44, b: 0.80, a: 0.78),
-//            .dockingEmptyBg: SGColor(r: 0.2, g: 0.2, b: 0.2, a: 1),
             .plotLines: GuiColor(r: 0.61, g: 0.61, b: 0.61, a: 1),
             .plotLinesHovered: GuiColor(r: 1, g: 0.43, b: 0.35, a: 1),
             .plotHistogram: GuiColor(r: 0.9, g: 0.7, b: 0, a: 1),
             .plotHistogramHovered: GuiColor(r: 1, g: 0.6, b: 0, a: 1),
             .textSelectedBg: GuiColor(r: 0.18, g: 0.39, b: 0.79, a: 0.9),
-//            .dragDropTarget: SGColor(r: 0.26, g: 0.59, b: 0.98, a: 0.95),
-//            .navHighlight: SGColor(r: 0.26, g: 0.59, b: 0.98, a: 0.80),
-//            .navWindowingHighlight: SGColor(r: 0.7, g: 0.7, b: 0.7, a: 0.7),
-//            .navWindowingDimBg: SGColor(r: 0.2, g: 0.2, b: 0.2, a: 0.2),
-            .modalWindowDimBg: GuiColor(r: 0.18, g: 0.39, b: 0.79, a: 1),
+            .modalWindowDimBg: GuiColor(r: 0.18, g: 0.39, b: 0.79, a: 1)
         ]
     }
-    
+
     public var windowRounding: Float {
         return 5.3
     }

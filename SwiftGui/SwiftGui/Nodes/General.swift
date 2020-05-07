@@ -12,7 +12,7 @@ import SwiftGuiCore
 /// Empty node.
 /// - returns: New node
 public func Empty() -> GuiNode {
-    
+
     GuiNode(tag: #function)
 }
 
@@ -22,17 +22,17 @@ public func Empty() -> GuiNode {
 /// - parameter child: List of nodes
 /// - returns: New node
 public func Group(id: String? = nil, @GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
+
         if let id = id {
 
             igPushIDStr(id.cStr())
                 child?.render()
             igPopID()
-            
+
         } else {
-            
+
             child?.render()
         }
     }
@@ -43,22 +43,22 @@ public func Group(id: String? = nil, @GuiBuilder child: () -> GuiView?) -> GuiNo
 /// - parameter child: List of nodes
 /// - returns: New node
 public func HStack(@GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
+
         if let multi = child as? GuiNodeList {
-            
+
             for child in multi.children {
-                
+
                 igBeginGroup()
                 child.render()
                 igEndGroup()
                 igSameLine(0.0, -1.0)
             }
             igNewLine()
-            
+
         } else {
-            
+
             child?.render()
         }
     }
@@ -70,13 +70,13 @@ public func HStack(@GuiBuilder child: () -> GuiView?) -> GuiNode {
 /// - parameter onLoop: Callback for loop execution
 /// - returns: New node
 public func ForEach<T:Sequence>(_ data: T,
-                                 onLoop: @escaping (T.Element) -> GuiNode?) -> GuiNode {
-    
+                                onLoop: @escaping (T.Element) -> GuiNode?) -> GuiNode {
+
     GuiNode(tag: #function).onRender { _ in
 
-        for (_, element) in data.enumerated() {
-            
-            onLoop(element)?.render()
+        data.forEach {
+
+            onLoop($0)?.render()
         }
     }
 }
@@ -84,7 +84,7 @@ public func ForEach<T:Sequence>(_ data: T,
 /// Separator node.
 /// - returns: New node
 public func Separator() -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         igSeparator()
@@ -98,7 +98,7 @@ public func Separator() -> GuiNode {
 /// - returns: New node
 public func SameLine(offsetX: GuiPoint = .zero,
                      spacing: Float = -1.0) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         igSameLine(Float(offsetX.x), spacing)
@@ -108,7 +108,7 @@ public func SameLine(offsetX: GuiPoint = .zero,
 /// NewLine node.
 /// - returns: New node
 public func NewLine() -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         igNewLine()
@@ -118,7 +118,7 @@ public func NewLine() -> GuiNode {
 /// Spacing node.
 /// - returns: New node
 public func Spacing() -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         igSpacing()
@@ -131,9 +131,9 @@ public func Spacing() -> GuiNode {
 /// - returns: New node
 public func Indent(spacing: Float = 0,
                    @GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
+
         igIndent(spacing)
         child?.render()
         igUnindent(spacing)
@@ -148,9 +148,9 @@ public func Indent(spacing: Float = 0,
 public func ProgressBar(_ fraction: Float,
                         size: GuiSize = GuiSize(width: -1, height: 0),
                         overlay: String? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         igProgressBar(fraction, size.convertToVec2(), overlay)
     }
 }

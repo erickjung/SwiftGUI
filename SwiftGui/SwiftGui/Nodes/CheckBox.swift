@@ -19,31 +19,31 @@ public func CheckBox(_ title: String = "",
                      id: String? = nil,
                      selectedState: Bool,
                      onChange: ((Bool) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         var _value = selectedState
-        
+
         if let id = id {
-            
+
             igPushIDStr(id.cStr())
-            
+
             if igCheckbox(title.cStr(), &_value) {
-                
+
                 if _value != selectedState {
-                    
+
                     onChange?(_value)
                 }
             }
-            
+
             igPopID()
 
         } else {
-            
+
             if igCheckbox(title.cStr(), &_value) {
-                
+
                 if _value != selectedState {
-                    
+
                     onChange?(_value)
                 }
             }

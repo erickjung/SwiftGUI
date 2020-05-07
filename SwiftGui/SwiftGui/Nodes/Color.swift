@@ -18,12 +18,12 @@ import SwiftGuiCore
 public func ColorEdit(_ title: String,
                        colorState: GuiColor,
                        onChange: ((GuiColor) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         var _color = colorState.convertToFloats()
         if igColorEdit3(title.cStr(), &_color, 0) {
-            
+
             if let onChange = onChange {
 
                 onChange(GuiColor(r: _color[0], g: _color[1], b: _color[2], a: 1.0))

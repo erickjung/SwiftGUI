@@ -19,14 +19,14 @@ public func ComboBox(_ title: String = "",
                      currentItemState: Int,
                      items: [String],
                      onChange: ((Int) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         var _currentItem = Int32(currentItemState)
         if igCombo(title.cStr(), &_currentItem, items.map { $0.cStr() }, Int32(items.count), -1) {
-            
+
             if _currentItem != currentItemState {
-                
+
                 onChange?(Int(_currentItem))
             }
         }

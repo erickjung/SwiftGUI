@@ -35,13 +35,13 @@ public func Plot(_ title: String = "",
                  maxScale: Float = Float.greatestFiniteMagnitude,
                  size: GuiSize = .zero,
                  stride: Int = MemoryLayout<Float>.size) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         switch type {
-            
+
         case .line:
-            
+
             igPlotLines(title,
                         values.map({ return $0 }),
                         Int32(values.count),

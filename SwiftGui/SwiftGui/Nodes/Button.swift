@@ -17,7 +17,7 @@ import SwiftGuiCore
 public func Button(_ title: String,
                    size: GuiSize = .zero,
                    onTap: (() -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         if igButton(title.cStr(), size.convertToVec2()) {
@@ -96,7 +96,7 @@ public func Selectable(_ title: String,
                        size: GuiSize = .zero,
                        options: GuiSelectable = .none,
                        onChange: ((Bool) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
 
         var _value = selectedState

@@ -18,11 +18,11 @@ import SwiftGuiCore
 public func Popup(id: String,
                   options: GuiWindowConfig = .none,
                   @GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
+
     GuiNode(tag: #function, child: child()).onRender { child in
-        
+
         if igBeginPopup(id.cStr(), options.rawValue) {
-        
+
             child?.render()
 
             igEndPopup()
@@ -43,4 +43,3 @@ public func PopupCloseCall() {
 
     igCloseCurrentPopup()
 }
-

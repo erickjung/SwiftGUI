@@ -23,14 +23,14 @@ public func SliderFloat(_ title: String,
                         max: Float,
                         format: String = "%.3f",
                         onChange: ((Float) -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         var _value = valueState
         if igSliderFloat(title, &_value, min, max, format, 1.0) {
-            
+
             if _value != valueState {
-                
+
                 onChange?(_value)
             }
         }

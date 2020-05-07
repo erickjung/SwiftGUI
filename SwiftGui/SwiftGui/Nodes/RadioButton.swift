@@ -17,9 +17,9 @@ import SwiftGuiCore
 public func RadioButton(_ title: String,
                         activeState: Bool,
                         onChange: (() -> Void)? = nil) -> GuiNode {
-    
+
     GuiNode(tag: #function).onRender { _ in
-        
+
         if igRadioButtonBool(title, activeState) {
             onChange?()
         }
@@ -39,23 +39,23 @@ public func RadioButtonGroup(_ values: [String],
                                selectedState: Int,
                                order: Int,
                                onChange: ((Int) -> Void)? = nil) -> GuiNode {
-    
+
         GuiNode(tag: #function).onRender { _ in
-            
+
             var _value = Int32(selectedState)
             if igRadioButtonIntPtr(title, &_value, Int32(order)) {
-                
+
                 if _value != selectedState {
-                    
+
                     onChange?(Int(_value))
                 }
             }
         }
     }
-        
+
     var list = [GuiView]()
     for (index, element) in values.enumerated() {
-        
+
         list.append(RadioButtonSequential(element, selectedState: selectedState, order: index, onChange: onChange))
     }
 
