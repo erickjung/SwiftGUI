@@ -7,10 +7,11 @@
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 <b>SwiftGUI</b> is an experimental API inspired by <b>SwiftUI</b> DSL, using Dear ImGui as renderer and running on OSX and iOS.
-
-![Hello world](Docs/hellow_world.png)
-
 </center>
+
+<p align="center">
+    <img src="Docs/hellow_world.png" alt="hellow world"/>
+</p>
 
 ```swift
 Window("SwiftGUI") {
