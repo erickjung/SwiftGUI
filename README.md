@@ -1,4 +1,4 @@
-![SwiftGUI (Dear ImGui + SwiftUI inspired API)](https://raw.githubusercontent.com/erickjung/SwiftGUI/master/swiftgui.png)
+![SwiftGUI (Dear ImGui + SwiftUI inspired API)](https://raw.githubusercontent.com/erickjung/SwiftGUI/master/Docs/swiftgui.png)
 
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![swift version](https://img.shields.io/badge/swift-5.0+-brightgreen.svg)](https://swift.org/download)
