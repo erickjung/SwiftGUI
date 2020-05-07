@@ -1,23 +1,25 @@
 //
 //  ViewController.swift
-//  Sample01-macOS
+//  Sample01iOS
 //
-//  Created by Erick Jung on 01/11/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+//  Created by Erick Jung on 07/05/2020.
+//  Copyright © 2020 Erick Jung. All rights reserved.
 //
 
-import Cocoa
-import Metal
-import MetalKit
+import UIKit
 import SwiftGui
 
-class ViewController: NSViewController {
+class ViewController: UIViewController {
     
     var renderer: SGRenderer?
+    let mtkView = MTKView()
     var counterState = 0
     var radioState = 0
     var logo: SGImage?
-    var bigList = [String](repeating: "test", count: 2000)
+
+    override func loadView() {
+        self.view = mtkView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,51 +33,25 @@ class ViewController: NSViewController {
             mtkView.delegate = self.renderer
         }
         
-        let trackingArea = NSTrackingArea(rect: .zero,
-                                          options: [.mouseMoved, .inVisibleRect, .activeAlways ],
-                                          owner: self, userInfo: nil)
-        self.view.addTrackingArea(trackingArea)
-        
-        NSEvent.addLocalMonitorForEvents(matching: [ .keyDown, .keyUp, .flagsChanged, .scrollWheel ]) { event -> NSEvent? in
-            
-            if let renderer = self.renderer,
-                renderer.handle(event, view: self.view) {
-
-                return nil
-            }
-            
-            return event
-        }
-        
-        self.renderer?.initializePlatform(false)
+        self.renderer?.initializePlatform()
         
         self.loadResources()
     }
-
-    override func mouseMoved(with event: NSEvent) {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.renderer?.handle(event, view: self.view)
     }
 
-    override func mouseDown(with event: NSEvent) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.renderer?.handle(event, view: self.view)
     }
 
-    override func mouseUp(with event: NSEvent) {
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.renderer?.handle(event, view: self.view)
     }
 
-    override func mouseDragged(with event: NSEvent) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.renderer?.handle(event, view: self.view)
-    }
-
-    override func scrollWheel(with event: NSEvent) {
-        self.renderer?.handle(event, view: self.view)
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
     }
     
     private func loadResources() {
@@ -83,10 +59,10 @@ class ViewController: NSViewController {
         logo = self.renderer?.loadTexture(withName: "swiftgui")
     }
 }
-extension ViewController: SGRendererDelegate {
 
+extension ViewController: SGRendererDelegate {
+    
     func setup() {
-        
         DefaultFontGroup().load()
         DarculaTheme().apply()
     }
@@ -149,13 +125,11 @@ extension ViewController: SGRendererDelegate {
                 }
             }
 
-            ForEach((1...7)) { val in
-                Group {
-                    
+            HStack {
+                ForEach((1...7)) { val in
                     Button("Click \(val)")
                         .color(.buttonHovered, color: .brown)
                         .color(.buttonActive, color: .orange)
-                    SameLine()
                 }
             }
             NewLine()
@@ -347,90 +321,10 @@ extension ViewController: SGRendererDelegate {
       
     func mainView() -> GuiNode {
         
-        Window("SwiftGUI Demo", flags: .menuBar) {
-            
-            MenuBar {
-                MenuGroup("Theme") {
-                    MenuItem("Darcula") {
-                     
-                        DarculaTheme().apply()
-                    }
-                    
-                    MenuItem("Light") {
-                        
-                        LightTheme().apply()
-                    }
-                }
-            }
+        Window("SwiftGUI Demo", flags: .noTitleBar) {
             
             Image(imageId: logo, size: SGSize(width: 250, height: 65))
-
-            CollapsingHeader("BigList") {
-
-                ListBuffer(buffer: bigList, itemHeight: 20) { index, item in
-                    
-                    Button("\(item)_\(index)")
-                }
-            }
-
-            CollapsingHeader("Editor") {
-                
-                Text("Colors: ")
-                
-                HStack {
-                    
-                    Button("default") { TextEditorSetPalleteCall(.dflt) }
-                    Button("retroBlue") { TextEditorSetPalleteCall(.retroBlue) }
-                    Button("light") { TextEditorSetPalleteCall(.light) }
-                    Button("dark") { TextEditorSetPalleteCall(.dark) }
-                }
-                
-                Text("Examples: ")
-                
-                HStack {
-                    
-                    Button("json") {
-                        let code = "{\n  \"id\": \"XP-8YTH-NNP3-WSVN-3C76\",\n  \"name\": \"exampleProfile\",\n  \"temporary\": false,\n  \"flow_config\": {\n    \"landing_page_type\": \"billing\",\n    \"bank_txn_pending_url\": \"https://example.com/flow_config/\"\n  },\n  \"input_fields\": {\n    \"no_shipping\": 1,\n    \"address_override\": 1\n  },\n  \"presentation\": {\n    \"logo_image\": \"https://example.com/logo_image/\"\n  }\n}\n"
-                        TextEditorSetTextCall(code)
-                        TextEditorSetLanguageDefinitionCall(.cpp)
-                    }
-                    
-                    Button("cpp") {
-                        
-                        let code = "#include <iostream>\r\nusing namespace std;\r\nint main()\r\n{\r\n    int n, t1 = 0, t2 = 1, nextTerm = 0;\r\n    cout << \"Enter the number of terms: \";\r\n    cin >> n;\r\n    cout << \"Fibonacci Series: \";\r\n    for (int i = 1; i <= n; ++i)\r\n    {\r\n        // Prints the first two terms.\r\n        if(i == 1)\r\n        {\r\n            cout << \" \" << t1;\r\n            continue;\r\n        }\r\n        if(i == 2)\r\n        {\r\n            cout << t2 << \" \";\r\n            continue;\r\n        }\r\n        nextTerm = t1 + t2;\r\n        t1 = t2;\r\n        t2 = nextTerm;\r\n        \r\n        cout << nextTerm << \" \";\r\n    }\r\n    return 0;\r\n}"
-                        TextEditorSetTextCall(code)
-                        TextEditorSetLanguageDefinitionCall(.cpp)
-                    }
-                    
-                    Button("c") {
-                        
-                        let code = "#include <stdio.h> \r\nint fib(int n) \r\n{ \r\n    if (n <= 1) \r\n        return n; \r\n    return fib(n - 1) + fib(n - 2); \r\n} \r\n  \r\nint main() \r\n{ \r\n    int n = 9; \r\n    printf(\"%d\", fib(n)); \r\n    getchar(); \r\n    return 0; \r\n} "
-                        TextEditorSetTextCall(code)
-                        TextEditorSetLanguageDefinitionCall(.c)
-                    }
-                    
-                    Button("lua") {
-                        
-                        let code = "function fibonacci(n)\r\n    if n<3 then\r\n        return 1\r\n    else\r\n        return fibonacci(n-1) + fibonacci(n-2)\r\n    end\r\nend\r\n\r\nfor n = 1, 16 do\r\n    io.write(fibonacci(n), \", \")\r\nend"
-                        TextEditorSetTextCall(code)
-                        TextEditorSetLanguageDefinitionCall(.lua)
-                    }
-                    
-                    Button("insert errors") {
-                        
-                        TextEditorInsertErrorMarkerCall(2, "test error")
-                        TextEditorInsertErrorMarkerCall(10, "test error")
-                    }
-                    
-                    Button("clear errors") {
-                        
-                        TextEditorClearErrorMarkersCall()
-                    }
-                }
-                
-                TextEditor("editor").font(DefaultFontGroup.Types.FiraCode_14)
-            }
-
+            
             CollapsingHeader("Help") {
                 showProgrammerGuide()
                 Separator()
@@ -487,7 +381,11 @@ extension ViewController: SGRendererDelegate {
 
             showDemoWindowWidgets()
         }
-        .position(.zero, condition: .appearing)
+        .position(CGPoint(x: 0, y: (0 + 20)), condition: .always)
+        .size(CGSize(width: self.view.frame.width,
+                     height: self.view.frame.height - 20), condition: .always)
+        .property(.windowRounding, set: 0)
+        .font(DefaultFontGroup.Types.FiraCode_18)
     }
     
     func draw() {

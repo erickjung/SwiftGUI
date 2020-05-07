@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B65199042463892300E0EB6A /* SwiftGuiiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65199032463892300E0EB6A /* SwiftGuiiOS.framework */; };
-		B65199052463892300E0EB6A /* SwiftGuiiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65199032463892300E0EB6A /* SwiftGuiiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B65199262464077600E0EB6A /* SwiftGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65199252464077600E0EB6A /* SwiftGui.framework */; };
+		B65199272464077600E0EB6A /* SwiftGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65199252464077600E0EB6A /* SwiftGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D4C236BBCFA00216EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D4B236BBCFA00216EA2 /* AppDelegate.swift */; };
 		B67E1D4E236BBCFA00216EA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D4D236BBCFA00216EA2 /* SceneDelegate.swift */; };
 		B67E1D50236BBCFA00216EA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D4F236BBCFA00216EA2 /* ViewController.swift */; };
@@ -30,13 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B65199062463892300E0EB6A /* Embed Frameworks */ = {
+		B65199282464077600E0EB6A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B65199052463892300E0EB6A /* SwiftGuiiOS.framework in Embed Frameworks */,
+				B65199272464077600E0EB6A /* SwiftGui.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		B65199032463892300E0EB6A /* SwiftGuiiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGuiiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6519921246404E500E0EB6A /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65199252464077600E0EB6A /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D48236BBCFA00216EA2 /* Sample01-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample01-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D4B236BBCFA00216EA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67E1D4D236BBCFA00216EA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65199042463892300E0EB6A /* SwiftGuiiOS.framework in Frameworks */,
 				B67E1D97236C488900216EA2 /* MetalKit.framework in Frameworks */,
+				B65199262464077600E0EB6A /* SwiftGui.framework in Frameworks */,
 				B67E1D96236C488900216EA2 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +113,8 @@
 		B67E1D5F236BBD5A00216EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B65199252464077600E0EB6A /* SwiftGui.framework */,
+				B6519921246404E500E0EB6A /* SwiftGui.framework */,
 				B65199032463892300E0EB6A /* SwiftGuiiOS.framework */,
 				B6CA6771237301DB000A1C5A /* SwiftGUI_Core.framework */,
 				B6E3BCB4236D98D700C1E1CF /* CImGuiLib.xcodeproj */,
@@ -142,7 +146,7 @@
 				B67E1D44236BBCFA00216EA2 /* Sources */,
 				B67E1D45236BBCFA00216EA2 /* Frameworks */,
 				B67E1D46236BBCFA00216EA2 /* Resources */,
-				B65199062463892300E0EB6A /* Embed Frameworks */,
+				B65199282464077600E0EB6A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

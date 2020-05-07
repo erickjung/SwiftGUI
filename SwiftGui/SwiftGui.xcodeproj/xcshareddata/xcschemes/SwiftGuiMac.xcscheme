@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B651959B2463657800E0EB6A"
-               BuildableName = "SwiftGuiMac.framework"
+               BuildableName = "SwiftGui.framework"
                BlueprintName = "SwiftGuiMac"
                ReferencedContainer = "container:SwiftGui.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B651959B2463657800E0EB6A"
-            BuildableName = "SwiftGuiMac.framework"
+            BuildableName = "SwiftGui.framework"
             BlueprintName = "SwiftGuiMac"
             ReferencedContainer = "container:SwiftGui.xcodeproj">
          </BuildableReference>

@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Sample01-macOS
+//  Sample01Mac
 //
-//  Created by Erick Jung on 01/11/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+//  Created by Erick Jung on 07/05/2020.
+//  Copyright © 2020 Erick Jung. All rights reserved.
 //
 
 import Cocoa
