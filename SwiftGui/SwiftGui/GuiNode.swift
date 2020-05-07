@@ -1,9 +1,9 @@
 //
-//  GuiNode.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 23/10/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import SwiftGuiCore
@@ -88,18 +88,6 @@ extension GuiNode {
             if igIsItemHovered(0) {
                 onHover()?.render()
             }
-        }
-    }
-}
-
-struct GuiMultiNode: GuiView {
-
-    let children: [GuiView]
-
-    func render() {
-
-        for child in children {
-            child.render()
         }
     }
 }

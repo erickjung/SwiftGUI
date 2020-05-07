@@ -1,9 +1,9 @@
 //
-//  ViewController.swift
-//  Sample01iOS
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 07/05/2020.
-//  Copyright © 2020 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import UIKit
@@ -184,10 +184,10 @@ extension ViewController: SGRendererDelegate {
 
             InputFloat("input float", valueState: 0, step: 0.01, stepFast: 1.0, format: "%.3f")
 
-            DragInt("drag int", valueState: 0)
+            Drag("drag int", valueState: 0)
             helpMarker("Click and drag to edit value.\nHold SHIFT/ALT for faster/slower edit.\nDouble-click or CTRL+click to input value.")
 
-            DragInt("drag int", valueState: 0, valueSpeed: 1.0, min: 0, max: 100, format: "%d%%")
+            Drag("drag int", valueState: 0, speed: 1.0, min: 0, max: 100, format: "%d%%")
 
             ListBox("listbox\n(single select)", currentItemState: 0, items: ["Apple", "Banana", "Cherry", "Kiwi", "Mango", "Orange", "Pineapple", "Strawberry", "Watermelon"])
         }
@@ -207,6 +207,8 @@ extension ViewController: SGRendererDelegate {
             }
 
             Tree("Advanced, with Selectable nodes") {
+                
+                Selectable("test selectabled", selectedState: true)
                 helpMarker("This is a more typical looking tree with selectable nodes.\nClick to select, CTRL+Click to toggle, click on arrows or double-click to open.", atSameLine: false)
                 CheckBox("GuiTreeConfig OpenOnArrow", selectedState: false)
                 Text("Hello!")
@@ -302,7 +304,7 @@ extension ViewController: SGRendererDelegate {
     func showDemoWindowWidgets_Color() -> GuiNode {
         Tree("Color/Picker Widgets") {
             Text("Color widget:")
-            ColorEdit3("MyColor##1", color: .red)
+            ColorEdit("MyColor##1", colorState: .red)
         }
     }
 
@@ -346,15 +348,9 @@ extension ViewController: SGRendererDelegate {
                     helpMarker("Instruct back-end to not alter mouse cursor shape and visibility.")
                 }
 
-                Tree("Style") {
-                    ShowStyleEditorDebug()
-                }
-
                 Tree("Capture/Logging") {
                     TextWrapped("The logging API redirects all text output so you can easily capture the content of a window or a block. Tree nodes can be automatically expanded.")
                     helpMarker("Try opening any of the contents below in this window and then click one of the \"Log To\" button.", atSameLine: false)
-                    
-                    LogButtons()
                     
                     TextWrapped("You can also call ImGui::LogText() to output directly to the log without a visual output.")
                     Button("Copy \"Hello, world!\" to clipboard")

@@ -26,13 +26,12 @@
 		B65195C32463686900E0EB6A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6C236BB23C00216EA2 /* Color.swift */; };
 		B65195C42463686900E0EB6A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE03A523EB67ED002381A7 /* Column.swift */; };
 		B65195C52463686900E0EB6A /* ComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C62236BB23C00216EA2 /* ComboBox.swift */; };
-		B65195C62463686900E0EB6A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5F236BB23C00216EA2 /* Common.swift */; };
-		B65195C72463686900E0EB6A /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C67236BB23C00216EA2 /* Debug.swift */; };
+		B65195C62463686900E0EB6A /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5F236BB23C00216EA2 /* General.swift */; };
 		B65195C82463686900E0EB6A /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603BBDD238E20500059D1AD /* Dock.swift */; };
 		B65195C92463686900E0EB6A /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5E236BB23C00216EA2 /* Drag.swift */; };
 		B65195CA2463686900E0EB6A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF8B59237AB53300374675 /* Image.swift */; };
 		B65195CB2463686900E0EB6A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C64236BB23C00216EA2 /* Input.swift */; };
-		B65195CC2463686900E0EB6A /* ListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5D236BB23C00216EA2 /* ListBox.swift */; };
+		B65195CC2463686900E0EB6A /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5D236BB23C00216EA2 /* List.swift */; };
 		B65195CD2463686900E0EB6A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C68236BB23C00216EA2 /* Menu.swift */; };
 		B65195CE2463686900E0EB6A /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76002373802C008DB346 /* Perform.swift */; };
 		B65195CF2463686900E0EB6A /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C60236BB23C00216EA2 /* Plot.swift */; };
@@ -67,13 +66,12 @@
 		B65195FE246369D600E0EB6A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6C236BB23C00216EA2 /* Color.swift */; };
 		B65195FF246369D600E0EB6A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE03A523EB67ED002381A7 /* Column.swift */; };
 		B6519600246369D600E0EB6A /* ComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C62236BB23C00216EA2 /* ComboBox.swift */; };
-		B6519601246369D600E0EB6A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5F236BB23C00216EA2 /* Common.swift */; };
-		B6519602246369D600E0EB6A /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C67236BB23C00216EA2 /* Debug.swift */; };
+		B6519601246369D600E0EB6A /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5F236BB23C00216EA2 /* General.swift */; };
 		B6519603246369D600E0EB6A /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603BBDD238E20500059D1AD /* Dock.swift */; };
 		B6519604246369D600E0EB6A /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5E236BB23C00216EA2 /* Drag.swift */; };
 		B6519605246369D600E0EB6A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF8B59237AB53300374675 /* Image.swift */; };
 		B6519606246369D600E0EB6A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C64236BB23C00216EA2 /* Input.swift */; };
-		B6519607246369D600E0EB6A /* ListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5D236BB23C00216EA2 /* ListBox.swift */; };
+		B6519607246369D600E0EB6A /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5D236BB23C00216EA2 /* List.swift */; };
 		B6519608246369D600E0EB6A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C68236BB23C00216EA2 /* Menu.swift */; };
 		B6519609246369D600E0EB6A /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76002373802C008DB346 /* Perform.swift */; };
 		B651960A246369D600E0EB6A /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C60236BB23C00216EA2 /* Plot.swift */; };
@@ -86,7 +84,6 @@
 		B6519611246369D600E0EB6A /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5C236BB23C00216EA2 /* Tooltip.swift */; };
 		B6519612246369D600E0EB6A /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C65236BB23C00216EA2 /* Tree.swift */; };
 		B6519613246369D600E0EB6A /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C61236BB23C00216EA2 /* Window.swift */; };
-		B6519614246369D600E0EB6A /* FiraCodeRegular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = B6A158D2237C288100E3F016 /* FiraCodeRegular.ttf */; };
 		B6519615246369D600E0EB6A /* SwiftGui.h in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C50236BB20400216EA2 /* SwiftGui.h */; };
 		B6519616246369D600E0EB6A /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347E237948BB00F4129B /* LightTheme.swift */; };
 		B6519617246369D600E0EB6A /* DarculaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F934882379959200F4129B /* DarculaTheme.swift */; };
@@ -145,6 +142,8 @@
 		B6519997246414C600E0EB6A /* GuiDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519995246414C600E0EB6A /* GuiDirection.swift */; };
 		B6519999246414DF00E0EB6A /* GuiEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* GuiEdge.swift */; };
 		B651999A246414DF00E0EB6A /* GuiEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* GuiEdge.swift */; };
+		B651999C24643D2400E0EB6A /* GuiNodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651999B24643D2400E0EB6A /* GuiNodeList.swift */; };
+		B651999D24643D2400E0EB6A /* GuiNodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651999B24643D2400E0EB6A /* GuiNodeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,13 +258,14 @@
 		B6519992246414A600E0EB6A /* GuiStyleProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiStyleProperty.swift; sourceTree = "<group>"; };
 		B6519995246414C600E0EB6A /* GuiDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiDirection.swift; sourceTree = "<group>"; };
 		B6519998246414DF00E0EB6A /* GuiEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiEdge.swift; sourceTree = "<group>"; };
+		B651999B24643D2400E0EB6A /* GuiNodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiNodeList.swift; sourceTree = "<group>"; };
 		B67E1C50236BB20400216EA2 /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B67E1C51236BB20400216EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
 		B67E1C5C236BB23C00216EA2 /* Tooltip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
-		B67E1C5D236BB23C00216EA2 /* ListBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBox.swift; sourceTree = "<group>"; };
+		B67E1C5D236BB23C00216EA2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		B67E1C5E236BB23C00216EA2 /* Drag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drag.swift; sourceTree = "<group>"; };
-		B67E1C5F236BB23C00216EA2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		B67E1C5F236BB23C00216EA2 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		B67E1C60236BB23C00216EA2 /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
 		B67E1C61236BB23C00216EA2 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		B67E1C62236BB23C00216EA2 /* ComboBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComboBox.swift; sourceTree = "<group>"; };
@@ -273,7 +273,6 @@
 		B67E1C64236BB23C00216EA2 /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		B67E1C65236BB23C00216EA2 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		B67E1C66236BB23C00216EA2 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
-		B67E1C67236BB23C00216EA2 /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		B67E1C68236BB23C00216EA2 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		B67E1C69236BB23C00216EA2 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		B67E1C6A236BB23C00216EA2 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
@@ -434,8 +433,8 @@
 			isa = PBXGroup;
 			children = (
 				B67E1C4F236BB20400216EA2 /* SwiftGui */,
-				B65195E82463698800E0EB6A /* SwiftGuiiOS */,
 				B651959D2463657800E0EB6A /* SwiftGuiMac */,
+				B65195E82463698800E0EB6A /* SwiftGuiiOS */,
 				B651992E246407AE00E0EB6A /* Sample01Mac */,
 				B651994624640EA800E0EB6A /* Sample02Mac */,
 				B651995C24640F8700E0EB6A /* Sample01iOS */,
@@ -463,6 +462,7 @@
 				B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */,
 				B67E1C6F236BB23C00216EA2 /* GuiNode.swift */,
 				B61C76122374532A008DB346 /* GuiNode+Extensions.swift */,
+				B651999B24643D2400E0EB6A /* GuiNodeList.swift */,
 				B67E1C6D236BB23C00216EA2 /* GuiView.swift */,
 				B67E1C51236BB20400216EA2 /* Info.plist */,
 				B67E1C5B236BB23C00216EA2 /* Nodes */,
@@ -491,13 +491,12 @@
 				B67E1C6C236BB23C00216EA2 /* Color.swift */,
 				B6BE03A523EB67ED002381A7 /* Column.swift */,
 				B67E1C62236BB23C00216EA2 /* ComboBox.swift */,
-				B67E1C5F236BB23C00216EA2 /* Common.swift */,
-				B67E1C67236BB23C00216EA2 /* Debug.swift */,
+				B67E1C5F236BB23C00216EA2 /* General.swift */,
 				B603BBDD238E20500059D1AD /* Dock.swift */,
 				B67E1C5E236BB23C00216EA2 /* Drag.swift */,
 				B6DF8B59237AB53300374675 /* Image.swift */,
 				B67E1C64236BB23C00216EA2 /* Input.swift */,
-				B67E1C5D236BB23C00216EA2 /* ListBox.swift */,
+				B67E1C5D236BB23C00216EA2 /* List.swift */,
 				B67E1C68236BB23C00216EA2 /* Menu.swift */,
 				B61C76002373802C008DB346 /* Perform.swift */,
 				B67E1C60236BB23C00216EA2 /* Plot.swift */,
@@ -793,6 +792,7 @@
 				B65195BD2463686900E0EB6A /* GuiBuilder.swift in Sources */,
 				B65195BE2463686900E0EB6A /* GuiNode.swift in Sources */,
 				B651998D2464146500E0EB6A /* GuiSelectable.swift in Sources */,
+				B651999C24643D2400E0EB6A /* GuiNodeList.swift in Sources */,
 				B65195BF2463686900E0EB6A /* GuiNode+Extensions.swift in Sources */,
 				B651998A2464144800E0EB6A /* GuiTabItemConfig.swift in Sources */,
 				B65195C02463686900E0EB6A /* GuiView.swift in Sources */,
@@ -803,8 +803,7 @@
 				B6519993246414A600E0EB6A /* GuiStyleProperty.swift in Sources */,
 				B65195C42463686900E0EB6A /* Column.swift in Sources */,
 				B65195C52463686900E0EB6A /* ComboBox.swift in Sources */,
-				B65195C62463686900E0EB6A /* Common.swift in Sources */,
-				B65195C72463686900E0EB6A /* Debug.swift in Sources */,
+				B65195C62463686900E0EB6A /* General.swift in Sources */,
 				B65195C82463686900E0EB6A /* Dock.swift in Sources */,
 				B6519981246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
 				B6519975246412C600E0EB6A /* GuiConfig.swift in Sources */,
@@ -813,7 +812,7 @@
 				B65195CA2463686900E0EB6A /* Image.swift in Sources */,
 				B65195CB2463686900E0EB6A /* Input.swift in Sources */,
 				B651997E246413B900E0EB6A /* GuiCondition.swift in Sources */,
-				B65195CC2463686900E0EB6A /* ListBox.swift in Sources */,
+				B65195CC2463686900E0EB6A /* List.swift in Sources */,
 				B65195CD2463686900E0EB6A /* Menu.swift in Sources */,
 				B6519999246414DF00E0EB6A /* GuiEdge.swift in Sources */,
 				B65195CE2463686900E0EB6A /* Perform.swift in Sources */,
@@ -852,6 +851,7 @@
 				B65199792464132C00E0EB6A /* GuiDockConfig.swift in Sources */,
 				B6519994246414A600E0EB6A /* GuiStyleProperty.swift in Sources */,
 				B65195F8246369D600E0EB6A /* GuiBuilder.swift in Sources */,
+				B651999D24643D2400E0EB6A /* GuiNodeList.swift in Sources */,
 				B65195F9246369D600E0EB6A /* GuiNode.swift in Sources */,
 				B65195FA246369D600E0EB6A /* GuiNode+Extensions.swift in Sources */,
 				B65195FB246369D600E0EB6A /* GuiView.swift in Sources */,
@@ -862,14 +862,13 @@
 				B65195FF246369D600E0EB6A /* Column.swift in Sources */,
 				B6519600246369D600E0EB6A /* ComboBox.swift in Sources */,
 				B6519982246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
-				B6519601246369D600E0EB6A /* Common.swift in Sources */,
-				B6519602246369D600E0EB6A /* Debug.swift in Sources */,
+				B6519601246369D600E0EB6A /* General.swift in Sources */,
 				B6519603246369D600E0EB6A /* Dock.swift in Sources */,
 				B6519604246369D600E0EB6A /* Drag.swift in Sources */,
 				B651998B2464144800E0EB6A /* GuiTabItemConfig.swift in Sources */,
 				B6519605246369D600E0EB6A /* Image.swift in Sources */,
 				B6519606246369D600E0EB6A /* Input.swift in Sources */,
-				B6519607246369D600E0EB6A /* ListBox.swift in Sources */,
+				B6519607246369D600E0EB6A /* List.swift in Sources */,
 				B6519608246369D600E0EB6A /* Menu.swift in Sources */,
 				B651998E2464146500E0EB6A /* GuiSelectable.swift in Sources */,
 				B651997C2464138000E0EB6A /* GuiWindowConfig.swift in Sources */,
@@ -888,7 +887,6 @@
 				B6519612246369D600E0EB6A /* Tree.swift in Sources */,
 				B6519976246412CB00E0EB6A /* GuiConfig.swift in Sources */,
 				B6519613246369D600E0EB6A /* Window.swift in Sources */,
-				B6519614246369D600E0EB6A /* FiraCodeRegular.ttf in Sources */,
 				B65199882464143000E0EB6A /* GuiTabBarConfig.swift in Sources */,
 				B6519615246369D600E0EB6A /* SwiftGui.h in Sources */,
 				B6519616246369D600E0EB6A /* LightTheme.swift in Sources */,

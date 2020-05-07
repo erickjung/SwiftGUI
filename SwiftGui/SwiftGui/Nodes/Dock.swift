@@ -1,15 +1,18 @@
 //
-//  Dock.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 27/11/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
 import SwiftGuiCore
 
-
+/// Dock node.
+/// NOTE: Still experimental
+/// - parameter child: List of nodes
+/// - returns: New node
 public func Dock(@GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in

@@ -1,14 +1,17 @@
 //
-//  Menu.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 24/10/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
 import SwiftGuiCore
 
+/// MenuBar node.
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func MenuBar(@GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
@@ -21,6 +24,11 @@ public func MenuBar(@GuiBuilder child: () -> GuiView?) -> GuiNode {
     }
 }
 
+/// MenuGroup node.
+/// - parameter title: Text for node
+/// - parameter enabled: Enable/Disable node
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func MenuGroup(_ title: String,
                       enabled: Bool = true,
                       @GuiBuilder child: () -> GuiView?) -> GuiNode {
@@ -35,6 +43,13 @@ public func MenuGroup(_ title: String,
     }
 }
 
+/// MenuItem node.
+/// - parameter title: Text for node
+/// - parameter shortcut: Shortcut helper text
+/// - parameter selected: Select/Unselect node
+/// - parameter enabled: Enable/Disable node
+/// - parameter onTap: Callback for node tap
+/// - returns: New node
 public func MenuItem(_ title: String,
                      shortcut: String? = nil,
                      selected: Bool = false,

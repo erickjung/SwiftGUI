@@ -1,9 +1,9 @@
 //
-//  Builder.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 23/10/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 @_functionBuilder
@@ -18,12 +18,12 @@ public struct GuiBuilder {
     }
 
     public static func buildBlock(_ content: GuiView...) -> GuiView {
-        GuiMultiNode(children: content)
+        GuiNodeList(children: content)
     }
 
     public static func buildIf(_ content: GuiView?) -> GuiView {
         if let content = content { return content }
-        return GuiMultiNode(children: [])
+        return GuiNodeList(children: [])
     }
 
     public static func buildEither(first: GuiView) -> GuiView {

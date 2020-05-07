@@ -1,14 +1,19 @@
 //
-//  Tree.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 24/10/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
 import SwiftGuiCore
 
+/// Tree node.
+/// - parameter title: Text for node
+/// - parameter options: Node options
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func Tree(_ title: String,
                  options: GuiTreeConfig = .none,
                  @GuiBuilder child: () -> GuiView?) -> GuiNode {
@@ -23,6 +28,11 @@ public func Tree(_ title: String,
     }
 }
 
+/// CollapsingHeader node.
+/// - parameter title: Text for node
+/// - parameter options: Node options
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func CollapsingHeader(_ title: String,
                              options: GuiTreeConfig = .none,
                              @GuiBuilder child: () -> GuiView?) -> GuiNode {
@@ -36,6 +46,13 @@ public func CollapsingHeader(_ title: String,
     }
 }
 
+/// CollapsingHeaderClosable node.
+/// - parameter title: Text for node
+/// - parameter closeState: Close state
+/// - parameter options: Node options
+/// - parameter onClose: Callback for close state changing
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func CollapsingHeaderClosable(_ title: String,
                                      closeState: Bool = false,
                                      options: GuiTreeConfig = .none,

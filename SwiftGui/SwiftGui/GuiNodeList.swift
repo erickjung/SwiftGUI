@@ -8,13 +8,12 @@
 
 import Foundation
 
-/// A cardinal direction.
-/// Represents: `ImGuiDir`.
-public enum GuiDirection: Int32
-{
-    case none  = -1
-    case left  = 0
-    case right = 1
-    case up    = 2
-    case down  = 3
+struct GuiNodeList: GuiView {
+
+    let children: [GuiView]
+
+    func render() {
+
+        self.children.forEach { $0.render() }
+    }
 }

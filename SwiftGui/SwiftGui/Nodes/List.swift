@@ -1,14 +1,21 @@
 //
-//  ListBox.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 27/10/2019.
-//  Copyright © 2019 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
 import SwiftGuiCore
 
+/// ListBox node.
+/// NOTE: Use this for small/medium lists
+/// - parameter title: Text for node
+/// - parameter currentItemState: Current item selected state
+/// - parameter items: List of text items
+/// - parameter onChange: Callback for state changing
+/// - returns: New node
 public func ListBox(_ title: String,
                     currentItemState: Int,
                     items: [String],
@@ -27,29 +34,46 @@ public func ListBox(_ title: String,
     }
 }
 
+/// List node.
+/// NOTE: Use this for small/medium lists
+/// - parameter id: Node id
+/// - parameter size: List height
+/// - parameter border: Show list border
+/// - parameter options: Node options
+/// - parameter child: List of child nodes
+/// - returns: New node
 public func List(id: String = "##list",
                  size: GuiSize = .zero,
                  border: Bool = false,
                  options: GuiWindowConfig = .none,
                  @GuiBuilder child: () -> GuiView?) -> GuiNode {
-    
-    GuiNode(tag: #function, child: child()).onRender { child in
-        
+     
+     GuiNode(tag: #function, child: child()).onRender { child in
+         
         if igBeginChild(id.cStr(), size.convertToVec2(), border, options.rawValue) {
-        
-            child?.render()
+         
+             child?.render()
         }
         igEndChild()
     }
 }
 
-public func ListBuffer<T>(id: String = "##list_buffer",
-                          buffer: [T],
-                          itemHeight: Float = -1,
-                          size: GuiSize = .zero,
-                          border: Bool = false,
-                          options: GuiWindowConfig = .none,
-                          onLoop: @escaping ((Int, T) -> GuiNode?)) -> GuiNode {
+/// List node.
+/// NOTE: Use this for large lists as will clipper rendered data properly
+/// - parameter id: Node id
+/// - parameter itemHeight: Height for each item row
+/// - parameter size: List height
+/// - parameter border: Show list border
+/// - parameter options: Node options
+/// - parameter onLoop: Callback for data changing
+/// - returns: New node
+public func List<T>(id: String = "##list_buffer",
+                    buffer: [T],
+                    itemHeight: Float = -1,
+                    size: GuiSize = .zero,
+                    border: Bool = false,
+                    options: GuiWindowConfig = .none,
+                    onLoop: @escaping ((Int, T) -> GuiNode?)) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
         

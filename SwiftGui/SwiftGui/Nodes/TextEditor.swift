@@ -1,14 +1,20 @@
 //
-//  TextEditor.swift
-//  SwiftGui
+// Copyright (c) 2020, Erick Jung.
+// All rights reserved.
 //
-//  Created by Erick Jung on 05/02/2020.
-//  Copyright © 2020 Erick Jung. All rights reserved.
+// This source code is licensed under the MIT-style license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
 import SwiftGuiCore
 
+/// TextEditor node.
+/// NOTE: For now you can only have one editor running on screen.
+/// You must use this node with all call functions below.
+/// - parameter title: Text for node
+/// - parameter onChange: Callback for state changing
+/// - returns: New node
 public func TextEditor(_ title: String,
                        onChange: ((String) -> Void)? = nil) -> GuiNode {
     
