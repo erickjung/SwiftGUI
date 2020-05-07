@@ -9,8 +9,8 @@
 import Cocoa
 import Metal
 import MetalKit
-import SwiftGui
-import SwiftGui_PlatformOSX
+import SwiftGuiMac
+//import SwiftGui_PlatformOSX
 
 class ViewController: NSViewController {
     

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 public func DragInt(_ title: String,
                     valueState: Int,

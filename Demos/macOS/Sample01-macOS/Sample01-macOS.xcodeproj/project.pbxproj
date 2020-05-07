@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B65195BA2463681500E0EB6A /* SwiftGuiMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195B92463681500E0EB6A /* SwiftGuiMac.framework */; };
+		B65195BB2463681500E0EB6A /* SwiftGuiMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65195B92463681500E0EB6A /* SwiftGuiMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D21236BB8F800216EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D20236BB8F800216EA2 /* AppDelegate.swift */; };
 		B67E1D23236BB8F800216EA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D22236BB8F800216EA2 /* ViewController.swift */; };
 		B67E1D25236BB8F800216EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67E1D24236BB8F800216EA2 /* Assets.xcassets */; };
 		B67E1D28236BB8F800216EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67E1D26236BB8F800216EA2 /* Main.storyboard */; };
-		B67E1D33236BB91E00216EA2 /* SwiftGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D31236BB91E00216EA2 /* SwiftGui.framework */; };
-		B67E1D34236BB91F00216EA2 /* SwiftGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D31236BB91E00216EA2 /* SwiftGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D3D236BBB6900216EA2 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D3B236BBB6900216EA2 /* Metal.framework */; };
 		B67E1D3E236BBB6900216EA2 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D3C236BBB6900216EA2 /* MetalKit.framework */; };
-		B6E3BE57236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE56236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework */; };
-		B6E3BE58236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE56236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6E3BE58236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Embed Frameworks */,
-				B67E1D34236BB91F00216EA2 /* SwiftGui.framework in Embed Frameworks */,
+				B65195BB2463681500E0EB6A /* SwiftGuiMac.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B65195B92463681500E0EB6A /* SwiftGuiMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGuiMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D1D236BB8F800216EA2 /* Sample01-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample01-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D20236BB8F800216EA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67E1D22236BB8F800216EA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,9 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67E1D33236BB91E00216EA2 /* SwiftGui.framework in Frameworks */,
+				B65195BA2463681500E0EB6A /* SwiftGuiMac.framework in Frameworks */,
 				B67E1D3E236BBB6900216EA2 /* MetalKit.framework in Frameworks */,
-				B6E3BE57236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Frameworks */,
 				B67E1D3D236BBB6900216EA2 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +94,7 @@
 		B67E1D30236BB91E00216EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B65195B92463681500E0EB6A /* SwiftGuiMac.framework */,
 				B6E3BE56236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework */,
 				B67E1D3B236BBB6900216EA2 /* Metal.framework */,
 				B67E1D3C236BBB6900216EA2 /* MetalKit.framework */,

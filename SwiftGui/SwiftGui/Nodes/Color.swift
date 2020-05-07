@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 public func ColorEdit3(_ title: String,
                        color: SGColor,

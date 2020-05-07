@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 public func Column(id: String? = nil,
                    count: Int = 1,

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 
 public func Dock(@GuiBuilder child: () -> GuiView?) -> GuiNode {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 public func Text(_ title: String, _ args: CVarArg...) -> GuiNode {
     

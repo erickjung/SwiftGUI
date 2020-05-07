@@ -6,7 +6,7 @@
 //  Copyright © 2019 Erick Jung. All rights reserved.
 //
 
-import SwiftGUI_Core
+import SwiftGuiCore
 
 #if os(OSX)
 

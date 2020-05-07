@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 public func Window(_ title: String,
                    flags: ImGuiWindowFlags = .none,

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGUI_Core
+import SwiftGuiCore
 
 public func TextEditor(_ title: String,
                        onChange: ((String) -> Void)? = nil) -> GuiNode {
