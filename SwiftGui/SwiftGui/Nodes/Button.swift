@@ -10,7 +10,7 @@ import Foundation
 import SwiftGuiCore
 
 public func Button(_ title: String,
-                   size: SGSize = .zero,
+                   size: GuiSize = .zero,
                    onTap: (() -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
@@ -34,7 +34,7 @@ public func SmallButton(_ title: String,
 }
 
 public func ArrowButton(_ id: String,
-                        direction: ImGuiDir,
+                        direction: GuiDirection,
                         onTap: (() -> Void)? = nil) -> GuiNode {
 
     GuiNode(tag: #function).onRender { _ in
@@ -66,14 +66,14 @@ public func Bullet() -> GuiNode {
 
 public func Selectable(_ title: String,
                        selectedState: Bool,
-                       size: SGSize = .zero,
-                       flags: ImGuiSelectableFlags = .none,
+                       size: GuiSize = .zero,
+                       options: GuiSelectable = .none,
                        onChange: ((Bool) -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
 
         var _value = selectedState
-        if igSelectableBoolPtr(title.cStr(), &_value, flags.rawValue, size.convertToVec2()) {
+        if igSelectableBoolPtr(title.cStr(), &_value, options.rawValue, size.convertToVec2()) {
             onChange?(_value)
         }
     }

@@ -22,7 +22,7 @@ public func Plot(_ title: String,
                  overlayText: String = "",
                  minScale: Float = Float.greatestFiniteMagnitude,
                  maxScale: Float = Float.greatestFiniteMagnitude,
-                 size: SGSize = .zero,
+                 size: GuiSize = .zero,
                  stride: Int = MemoryLayout<Float>.size) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
@@ -57,7 +57,7 @@ public func Plot(_ title: String,
 
 
 public func ProgressBar(_ fraction: Float,
-                        size: SGSize = SGSize(width: -1, height: 0),
+                        size: GuiSize = GuiSize(width: -1, height: 0),
                         overlay: String? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in

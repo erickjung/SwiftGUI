@@ -28,14 +28,14 @@ public func ListBox(_ title: String,
 }
 
 public func List(id: String = "##list",
-                 size: SGSize = .zero,
+                 size: GuiSize = .zero,
                  border: Bool = false,
-                 flags: ImGuiWindowFlags = .none,
+                 options: GuiWindowConfig = .none,
                  @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
         
-        if igBeginChild(id.cStr(), size.convertToVec2(), border, flags.rawValue) {
+        if igBeginChild(id.cStr(), size.convertToVec2(), border, options.rawValue) {
         
             child?.render()
         }
@@ -46,14 +46,14 @@ public func List(id: String = "##list",
 public func ListBuffer<T>(id: String = "##list_buffer",
                           buffer: [T],
                           itemHeight: Float = -1,
-                          size: SGSize = .zero,
+                          size: GuiSize = .zero,
                           border: Bool = false,
-                          flags: ImGuiWindowFlags = .none,
+                          options: GuiWindowConfig = .none,
                           onLoop: @escaping ((Int, T) -> GuiNode?)) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
         
-        if igBeginChild(id.cStr(), size.convertToVec2(), border, flags.rawValue) {
+        if igBeginChild(id.cStr(), size.convertToVec2(), border, options.rawValue) {
             
             if let clipper = ImGuiListClipper_ImGuiListClipper(0, itemHeight) {
                 

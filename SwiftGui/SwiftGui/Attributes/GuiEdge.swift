@@ -8,7 +8,8 @@
 
 import Foundation
 
-public enum GUIEdge
+/// A screen edges.
+public enum GuiEdge
 {
     case all
     case top

@@ -10,12 +10,12 @@ import Foundation
 import SwiftGuiCore
 
 public func TabBar(id: String,
-                   flags: ImGuiTabBarFlags = .none,
+                   options: GuiTabBarConfig = .none,
                    @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
         
-        if igBeginTabBar(id.cStr(), flags.rawValue) {
+        if igBeginTabBar(id.cStr(), options.rawValue) {
             
             child?.render()
             igEndTabBar()
@@ -24,12 +24,12 @@ public func TabBar(id: String,
 }
 
 public func TabItem(_ title: String,
-                    flags: ImGuiTabItemFlags = .none,
+                    options: GuiTabItemConfig = .none,
                     @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
         
-        if igBeginTabItem(title.cStr(), nil, flags.rawValue) {
+        if igBeginTabItem(title.cStr(), nil, options.rawValue) {
             
             child?.render()
             igEndTabItem()

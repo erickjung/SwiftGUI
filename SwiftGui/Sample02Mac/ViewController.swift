@@ -103,7 +103,7 @@ extension ViewController: SGRendererDelegate {
         }
     }
     
-    func cell(name: String, value: Bool, color: SGColor) -> GuiNode {
+    func cell(name: String, value: Bool, color: GuiColor) -> GuiNode {
         
         Group(id: name) {
             
@@ -141,7 +141,7 @@ extension ViewController: SGRendererDelegate {
         
         CollapsingHeader("TODO", options: .defaultOpen) {
          
-            List(id: "##todo", size: SGSize(width: 0, height: 150)) {
+            List(id: "##todo", size: GuiSize(width: 0, height: 150)) {
                 
                 ForEach(items) { val in
                    
@@ -175,7 +175,7 @@ extension ViewController: SGRendererDelegate {
     
     func mainView() -> GuiNode {
         
-        Window("TODO", flags: .noTitleBar) {
+        Window("TODO", options: .noTitleBar) {
             
             todoInput()
             todoList()

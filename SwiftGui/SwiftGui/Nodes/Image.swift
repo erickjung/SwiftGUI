@@ -9,12 +9,12 @@
 import Foundation
 import SwiftGuiCore
 
-public func Image(imageId: SGImage?,
-                  size: SGSize,
-                  uv0: SGSize = .zero,
-                  uv1: SGSize = SGSize(width: 1, height: 1),
-                  tintColor: SGColor = .white,
-                  borderColor: SGColor = SGColor(r: 0, g: 0, b: 0, a: 0)) -> GuiNode {
+public func Image(imageId: GuiImage?,
+                  size: GuiSize,
+                  uv0: GuiSize = .zero,
+                  uv1: GuiSize = GuiSize(width: 1, height: 1),
+                  tintColor: GuiColor = .white,
+                  borderColor: GuiColor = GuiColor(r: 0, g: 0, b: 0, a: 0)) -> GuiNode {
     
     GuiNode(tag: #function).onRender { child in
         

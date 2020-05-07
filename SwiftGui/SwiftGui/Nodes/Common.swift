@@ -73,7 +73,7 @@ public func Separator() -> GuiNode {
     }
 }
 
-public func SameLine(offsetX: SGPoint = .zero,
+public func SameLine(offsetX: GuiPoint = .zero,
                      spacing: Float = -1.0) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in

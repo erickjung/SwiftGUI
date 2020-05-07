@@ -13,20 +13,20 @@ import SwiftGuiCore
 import Foundation
 import AppKit
     
-public typealias SGColor = NSColor
-public typealias SGPoint = CGPoint
-public typealias SGSize = CGSize
-public typealias SGImage = AnyObject
+public typealias GuiColor = NSColor
+public typealias GuiPoint = CGPoint
+public typealias GuiSize = CGSize
+public typealias GuiImage = AnyObject
 
 #else
     
 import AVFoundation
 import UIKit
 
-public typealias SGColor = UIColor
-public typealias SGPoint = CGPoint
-public typealias SGSize = CGSize
-public typealias SGImage = AnyObject
+public typealias GuiColor = UIColor
+public typealias GuiPoint = CGPoint
+public typealias GuiSize = CGSize
+public typealias GuiImage = AnyObject
     
 #endif
 
@@ -57,7 +57,7 @@ public extension String {
     }
 }
 
-public extension SGColor {
+public extension GuiColor {
     
     convenience init(r: Float, g: Float , b: Float , a: Float) {
         self.init(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: CGFloat(a))
@@ -94,7 +94,7 @@ public extension SGColor {
     }
 }
 
-public extension SGPoint {
+public extension GuiPoint {
     
     func convertToVec2() -> ImVec2 {
 
@@ -102,7 +102,7 @@ public extension SGPoint {
     }
 }
 
-public extension SGSize {
+public extension GuiSize {
     
     func convertToVec2() -> ImVec2 {
         

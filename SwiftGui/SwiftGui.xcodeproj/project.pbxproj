@@ -17,7 +17,7 @@
 		B65195B6246366A300E0EB6A /* SGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195B0246366A300E0EB6A /* SGRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195B7246366A300E0EB6A /* SGRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195B1246366A300E0EB6A /* SGRenderer.mm */; };
 		B65195B8246366A300E0EB6A /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195B2246366A300E0EB6A /* imgui_impl_metal.h */; };
-		B65195BD2463686900E0EB6A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* Builder.swift */; };
+		B65195BD2463686900E0EB6A /* GuiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */; };
 		B65195BE2463686900E0EB6A /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
 		B65195BF2463686900E0EB6A /* GuiNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76122374532A008DB346 /* GuiNode+Extensions.swift */; };
 		B65195C02463686900E0EB6A /* GuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6D236BB23C00216EA2 /* GuiView.swift */; };
@@ -45,7 +45,6 @@
 		B65195D62463686900E0EB6A /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5C236BB23C00216EA2 /* Tooltip.swift */; };
 		B65195D72463686900E0EB6A /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C65236BB23C00216EA2 /* Tree.swift */; };
 		B65195D82463686900E0EB6A /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C61236BB23C00216EA2 /* Window.swift */; };
-		B65195D92463686900E0EB6A /* FiraCodeRegular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = B6A158D2237C288100E3F016 /* FiraCodeRegular.ttf */; };
 		B65195DA2463686900E0EB6A /* SwiftGui.h in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C50236BB20400216EA2 /* SwiftGui.h */; };
 		B65195DB2463686900E0EB6A /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347E237948BB00F4129B /* LightTheme.swift */; };
 		B65195DC2463686900E0EB6A /* DarculaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F934882379959200F4129B /* DarculaTheme.swift */; };
@@ -59,7 +58,7 @@
 		B65195F4246369AD00E0EB6A /* SGRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195F0246369AD00E0EB6A /* SGRenderer.mm */; };
 		B65195F5246369AD00E0EB6A /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195F1246369AD00E0EB6A /* imgui_impl_metal.h */; };
 		B65195F6246369AD00E0EB6A /* SGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195F2246369AD00E0EB6A /* SGRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65195F8246369D600E0EB6A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* Builder.swift */; };
+		B65195F8246369D600E0EB6A /* GuiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */; };
 		B65195F9246369D600E0EB6A /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
 		B65195FA246369D600E0EB6A /* GuiNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76122374532A008DB346 /* GuiNode+Extensions.swift */; };
 		B65195FB246369D600E0EB6A /* GuiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6D236BB23C00216EA2 /* GuiView.swift */; };
@@ -120,32 +119,32 @@
 		B651996524640F8700E0EB6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651996324640F8700E0EB6A /* Main.storyboard */; };
 		B651996724640F8800E0EB6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B651996624640F8800E0EB6A /* Assets.xcassets */; };
 		B651996A24640F8800E0EB6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651996824640F8800E0EB6A /* LaunchScreen.storyboard */; };
-		B6519975246412C600E0EB6A /* ConfigFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519974246412C600E0EB6A /* ConfigFlags.swift */; };
-		B6519976246412CB00E0EB6A /* ConfigFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519974246412C600E0EB6A /* ConfigFlags.swift */; };
-		B65199782464132C00E0EB6A /* DockNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199772464132C00E0EB6A /* DockNodeFlags.swift */; };
-		B65199792464132C00E0EB6A /* DockNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199772464132C00E0EB6A /* DockNodeFlags.swift */; };
-		B651997B2464138000E0EB6A /* WindowFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997A2464138000E0EB6A /* WindowFlags.swift */; };
-		B651997C2464138000E0EB6A /* WindowFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997A2464138000E0EB6A /* WindowFlags.swift */; };
-		B651997E246413B900E0EB6A /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997D246413B900E0EB6A /* Cond.swift */; };
-		B651997F246413B900E0EB6A /* Cond.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997D246413B900E0EB6A /* Cond.swift */; };
-		B6519981246413D500E0EB6A /* InputTextFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519980246413D500E0EB6A /* InputTextFlags.swift */; };
-		B6519982246413D500E0EB6A /* InputTextFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519980246413D500E0EB6A /* InputTextFlags.swift */; };
-		B65199842464141000E0EB6A /* TreeNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199832464141000E0EB6A /* TreeNodeFlags.swift */; };
-		B65199852464141000E0EB6A /* TreeNodeFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199832464141000E0EB6A /* TreeNodeFlags.swift */; };
-		B65199872464143000E0EB6A /* TabBarFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199862464143000E0EB6A /* TabBarFlags.swift */; };
-		B65199882464143000E0EB6A /* TabBarFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199862464143000E0EB6A /* TabBarFlags.swift */; };
-		B651998A2464144800E0EB6A /* TabItemFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199892464144800E0EB6A /* TabItemFlags.swift */; };
-		B651998B2464144800E0EB6A /* TabItemFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199892464144800E0EB6A /* TabItemFlags.swift */; };
-		B651998D2464146500E0EB6A /* SelectableFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998C2464146500E0EB6A /* SelectableFlags.swift */; };
-		B651998E2464146500E0EB6A /* SelectableFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998C2464146500E0EB6A /* SelectableFlags.swift */; };
-		B65199902464148600E0EB6A /* GuiCol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998F2464148600E0EB6A /* GuiCol.swift */; };
-		B65199912464148600E0EB6A /* GuiCol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998F2464148600E0EB6A /* GuiCol.swift */; };
-		B6519993246414A600E0EB6A /* StyleVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519992246414A600E0EB6A /* StyleVar.swift */; };
-		B6519994246414A600E0EB6A /* StyleVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519992246414A600E0EB6A /* StyleVar.swift */; };
-		B6519996246414C600E0EB6A /* Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519995246414C600E0EB6A /* Dir.swift */; };
-		B6519997246414C600E0EB6A /* Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519995246414C600E0EB6A /* Dir.swift */; };
-		B6519999246414DF00E0EB6A /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* Edge.swift */; };
-		B651999A246414DF00E0EB6A /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* Edge.swift */; };
+		B6519975246412C600E0EB6A /* GuiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519974246412C600E0EB6A /* GuiConfig.swift */; };
+		B6519976246412CB00E0EB6A /* GuiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519974246412C600E0EB6A /* GuiConfig.swift */; };
+		B65199782464132C00E0EB6A /* GuiDockConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199772464132C00E0EB6A /* GuiDockConfig.swift */; };
+		B65199792464132C00E0EB6A /* GuiDockConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199772464132C00E0EB6A /* GuiDockConfig.swift */; };
+		B651997B2464138000E0EB6A /* GuiWindowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997A2464138000E0EB6A /* GuiWindowConfig.swift */; };
+		B651997C2464138000E0EB6A /* GuiWindowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997A2464138000E0EB6A /* GuiWindowConfig.swift */; };
+		B651997E246413B900E0EB6A /* GuiCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997D246413B900E0EB6A /* GuiCondition.swift */; };
+		B651997F246413B900E0EB6A /* GuiCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651997D246413B900E0EB6A /* GuiCondition.swift */; };
+		B6519981246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519980246413D500E0EB6A /* GuiInputTextConfig.swift */; };
+		B6519982246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519980246413D500E0EB6A /* GuiInputTextConfig.swift */; };
+		B65199842464141000E0EB6A /* GuiTreeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199832464141000E0EB6A /* GuiTreeConfig.swift */; };
+		B65199852464141000E0EB6A /* GuiTreeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199832464141000E0EB6A /* GuiTreeConfig.swift */; };
+		B65199872464143000E0EB6A /* GuiTabBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199862464143000E0EB6A /* GuiTabBarConfig.swift */; };
+		B65199882464143000E0EB6A /* GuiTabBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199862464143000E0EB6A /* GuiTabBarConfig.swift */; };
+		B651998A2464144800E0EB6A /* GuiTabItemConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199892464144800E0EB6A /* GuiTabItemConfig.swift */; };
+		B651998B2464144800E0EB6A /* GuiTabItemConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65199892464144800E0EB6A /* GuiTabItemConfig.swift */; };
+		B651998D2464146500E0EB6A /* GuiSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998C2464146500E0EB6A /* GuiSelectable.swift */; };
+		B651998E2464146500E0EB6A /* GuiSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998C2464146500E0EB6A /* GuiSelectable.swift */; };
+		B65199902464148600E0EB6A /* GuiColorProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998F2464148600E0EB6A /* GuiColorProperty.swift */; };
+		B65199912464148600E0EB6A /* GuiColorProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651998F2464148600E0EB6A /* GuiColorProperty.swift */; };
+		B6519993246414A600E0EB6A /* GuiStyleProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519992246414A600E0EB6A /* GuiStyleProperty.swift */; };
+		B6519994246414A600E0EB6A /* GuiStyleProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519992246414A600E0EB6A /* GuiStyleProperty.swift */; };
+		B6519996246414C600E0EB6A /* GuiDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519995246414C600E0EB6A /* GuiDirection.swift */; };
+		B6519997246414C600E0EB6A /* GuiDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519995246414C600E0EB6A /* GuiDirection.swift */; };
+		B6519999246414DF00E0EB6A /* GuiEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* GuiEdge.swift */; };
+		B651999A246414DF00E0EB6A /* GuiEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* GuiEdge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,19 +246,19 @@
 		B651996624640F8800E0EB6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B651996924640F8800E0EB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B651996B24640F8800E0EB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6519974246412C600E0EB6A /* ConfigFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigFlags.swift; sourceTree = "<group>"; };
-		B65199772464132C00E0EB6A /* DockNodeFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockNodeFlags.swift; sourceTree = "<group>"; };
-		B651997A2464138000E0EB6A /* WindowFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowFlags.swift; sourceTree = "<group>"; };
-		B651997D246413B900E0EB6A /* Cond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cond.swift; sourceTree = "<group>"; };
-		B6519980246413D500E0EB6A /* InputTextFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFlags.swift; sourceTree = "<group>"; };
-		B65199832464141000E0EB6A /* TreeNodeFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNodeFlags.swift; sourceTree = "<group>"; };
-		B65199862464143000E0EB6A /* TabBarFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlags.swift; sourceTree = "<group>"; };
-		B65199892464144800E0EB6A /* TabItemFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemFlags.swift; sourceTree = "<group>"; };
-		B651998C2464146500E0EB6A /* SelectableFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableFlags.swift; sourceTree = "<group>"; };
-		B651998F2464148600E0EB6A /* GuiCol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiCol.swift; sourceTree = "<group>"; };
-		B6519992246414A600E0EB6A /* StyleVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleVar.swift; sourceTree = "<group>"; };
-		B6519995246414C600E0EB6A /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
-		B6519998246414DF00E0EB6A /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		B6519974246412C600E0EB6A /* GuiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiConfig.swift; sourceTree = "<group>"; };
+		B65199772464132C00E0EB6A /* GuiDockConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiDockConfig.swift; sourceTree = "<group>"; };
+		B651997A2464138000E0EB6A /* GuiWindowConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiWindowConfig.swift; sourceTree = "<group>"; };
+		B651997D246413B900E0EB6A /* GuiCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiCondition.swift; sourceTree = "<group>"; };
+		B6519980246413D500E0EB6A /* GuiInputTextConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiInputTextConfig.swift; sourceTree = "<group>"; };
+		B65199832464141000E0EB6A /* GuiTreeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiTreeConfig.swift; sourceTree = "<group>"; };
+		B65199862464143000E0EB6A /* GuiTabBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiTabBarConfig.swift; sourceTree = "<group>"; };
+		B65199892464144800E0EB6A /* GuiTabItemConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiTabItemConfig.swift; sourceTree = "<group>"; };
+		B651998C2464146500E0EB6A /* GuiSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiSelectable.swift; sourceTree = "<group>"; };
+		B651998F2464148600E0EB6A /* GuiColorProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiColorProperty.swift; sourceTree = "<group>"; };
+		B6519992246414A600E0EB6A /* GuiStyleProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiStyleProperty.swift; sourceTree = "<group>"; };
+		B6519995246414C600E0EB6A /* GuiDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiDirection.swift; sourceTree = "<group>"; };
+		B6519998246414DF00E0EB6A /* GuiEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiEdge.swift; sourceTree = "<group>"; };
 		B67E1C50236BB20400216EA2 /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B67E1C51236BB20400216EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
@@ -281,7 +280,7 @@
 		B67E1C6B236BB23C00216EA2 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		B67E1C6C236BB23C00216EA2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B67E1C6D236BB23C00216EA2 /* GuiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuiView.swift; sourceTree = "<group>"; };
-		B67E1C6E236BB23C00216EA2 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuiBuilder.swift; sourceTree = "<group>"; };
 		B67E1C6F236BB23C00216EA2 /* GuiNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuiNode.swift; sourceTree = "<group>"; };
 		B6A158CC237C1C9300E3F016 /* FontGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontGroup.swift; sourceTree = "<group>"; };
 		B6A158D0237C1D6700E3F016 /* DefaultFontGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFontGroup.swift; sourceTree = "<group>"; };
@@ -414,19 +413,19 @@
 		B6519973246412B400E0EB6A /* Attributes */ = {
 			isa = PBXGroup;
 			children = (
-				B6519974246412C600E0EB6A /* ConfigFlags.swift */,
-				B65199772464132C00E0EB6A /* DockNodeFlags.swift */,
-				B651997A2464138000E0EB6A /* WindowFlags.swift */,
-				B651997D246413B900E0EB6A /* Cond.swift */,
-				B6519980246413D500E0EB6A /* InputTextFlags.swift */,
-				B65199832464141000E0EB6A /* TreeNodeFlags.swift */,
-				B65199862464143000E0EB6A /* TabBarFlags.swift */,
-				B65199892464144800E0EB6A /* TabItemFlags.swift */,
-				B651998C2464146500E0EB6A /* SelectableFlags.swift */,
-				B651998F2464148600E0EB6A /* GuiCol.swift */,
-				B6519992246414A600E0EB6A /* StyleVar.swift */,
-				B6519995246414C600E0EB6A /* Dir.swift */,
-				B6519998246414DF00E0EB6A /* Edge.swift */,
+				B651998F2464148600E0EB6A /* GuiColorProperty.swift */,
+				B651997D246413B900E0EB6A /* GuiCondition.swift */,
+				B6519974246412C600E0EB6A /* GuiConfig.swift */,
+				B6519995246414C600E0EB6A /* GuiDirection.swift */,
+				B65199772464132C00E0EB6A /* GuiDockConfig.swift */,
+				B6519998246414DF00E0EB6A /* GuiEdge.swift */,
+				B6519980246413D500E0EB6A /* GuiInputTextConfig.swift */,
+				B651998C2464146500E0EB6A /* GuiSelectable.swift */,
+				B6519992246414A600E0EB6A /* GuiStyleProperty.swift */,
+				B65199862464143000E0EB6A /* GuiTabBarConfig.swift */,
+				B65199892464144800E0EB6A /* GuiTabItemConfig.swift */,
+				B65199832464141000E0EB6A /* GuiTreeConfig.swift */,
+				B651997A2464138000E0EB6A /* GuiWindowConfig.swift */,
 			);
 			path = Attributes;
 			sourceTree = "<group>";
@@ -461,7 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				B6519973246412B400E0EB6A /* Attributes */,
-				B67E1C6E236BB23C00216EA2 /* Builder.swift */,
+				B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */,
 				B67E1C6F236BB23C00216EA2 /* GuiNode.swift */,
 				B61C76122374532A008DB346 /* GuiNode+Extensions.swift */,
 				B67E1C6D236BB23C00216EA2 /* GuiView.swift */,
@@ -791,52 +790,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65195BD2463686900E0EB6A /* Builder.swift in Sources */,
+				B65195BD2463686900E0EB6A /* GuiBuilder.swift in Sources */,
 				B65195BE2463686900E0EB6A /* GuiNode.swift in Sources */,
-				B651998D2464146500E0EB6A /* SelectableFlags.swift in Sources */,
+				B651998D2464146500E0EB6A /* GuiSelectable.swift in Sources */,
 				B65195BF2463686900E0EB6A /* GuiNode+Extensions.swift in Sources */,
-				B651998A2464144800E0EB6A /* TabItemFlags.swift in Sources */,
+				B651998A2464144800E0EB6A /* GuiTabItemConfig.swift in Sources */,
 				B65195C02463686900E0EB6A /* GuiView.swift in Sources */,
 				B65195C12463686900E0EB6A /* Button.swift in Sources */,
 				B65195C22463686900E0EB6A /* CheckBox.swift in Sources */,
 				B65195C32463686900E0EB6A /* Color.swift in Sources */,
-				B65199902464148600E0EB6A /* GuiCol.swift in Sources */,
-				B6519993246414A600E0EB6A /* StyleVar.swift in Sources */,
+				B65199902464148600E0EB6A /* GuiColorProperty.swift in Sources */,
+				B6519993246414A600E0EB6A /* GuiStyleProperty.swift in Sources */,
 				B65195C42463686900E0EB6A /* Column.swift in Sources */,
 				B65195C52463686900E0EB6A /* ComboBox.swift in Sources */,
 				B65195C62463686900E0EB6A /* Common.swift in Sources */,
 				B65195C72463686900E0EB6A /* Debug.swift in Sources */,
 				B65195C82463686900E0EB6A /* Dock.swift in Sources */,
-				B6519981246413D500E0EB6A /* InputTextFlags.swift in Sources */,
-				B6519975246412C600E0EB6A /* ConfigFlags.swift in Sources */,
-				B65199782464132C00E0EB6A /* DockNodeFlags.swift in Sources */,
+				B6519981246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
+				B6519975246412C600E0EB6A /* GuiConfig.swift in Sources */,
+				B65199782464132C00E0EB6A /* GuiDockConfig.swift in Sources */,
 				B65195C92463686900E0EB6A /* Drag.swift in Sources */,
 				B65195CA2463686900E0EB6A /* Image.swift in Sources */,
 				B65195CB2463686900E0EB6A /* Input.swift in Sources */,
-				B651997E246413B900E0EB6A /* Cond.swift in Sources */,
+				B651997E246413B900E0EB6A /* GuiCondition.swift in Sources */,
 				B65195CC2463686900E0EB6A /* ListBox.swift in Sources */,
 				B65195CD2463686900E0EB6A /* Menu.swift in Sources */,
-				B6519999246414DF00E0EB6A /* Edge.swift in Sources */,
+				B6519999246414DF00E0EB6A /* GuiEdge.swift in Sources */,
 				B65195CE2463686900E0EB6A /* Perform.swift in Sources */,
-				B651997B2464138000E0EB6A /* WindowFlags.swift in Sources */,
+				B651997B2464138000E0EB6A /* GuiWindowConfig.swift in Sources */,
 				B65195CF2463686900E0EB6A /* Plot.swift in Sources */,
 				B65195D02463686900E0EB6A /* Popup.swift in Sources */,
 				B65195D12463686900E0EB6A /* RadioButton.swift in Sources */,
 				B65195D22463686900E0EB6A /* Slider.swift in Sources */,
-				B65199842464141000E0EB6A /* TreeNodeFlags.swift in Sources */,
+				B65199842464141000E0EB6A /* GuiTreeConfig.swift in Sources */,
 				B65195D32463686900E0EB6A /* TabBar.swift in Sources */,
 				B65195D42463686900E0EB6A /* Text.swift in Sources */,
 				B65195D52463686900E0EB6A /* TextEditor.swift in Sources */,
 				B65195D62463686900E0EB6A /* Tooltip.swift in Sources */,
 				B65195D72463686900E0EB6A /* Tree.swift in Sources */,
 				B65195D82463686900E0EB6A /* Window.swift in Sources */,
-				B65195D92463686900E0EB6A /* FiraCodeRegular.ttf in Sources */,
 				B65195DA2463686900E0EB6A /* SwiftGui.h in Sources */,
-				B65199872464143000E0EB6A /* TabBarFlags.swift in Sources */,
+				B65199872464143000E0EB6A /* GuiTabBarConfig.swift in Sources */,
 				B65195DB2463686900E0EB6A /* LightTheme.swift in Sources */,
 				B65195DC2463686900E0EB6A /* DarculaTheme.swift in Sources */,
 				B65195DD2463686900E0EB6A /* DefaultFontGroup.swift in Sources */,
-				B6519996246414C600E0EB6A /* Dir.swift in Sources */,
+				B6519996246414C600E0EB6A /* GuiDirection.swift in Sources */,
 				B65195DE2463686900E0EB6A /* FontGroup.swift in Sources */,
 				B65195DF2463686900E0EB6A /* Theme.swift in Sources */,
 				B65195E02463686900E0EB6A /* Extensions.swift in Sources */,
@@ -851,47 +849,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65199792464132C00E0EB6A /* DockNodeFlags.swift in Sources */,
-				B6519994246414A600E0EB6A /* StyleVar.swift in Sources */,
-				B65195F8246369D600E0EB6A /* Builder.swift in Sources */,
+				B65199792464132C00E0EB6A /* GuiDockConfig.swift in Sources */,
+				B6519994246414A600E0EB6A /* GuiStyleProperty.swift in Sources */,
+				B65195F8246369D600E0EB6A /* GuiBuilder.swift in Sources */,
 				B65195F9246369D600E0EB6A /* GuiNode.swift in Sources */,
 				B65195FA246369D600E0EB6A /* GuiNode+Extensions.swift in Sources */,
 				B65195FB246369D600E0EB6A /* GuiView.swift in Sources */,
 				B65195FC246369D600E0EB6A /* Button.swift in Sources */,
 				B65195FD246369D600E0EB6A /* CheckBox.swift in Sources */,
-				B651999A246414DF00E0EB6A /* Edge.swift in Sources */,
+				B651999A246414DF00E0EB6A /* GuiEdge.swift in Sources */,
 				B65195FE246369D600E0EB6A /* Color.swift in Sources */,
 				B65195FF246369D600E0EB6A /* Column.swift in Sources */,
 				B6519600246369D600E0EB6A /* ComboBox.swift in Sources */,
-				B6519982246413D500E0EB6A /* InputTextFlags.swift in Sources */,
+				B6519982246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
 				B6519601246369D600E0EB6A /* Common.swift in Sources */,
 				B6519602246369D600E0EB6A /* Debug.swift in Sources */,
 				B6519603246369D600E0EB6A /* Dock.swift in Sources */,
 				B6519604246369D600E0EB6A /* Drag.swift in Sources */,
-				B651998B2464144800E0EB6A /* TabItemFlags.swift in Sources */,
+				B651998B2464144800E0EB6A /* GuiTabItemConfig.swift in Sources */,
 				B6519605246369D600E0EB6A /* Image.swift in Sources */,
 				B6519606246369D600E0EB6A /* Input.swift in Sources */,
 				B6519607246369D600E0EB6A /* ListBox.swift in Sources */,
 				B6519608246369D600E0EB6A /* Menu.swift in Sources */,
-				B651998E2464146500E0EB6A /* SelectableFlags.swift in Sources */,
-				B651997C2464138000E0EB6A /* WindowFlags.swift in Sources */,
+				B651998E2464146500E0EB6A /* GuiSelectable.swift in Sources */,
+				B651997C2464138000E0EB6A /* GuiWindowConfig.swift in Sources */,
 				B6519609246369D600E0EB6A /* Perform.swift in Sources */,
-				B65199912464148600E0EB6A /* GuiCol.swift in Sources */,
+				B65199912464148600E0EB6A /* GuiColorProperty.swift in Sources */,
 				B651960A246369D600E0EB6A /* Plot.swift in Sources */,
-				B6519997246414C600E0EB6A /* Dir.swift in Sources */,
+				B6519997246414C600E0EB6A /* GuiDirection.swift in Sources */,
 				B651960B246369D600E0EB6A /* Popup.swift in Sources */,
 				B651960C246369D600E0EB6A /* RadioButton.swift in Sources */,
 				B651960D246369D600E0EB6A /* Slider.swift in Sources */,
 				B651960E246369D600E0EB6A /* TabBar.swift in Sources */,
 				B651960F246369D600E0EB6A /* Text.swift in Sources */,
 				B6519610246369D600E0EB6A /* TextEditor.swift in Sources */,
-				B65199852464141000E0EB6A /* TreeNodeFlags.swift in Sources */,
+				B65199852464141000E0EB6A /* GuiTreeConfig.swift in Sources */,
 				B6519611246369D600E0EB6A /* Tooltip.swift in Sources */,
 				B6519612246369D600E0EB6A /* Tree.swift in Sources */,
-				B6519976246412CB00E0EB6A /* ConfigFlags.swift in Sources */,
+				B6519976246412CB00E0EB6A /* GuiConfig.swift in Sources */,
 				B6519613246369D600E0EB6A /* Window.swift in Sources */,
 				B6519614246369D600E0EB6A /* FiraCodeRegular.ttf in Sources */,
-				B65199882464143000E0EB6A /* TabBarFlags.swift in Sources */,
+				B65199882464143000E0EB6A /* GuiTabBarConfig.swift in Sources */,
 				B6519615246369D600E0EB6A /* SwiftGui.h in Sources */,
 				B6519616246369D600E0EB6A /* LightTheme.swift in Sources */,
 				B6519617246369D600E0EB6A /* DarculaTheme.swift in Sources */,
@@ -900,7 +898,7 @@
 				B651961A246369D600E0EB6A /* Theme.swift in Sources */,
 				B651961B246369D600E0EB6A /* Extensions.swift in Sources */,
 				B651961C246369D600E0EB6A /* OrderedSet.swift in Sources */,
-				B651997F246413B900E0EB6A /* Cond.swift in Sources */,
+				B651997F246413B900E0EB6A /* GuiCondition.swift in Sources */,
 				B65195F4246369AD00E0EB6A /* SGRenderer.mm in Sources */,
 				B65195F3246369AD00E0EB6A /* imgui_impl_metal.mm in Sources */,
 			);
@@ -1015,6 +1013,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiMac;
 				PRODUCT_NAME = SwiftGui;
 				SKIP_INSTALL = YES;
@@ -1046,6 +1045,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiMac;
 				PRODUCT_NAME = SwiftGui;
 				SKIP_INSTALL = YES;
@@ -1070,6 +1070,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiiOS;
 				PRODUCT_NAME = SwiftGui;
 				SDKROOT = iphoneos;
@@ -1097,6 +1098,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiiOS;
 				PRODUCT_NAME = SwiftGui;
 				SDKROOT = iphoneos;
@@ -1122,6 +1124,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1142,6 +1145,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1162,6 +1166,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample02Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1182,6 +1187,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample02Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1200,6 +1206,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1220,6 +1227,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.7.0;
+				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

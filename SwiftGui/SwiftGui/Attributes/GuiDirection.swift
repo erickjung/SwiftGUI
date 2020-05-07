@@ -8,7 +8,9 @@
 
 import Foundation
 
-public enum ImGuiDir: Int32
+/// A cardinal direction.
+/// Represents: `ImGuiDir`.
+public enum GuiDirection: Int32
 {
     case none  = -1
     case left  = 0

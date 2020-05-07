@@ -10,8 +10,8 @@ import Foundation
 import SwiftGuiCore
 
 public func ColorEdit3(_ title: String,
-                       color: SGColor,
-                       onChange: ((SGColor) -> Void)? = nil) -> GuiNode {
+                       color: GuiColor,
+                       onChange: ((GuiColor) -> Void)? = nil) -> GuiNode {
     
     GuiNode(tag: #function).onRender { _ in
 
@@ -20,7 +20,7 @@ public func ColorEdit3(_ title: String,
             
             if let onChange = onChange {
 
-                onChange(SGColor(r: _color[0], g: _color[1], b: _color[2], a: 1.0))
+                onChange(GuiColor(r: _color[0], g: _color[1], b: _color[2], a: 1.0))
             }
         }
     }

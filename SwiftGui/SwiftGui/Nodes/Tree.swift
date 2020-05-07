@@ -10,7 +10,7 @@ import Foundation
 import SwiftGuiCore
 
 public func Tree(_ title: String,
-                 options: ImGuiTreeNodeFlags = .none,
+                 options: GuiTreeConfig = .none,
                  @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
@@ -24,7 +24,7 @@ public func Tree(_ title: String,
 }
 
 public func CollapsingHeader(_ title: String,
-                             options: ImGuiTreeNodeFlags = .none,
+                             options: GuiTreeConfig = .none,
                              @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
@@ -38,7 +38,7 @@ public func CollapsingHeader(_ title: String,
 
 public func CollapsingHeaderClosable(_ title: String,
                                      closeState: Bool = false,
-                                     options: ImGuiTreeNodeFlags = .none,
+                                     options: GuiTreeConfig = .none,
                                      onClose: ((Bool) -> Void)? = nil,
                                      @GuiBuilder child: () -> GuiView?) -> GuiNode {
     

@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     let mtkView = MTKView()
     var counterState = 0
     var radioState = 0
-    var logo: SGImage?
+    var logo: GuiImage?
 
     override func loadView() {
         self.view = mtkView
@@ -175,7 +175,7 @@ extension ViewController: SGRendererDelegate {
             helpMarker("Refer to the \"Combo\" section below for an explanation of the full BeginCombo/EndCombo API, and demonstration of various flags.\n")
 
             InputText("input text", textState: "Hello, world!")
-            helpMarker("USER:\nHold SHIFT or use mouse to select text.\nCTRL+Left/Right to word jump.\nCTRL+A or double-click to select all.\nCTRL+X,CTRL+C,CTRL+V clipboard.\nCTRL+Z,CTRL+Y undo/redo.\nESCAPE to revert.\n\nPROGRAMMER:\nYou can use the ImGuiInputTextFlags_CallbackResize facility if you need to wire InputText() to a dynamic string type. See misc/cpp/imgui_stdlib.h for an example (this is not demonstrated in imgui_demo.cpp).")
+            helpMarker("USER:\nHold SHIFT or use mouse to select text.\nCTRL+Left/Right to word jump.\nCTRL+A or double-click to select all.\nCTRL+X,CTRL+C,CTRL+V clipboard.\nCTRL+Z,CTRL+Y undo/redo.\nESCAPE to revert.\n\nPROGRAMMER:\nYou can use the GuiInputTextConfig CallbackResize facility if you need to wire InputText() to a dynamic string type. See misc/cpp/imgui_stdlib.h for an example (this is not demonstrated in imgui_demo.cpp).")
 
             InputText("input text (w/ hint)", textState: "", placeHolder: "enter text here")
 
@@ -208,7 +208,7 @@ extension ViewController: SGRendererDelegate {
 
             Tree("Advanced, with Selectable nodes") {
                 helpMarker("This is a more typical looking tree with selectable nodes.\nClick to select, CTRL+Click to toggle, click on arrows or double-click to open.", atSameLine: false)
-                CheckBox("ImGuiTreeNodeFlags_OpenOnArrow", selectedState: false)
+                CheckBox("GuiTreeConfig OpenOnArrow", selectedState: false)
                 Text("Hello!")
                 
                 ForEach((1...3)) { value in
@@ -321,9 +321,9 @@ extension ViewController: SGRendererDelegate {
       
     func mainView() -> GuiNode {
         
-        Window("SwiftGUI Demo", flags: .noTitleBar) {
+        Window("SwiftGUI Demo", options: .noTitleBar) {
             
-            Image(imageId: logo, size: SGSize(width: 250, height: 65))
+            Image(imageId: logo, size: GuiSize(width: 250, height: 65))
             
             CollapsingHeader("Help") {
                 showProgrammerGuide()

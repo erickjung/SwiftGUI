@@ -10,7 +10,7 @@ import SwiftGuiCore
 
 public extension GuiNode {
 
-    func color(_ property: ImGuiCol, color: SGColor) -> GuiNode {
+    func color(_ property: GuiColorProperty, color: GuiColor) -> GuiNode {
         
         let id = UUID().hashValue
         self.insertPreAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
@@ -24,16 +24,16 @@ public extension GuiNode {
         return self
     }
 
-    func position(_ position: SGPoint, condition: ImGuiCond) -> GuiNode {
+    func position(_ position: GuiPoint, condition: GuiCondition) -> GuiNode {
         
         self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
 
-            igSetNextWindowPos(position.convertToVec2(), condition.rawValue, SGPoint.zero.convertToVec2())
+            igSetNextWindowPos(position.convertToVec2(), condition.rawValue, GuiPoint.zero.convertToVec2())
         })
         return self
     }
     
-    func size(_ size: SGSize, condition: ImGuiCond) -> GuiNode {
+    func size(_ size: GuiSize, condition: GuiCondition) -> GuiNode {
         
         self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
 
@@ -42,7 +42,7 @@ public extension GuiNode {
         return self
     }
     
-    func property(_ property: ImGuiStyleVar, set number: Float) -> GuiNode {
+    func property(_ property: GuiStyleProperty, set number: Float) -> GuiNode {
         
         let id = UUID().hashValue
         self.insertPreAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
@@ -92,7 +92,7 @@ public extension GuiNode {
         return self
     }
     
-    func padding(_ edge: GUIEdge = .all,
+    func padding(_ edge: GuiEdge = .all,
                  value: Float) -> GuiNode {
         
         if edge != .bottom && edge != .trailing {

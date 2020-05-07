@@ -10,12 +10,12 @@ import Foundation
 import SwiftGuiCore
 
 public func Popup(id: String,
-                  flags: ImGuiWindowFlags = .none,
+                  options: GuiWindowConfig = .none,
                   @GuiBuilder child: () -> GuiView?) -> GuiNode {
     
     GuiNode(tag: #function, child: child()).onRender { child in
         
-        if igBeginPopup(id.cStr(), flags.rawValue) {
+        if igBeginPopup(id.cStr(), options.rawValue) {
         
             child?.render()
 

@@ -139,10 +139,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F49EAD2371D74500A6D48C /* imconfig.h in Headers */,
 				B6F49EAF2371D74500A6D48C /* imstb_truetype.h in Headers */,
 				B6DF966723EAF4DE00662401 /* TextEditorWrapper.h in Headers */,
 				B6F49EAB2371D74500A6D48C /* imgui.h in Headers */,
+				B6F49EAD2371D74500A6D48C /* imconfig.h in Headers */,
 				B6F49EB62371D74500A6D48C /* cimgui.h in Headers */,
 				B6F49EB22371D74500A6D48C /* imstb_rectpack.h in Headers */,
 				B6F49EAC2371D74500A6D48C /* imstb_textedit.h in Headers */,
@@ -375,6 +375,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				WARNING_CFLAGS = "-Wno-incomplete-umbrella";
 			};
 			name = Debug;
 		};
@@ -405,6 +406,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				WARNING_CFLAGS = "-Wno-incomplete-umbrella";
 			};
 			name = Release;
 		};
