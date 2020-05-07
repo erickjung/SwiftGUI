@@ -8,27 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B625A1AD2376DD820077717D /* MTKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625A1AC2376DD820077717D /* MTKViewController.swift */; };
+		B65199002463891500E0EB6A /* SwiftGuiMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65198FF2463891500E0EB6A /* SwiftGuiMac.framework */; };
+		B65199012463891500E0EB6A /* SwiftGuiMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65198FF2463891500E0EB6A /* SwiftGuiMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D21236BB8F800216EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D20236BB8F800216EA2 /* AppDelegate.swift */; };
 		B67E1D23236BB8F800216EA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D22236BB8F800216EA2 /* ViewController.swift */; };
 		B67E1D25236BB8F800216EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67E1D24236BB8F800216EA2 /* Assets.xcassets */; };
 		B67E1D28236BB8F800216EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67E1D26236BB8F800216EA2 /* Main.storyboard */; };
-		B67E1D33236BB91E00216EA2 /* SwiftGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D31236BB91E00216EA2 /* SwiftGui.framework */; };
-		B67E1D34236BB91F00216EA2 /* SwiftGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D31236BB91E00216EA2 /* SwiftGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D3D236BBB6900216EA2 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D3B236BBB6900216EA2 /* Metal.framework */; };
 		B67E1D3E236BBB6900216EA2 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D3C236BBB6900216EA2 /* MetalKit.framework */; };
-		B6E3BE57236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE56236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework */; };
-		B6E3BE58236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6E3BE56236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B67E1D37236BB91F00216EA2 /* Embed Frameworks */ = {
+		B65199022463891500E0EB6A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6E3BE58236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Embed Frameworks */,
-				B67E1D34236BB91F00216EA2 /* SwiftGui.framework in Embed Frameworks */,
+				B65199012463891500E0EB6A /* SwiftGuiMac.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		B625A1AC2376DD820077717D /* MTKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKViewController.swift; sourceTree = "<group>"; };
+		B65198FF2463891500E0EB6A /* SwiftGuiMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGuiMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D1D236BB8F800216EA2 /* Sample02-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample02-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D20236BB8F800216EA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67E1D22236BB8F800216EA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67E1D33236BB91E00216EA2 /* SwiftGui.framework in Frameworks */,
+				B65199002463891500E0EB6A /* SwiftGuiMac.framework in Frameworks */,
 				B67E1D3E236BBB6900216EA2 /* MetalKit.framework in Frameworks */,
-				B6E3BE57236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework in Frameworks */,
 				B67E1D3D236BBB6900216EA2 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +97,7 @@
 		B67E1D30236BB91E00216EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B65198FF2463891500E0EB6A /* SwiftGuiMac.framework */,
 				B6E3BE56236ECF8100C1E1CF /* SwiftGui_PlatformOSX.framework */,
 				B67E1D3B236BBB6900216EA2 /* Metal.framework */,
 				B67E1D3C236BBB6900216EA2 /* MetalKit.framework */,
@@ -119,7 +117,7 @@
 				B67E1D19236BB8F800216EA2 /* Sources */,
 				B67E1D1A236BB8F800216EA2 /* Frameworks */,
 				B67E1D1B236BB8F800216EA2 /* Resources */,
-				B67E1D37236BB91F00216EA2 /* Embed Frameworks */,
+				B65199022463891500E0EB6A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

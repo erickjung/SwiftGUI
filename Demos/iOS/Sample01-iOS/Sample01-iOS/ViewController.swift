@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import SwiftGui
-import SwiftGui_PlatformiOS
+import SwiftGuiiOS
 
 
 class ViewController: UIViewController {

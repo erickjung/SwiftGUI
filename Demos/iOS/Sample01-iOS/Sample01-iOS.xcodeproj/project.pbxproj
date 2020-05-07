@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B65199042463892300E0EB6A /* SwiftGuiiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65199032463892300E0EB6A /* SwiftGuiiOS.framework */; };
+		B65199052463892300E0EB6A /* SwiftGuiiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65199032463892300E0EB6A /* SwiftGuiiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D4C236BBCFA00216EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D4B236BBCFA00216EA2 /* AppDelegate.swift */; };
 		B67E1D4E236BBCFA00216EA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D4D236BBCFA00216EA2 /* SceneDelegate.swift */; };
 		B67E1D50236BBCFA00216EA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1D4F236BBCFA00216EA2 /* ViewController.swift */; };
 		B67E1D53236BBCFA00216EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67E1D51236BBCFA00216EA2 /* Main.storyboard */; };
 		B67E1D55236BBCFB00216EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67E1D54236BBCFB00216EA2 /* Assets.xcassets */; };
 		B67E1D58236BBCFB00216EA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67E1D56236BBCFB00216EA2 /* LaunchScreen.storyboard */; };
-		B67E1D62236BBD5A00216EA2 /* SwiftGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D60236BBD5A00216EA2 /* SwiftGui.framework */; };
-		B67E1D63236BBD5A00216EA2 /* SwiftGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D60236BBD5A00216EA2 /* SwiftGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B67E1D94236C45EF00216EA2 /* SwiftGui_PlatformiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D93236C45EF00216EA2 /* SwiftGui_PlatformiOS.framework */; };
-		B67E1D95236C45EF00216EA2 /* SwiftGui_PlatformiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D93236C45EF00216EA2 /* SwiftGui_PlatformiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B67E1D96236C488900216EA2 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D68236BBD6400216EA2 /* Metal.framework */; };
 		B67E1D97236C488900216EA2 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67E1D67236BBD6400216EA2 /* MetalKit.framework */; };
-		B6CA6772237301DB000A1C5A /* SwiftGUI_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6CA6771237301DB000A1C5A /* SwiftGUI_Core.framework */; };
-		B6CA6773237301DB000A1C5A /* SwiftGUI_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6CA6771237301DB000A1C5A /* SwiftGUI_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,15 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B67E1D66236BBD5A00216EA2 /* Embed Frameworks */ = {
+		B65199062463892300E0EB6A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B67E1D63236BBD5A00216EA2 /* SwiftGui.framework in Embed Frameworks */,
-				B67E1D95236C45EF00216EA2 /* SwiftGui_PlatformiOS.framework in Embed Frameworks */,
-				B6CA6773237301DB000A1C5A /* SwiftGUI_Core.framework in Embed Frameworks */,
+				B65199052463892300E0EB6A /* SwiftGuiiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B65199032463892300E0EB6A /* SwiftGuiiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGuiiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D48236BBCFA00216EA2 /* Sample01-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample01-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E1D4B236BBCFA00216EA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67E1D4D236BBCFA00216EA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,11 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67E1D62236BBD5A00216EA2 /* SwiftGui.framework in Frameworks */,
-				B6CA6772237301DB000A1C5A /* SwiftGUI_Core.framework in Frameworks */,
+				B65199042463892300E0EB6A /* SwiftGuiiOS.framework in Frameworks */,
 				B67E1D97236C488900216EA2 /* MetalKit.framework in Frameworks */,
 				B67E1D96236C488900216EA2 /* Metal.framework in Frameworks */,
-				B67E1D94236C45EF00216EA2 /* SwiftGui_PlatformiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +111,7 @@
 		B67E1D5F236BBD5A00216EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B65199032463892300E0EB6A /* SwiftGuiiOS.framework */,
 				B6CA6771237301DB000A1C5A /* SwiftGUI_Core.framework */,
 				B6E3BCB4236D98D700C1E1CF /* CImGuiLib.xcodeproj */,
 				B6E3BC9A236C4D5400C1E1CF /* CImGui.framework */,
@@ -148,7 +142,7 @@
 				B67E1D44236BBCFA00216EA2 /* Sources */,
 				B67E1D45236BBCFA00216EA2 /* Frameworks */,
 				B67E1D46236BBCFA00216EA2 /* Resources */,
-				B67E1D66236BBD5A00216EA2 /* Embed Frameworks */,
+				B65199062463892300E0EB6A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

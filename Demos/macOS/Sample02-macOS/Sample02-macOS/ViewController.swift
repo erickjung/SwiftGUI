@@ -9,8 +9,7 @@
 import Cocoa
 import Metal
 import MetalKit
-import SwiftGui
-import SwiftGui_PlatformOSX
+import SwiftGuiMac
 
 class ViewController: MTKViewController {
 
@@ -58,7 +57,7 @@ extension ViewController: SGRendererDelegate {
         DarculaTheme().apply()
     }
 
-    func todoInput() -> GuiView {
+    func todoInput() -> GuiNode {
 
         Group {
          
@@ -83,7 +82,7 @@ extension ViewController: SGRendererDelegate {
         .padding(.top, value: 10)
     }
     
-    func confirmationPopup(name: String) -> GuiView {
+    func confirmationPopup(name: String) -> GuiNode {
         
         Popup(id: name) {
             
@@ -104,7 +103,7 @@ extension ViewController: SGRendererDelegate {
         }
     }
     
-    func cell(name: String, value: Bool, color: SGColor) -> GuiView {
+    func cell(name: String, value: Bool, color: SGColor) -> GuiNode {
         
         Group(id: name) {
             
@@ -138,7 +137,7 @@ extension ViewController: SGRendererDelegate {
         }
     }
     
-    func todoList() -> GuiView {
+    func todoList() -> GuiNode {
         
         CollapsingHeader("TODO", options: .defaultOpen) {
          
@@ -148,14 +147,15 @@ extension ViewController: SGRendererDelegate {
                    
                     if !val.1 {
                         
-                        cell(name: val.0, value: val.1, color: .orange)
+                        return self.cell(name: val.0, value: val.1, color: .orange)
                     }
+                    return nil
                 }
             }
         }
     }
     
-    func doneList() -> GuiView {
+    func doneList() -> GuiNode {
         
         CollapsingHeader("DONE", options: .defaultOpen) {
          
@@ -165,14 +165,15 @@ extension ViewController: SGRendererDelegate {
                    
                     if val.1 {
                         
-                        cell(name: val.0, value: val.1, color: .gray)
+                        return self.cell(name: val.0, value: val.1, color: .gray)
                     }
+                    return nil
                 }
             }
         }
     }
     
-    func mainView() -> GuiView {
+    func mainView() -> GuiNode {
         
         Window("TODO", flags: .noTitleBar) {
             
