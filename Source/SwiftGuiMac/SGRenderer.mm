@@ -41,11 +41,7 @@
     io.DisplaySize.x = view.bounds.size.width;
     io.DisplaySize.y = view.bounds.size.height;
 
-#if TARGET_OS_OSX
     CGFloat framebufferScale = view.window.screen.backingScaleFactor ?: NSScreen.mainScreen.backingScaleFactor;
-#else
-    CGFloat framebufferScale = view.window.screen.scale ?: UIScreen.mainScreen.scale;
-#endif
     io.DisplayFramebufferScale = ImVec2(framebufferScale, framebufferScale);
 
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
@@ -64,9 +60,7 @@
 
         // Start the Dear ImGui frame
         ImGui_ImplMetal_NewFrame(renderPassDescriptor);
-#if TARGET_OS_OSX
         ImGui_ImplOSX_NewFrame(view);
-#endif
         ImGui::NewFrame();
 
         if (self.delegate && [self.delegate respondsToSelector:@selector(draw)]) {
