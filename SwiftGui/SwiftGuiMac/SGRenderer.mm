@@ -1,7 +1,7 @@
 #import "SGRenderer.h"
 #import <Metal/Metal.h>
 
-#include <SwiftGuiCore/imgui.h>
+#include "imgui.h"
 #include "imgui_impl_metal.h"
 
 #if TARGET_OS_OSX

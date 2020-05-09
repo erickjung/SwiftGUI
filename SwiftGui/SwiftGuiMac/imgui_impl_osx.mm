@@ -8,7 +8,7 @@
 // Issues:
 //  [ ] Platform: Keys are all generally very broken. Best using [event keycode] and not [event characters]..
 
-#include <SwiftGuiCore/imgui.h>
+#include "imgui.h"
 #include "imgui_impl_osx.h"
 
 #import <Cocoa/Cocoa.h>

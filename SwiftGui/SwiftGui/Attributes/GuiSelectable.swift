@@ -6,7 +6,7 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// OptionSet with flags for selectables.
 /// Represents: `ImGuiSelectableFlags`.

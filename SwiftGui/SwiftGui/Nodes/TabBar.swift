@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// TabBar node.
 /// - parameter id: Node id
@@ -20,10 +20,10 @@ public func TabBar(id: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBeginTabBar(id.cStr(), options.rawValue) {
+        if ImGuiWrapper.beginTabBar(id, flags: options.rawValue) {
 
             child?.render()
-            igEndTabBar()
+            ImGuiWrapper.endTabBar()
         }
     }
 }
@@ -39,10 +39,10 @@ public func TabItem(_ title: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBeginTabItem(title.cStr(), nil, options.rawValue) {
+        if ImGuiWrapper.beginTabItem(title, flags: options.rawValue) {
 
             child?.render()
-            igEndTabItem()
+            ImGuiWrapper.endTabItem()
         }
     }
 }

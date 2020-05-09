@@ -17,7 +17,7 @@
 //  2018-11-30: Misc: Setting up io.BackendRendererName so it can be displayed in the About Window.
 //  2018-07-05: Metal: Added new Metal backend implementation.
 
-#include <SwiftGuiCore/imgui.h>
+#include "imgui.h"
 #include "imgui_impl_metal.h"
 
 #import <Metal/Metal.h>

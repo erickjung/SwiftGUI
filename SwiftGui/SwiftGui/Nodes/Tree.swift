@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Tree node.
 /// - parameter title: Text for node
@@ -20,10 +20,10 @@ public func Tree(_ title: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igTreeNodeExStr(title.cStr(), options.rawValue) {
+        if ImGuiWrapper.treeNodeEx(title, flags: options.rawValue) {
 
             child?.render()
-            igTreePop()
+            ImGuiWrapper.treePop()
         }
     }
 }
@@ -39,7 +39,7 @@ public func CollapsingHeader(_ title: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igCollapsingHeader(title.cStr(), options.rawValue) {
+        if ImGuiWrapper.collapsingHeader(title, flags: options.rawValue) {
 
             child?.render()
         }
@@ -62,7 +62,7 @@ public func CollapsingHeaderClosable(_ title: String,
     GuiNode(tag: #function, child: child()).onRender { child in
 
         var _value = closeState
-        if igCollapsingHeaderBoolPtr(title, &_value, options.rawValue) {
+        if ImGuiWrapper.collapsingHeader(title, open: &_value, flags: options.rawValue) {
 
             child?.render()
         }

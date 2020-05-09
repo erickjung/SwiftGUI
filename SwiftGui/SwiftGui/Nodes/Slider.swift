@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// SliderFloat node.
 /// - parameter title: Text for node
@@ -27,7 +27,7 @@ public func SliderFloat(_ title: String,
     GuiNode(tag: #function).onRender { _ in
 
         var _value = valueState
-        if igSliderFloat(title, &_value, min, max, format, 1.0) {
+        if ImGuiWrapper.sliderFloat(title, value:  &_value, min: min, max: max, format: format, power: 1.0) {
 
             if _value != valueState {
 

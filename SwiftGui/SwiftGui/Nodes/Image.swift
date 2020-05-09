@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Image node.
 /// - parameter imageId: A Texture handler
@@ -28,12 +28,12 @@ public func Image(imageId: GuiImage?,
 
         if let imageId = imageId {
 
-            igImage(Unmanaged.passUnretained(imageId).toOpaque(),
-                    size.convertToVec2(),
-                    uv0.convertToVec2(),
-                    uv1.convertToVec2(),
-                    tintColor.convertToVec4(),
-                    borderColor.convertToVec4())
+            ImGuiWrapper.image(Unmanaged.passUnretained(imageId).toOpaque(),
+                               size: size,
+                               uv0: uv0,
+                               uv1: uv1,
+                               tintColor: tintColor.cgColor,
+                               borderColor: borderColor.cgColor)
         }
     }
 }

@@ -6,7 +6,7 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-import SwiftGuiCore
+//import SwiftGuiCore
 
 public class GuiNode: GuiView, Hashable {
 
@@ -83,7 +83,7 @@ extension GuiNode {
 
         guard let onHover = self.onHover else { return }
 
-        if igIsItemHovered(0) {
+        if ImGuiWrapper.isItemHovered() {
             onHover()?.render()
         }
     }

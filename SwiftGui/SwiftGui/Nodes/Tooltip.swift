@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Tooltip node.
 /// This can be used with onHover and others nodes to show a tooltip effect.
@@ -17,8 +17,8 @@ public func Tooltip(@GuiBuilder child: () -> GuiView?) -> GuiNode {
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        igBeginTooltip()
+        ImGuiWrapper.beginTooltip()
         child?.render()
-        igEndTooltip()
+        ImGuiWrapper.endTooltip()
     }
 }

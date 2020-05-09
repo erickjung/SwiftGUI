@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Drag node.
 /// This will show a draggable number field
@@ -30,7 +30,7 @@ public func Drag(_ title: String,
     GuiNode(tag: #function).onRender { _ in
 
         var _value = Int32(valueState)
-        if igDragInt(title.cStr(), &_value, speed, Int32(min), Int32(max), format) {
+        if ImGuiWrapper.dragInt(title, value: &_value, vSpeed: speed, vMin: Int32(min), vMax: Int32(max), format: format) {
 
             if _value != valueState {
 

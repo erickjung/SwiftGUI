@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Empty node.
 /// - returns: New node
@@ -27,9 +27,9 @@ public func Group(id: String? = nil, @GuiBuilder child: () -> GuiView?) -> GuiNo
 
         if let id = id {
 
-            igPushIDStr(id.cStr())
+            ImGuiWrapper.pushID(id)
                 child?.render()
-            igPopID()
+            ImGuiWrapper.popID()
 
         } else {
 
@@ -50,12 +50,12 @@ public func HStack(@GuiBuilder child: () -> GuiView?) -> GuiNode {
 
             for child in multi.children {
 
-                igBeginGroup()
+                ImGuiWrapper.beginGroup()
                 child.render()
-                igEndGroup()
-                igSameLine(0.0, -1.0)
+                ImGuiWrapper.endGroup()
+                ImGuiWrapper.sameLine(0.0, spacing: -1.0)
             }
-            igNewLine()
+            ImGuiWrapper.newLine()
 
         } else {
 
@@ -87,7 +87,7 @@ public func Separator() -> GuiNode {
 
     GuiNode(tag: #function).onRender { _ in
 
-        igSeparator()
+        ImGuiWrapper.separator()
     }
 }
 
@@ -101,7 +101,7 @@ public func SameLine(offsetX: GuiPoint = .zero,
 
     GuiNode(tag: #function).onRender { _ in
 
-        igSameLine(Float(offsetX.x), spacing)
+        ImGuiWrapper.sameLine(Float(offsetX.x), spacing: spacing)
     }
 }
 
@@ -111,7 +111,7 @@ public func NewLine() -> GuiNode {
 
     GuiNode(tag: #function).onRender { _ in
 
-        igNewLine()
+        ImGuiWrapper.newLine()
     }
 }
 
@@ -121,7 +121,7 @@ public func Spacing() -> GuiNode {
 
     GuiNode(tag: #function).onRender { _ in
 
-        igSpacing()
+        ImGuiWrapper.spacing()
     }
 }
 
@@ -134,9 +134,9 @@ public func Indent(spacing: Float = 0,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        igIndent(spacing)
+        ImGuiWrapper.indent(spacing)
         child?.render()
-        igUnindent(spacing)
+        ImGuiWrapper.unindent(spacing)
     }
 }
 
@@ -151,6 +151,6 @@ public func ProgressBar(_ fraction: Float,
 
     GuiNode(tag: #function).onRender { _ in
 
-        igProgressBar(fraction, size.convertToVec2(), overlay)
+        ImGuiWrapper.progressBar(fraction, size: size, overlay: overlay)
     }
 }

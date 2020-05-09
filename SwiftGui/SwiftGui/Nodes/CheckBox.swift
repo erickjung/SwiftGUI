@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// CheckBox node.
 /// - parameter title: Text for node
@@ -26,9 +26,9 @@ public func CheckBox(_ title: String = "",
 
         if let id = id {
 
-            igPushIDStr(id.cStr())
+            ImGuiWrapper.pushID(id)
 
-            if igCheckbox(title.cStr(), &_value) {
+            if ImGuiWrapper.checkbox(title, value: &_value) {
 
                 if _value != selectedState {
 
@@ -36,11 +36,11 @@ public func CheckBox(_ title: String = "",
                 }
             }
 
-            igPopID()
+            ImGuiWrapper.popID()
 
         } else {
 
-            if igCheckbox(title.cStr(), &_value) {
+            if ImGuiWrapper.checkbox(title, value: &_value) {
 
                 if _value != selectedState {
 

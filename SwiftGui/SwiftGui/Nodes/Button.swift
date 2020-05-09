@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Button node.
 /// - parameter title: Text for node
@@ -20,7 +20,7 @@ public func Button(_ title: String,
 
     GuiNode(tag: #function).onRender { _ in
 
-        if igButton(title.cStr(), size.convertToVec2()) {
+        if ImGuiWrapper.button(title, size: size) {
             onTap?()
         }
     }
@@ -35,7 +35,7 @@ public func SmallButton(_ title: String,
 
     GuiNode(tag: #function).onRender { _ in
 
-        if igSmallButton(title.cStr()) {
+        if ImGuiWrapper.smallButton(title) {
             onTap?()
         }
     }
@@ -52,7 +52,7 @@ public func ArrowButton(_ id: String,
 
     GuiNode(tag: #function).onRender { _ in
 
-        if igArrowButton(id.cStr(), direction.rawValue) {
+        if ImGuiWrapper.arrowButton(id, dir: direction.rawValue) {
             onTap?()
         }
     }
@@ -67,9 +67,9 @@ public func PushButtonGroup(loop: Bool = true,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        igPushButtonRepeat(loop)
+        ImGuiWrapper.pushButtonRepeat(loop)
         child?.render()
-        igPopButtonRepeat()
+        ImGuiWrapper.popButtonRepeat()
     }
 }
 
@@ -79,29 +79,6 @@ public func Bullet() -> GuiNode {
 
     GuiNode(tag: #function).onRender { _ in
 
-        igBullet()
-    }
-}
-
-/// Selectable node.
-/// A selectable highlights when hovered.
-/// - parameter title: Text for node
-/// - parameter selectedState: Select state
-/// - parameter size: Size for node
-/// - parameter options: Options for node
-/// - parameter onChange: Callback for state changing
-/// - returns: New node
-public func Selectable(_ title: String,
-                       selectedState: Bool = false,
-                       size: GuiSize = .zero,
-                       options: GuiSelectable = .none,
-                       onChange: ((Bool) -> Void)? = nil) -> GuiNode {
-
-    GuiNode(tag: #function).onRender { _ in
-
-        var _value = selectedState
-        if igSelectableBoolPtr(title.cStr(), &_value, options.rawValue, size.convertToVec2()) {
-            onChange?(_value)
-        }
+        ImGuiWrapper.bullet()
     }
 }

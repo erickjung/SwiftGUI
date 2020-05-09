@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// ComboBox node.
 /// - parameter title: Text for node
@@ -23,7 +23,7 @@ public func ComboBox(_ title: String = "",
     GuiNode(tag: #function).onRender { _ in
 
         var _currentItem = Int32(currentItemState)
-        if igCombo(title.cStr(), &_currentItem, items.map { $0.cStr() }, Int32(items.count), -1) {
+        if ImGuiWrapper.combo(title, currentItem: &_currentItem, items: items.map { $0 }, popupMaxHeightItems: -1) {
 
             if _currentItem != currentItemState {
 

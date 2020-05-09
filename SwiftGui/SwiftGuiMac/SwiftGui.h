@@ -15,4 +15,6 @@ FOUNDATION_EXPORT double SwiftGuiMacVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftGuiMacVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftGui/PublicHeader.h>
+#import "ImGuiWrapper.h"
+#import "TextEditorWrapper.h"
 #import "SGRenderer.h"

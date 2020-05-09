@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// A plot types.
 public enum GuiPlotType {
@@ -42,27 +42,27 @@ public func Plot(_ title: String = "",
 
         case .line:
 
-            igPlotLines(title,
-                        values.map({ return $0 }),
-                        Int32(values.count),
-                        Int32(valuesOffset),
-                        overlayText,
-                        minScale,
-                        maxScale,
-                        size.convertToVec2(),
-                        Int32(stride))
+            ImGuiWrapper.plotLines(title,
+                                   values: values.map({ return $0 }),
+                                   valueCount: Int32(values.count),
+                                   valuesOffset: Int32(valuesOffset),
+                                   overlayText: overlayText,
+                                   minScale: minScale,
+                                   maxScale: maxScale,
+                                   graphSize: size,
+                                   stride: Int32(stride))
 
         case .histogram:
 
-            igPlotHistogramFloatPtr(title,
-                                    values.map({ return $0 }),
-                                    Int32(values.count),
-                                    Int32(valuesOffset),
-                                    overlayText,
-                                    minScale,
-                                    maxScale,
-                                    size.convertToVec2(),
-                                    Int32(stride))
+            ImGuiWrapper.plotHistogram(title,
+                                       values: values.map({ return $0 }),
+                                       valueCount: Int32(values.count),
+                                       valuesOffset: Int32(valuesOffset),
+                                       overlayText: overlayText,
+                                       minScale: minScale,
+                                       maxScale: maxScale,
+                                       graphSize: size,
+                                       stride: Int32(stride))
         }
     }
 }

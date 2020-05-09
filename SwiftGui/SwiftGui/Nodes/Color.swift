@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// ColorEdit node.
 /// This is an editable node with 3 floats fields.
@@ -22,7 +22,7 @@ public func ColorEdit(_ title: String,
     GuiNode(tag: #function).onRender { _ in
 
         var _color = colorState.convertToFloats()
-        if igColorEdit3(title.cStr(), &_color, 0) {
+        if ImGuiWrapper.colorEdit3(title, color: &_color, flags: 0) {
 
             if let onChange = onChange {
 

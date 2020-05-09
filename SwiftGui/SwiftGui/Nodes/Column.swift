@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Column node.
 /// - parameter id: Node id
@@ -20,7 +20,7 @@ public func Column(id: String? = nil,
 
     GuiNode(tag: #function).onRender { _ in
 
-        igColumns(Int32(count), id?.cStr(), border)
+        ImGuiWrapper.columns(Int32(count), strId: id, border: border)
     }
 }
 
@@ -33,7 +33,7 @@ public func ColumnWidth(index: Int,
 
     GuiNode(tag: #function).onRender { _ in
 
-        igSetColumnWidth(Int32(index), width)
+        ImGuiWrapper.setColumnWidth(Int32(index), width: width)
     }
 }
 
@@ -46,7 +46,7 @@ public func ColumnOffset(index: Int,
 
     GuiNode(tag: #function).onRender { _ in
 
-        igSetColumnOffset(Int32(index), offset)
+        ImGuiWrapper.setColumnOffset(Int32(index), offset: offset)
     }
 }
 
@@ -57,6 +57,6 @@ public func ColumnNext() -> GuiNode {
 
     GuiNode(tag: #function).onRender { _ in
 
-        igNextColumn()
+        ImGuiWrapper.nextColumn()
     }
 }

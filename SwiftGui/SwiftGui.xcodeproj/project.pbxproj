@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61DD32F2466059100BCB30F /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3172466059100BCB30F /* imgui.h */; };
+		B61DD3302466059100BCB30F /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3172466059100BCB30F /* imgui.h */; };
+		B61DD3312466059100BCB30F /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3182466059100BCB30F /* imstb_textedit.h */; };
+		B61DD3322466059100BCB30F /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3182466059100BCB30F /* imstb_textedit.h */; };
+		B61DD3332466059100BCB30F /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3192466059100BCB30F /* imconfig.h */; };
+		B61DD3342466059100BCB30F /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3192466059100BCB30F /* imconfig.h */; };
+		B61DD3352466059100BCB30F /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD31A2466059100BCB30F /* imgui_widgets.cpp */; };
+		B61DD3362466059100BCB30F /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD31A2466059100BCB30F /* imgui_widgets.cpp */; };
+		B61DD3372466059100BCB30F /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD31B2466059100BCB30F /* imstb_truetype.h */; };
+		B61DD3382466059100BCB30F /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD31B2466059100BCB30F /* imstb_truetype.h */; };
+		B61DD3392466059100BCB30F /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD31C2466059100BCB30F /* imgui.cpp */; };
+		B61DD33A2466059100BCB30F /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD31C2466059100BCB30F /* imgui.cpp */; };
+		B61DD33B2466059100BCB30F /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD31D2466059100BCB30F /* imgui_internal.h */; };
+		B61DD33C2466059100BCB30F /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD31D2466059100BCB30F /* imgui_internal.h */; };
+		B61DD33D2466059100BCB30F /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD31E2466059100BCB30F /* imstb_rectpack.h */; };
+		B61DD33E2466059100BCB30F /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD31E2466059100BCB30F /* imstb_rectpack.h */; };
+		B61DD33F2466059100BCB30F /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD31F2466059100BCB30F /* imgui_demo.cpp */; };
+		B61DD3402466059100BCB30F /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD31F2466059100BCB30F /* imgui_demo.cpp */; };
+		B61DD3412466059100BCB30F /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3202466059100BCB30F /* imgui_draw.cpp */; };
+		B61DD3422466059100BCB30F /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3202466059100BCB30F /* imgui_draw.cpp */; };
+		B61DD3492466059100BCB30F /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3272466059100BCB30F /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B61DD34B2466059100BCB30F /* TextEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3282466059100BCB30F /* TextEditor.cpp */; };
+		B61DD34C2466059100BCB30F /* TextEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3282466059100BCB30F /* TextEditor.cpp */; };
+		B61DD34E2466059100BCB30F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B61DD3292466059100BCB30F /* LICENSE */; };
+		B61DD3502466059100BCB30F /* CONTRIBUTING in Resources */ = {isa = PBXBuildFile; fileRef = B61DD32A2466059100BCB30F /* CONTRIBUTING */; };
+		B61DD3512466059100BCB30F /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */; };
+		B61DD3542466059100BCB30F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B61DD32C2466059100BCB30F /* README.md */; };
+		B61DD3552466059100BCB30F /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD32D2466059100BCB30F /* TextEditor.h */; };
+		B61DD3562466059100BCB30F /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD32D2466059100BCB30F /* TextEditor.h */; };
 		B65195A02463657800E0EB6A /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B651959E2463657800E0EB6A /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195A52463660500E0EB6A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A42463660500E0EB6A /* AppKit.framework */; };
 		B65195A82463660C00E0EB6A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A62463660C00E0EB6A /* Metal.framework */; };
@@ -27,7 +56,6 @@
 		B65195C42463686900E0EB6A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE03A523EB67ED002381A7 /* Column.swift */; };
 		B65195C52463686900E0EB6A /* ComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C62236BB23C00216EA2 /* ComboBox.swift */; };
 		B65195C62463686900E0EB6A /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5F236BB23C00216EA2 /* General.swift */; };
-		B65195C82463686900E0EB6A /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603BBDD238E20500059D1AD /* Dock.swift */; };
 		B65195C92463686900E0EB6A /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5E236BB23C00216EA2 /* Drag.swift */; };
 		B65195CA2463686900E0EB6A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF8B59237AB53300374675 /* Image.swift */; };
 		B65195CB2463686900E0EB6A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C64236BB23C00216EA2 /* Input.swift */; };
@@ -67,7 +95,6 @@
 		B65195FF246369D600E0EB6A /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE03A523EB67ED002381A7 /* Column.swift */; };
 		B6519600246369D600E0EB6A /* ComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C62236BB23C00216EA2 /* ComboBox.swift */; };
 		B6519601246369D600E0EB6A /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5F236BB23C00216EA2 /* General.swift */; };
-		B6519603246369D600E0EB6A /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603BBDD238E20500059D1AD /* Dock.swift */; };
 		B6519604246369D600E0EB6A /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5E236BB23C00216EA2 /* Drag.swift */; };
 		B6519605246369D600E0EB6A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DF8B59237AB53300374675 /* Image.swift */; };
 		B6519606246369D600E0EB6A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C64236BB23C00216EA2 /* Input.swift */; };
@@ -95,10 +122,6 @@
 		B651961E246369F800E0EB6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B651961D246369F800E0EB6A /* UIKit.framework */; };
 		B651961F246369FD00E0EB6A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A62463660C00E0EB6A /* Metal.framework */; };
 		B6519620246369FD00E0EB6A /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A72463660C00E0EB6A /* MetalKit.framework */; };
-		B65198F92463865400E0EB6A /* SwiftGuiCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65198F82463865400E0EB6A /* SwiftGuiCore.framework */; };
-		B65198FA2463865400E0EB6A /* SwiftGuiCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65198F82463865400E0EB6A /* SwiftGuiCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B65198FC2463876900E0EB6A /* SwiftGuiCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65198F82463865400E0EB6A /* SwiftGuiCore.framework */; };
-		B65198FD2463876900E0EB6A /* SwiftGuiCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65198F82463865400E0EB6A /* SwiftGuiCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6519930246407AE00E0EB6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651992F246407AE00E0EB6A /* AppDelegate.swift */; };
 		B6519932246407AE00E0EB6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519931246407AE00E0EB6A /* ViewController.swift */; };
 		B6519934246407AF00E0EB6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6519933246407AF00E0EB6A /* Assets.xcassets */; };
@@ -144,6 +167,12 @@
 		B651999A246414DF00E0EB6A /* GuiEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6519998246414DF00E0EB6A /* GuiEdge.swift */; };
 		B651999C24643D2400E0EB6A /* GuiNodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651999B24643D2400E0EB6A /* GuiNodeList.swift */; };
 		B651999D24643D2400E0EB6A /* GuiNodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651999B24643D2400E0EB6A /* GuiNodeList.swift */; };
+		B666D04124660D71009D4010 /* ImGuiWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B666D03F24660D71009D4010 /* ImGuiWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B666D04224660D71009D4010 /* ImGuiWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B666D04024660D71009D4010 /* ImGuiWrapper.mm */; };
+		B6C0A55D246627BE00FFF84D /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3272466059100BCB30F /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6C0A55E246627C400FFF84D /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */; };
+		B6C0A55F246627C600FFF84D /* ImGuiWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B666D03F24660D71009D4010 /* ImGuiWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6C0A560246627CA00FFF84D /* ImGuiWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B666D04024660D71009D4010 /* ImGuiWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,39 +199,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		B65198FB2463865400E0EB6A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B65198FA2463865400E0EB6A /* SwiftGuiCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B65198FE2463876900E0EB6A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B65198FD2463876900E0EB6A /* SwiftGuiCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		B603BBD9238E038A0059D1AD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		B603BBDD238E20500059D1AD /* Dock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dock.swift; sourceTree = "<group>"; };
 		B61C76002373802C008DB346 /* Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perform.swift; sourceTree = "<group>"; };
 		B61C76122374532A008DB346 /* GuiNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GuiNode+Extensions.swift"; sourceTree = "<group>"; };
+		B61DD3172466059100BCB30F /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
+		B61DD3182466059100BCB30F /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
+		B61DD3192466059100BCB30F /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
+		B61DD31A2466059100BCB30F /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_widgets.cpp; sourceTree = "<group>"; };
+		B61DD31B2466059100BCB30F /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
+		B61DD31C2466059100BCB30F /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
+		B61DD31D2466059100BCB30F /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
+		B61DD31E2466059100BCB30F /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_rectpack.h; sourceTree = "<group>"; };
+		B61DD31F2466059100BCB30F /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
+		B61DD3202466059100BCB30F /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
+		B61DD3272466059100BCB30F /* TextEditorWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextEditorWrapper.h; path = thirdparty/ImGuiColorTextEdit/TextEditorWrapper.h; sourceTree = "<group>"; };
+		B61DD3282466059100BCB30F /* TextEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextEditor.cpp; sourceTree = "<group>"; };
+		B61DD3292466059100BCB30F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B61DD32A2466059100BCB30F /* CONTRIBUTING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CONTRIBUTING; sourceTree = "<group>"; };
+		B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextEditorWrapper.mm; path = thirdparty/ImGuiColorTextEdit/TextEditorWrapper.mm; sourceTree = "<group>"; };
+		B61DD32C2466059100BCB30F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B61DD32D2466059100BCB30F /* TextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditor.h; sourceTree = "<group>"; };
 		B625A1A32375BDE60077717D /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		B651959C2463657800E0EB6A /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B651959E2463657800E0EB6A /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
+		B651959E2463657800E0EB6A /* SwiftGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B651959F2463657800E0EB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65195A42463660500E0EB6A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B65195A62463660C00E0EB6A /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
@@ -259,6 +279,8 @@
 		B6519995246414C600E0EB6A /* GuiDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiDirection.swift; sourceTree = "<group>"; };
 		B6519998246414DF00E0EB6A /* GuiEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiEdge.swift; sourceTree = "<group>"; };
 		B651999B24643D2400E0EB6A /* GuiNodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiNodeList.swift; sourceTree = "<group>"; };
+		B666D03F24660D71009D4010 /* ImGuiWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImGuiWrapper.h; sourceTree = "<group>"; };
+		B666D04024660D71009D4010 /* ImGuiWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImGuiWrapper.mm; sourceTree = "<group>"; };
 		B67E1C50236BB20400216EA2 /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B67E1C51236BB20400216EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
@@ -299,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65195A92463660C00E0EB6A /* MetalKit.framework in Frameworks */,
-				B65198F92463865400E0EB6A /* SwiftGuiCore.framework in Frameworks */,
 				B65195A82463660C00E0EB6A /* Metal.framework in Frameworks */,
 				B65195A52463660500E0EB6A /* AppKit.framework in Frameworks */,
 			);
@@ -310,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6519620246369FD00E0EB6A /* MetalKit.framework in Frameworks */,
-				B65198FC2463876900E0EB6A /* SwiftGuiCore.framework in Frameworks */,
 				B651961F246369FD00E0EB6A /* Metal.framework in Frameworks */,
 				B651961E246369F800E0EB6A /* UIKit.framework in Frameworks */,
 			);
@@ -340,6 +360,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B61DD3152466059100BCB30F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B61DD3162466059100BCB30F /* imgui */,
+				B61DD3252466059100BCB30F /* thirdparty */,
+				B61DD3272466059100BCB30F /* TextEditorWrapper.h */,
+				B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */,
+				B666D03F24660D71009D4010 /* ImGuiWrapper.h */,
+				B666D04024660D71009D4010 /* ImGuiWrapper.mm */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B61DD3162466059100BCB30F /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				B61DD3172466059100BCB30F /* imgui.h */,
+				B61DD3182466059100BCB30F /* imstb_textedit.h */,
+				B61DD3192466059100BCB30F /* imconfig.h */,
+				B61DD31A2466059100BCB30F /* imgui_widgets.cpp */,
+				B61DD31B2466059100BCB30F /* imstb_truetype.h */,
+				B61DD31C2466059100BCB30F /* imgui.cpp */,
+				B61DD31D2466059100BCB30F /* imgui_internal.h */,
+				B61DD31E2466059100BCB30F /* imstb_rectpack.h */,
+				B61DD31F2466059100BCB30F /* imgui_demo.cpp */,
+				B61DD3202466059100BCB30F /* imgui_draw.cpp */,
+			);
+			path = imgui;
+			sourceTree = "<group>";
+		};
+		B61DD3252466059100BCB30F /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				B61DD3262466059100BCB30F /* ImGuiColorTextEdit */,
+			);
+			path = thirdparty;
+			sourceTree = "<group>";
+		};
+		B61DD3262466059100BCB30F /* ImGuiColorTextEdit */ = {
+			isa = PBXGroup;
+			children = (
+				B61DD32A2466059100BCB30F /* CONTRIBUTING */,
+				B61DD3292466059100BCB30F /* LICENSE */,
+				B61DD32C2466059100BCB30F /* README.md */,
+				B61DD3282466059100BCB30F /* TextEditor.cpp */,
+				B61DD32D2466059100BCB30F /* TextEditor.h */,
+			);
+			path = ImGuiColorTextEdit;
+			sourceTree = "<group>";
+		};
 		B651959D2463657800E0EB6A /* SwiftGuiMac */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +528,7 @@
 		B67E1C4F236BB20400216EA2 /* SwiftGui */ = {
 			isa = PBXGroup;
 			children = (
+				B61DD3152466059100BCB30F /* Core */,
 				B6519973246412B400E0EB6A /* Attributes */,
 				B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */,
 				B67E1C6F236BB23C00216EA2 /* GuiNode.swift */,
@@ -492,7 +563,6 @@
 				B6BE03A523EB67ED002381A7 /* Column.swift */,
 				B67E1C62236BB23C00216EA2 /* ComboBox.swift */,
 				B67E1C5F236BB23C00216EA2 /* General.swift */,
-				B603BBDD238E20500059D1AD /* Dock.swift */,
 				B67E1C5E236BB23C00216EA2 /* Drag.swift */,
 				B6DF8B59237AB53300374675 /* Image.swift */,
 				B67E1C64236BB23C00216EA2 /* Input.swift */,
@@ -576,10 +646,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61DD3552466059100BCB30F /* TextEditor.h in Headers */,
 				B65195A02463657800E0EB6A /* SwiftGui.h in Headers */,
+				B666D04124660D71009D4010 /* ImGuiWrapper.h in Headers */,
+				B61DD3492466059100BCB30F /* TextEditorWrapper.h in Headers */,
+				B61DD3312466059100BCB30F /* imstb_textedit.h in Headers */,
 				B65195B6246366A300E0EB6A /* SGRenderer.h in Headers */,
 				B65195B8246366A300E0EB6A /* imgui_impl_metal.h in Headers */,
+				B61DD32F2466059100BCB30F /* imgui.h in Headers */,
+				B61DD3332466059100BCB30F /* imconfig.h in Headers */,
+				B61DD33D2466059100BCB30F /* imstb_rectpack.h in Headers */,
+				B61DD33B2466059100BCB30F /* imgui_internal.h in Headers */,
 				B65195B3246366A300E0EB6A /* imgui_impl_osx.h in Headers */,
+				B61DD3372466059100BCB30F /* imstb_truetype.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,9 +666,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61DD3302466059100BCB30F /* imgui.h in Headers */,
 				B65195F5246369AD00E0EB6A /* imgui_impl_metal.h in Headers */,
+				B61DD3322466059100BCB30F /* imstb_textedit.h in Headers */,
 				B65195F6246369AD00E0EB6A /* SGRenderer.h in Headers */,
+				B61DD3342466059100BCB30F /* imconfig.h in Headers */,
+				B61DD33C2466059100BCB30F /* imgui_internal.h in Headers */,
+				B6C0A55D246627BE00FFF84D /* TextEditorWrapper.h in Headers */,
 				B65195EB2463698800E0EB6A /* SwiftGui.h in Headers */,
+				B61DD3562466059100BCB30F /* TextEditor.h in Headers */,
+				B61DD33E2466059100BCB30F /* imstb_rectpack.h in Headers */,
+				B61DD3382466059100BCB30F /* imstb_truetype.h in Headers */,
+				B6C0A55F246627C600FFF84D /* ImGuiWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +692,6 @@
 				B65195982463657800E0EB6A /* Sources */,
 				B65195992463657800E0EB6A /* Frameworks */,
 				B651959A2463657800E0EB6A /* Resources */,
-				B65198FB2463865400E0EB6A /* Embed Frameworks */,
 				B651999E24646C0800E0EB6A /* SwiftLint */,
 			);
 			buildRules = (
@@ -624,7 +711,6 @@
 				B65195E32463698800E0EB6A /* Sources */,
 				B65195E42463698800E0EB6A /* Frameworks */,
 				B65195E52463698800E0EB6A /* Resources */,
-				B65198FE2463876900E0EB6A /* Embed Frameworks */,
 				B651999F246478E300E0EB6A /* SwiftLint */,
 			);
 			buildRules = (
@@ -752,7 +838,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61DD34E2466059100BCB30F /* LICENSE in Resources */,
 				B651994024640E1000E0EB6A /* FiraCodeRegular.ttf in Resources */,
+				B61DD3542466059100BCB30F /* README.md in Resources */,
+				B61DD3502466059100BCB30F /* CONTRIBUTING in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,8 +934,10 @@
 				B65195C42463686900E0EB6A /* Column.swift in Sources */,
 				B65195C52463686900E0EB6A /* ComboBox.swift in Sources */,
 				B65195C62463686900E0EB6A /* General.swift in Sources */,
-				B65195C82463686900E0EB6A /* Dock.swift in Sources */,
+				B61DD3512466059100BCB30F /* TextEditorWrapper.mm in Sources */,
+				B61DD3412466059100BCB30F /* imgui_draw.cpp in Sources */,
 				B6519981246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
+				B61DD3392466059100BCB30F /* imgui.cpp in Sources */,
 				B6519975246412C600E0EB6A /* GuiConfig.swift in Sources */,
 				B65199782464132C00E0EB6A /* GuiDockConfig.swift in Sources */,
 				B65195C92463686900E0EB6A /* Drag.swift in Sources */,
@@ -860,6 +951,7 @@
 				B651997B2464138000E0EB6A /* GuiWindowConfig.swift in Sources */,
 				B65195CF2463686900E0EB6A /* Plot.swift in Sources */,
 				B65195D02463686900E0EB6A /* Popup.swift in Sources */,
+				B666D04224660D71009D4010 /* ImGuiWrapper.mm in Sources */,
 				B65195D12463686900E0EB6A /* RadioButton.swift in Sources */,
 				B65195D22463686900E0EB6A /* Slider.swift in Sources */,
 				B65199842464141000E0EB6A /* GuiTreeConfig.swift in Sources */,
@@ -867,15 +959,18 @@
 				B65195D42463686900E0EB6A /* Text.swift in Sources */,
 				B65195D52463686900E0EB6A /* TextEditor.swift in Sources */,
 				B65195D62463686900E0EB6A /* Tooltip.swift in Sources */,
+				B61DD33F2466059100BCB30F /* imgui_demo.cpp in Sources */,
 				B65195D72463686900E0EB6A /* Tree.swift in Sources */,
 				B65195D82463686900E0EB6A /* Window.swift in Sources */,
 				B65195DA2463686900E0EB6A /* SwiftGui.h in Sources */,
 				B65199872464143000E0EB6A /* GuiTabBarConfig.swift in Sources */,
+				B61DD3352466059100BCB30F /* imgui_widgets.cpp in Sources */,
 				B65195DB2463686900E0EB6A /* LightTheme.swift in Sources */,
 				B65195DC2463686900E0EB6A /* DarculaTheme.swift in Sources */,
 				B65195DD2463686900E0EB6A /* DefaultFontGroup.swift in Sources */,
 				B6519996246414C600E0EB6A /* GuiDirection.swift in Sources */,
 				B65195DE2463686900E0EB6A /* FontGroup.swift in Sources */,
+				B61DD34B2466059100BCB30F /* TextEditor.cpp in Sources */,
 				B65195DF2463686900E0EB6A /* Theme.swift in Sources */,
 				B65195E02463686900E0EB6A /* Extensions.swift in Sources */,
 				B65195E12463686900E0EB6A /* OrderedSet.swift in Sources */,
@@ -900,11 +995,13 @@
 				B65195FD246369D600E0EB6A /* CheckBox.swift in Sources */,
 				B651999A246414DF00E0EB6A /* GuiEdge.swift in Sources */,
 				B65195FE246369D600E0EB6A /* Color.swift in Sources */,
+				B61DD34C2466059100BCB30F /* TextEditor.cpp in Sources */,
 				B65195FF246369D600E0EB6A /* Column.swift in Sources */,
+				B6C0A55E246627C400FFF84D /* TextEditorWrapper.mm in Sources */,
 				B6519600246369D600E0EB6A /* ComboBox.swift in Sources */,
+				B6C0A560246627CA00FFF84D /* ImGuiWrapper.mm in Sources */,
 				B6519982246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
 				B6519601246369D600E0EB6A /* General.swift in Sources */,
-				B6519603246369D600E0EB6A /* Dock.swift in Sources */,
 				B6519604246369D600E0EB6A /* Drag.swift in Sources */,
 				B651998B2464144800E0EB6A /* GuiTabItemConfig.swift in Sources */,
 				B6519605246369D600E0EB6A /* Image.swift in Sources */,
@@ -917,6 +1014,7 @@
 				B65199912464148600E0EB6A /* GuiColorProperty.swift in Sources */,
 				B651960A246369D600E0EB6A /* Plot.swift in Sources */,
 				B6519997246414C600E0EB6A /* GuiDirection.swift in Sources */,
+				B61DD3422466059100BCB30F /* imgui_draw.cpp in Sources */,
 				B651960B246369D600E0EB6A /* Popup.swift in Sources */,
 				B651960C246369D600E0EB6A /* RadioButton.swift in Sources */,
 				B651960D246369D600E0EB6A /* Slider.swift in Sources */,
@@ -933,9 +1031,12 @@
 				B6519616246369D600E0EB6A /* LightTheme.swift in Sources */,
 				B6519617246369D600E0EB6A /* DarculaTheme.swift in Sources */,
 				B6519618246369D600E0EB6A /* DefaultFontGroup.swift in Sources */,
+				B61DD3402466059100BCB30F /* imgui_demo.cpp in Sources */,
 				B6519619246369D600E0EB6A /* FontGroup.swift in Sources */,
+				B61DD33A2466059100BCB30F /* imgui.cpp in Sources */,
 				B651961A246369D600E0EB6A /* Theme.swift in Sources */,
 				B651961B246369D600E0EB6A /* Extensions.swift in Sources */,
+				B61DD3362466059100BCB30F /* imgui_widgets.cpp in Sources */,
 				B651961C246369D600E0EB6A /* OrderedSet.swift in Sources */,
 				B651997F246413B900E0EB6A /* GuiCondition.swift in Sources */,
 				B65195F4246369AD00E0EB6A /* SGRenderer.mm in Sources */,
@@ -1040,7 +1141,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
-				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = CIMGUI_DEFINE_ENUMS_AND_STRUCTS;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SwiftGuiMac/Info.plist;
@@ -1073,7 +1174,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
-				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = CIMGUI_DEFINE_ENUMS_AND_STRUCTS;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SwiftGuiMac/Info.plist;

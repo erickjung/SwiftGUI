@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// InputText node.
 /// - parameter title: Text for node
@@ -30,13 +30,13 @@ public func InputText(_ title: String = "",
 
         if let placeHolder = placeHolder {
 
-            if igInputTextWithHint(title.cStr(), placeHolder, &_value, maxLength, options.rawValue, nil, nil) {
+            if ImGuiWrapper.inputText(withHint: title, hint: placeHolder, buffer: &_value, bufferSize: Int32(maxLength), flags: options.rawValue) {
                 onChange?(String(cString: _value))
             }
 
         } else {
 
-            if igInputText(title.cStr(), &_value, maxLength, options.rawValue, nil, nil) {
+            if ImGuiWrapper.inputText(title, buffer: &_value, bufferSize: Int32(maxLength), flags: options.rawValue) {
                 onChange?(String(cString: _value))
             }
         }
@@ -59,11 +59,7 @@ public func InputTextMultiline(id: String,
     GuiNode(tag: #function).onRender { _ in
 
         var _value = textState.cChars(with: textState.count + 2048)
-        if igInputTextMultiline(id.cStr(), &_value, _value.count, size.convertToVec2(), options.rawValue, { _ in
-
-            return 0
-
-        }, nil) {
+        if ImGuiWrapper.inputTextMultiline(id, buffer: &_value, bufferSize: Int32(_value.count), size: size, flags: options.rawValue) {
 
             onChange?(String(cString: _value))
         }
@@ -91,7 +87,7 @@ public func InputFloat(_ title: String,
     GuiNode(tag: #function).onRender { _ in
 
         var _value = Float32(valueState)
-        if igInputFloat(title.cStr(), &_value, step, stepFast, format, options.rawValue) {
+        if ImGuiWrapper.inputFloat(title, v: &_value, step: step, stepFast: stepFast, format: format, flags: options.rawValue) {
             onChange?(Float(_value))
         }
     }
@@ -116,7 +112,7 @@ public func InputInt(_ title: String,
     GuiNode(tag: #function).onRender { _ in
 
         var _value = Int32(valueState)
-        if igInputInt(title.cStr(), &_value, Int32(step), Int32(stepFast), options.rawValue) {
+        if ImGuiWrapper.inputInt(title, v: &_value, step: Int32(step), stepFast: Int32(stepFast), flags: options.rawValue) {
             onChange?(Int(_value))
         }
     }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// RadioButton node.
 /// - parameter title: Text for node
@@ -20,7 +20,7 @@ public func RadioButton(_ title: String,
 
     GuiNode(tag: #function).onRender { _ in
 
-        if igRadioButtonBool(title, activeState) {
+        if ImGuiWrapper.radioButton(title, active: activeState) {
             onChange?()
         }
     }
@@ -43,7 +43,7 @@ public func RadioButtonGroup(_ values: [String],
         GuiNode(tag: #function).onRender { _ in
 
             var _value = Int32(selectedState)
-            if igRadioButtonIntPtr(title, &_value, Int32(order)) {
+            if ImGuiWrapper.radioButton(title, value: &_value, vButton: Int32(order)) {
 
                 if _value != selectedState {
 

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Window node.
 /// - parameter title: Text for node
@@ -20,11 +20,11 @@ public func Window(_ title: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBegin(title.cStr(), nil, options.rawValue) {
+        if ImGuiWrapper.begin(title, flags: options.rawValue) {
 
             child?.render()
         }
-        igEnd()
+        ImGuiWrapper.end()
     }
 }
 
@@ -43,10 +43,10 @@ public func SubWindow(_ id: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBeginChild(id.cStr(), size.convertToVec2(), border, options.rawValue) {
+        if ImGuiWrapper.beginChild(id, size: size, border: border, flags: options.rawValue) {
 
             child?.render()
         }
-        igEndChild()
+        ImGuiWrapper.endChild()
     }
 }

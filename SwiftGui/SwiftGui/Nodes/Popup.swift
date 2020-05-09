@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// Popup node.
 /// NOTE: This node should be used with PopupOpenCall and PopupCloseCall
@@ -21,11 +21,11 @@ public func Popup(id: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBeginPopup(id.cStr(), options.rawValue) {
+        if ImGuiWrapper.beginPopup(id, flags: options.rawValue) {
 
             child?.render()
 
-            igEndPopup()
+            ImGuiWrapper.endPopup()
         }
     }
 }
@@ -34,12 +34,12 @@ public func Popup(id: String,
 /// - parameter id: Should be same id used by Popup node
 public func PopupOpenCall(_ id: String) {
 
-    igOpenPopup(id.cStr())
+    ImGuiWrapper.openPopup(id)
 }
 
 /// PopupCloseCall function.
 /// NOTE: This will close any popup opened
 public func PopupCloseCall() {
 
-    igCloseCurrentPopup()
+    ImGuiWrapper.closeCurrentPopup()
 }

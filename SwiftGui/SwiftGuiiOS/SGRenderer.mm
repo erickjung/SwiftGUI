@@ -2,7 +2,7 @@
 #import <Metal/Metal.h>
 #import <UIKit/UIKit.h>
 
-#include <SwiftGuiCore/imgui.h>
+#include "imgui.h"
 #include "imgui_impl_metal.h"
 
 @interface SGRenderer ()

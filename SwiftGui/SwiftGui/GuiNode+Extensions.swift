@@ -6,7 +6,7 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-import SwiftGuiCore
+//import SwiftGuiCore
 
 public extension GuiNode {
 
@@ -15,11 +15,11 @@ public extension GuiNode {
         let id = UUID().hashValue
         self.insertPreAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
 
-            igPushStyleColor(property.rawValue, color.convertToVec4())
+            ImGuiWrapper.pushStyleColor(property.rawValue, colorRef: color.cgColor)
         })
         self.insertPosAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
 
-            igPopStyleColor(1)
+            ImGuiWrapper.popStyleColor(1)
         })
         return self
     }
@@ -28,7 +28,7 @@ public extension GuiNode {
 
         self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
 
-            igSetNextWindowPos(position.convertToVec2(), condition.rawValue, GuiPoint.zero.convertToVec2())
+            ImGuiWrapper.setNextWindowPos(position, cond: condition.rawValue, pivot: GuiPoint.zero)
         })
         return self
     }
@@ -37,7 +37,7 @@ public extension GuiNode {
 
         self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
 
-            igSetNextWindowSize(size.convertToVec2(), condition.rawValue)
+            ImGuiWrapper.setNextWindowSize(size, cond: condition.rawValue)
         })
         return self
     }
@@ -47,11 +47,11 @@ public extension GuiNode {
         let id = UUID().hashValue
         self.insertPreAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
 
-            igPushStyleVarFloat(property.rawValue, number)
+            ImGuiWrapper.pushStyleVar(property.rawValue, valNumber: number)
         })
         self.insertPosAttribute(GuiNode(tag: "\(#function)_\(id)").onRender { _ in
 
-            igPopStyleVar(1)
+            ImGuiWrapper.popStyleVar(1)
         })
         return self
     }
@@ -60,30 +60,27 @@ public extension GuiNode {
 
         self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
 
-            igPushItemWidth(width)
+            ImGuiWrapper.pushItemWidth(width)
         })
         self.insertPosAttribute(GuiNode(tag: #function).onRender { _ in
 
-            igPopItemWidth()
+            ImGuiWrapper.popItemWidth()
         })
         return self
     }
 
     func font(_ type: Int) -> GuiNode {
 
-        guard let io = igGetIO(),
-            let fonts = io.pointee.Fonts,
-            type < fonts.pointee.Fonts.Size else { return self }
+        guard let font = ImGuiWrapper.getFontWithType(Int32(type)) else { return self }
 
-        let font = fonts.pointee.Fonts.Data[type]
         self.insertPreAttribute(GuiNode(tag: #function).onRender { _ in
 
-            igPushFont(font)
+            ImGuiWrapper.pushFont(font)
         })
 
         self.insertPosAttribute(GuiNode(tag: #function).onRender { _ in
 
-            igPopFont()
+            ImGuiWrapper.popFont()
         })
 
         return self
@@ -98,14 +95,14 @@ public extension GuiNode {
 
                 switch edge {
                 case .all:
-                    igDummy(ImVec2(x: 0, y: value))
-                    igDummy(ImVec2(x: value, y: 0))
-                    igSameLine(0, -1)
+                    ImGuiWrapper.dummy(GuiSize(width: 0, height: Int(value)))
+                    ImGuiWrapper.dummy(GuiSize(width: Int(value), height: 0))
+                    ImGuiWrapper.sameLine(0, spacing: -1)
                 case .top:
-                    igDummy(ImVec2(x: 0, y: value))
+                    ImGuiWrapper.dummy(GuiSize(width: 0, height: Int(value)))
                 case .leading:
-                    igDummy(ImVec2(x: value, y: 0))
-                    igSameLine(0, -1)
+                    ImGuiWrapper.dummy(GuiSize(width: Int(value), height: 0))
+                    ImGuiWrapper.sameLine(0, spacing: -1)
                 default:
                     break
                 }
@@ -119,14 +116,15 @@ public extension GuiNode {
 
                 switch edge {
                 case .all:
-                    igSameLine(0, -1)
-                    igDummy(ImVec2(x: value, y: 0))
-                    igDummy(ImVec2(x: 0, y: value))
+                    ImGuiWrapper.sameLine(0, spacing: -1)
+                    ImGuiWrapper.dummy(GuiSize(width: Int(value), height: 0))
+                    ImGuiWrapper.dummy(GuiSize(width: 0, height: Int(value)))
                 case .bottom:
-                    igDummy(ImVec2(x: 0, y: value))
+                    ImGuiWrapper.dummy(GuiSize(width: 0, height: Int(value)))
                 case .trailing:
-                    igSameLine(0, -1)
-                    igDummy(ImVec2(x: value, y: 0))
+                    ImGuiWrapper.sameLine(0, spacing: -1)
+                    ImGuiWrapper.dummy(GuiSize(width: Int(value), height: 0))
+
                 default:
                     break
                 }

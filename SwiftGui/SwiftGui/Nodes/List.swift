@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// ListBox node.
 /// NOTE: Use this for small/medium lists
@@ -24,7 +24,7 @@ public func ListBox(_ title: String,
     GuiNode(tag: #function).onRender { _ in
 
         var _currentItem = Int32(currentItemState)
-        if igListBoxStr_arr(title.cStr(), &_currentItem, items.map { $0.cStr() }, Int32(items.count), -1) {
+        if ImGuiWrapper.listBox(title, currentItem: &_currentItem, items: items.map { $0 }, heightInItems: -1) {
 
             if _currentItem != currentItemState {
 
@@ -50,11 +50,11 @@ public func List(id: String = "##list",
 
      GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBeginChild(id.cStr(), size.convertToVec2(), border, options.rawValue) {
+        if ImGuiWrapper.beginChild(id, size: size, border: border, flags: options.rawValue) {
 
              child?.render()
         }
-        igEndChild()
+        ImGuiWrapper.endChild()
     }
 }
 
@@ -77,26 +77,23 @@ public func List<T>(id: String = "##list_buffer",
 
     GuiNode(tag: #function).onRender { _ in
 
-        if igBeginChild(id.cStr(), size.convertToVec2(), border, options.rawValue) {
+        if ImGuiWrapper.beginChild(id, size: size, border: border, flags: options.rawValue) {
 
-            if let clipper = ImGuiListClipper_ImGuiListClipper(0, itemHeight) {
+            if let clipper = ImGuiWrapper.listClipperCreate(0, itemsHeight: itemHeight) {
 
-                ImGuiListClipper_Begin(clipper, Int32(buffer.count), itemHeight)
+                ImGuiWrapper.listClipperBegin(clipper, itemsCount: Int32(buffer.count), itemsHeight: itemHeight)
 
-                while ImGuiListClipper_Step(clipper) {
+                ImGuiWrapper.listClipperLoop(clipper) { index in
 
-                    for i in (clipper.pointee.DisplayStart..<clipper.pointee.DisplayEnd) {
-
-                        onLoop(Int(i), buffer[Int(i)])?.render()
-                    }
+                    onLoop(Int(index), buffer[Int(index)])?.render()
                 }
 
-                ImGuiListClipper_End(clipper)
+                ImGuiWrapper.listClipperEnd(clipper)
 
-                ImGuiListClipper_destroy(clipper)
+                ImGuiWrapper.listClipperDestroy(clipper)
             }
         }
 
-        igEndChild()
+        ImGuiWrapper.endChild()
     }
 }

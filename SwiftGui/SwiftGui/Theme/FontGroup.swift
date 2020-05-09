@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 public protocol FontGroup {
 
@@ -19,15 +19,13 @@ extension FontGroup {
 
     public func load() {
 
-        guard let io = igGetIO() else { return }
-
         self.fonts?.forEach { font in
 
             guard let font = font.first else { return }
 
             font.value.forEach { size in
 
-                ImFontAtlas_AddFontFromFileTTF(io.pointee.Fonts, font.key.cStr(), size, nil, nil)
+                ImGuiWrapper.addFont(withFilename: font.key, sizePixels: size)
             }
         }
     }

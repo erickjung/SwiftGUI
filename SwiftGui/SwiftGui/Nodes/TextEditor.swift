@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// TextEditor node.
 /// NOTE: For now you can only have one editor running on screen.

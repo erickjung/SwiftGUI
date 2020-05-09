@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftGuiCore
+//import SwiftGuiCore
 
 /// MenuBar node.
 /// - parameter child: List of child nodes
@@ -16,10 +16,10 @@ public func MenuBar(@GuiBuilder child: () -> GuiView?) -> GuiNode {
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBeginMenuBar() {
+        if ImGuiWrapper.beginMenuBar() {
 
             child?.render()
-            igEndMenuBar()
+            ImGuiWrapper.endMenuBar()
         }
     }
 }
@@ -35,10 +35,10 @@ public func MenuGroup(_ title: String,
 
     GuiNode(tag: #function, child: child()).onRender { child in
 
-        if igBeginMenu(title.cStr(), enabled) {
+        if ImGuiWrapper.beginMenu(title, enabled: enabled) {
 
             child?.render()
-            igEndMenu()
+            ImGuiWrapper.endMenu()
         }
     }
 }
@@ -58,7 +58,7 @@ public func MenuItem(_ title: String,
 
     GuiNode(tag: #function).onRender { _ in
 
-        if igMenuItemBool(title.cStr(), shortcut, selected, enabled) {
+        if ImGuiWrapper.menuItem(title, shortcut: shortcut, selected: selected, enabled: enabled) {
             onTap?()
         }
     }
