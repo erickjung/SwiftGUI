@@ -7,34 +7,14 @@
 //  [X] Platform: OSX clipboard is supported within core Dear ImGui (no specific code in this back-end).
 // Issues:
 //  [ ] Platform: Keys are all generally very broken. Best using [event keycode] and not [event characters]..
+//  [ ] Platform: Multi-viewport / platform windows.
+
+#include "imgui.h"      // IMGUI_IMPL_API
 
 @class NSEvent;
 @class NSView;
 
-#if defined _WIN32 || defined __CYGWIN__
-    #ifdef CIMGUI_NO_EXPORT
-        #define API
-    #else
-        #define API __declspec(dllexport)
-    #endif
-    #ifndef __GNUC__
-    #define snprintf sprintf_s
-    #endif
-#else
-    #define API
-#endif
-
-#if defined __cplusplus
-    #define EXTERN extern "C"
-#else
-    #include <stdarg.h>
-    #include <stdbool.h>
-    #define EXTERN extern
-#endif
-
-#define CIMGUI_API EXTERN API
-
-CIMGUI_API bool        ImGui_ImplOSX_Init();
-CIMGUI_API void        ImGui_ImplOSX_Shutdown();
-CIMGUI_API void        ImGui_ImplOSX_NewFrame(NSView *_Nonnull view);
-CIMGUI_API bool        ImGui_ImplOSX_HandleEvent(NSEvent *_Nonnull event, NSView *_Nullable view);
+IMGUI_IMPL_API bool     ImGui_ImplOSX_Init();
+IMGUI_IMPL_API void     ImGui_ImplOSX_Shutdown();
+IMGUI_IMPL_API void     ImGui_ImplOSX_NewFrame(NSView *_Nullable view);
+IMGUI_IMPL_API bool     ImGui_ImplOSX_HandleEvent(NSEvent *_Nonnull event, NSView *_Nullable view);

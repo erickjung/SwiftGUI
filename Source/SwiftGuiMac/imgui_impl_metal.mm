@@ -2,8 +2,10 @@
 // This needs to be used along with a Platform Binding (e.g. OSX)
 
 // Implemented features:
-//  [X] Renderer: User texture binding. Use 'MTLTexture' as ImTextureID. Read the FAQ about ImTextureID in imgui.cpp.
-//  [X] Renderer: Support for large meshes (64k+ vertices) with 16-bits indices.
+//  [X] Renderer: User texture binding. Use 'MTLTexture' as ImTextureID. Read the FAQ about ImTextureID!
+//  [X] Renderer: Support for large meshes (64k+ vertices) with 16-bit indices.
+// Missing features:
+//  [ ] Renderer: Multi-viewport / platform windows.
 
 // You can copy and use unmodified imgui_impl_* files in your project. See main.cpp for an example of using this.
 // If you are new to dear imgui, read examples/README.txt and read the documentation at the top of imgui.cpp.
@@ -17,7 +19,6 @@
 //  2018-11-30: Misc: Setting up io.BackendRendererName so it can be displayed in the About Window.
 //  2018-07-05: Metal: Added new Metal backend implementation.
 
-//#include "imgui.h"
 #include "imgui.h"
 #include "imgui_impl_metal.h"
 
@@ -104,10 +105,9 @@ void ImGui_ImplMetal_NewFrame(MTLRenderPassDescriptor *renderPassDescriptor)
 }
 
 // Metal Render function.
-void ImGui_ImplMetal_RenderDrawData(void* draw_data, id<MTLCommandBuffer> commandBuffer, id<MTLRenderCommandEncoder> commandEncoder)
+void ImGui_ImplMetal_RenderDrawData(ImDrawData* draw_data, id<MTLCommandBuffer> commandBuffer, id<MTLRenderCommandEncoder> commandEncoder)
 {
-    
-    [g_sharedMetalContext renderDrawData:(ImDrawData*)draw_data commandBuffer:commandBuffer commandEncoder:commandEncoder];
+    [g_sharedMetalContext renderDrawData:draw_data commandBuffer:commandBuffer commandEncoder:commandEncoder];
 }
 
 bool ImGui_ImplMetal_CreateFontsTexture(id<MTLDevice> device)
