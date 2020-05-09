@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// ColorEdit node.
 /// This is an editable node with 3 floats fields.

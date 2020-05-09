@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// CheckBox node.
 /// - parameter title: Text for node

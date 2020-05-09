@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// Column node.
 /// - parameter id: Node id

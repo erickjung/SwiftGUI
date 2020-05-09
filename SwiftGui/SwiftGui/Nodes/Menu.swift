@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// MenuBar node.
 /// - parameter child: List of child nodes

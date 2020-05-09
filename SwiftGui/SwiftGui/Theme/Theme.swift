@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 public protocol Theme {
 
@@ -256,100 +255,95 @@ extension Theme {
 
     public func apply() {
 
-        // TODO
-//        if let style = igGetStyle() {
-//
-//            style.pointee.Alpha = self.alpha
-//            style.pointee.WindowPadding = self.windowPadding.convertToVec2()
-//            style.pointee.WindowRounding = self.windowRounding
-//            style.pointee.WindowBorderSize = self.windowBorderSize
-//            style.pointee.WindowMinSize = self.windowMinSize.convertToVec2()
-//            style.pointee.WindowTitleAlign = self.windowTitleAlign.convertToVec2()
-//            style.pointee.WindowMenuButtonPosition = self.windowMenuButtonPosition.rawValue
-//            style.pointee.ChildRounding = self.childRounding
-//            style.pointee.ChildBorderSize = self.childBorderSize
-//            style.pointee.PopupRounding = self.popupRounding
-//            style.pointee.PopupBorderSize = self.popupBorderSize
-//            style.pointee.FramePadding = self.framePadding.convertToVec2()
-//            style.pointee.FrameRounding = self.frameRounding
-//            style.pointee.FrameBorderSize = self.frameBorderSize
-//            style.pointee.ItemSpacing = self.itemSpacing.convertToVec2()
-//            style.pointee.ItemInnerSpacing = self.itemInnerSpacing.convertToVec2()
-//            style.pointee.TouchExtraPadding = self.touchExtraPadding.convertToVec2()
-//            style.pointee.IndentSpacing = self.indentSpacing
-//            style.pointee.ColumnsMinSpacing = self.columnsMinSpacing
-//            style.pointee.ScrollbarSize = self.scrollbarSize
-//            style.pointee.ScrollbarRounding = self.scrollbarRounding
-//            style.pointee.GrabMinSize = self.grabMinSize
-//            style.pointee.GrabRounding = self.grabRounding
-//            style.pointee.TabRounding = self.tabRounding
-//            style.pointee.TabBorderSize = self.tabBorderSize
-//            style.pointee.ColorButtonPosition = self.colorButtonPosition.rawValue
-//            style.pointee.ButtonTextAlign = self.buttonTextAlign.convertToVec2()
-//            style.pointee.SelectableTextAlign = self.selectableTextAlign.convertToVec2()
-//            style.pointee.DisplayWindowPadding = self.displayWindowPadding.convertToVec2()
-//            style.pointee.DisplaySafeAreaPadding = self.displaySafeAreaPadding.convertToVec2()
-//            style.pointee.MouseCursorScale = self.mouseCursorScale
-//            style.pointee.AntiAliasedLines = self.antiAliasedLines
-//            style.pointee.AntiAliasedFill = self.antiAliasedFill
-//            style.pointee.CurveTessellationTol = self.curveTessellationTol
-//
-//            colors.forEach { data in
-//
-//                switch data.key {
-//
-//                case .text: style.pointee.Colors.0 = data.value.convertToVec4()
-//                case .textDisabled: style.pointee.Colors.1 = data.value.convertToVec4()
-//                case .windowBg: style.pointee.Colors.2 = data.value.convertToVec4()
-//                case .childBg: style.pointee.Colors.3 = data.value.convertToVec4()
-//                case .popupBg: style.pointee.Colors.4 = data.value.convertToVec4()
-//                case .border: style.pointee.Colors.5 = data.value.convertToVec4()
-//                case .borderShadow: style.pointee.Colors.6 = data.value.convertToVec4()
-//                case .frameBg: style.pointee.Colors.7 = data.value.convertToVec4()
-//                case .frameBgHovered: style.pointee.Colors.8 = data.value.convertToVec4()
-//                case .frameBgActive: style.pointee.Colors.9 = data.value.convertToVec4()
-//                case .titleBg: style.pointee.Colors.10 = data.value.convertToVec4()
-//                case .titleBgActive: style.pointee.Colors.11 = data.value.convertToVec4()
-//                case .titleBgCollapsed: style.pointee.Colors.12 = data.value.convertToVec4()
-//                case .menuBarBg: style.pointee.Colors.13 = data.value.convertToVec4()
-//                case .scrollbarBg: style.pointee.Colors.14 = data.value.convertToVec4()
-//                case .scrollbarGrab: style.pointee.Colors.15 = data.value.convertToVec4()
-//                case .scrollbarGrabHovered: style.pointee.Colors.16 = data.value.convertToVec4()
-//                case .scrollbarGrabActive: style.pointee.Colors.17 = data.value.convertToVec4()
-//                case .checkMark: style.pointee.Colors.18 = data.value.convertToVec4()
-//                case .sliderGrab: style.pointee.Colors.19 = data.value.convertToVec4()
-//                case .sliderGrabActive: style.pointee.Colors.20 = data.value.convertToVec4()
-//                case .button: style.pointee.Colors.21 = data.value.convertToVec4()
-//                case .buttonHovered: style.pointee.Colors.22 = data.value.convertToVec4()
-//                case .buttonActive: style.pointee.Colors.23 = data.value.convertToVec4()
-//                case .header: style.pointee.Colors.24 = data.value.convertToVec4()
-//                case .headerHovered: style.pointee.Colors.25 = data.value.convertToVec4()
-//                case .headerActive: style.pointee.Colors.26 = data.value.convertToVec4()
-//                case .separator: style.pointee.Colors.27 = data.value.convertToVec4()
-//                case .separatorHovered: style.pointee.Colors.28 = data.value.convertToVec4()
-//                case .separatorActive: style.pointee.Colors.29 = data.value.convertToVec4()
-//                case .resizeGrip: style.pointee.Colors.30 = data.value.convertToVec4()
-//                case .resizeGripHovered: style.pointee.Colors.31 = data.value.convertToVec4()
-//                case .resizeGripActive: style.pointee.Colors.32 = data.value.convertToVec4()
-//                case .tab: style.pointee.Colors.33 = data.value.convertToVec4()
-//                case .tabHovered: style.pointee.Colors.34 = data.value.convertToVec4()
-//                case .tabActive: style.pointee.Colors.35 = data.value.convertToVec4()
-//                case .tabUnfocused: style.pointee.Colors.36 = data.value.convertToVec4()
-//                case .tabUnfocusedActive: style.pointee.Colors.37 = data.value.convertToVec4()
-//                case .dockingPreview: style.pointee.Colors.38 = data.value.convertToVec4()
-//                case .dockingEmptyBg: style.pointee.Colors.39 = data.value.convertToVec4()
-//                case .plotLines: style.pointee.Colors.40 = data.value.convertToVec4()
-//                case .plotLinesHovered: style.pointee.Colors.41 = data.value.convertToVec4()
-//                case .plotHistogram: style.pointee.Colors.42 = data.value.convertToVec4()
-//                case .plotHistogramHovered: style.pointee.Colors.43 = data.value.convertToVec4()
-//                case .textSelectedBg: style.pointee.Colors.44 = data.value.convertToVec4()
-//                case .dragDropTarget: style.pointee.Colors.45 = data.value.convertToVec4()
-//                case .navHighlight: style.pointee.Colors.46 = data.value.convertToVec4()
-//                case .navWindowingHighlight: style.pointee.Colors.47 = data.value.convertToVec4()
-//                case .navWindowingDimBg: style.pointee.Colors.48 = data.value.convertToVec4()
-//                case .modalWindowDimBg: style.pointee.Colors.49 = data.value.convertToVec4()
-//                }
-//            }
-//        }
+        ImGuiStyleWrapper.alpha(self.alpha)
+        ImGuiStyleWrapper.windowPadding(self.windowPadding)
+        ImGuiStyleWrapper.windowRounding(self.windowRounding)
+        ImGuiStyleWrapper.windowMinSize(self.windowMinSize)
+        ImGuiStyleWrapper.windowTitleAlign(self.windowTitleAlign)
+        ImGuiStyleWrapper.windowMenuButtonPosition(self.windowMenuButtonPosition.rawValue)
+        ImGuiStyleWrapper.childRounding(self.childRounding)
+        ImGuiStyleWrapper.childBorderSize(self.childBorderSize)
+        ImGuiStyleWrapper.popupRounding(self.popupRounding)
+        ImGuiStyleWrapper.popupBorderSize(self.popupBorderSize)
+        ImGuiStyleWrapper.framePadding(self.framePadding)
+        ImGuiStyleWrapper.frameRounding(self.frameRounding)
+        ImGuiStyleWrapper.frameBorderSize(self.frameBorderSize)
+        ImGuiStyleWrapper.itemSpacing(self.itemSpacing)
+        ImGuiStyleWrapper.itemInnerSpacing(self.itemInnerSpacing)
+        ImGuiStyleWrapper.touchExtraPadding(self.touchExtraPadding)
+        ImGuiStyleWrapper.indentSpacing(self.indentSpacing)
+        ImGuiStyleWrapper.columnsMinSpacing(self.columnsMinSpacing)
+        ImGuiStyleWrapper.scrollbarSize(self.scrollbarSize)
+        ImGuiStyleWrapper.scrollbarRounding(self.scrollbarRounding)
+        ImGuiStyleWrapper.grabMinSize(self.grabMinSize)
+        ImGuiStyleWrapper.grabRounding(self.grabRounding)
+        ImGuiStyleWrapper.tabRounding(self.tabRounding)
+        ImGuiStyleWrapper.tabBorderSize(self.tabBorderSize)
+        ImGuiStyleWrapper.colorButtonPosition(self.colorButtonPosition.rawValue)
+        ImGuiStyleWrapper.buttonTextAlign(self.buttonTextAlign)
+        ImGuiStyleWrapper.selectableTextAlign(self.selectableTextAlign)
+        ImGuiStyleWrapper.displayWindowPadding(self.displayWindowPadding)
+        ImGuiStyleWrapper.displaySafeAreaPadding(self.displaySafeAreaPadding)
+        ImGuiStyleWrapper.mouseCursorScale(self.mouseCursorScale)
+        ImGuiStyleWrapper.antiAliasedLines(self.antiAliasedLines)
+        ImGuiStyleWrapper.antiAliasedFill(self.antiAliasedFill)
+        ImGuiStyleWrapper.curveTessellationTol(self.curveTessellationTol)
+
+        colors.forEach { data in
+
+            switch data.key {
+
+            case .text: ImGuiStyleWrapper.colorText(data.value.cgColor)
+            case .textDisabled: ImGuiStyleWrapper.colorTextDisabled(data.value.cgColor)
+            case .windowBg: ImGuiStyleWrapper.colorWindowBg(data.value.cgColor)
+            case .childBg: ImGuiStyleWrapper.colorChildBg(data.value.cgColor)
+            case .popupBg: ImGuiStyleWrapper.colorPopupBg(data.value.cgColor)
+            case .border: ImGuiStyleWrapper.colorBorder(data.value.cgColor)
+            case .borderShadow: ImGuiStyleWrapper.colorBorderShadow(data.value.cgColor)
+            case .frameBg: ImGuiStyleWrapper.colorFrameBg(data.value.cgColor)
+            case .frameBgHovered: ImGuiStyleWrapper.colorFrameBgHovered(data.value.cgColor)
+            case .frameBgActive: ImGuiStyleWrapper.colorFrameBgActive(data.value.cgColor)
+            case .titleBg: ImGuiStyleWrapper.colorTitleBg(data.value.cgColor)
+            case .titleBgActive: ImGuiStyleWrapper.colorTitleBgActive(data.value.cgColor)
+            case .titleBgCollapsed: ImGuiStyleWrapper.colorTitleBgCollapsed(data.value.cgColor)
+            case .menuBarBg: ImGuiStyleWrapper.colorMenuBarBg(data.value.cgColor)
+            case .scrollbarBg: ImGuiStyleWrapper.colorScrollbarBg(data.value.cgColor)
+            case .scrollbarGrab: ImGuiStyleWrapper.colorScrollbarGrab(data.value.cgColor)
+            case .scrollbarGrabHovered: ImGuiStyleWrapper.colorScrollbarGrabHovered(data.value.cgColor)
+            case .scrollbarGrabActive: ImGuiStyleWrapper.colorScrollbarGrabActive(data.value.cgColor)
+            case .checkMark: ImGuiStyleWrapper.colorCheckMark(data.value.cgColor)
+            case .sliderGrab: ImGuiStyleWrapper.colorSliderGrab(data.value.cgColor)
+            case .sliderGrabActive: ImGuiStyleWrapper.colorSliderGrabActive(data.value.cgColor)
+            case .button: ImGuiStyleWrapper.colorButton(data.value.cgColor)
+            case .buttonHovered: ImGuiStyleWrapper.colorButtonHovered(data.value.cgColor)
+            case .buttonActive: ImGuiStyleWrapper.colorButtonActive(data.value.cgColor)
+            case .header: ImGuiStyleWrapper.colorHeader(data.value.cgColor)
+            case .headerHovered: ImGuiStyleWrapper.colorHeaderHovered(data.value.cgColor)
+            case .headerActive: ImGuiStyleWrapper.colorHeaderActive(data.value.cgColor)
+            case .separator: ImGuiStyleWrapper.colorSeparator(data.value.cgColor)
+            case .separatorHovered: ImGuiStyleWrapper.colorSeparatorHovered(data.value.cgColor)
+            case .separatorActive: ImGuiStyleWrapper.colorSeparatorActive(data.value.cgColor)
+            case .resizeGrip: ImGuiStyleWrapper.colorResizeGrip(data.value.cgColor)
+            case .resizeGripHovered: ImGuiStyleWrapper.colorResizeGripHovered(data.value.cgColor)
+            case .resizeGripActive: ImGuiStyleWrapper.colorResizeGripActive(data.value.cgColor)
+            case .tab: ImGuiStyleWrapper.colorTab(data.value.cgColor)
+            case .tabHovered: ImGuiStyleWrapper.colorTabHovered(data.value.cgColor)
+            case .tabActive: ImGuiStyleWrapper.colorTabActive(data.value.cgColor)
+            case .tabUnfocused: ImGuiStyleWrapper.colorTabUnfocused(data.value.cgColor)
+            case .tabUnfocusedActive: ImGuiStyleWrapper.colorTabUnfocusedActive(data.value.cgColor)
+            case .dockingPreview: ImGuiStyleWrapper.colorDockingPreview(data.value.cgColor)
+            case .dockingEmptyBg: ImGuiStyleWrapper.colorDockingEmptyBg(data.value.cgColor)
+            case .plotLines: ImGuiStyleWrapper.colorPlotLines(data.value.cgColor)
+            case .plotLinesHovered: ImGuiStyleWrapper.colorPlotLinesHovered(data.value.cgColor)
+            case .plotHistogram: ImGuiStyleWrapper.colorPlotHistogram(data.value.cgColor)
+            case .plotHistogramHovered: ImGuiStyleWrapper.colorPlotHistogramHovered(data.value.cgColor)
+            case .textSelectedBg: ImGuiStyleWrapper.colorTextSelectedBg(data.value.cgColor)
+            case .dragDropTarget: ImGuiStyleWrapper.colorDragDropTarget(data.value.cgColor)
+            case .navHighlight: ImGuiStyleWrapper.colorNavHighlight(data.value.cgColor)
+            case .navWindowingHighlight: ImGuiStyleWrapper.colorNavWindowingHighlight(data.value.cgColor)
+            case .navWindowingDimBg: ImGuiStyleWrapper.colorNavWindowingDimBg(data.value.cgColor)
+            case .modalWindowDimBg: ImGuiStyleWrapper.colorModalWindowDimBg(data.value.cgColor)
+            }
+        }
     }
 }

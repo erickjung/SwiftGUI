@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// RadioButton node.
 /// - parameter title: Text for node

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// Image node.
 /// - parameter imageId: A Texture handler

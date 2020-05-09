@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// Popup node.
 /// NOTE: This node should be used with PopupOpenCall and PopupCloseCall

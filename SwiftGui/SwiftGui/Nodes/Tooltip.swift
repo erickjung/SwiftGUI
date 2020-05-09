@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import SwiftGuiCore
 
 /// Tooltip node.
 /// This can be used with onHover and others nodes to show a tooltip effect.

@@ -6,7 +6,7 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-//import SwiftGuiCore
+import Foundation
 
 /// OptionSet with properties for tab item configuration.
 /// Represents: `ImGuiTabItemFlags`.

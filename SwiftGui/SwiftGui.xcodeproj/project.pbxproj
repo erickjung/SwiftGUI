@@ -173,6 +173,10 @@
 		B6C0A55E246627C400FFF84D /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */; };
 		B6C0A55F246627C600FFF84D /* ImGuiWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B666D03F24660D71009D4010 /* ImGuiWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6C0A560246627CA00FFF84D /* ImGuiWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B666D04024660D71009D4010 /* ImGuiWrapper.mm */; };
+		B6C0A5632466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6C0A5642466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6C0A5652466F7C900FFF84D /* ImGuiStyleWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */; };
+		B6C0A5662466F7C900FFF84D /* ImGuiStyleWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +311,8 @@
 		B6A158D0237C1D6700E3F016 /* DefaultFontGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFontGroup.swift; sourceTree = "<group>"; };
 		B6A158D2237C288100E3F016 /* FiraCodeRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FiraCodeRegular.ttf; sourceTree = "<group>"; };
 		B6BE03A523EB67ED002381A7 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImGuiStyleWrapper.h; sourceTree = "<group>"; };
+		B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImGuiStyleWrapper.mm; sourceTree = "<group>"; };
 		B6DF8B59237AB53300374675 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B6DF9A8923EAFCD800662401 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -364,11 +370,13 @@
 			isa = PBXGroup;
 			children = (
 				B61DD3162466059100BCB30F /* imgui */,
-				B61DD3252466059100BCB30F /* thirdparty */,
-				B61DD3272466059100BCB30F /* TextEditorWrapper.h */,
-				B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */,
+				B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */,
+				B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */,
 				B666D03F24660D71009D4010 /* ImGuiWrapper.h */,
 				B666D04024660D71009D4010 /* ImGuiWrapper.mm */,
+				B61DD3272466059100BCB30F /* TextEditorWrapper.h */,
+				B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */,
+				B61DD3252466059100BCB30F /* thirdparty */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -647,6 +655,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B61DD3552466059100BCB30F /* TextEditor.h in Headers */,
+				B6C0A5632466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */,
 				B65195A02463657800E0EB6A /* SwiftGui.h in Headers */,
 				B666D04124660D71009D4010 /* ImGuiWrapper.h in Headers */,
 				B61DD3492466059100BCB30F /* TextEditorWrapper.h in Headers */,
@@ -669,6 +678,7 @@
 				B61DD3302466059100BCB30F /* imgui.h in Headers */,
 				B65195F5246369AD00E0EB6A /* imgui_impl_metal.h in Headers */,
 				B61DD3322466059100BCB30F /* imstb_textedit.h in Headers */,
+				B6C0A5642466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */,
 				B65195F6246369AD00E0EB6A /* SGRenderer.h in Headers */,
 				B61DD3342466059100BCB30F /* imconfig.h in Headers */,
 				B61DD33C2466059100BCB30F /* imgui_internal.h in Headers */,
@@ -973,6 +983,7 @@
 				B61DD34B2466059100BCB30F /* TextEditor.cpp in Sources */,
 				B65195DF2463686900E0EB6A /* Theme.swift in Sources */,
 				B65195E02463686900E0EB6A /* Extensions.swift in Sources */,
+				B6C0A5652466F7C900FFF84D /* ImGuiStyleWrapper.mm in Sources */,
 				B65195E12463686900E0EB6A /* OrderedSet.swift in Sources */,
 				B65195B5246366A300E0EB6A /* imgui_impl_osx.mm in Sources */,
 				B65195B4246366A300E0EB6A /* imgui_impl_metal.mm in Sources */,
@@ -1019,6 +1030,7 @@
 				B651960C246369D600E0EB6A /* RadioButton.swift in Sources */,
 				B651960D246369D600E0EB6A /* Slider.swift in Sources */,
 				B651960E246369D600E0EB6A /* TabBar.swift in Sources */,
+				B6C0A5662466F7C900FFF84D /* ImGuiStyleWrapper.mm in Sources */,
 				B651960F246369D600E0EB6A /* Text.swift in Sources */,
 				B6519610246369D600E0EB6A /* TextEditor.swift in Sources */,
 				B65199852464141000E0EB6A /* GuiTreeConfig.swift in Sources */,
