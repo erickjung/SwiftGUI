@@ -6,8 +6,6 @@
 // LICENSE file in the root directory of this source tree.
 //
 
-//import SwiftGuiCore
-
 public extension GuiNode {
 
     func color(_ property: GuiColorProperty, color: GuiColor) -> GuiNode {

@@ -27,10 +27,8 @@
 		B61DD3402466059100BCB30F /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD31F2466059100BCB30F /* imgui_demo.cpp */; };
 		B61DD3412466059100BCB30F /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3202466059100BCB30F /* imgui_draw.cpp */; };
 		B61DD3422466059100BCB30F /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3202466059100BCB30F /* imgui_draw.cpp */; };
-		B61DD3492466059100BCB30F /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3272466059100BCB30F /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B61DD34B2466059100BCB30F /* TextEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3282466059100BCB30F /* TextEditor.cpp */; };
 		B61DD34C2466059100BCB30F /* TextEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3282466059100BCB30F /* TextEditor.cpp */; };
-		B61DD3512466059100BCB30F /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */; };
 		B61DD3552466059100BCB30F /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD32D2466059100BCB30F /* TextEditor.h */; };
 		B61DD3562466059100BCB30F /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD32D2466059100BCB30F /* TextEditor.h */; };
 		B65195A02463657800E0EB6A /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B651959E2463657800E0EB6A /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -166,14 +164,16 @@
 		B651999D24643D2400E0EB6A /* GuiNodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651999B24643D2400E0EB6A /* GuiNodeList.swift */; };
 		B666D04124660D71009D4010 /* ImGuiWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B666D03F24660D71009D4010 /* ImGuiWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B666D04224660D71009D4010 /* ImGuiWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B666D04024660D71009D4010 /* ImGuiWrapper.mm */; };
-		B6C0A55D246627BE00FFF84D /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3272466059100BCB30F /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6C0A55E246627C400FFF84D /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */; };
 		B6C0A55F246627C600FFF84D /* ImGuiWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B666D03F24660D71009D4010 /* ImGuiWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6C0A560246627CA00FFF84D /* ImGuiWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B666D04024660D71009D4010 /* ImGuiWrapper.mm */; };
 		B6C0A5632466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6C0A5642466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6C0A5652466F7C900FFF84D /* ImGuiStyleWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */; };
 		B6C0A5662466F7C900FFF84D /* ImGuiStyleWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */; };
+		B6C0A56924672D1300FFF84D /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A56724672D1200FFF84D /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6C0A56A24672D1300FFF84D /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */; };
+		B6C0A56B24672D1600FFF84D /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A56724672D1200FFF84D /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6C0A56C24672D1D00FFF84D /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,9 +214,7 @@
 		B61DD31E2466059100BCB30F /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_rectpack.h; sourceTree = "<group>"; };
 		B61DD31F2466059100BCB30F /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
 		B61DD3202466059100BCB30F /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
-		B61DD3272466059100BCB30F /* TextEditorWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextEditorWrapper.h; path = thirdparty/ImGuiColorTextEdit/TextEditorWrapper.h; sourceTree = "<group>"; };
 		B61DD3282466059100BCB30F /* TextEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextEditor.cpp; sourceTree = "<group>"; };
-		B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextEditorWrapper.mm; path = thirdparty/ImGuiColorTextEdit/TextEditorWrapper.mm; sourceTree = "<group>"; };
 		B61DD32D2466059100BCB30F /* TextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditor.h; sourceTree = "<group>"; };
 		B625A1A32375BDE60077717D /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		B651959C2463657800E0EB6A /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,6 +305,8 @@
 		B6BE03A523EB67ED002381A7 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImGuiStyleWrapper.h; sourceTree = "<group>"; };
 		B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImGuiStyleWrapper.mm; sourceTree = "<group>"; };
+		B6C0A56724672D1200FFF84D /* TextEditorWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorWrapper.h; sourceTree = "<group>"; };
+		B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextEditorWrapper.mm; sourceTree = "<group>"; };
 		B6DF8B59237AB53300374675 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B6DF9A8923EAFCD800662401 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -368,8 +368,8 @@
 				B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */,
 				B666D03F24660D71009D4010 /* ImGuiWrapper.h */,
 				B666D04024660D71009D4010 /* ImGuiWrapper.mm */,
-				B61DD3272466059100BCB30F /* TextEditorWrapper.h */,
-				B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */,
+				B6C0A56724672D1200FFF84D /* TextEditorWrapper.h */,
+				B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */,
 				B61DD3252466059100BCB30F /* thirdparty */,
 			);
 			path = Core;
@@ -649,13 +649,13 @@
 				B6C0A5632466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */,
 				B65195A02463657800E0EB6A /* SwiftGui.h in Headers */,
 				B666D04124660D71009D4010 /* ImGuiWrapper.h in Headers */,
-				B61DD3492466059100BCB30F /* TextEditorWrapper.h in Headers */,
 				B61DD3312466059100BCB30F /* imstb_textedit.h in Headers */,
 				B65195B6246366A300E0EB6A /* SGRenderer.h in Headers */,
 				B65195B8246366A300E0EB6A /* imgui_impl_metal.h in Headers */,
 				B61DD32F2466059100BCB30F /* imgui.h in Headers */,
 				B61DD3332466059100BCB30F /* imconfig.h in Headers */,
 				B61DD33D2466059100BCB30F /* imstb_rectpack.h in Headers */,
+				B6C0A56924672D1300FFF84D /* TextEditorWrapper.h in Headers */,
 				B61DD33B2466059100BCB30F /* imgui_internal.h in Headers */,
 				B65195B3246366A300E0EB6A /* imgui_impl_osx.h in Headers */,
 				B61DD3372466059100BCB30F /* imstb_truetype.h in Headers */,
@@ -670,10 +670,10 @@
 				B65195F5246369AD00E0EB6A /* imgui_impl_metal.h in Headers */,
 				B61DD3322466059100BCB30F /* imstb_textedit.h in Headers */,
 				B6C0A5642466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */,
+				B6C0A56B24672D1600FFF84D /* TextEditorWrapper.h in Headers */,
 				B65195F6246369AD00E0EB6A /* SGRenderer.h in Headers */,
 				B61DD3342466059100BCB30F /* imconfig.h in Headers */,
 				B61DD33C2466059100BCB30F /* imgui_internal.h in Headers */,
-				B6C0A55D246627BE00FFF84D /* TextEditorWrapper.h in Headers */,
 				B65195EB2463698800E0EB6A /* SwiftGui.h in Headers */,
 				B61DD3562466059100BCB30F /* TextEditor.h in Headers */,
 				B61DD33E2466059100BCB30F /* imstb_rectpack.h in Headers */,
@@ -932,7 +932,7 @@
 				B65195C42463686900E0EB6A /* Column.swift in Sources */,
 				B65195C52463686900E0EB6A /* ComboBox.swift in Sources */,
 				B65195C62463686900E0EB6A /* General.swift in Sources */,
-				B61DD3512466059100BCB30F /* TextEditorWrapper.mm in Sources */,
+				B6C0A56A24672D1300FFF84D /* TextEditorWrapper.mm in Sources */,
 				B61DD3412466059100BCB30F /* imgui_draw.cpp in Sources */,
 				B6519981246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
 				B61DD3392466059100BCB30F /* imgui.cpp in Sources */,
@@ -996,7 +996,7 @@
 				B65195FE246369D600E0EB6A /* Color.swift in Sources */,
 				B61DD34C2466059100BCB30F /* TextEditor.cpp in Sources */,
 				B65195FF246369D600E0EB6A /* Column.swift in Sources */,
-				B6C0A55E246627C400FFF84D /* TextEditorWrapper.mm in Sources */,
+				B6C0A56C24672D1D00FFF84D /* TextEditorWrapper.mm in Sources */,
 				B6519600246369D600E0EB6A /* ComboBox.swift in Sources */,
 				B6C0A560246627CA00FFF84D /* ImGuiWrapper.mm in Sources */,
 				B6519982246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
