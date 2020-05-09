@@ -1152,7 +1152,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiMac;
 				PRODUCT_NAME = SwiftGui;
@@ -1185,7 +1185,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiMac;
 				PRODUCT_NAME = SwiftGui;
@@ -1211,7 +1211,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiiOS;
 				PRODUCT_NAME = SwiftGui;
@@ -1240,7 +1240,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiiOS;
 				PRODUCT_NAME = SwiftGui;
@@ -1267,7 +1267,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1289,7 +1289,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1311,7 +1311,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample02Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1333,7 +1333,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample02Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1353,7 +1353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1375,7 +1375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.1;
+				MARKETING_VERSION = 0.8.0;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

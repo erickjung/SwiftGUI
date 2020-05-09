@@ -122,7 +122,6 @@ Read the [Contributing guidelines](CONTRIBUTING.md)
 
 ## Using 
 
-* [Dear ImGui](https://github.com/ocornut/imgui) (1.74)
-* [cimgui](https://github.com/cimgui/cimgui)
+* [Dear ImGui](https://github.com/ocornut/imgui) (1.77)
 * [ImGuiColorTextEdit](https://github.com/BalazsJako/ImGuiColorTextEdit)
 
