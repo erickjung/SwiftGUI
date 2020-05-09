@@ -1,3 +1,3 @@
-SwiftGuiCore/* linguist-vendored=true
-SwiftGui/SwiftGuiiOS/* linguist-vendored=true
-SwiftGui/SwiftGuiMac/* linguist-vendored=true
+Source/SwiftGui/Core/* linguist-vendored=true
+Source/SwiftGui/SwiftGuiiOS/* linguist-vendored=true
+Source/SwiftGui/SwiftGuiMac/* linguist-vendored=true
