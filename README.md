@@ -78,12 +78,10 @@ Window("SwiftGUI") {
 
 ### Carthage
 
-[Carthage](https://github.com/Carthage/Carthage) is intended to be the simplest way to add frameworks to your Cocoa application. Builds your dependencies and provides you with binary frameworks, but you retain full control over your project structure and setup. Carthage does not automatically modify your project files or your build settings.
-
-To integrate `SwiftGUI` into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate `SwiftGui` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "erickjung/SwiftGUI" "lastverion"
+github "erickjung/SwiftGUI" "0.8.0"
 ```
 
 For `OSX` project, run:
@@ -96,6 +94,20 @@ For `iOS` project, run:
 
 ```ogdl
 carthage update --platform iOS
+```
+
+### Cocoapods
+
+To integrate `SwiftGui` into your Xcode project using Cocoapods, specify it in your `Podfile`:
+
+```ogdl
+pod 'SwiftGui', '~> 0.8.0'
+```
+
+run:
+
+```ogdl
+pod install
 ```
 
 ## Samples
