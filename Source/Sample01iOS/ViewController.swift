@@ -207,8 +207,6 @@ extension ViewController: SGRendererDelegate {
             }
 
             Tree("Advanced, with Selectable nodes") {
-
-                Selectable("test selectabled", selectedState: true)
                 helpMarker("This is a more typical looking tree with selectable nodes.\nClick to select, CTRL+Click to toggle, click on arrows or double-click to open.", atSameLine: false)
                 CheckBox("GuiTreeConfig OpenOnArrow", selectedState: false)
                 Text("Hello!")

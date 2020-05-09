@@ -30,10 +30,7 @@
 		B61DD3492466059100BCB30F /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3272466059100BCB30F /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B61DD34B2466059100BCB30F /* TextEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3282466059100BCB30F /* TextEditor.cpp */; };
 		B61DD34C2466059100BCB30F /* TextEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B61DD3282466059100BCB30F /* TextEditor.cpp */; };
-		B61DD34E2466059100BCB30F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B61DD3292466059100BCB30F /* LICENSE */; };
-		B61DD3502466059100BCB30F /* CONTRIBUTING in Resources */ = {isa = PBXBuildFile; fileRef = B61DD32A2466059100BCB30F /* CONTRIBUTING */; };
 		B61DD3512466059100BCB30F /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */; };
-		B61DD3542466059100BCB30F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B61DD32C2466059100BCB30F /* README.md */; };
 		B61DD3552466059100BCB30F /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD32D2466059100BCB30F /* TextEditor.h */; };
 		B61DD3562466059100BCB30F /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD32D2466059100BCB30F /* TextEditor.h */; };
 		B65195A02463657800E0EB6A /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B651959E2463657800E0EB6A /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -219,10 +216,7 @@
 		B61DD3202466059100BCB30F /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
 		B61DD3272466059100BCB30F /* TextEditorWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextEditorWrapper.h; path = thirdparty/ImGuiColorTextEdit/TextEditorWrapper.h; sourceTree = "<group>"; };
 		B61DD3282466059100BCB30F /* TextEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextEditor.cpp; sourceTree = "<group>"; };
-		B61DD3292466059100BCB30F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		B61DD32A2466059100BCB30F /* CONTRIBUTING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CONTRIBUTING; sourceTree = "<group>"; };
 		B61DD32B2466059100BCB30F /* TextEditorWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextEditorWrapper.mm; path = thirdparty/ImGuiColorTextEdit/TextEditorWrapper.mm; sourceTree = "<group>"; };
-		B61DD32C2466059100BCB30F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B61DD32D2466059100BCB30F /* TextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditor.h; sourceTree = "<group>"; };
 		B625A1A32375BDE60077717D /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		B651959C2463657800E0EB6A /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,9 +403,6 @@
 		B61DD3262466059100BCB30F /* ImGuiColorTextEdit */ = {
 			isa = PBXGroup;
 			children = (
-				B61DD32A2466059100BCB30F /* CONTRIBUTING */,
-				B61DD3292466059100BCB30F /* LICENSE */,
-				B61DD32C2466059100BCB30F /* README.md */,
 				B61DD3282466059100BCB30F /* TextEditor.cpp */,
 				B61DD32D2466059100BCB30F /* TextEditor.h */,
 			);
@@ -848,10 +839,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B61DD34E2466059100BCB30F /* LICENSE in Resources */,
 				B651994024640E1000E0EB6A /* FiraCodeRegular.ttf in Resources */,
-				B61DD3542466059100BCB30F /* README.md in Resources */,
-				B61DD3502466059100BCB30F /* CONTRIBUTING in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
