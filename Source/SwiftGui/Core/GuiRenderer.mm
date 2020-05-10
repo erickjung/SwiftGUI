@@ -41,7 +41,11 @@
     io.DisplaySize.x = view.bounds.size.width;
     io.DisplaySize.y = view.bounds.size.height;
 
+#if TARGET_OS_OSX
     CGFloat framebufferScale = view.window.screen.backingScaleFactor ?: NSScreen.mainScreen.backingScaleFactor;
+#else
+    CGFloat framebufferScale = view.window.screen.scale ?: UIScreen.mainScreen.scale;
+#endif
     io.DisplayFramebufferScale = ImVec2(framebufferScale, framebufferScale);
 
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
@@ -60,7 +64,9 @@
 
         // Start the Dear ImGui frame
         ImGui_ImplMetal_NewFrame(renderPassDescriptor);
+#if TARGET_OS_OSX
         ImGui_ImplOSX_NewFrame(view);
+#endif
         ImGui::NewFrame();
 
         if (self.delegate && [self.delegate respondsToSelector:@selector(draw)]) {
@@ -94,18 +100,44 @@
 
     ImGui_ImplMetal_Init(_device);
 
+#if TARGET_OS_OSX
     ImGui_ImplOSX_Init();
+#endif
 }
 
 -(void)shutdownPlatform {
     
+#if TARGET_OS_OSX
     ImGui_ImplOSX_Shutdown();
+#endif
 }
+
+#if TARGET_OS_OSX
 
 -(bool)handleEvent:(NSEvent *_Nonnull)event view:(NSView *_Nullable)view {
  
     return ImGui_ImplOSX_HandleEvent(event, view);
 }
+
+#else
+
+-(void)handleEvent:(UIEvent *_Nullable)event view:(UIView *_Nullable)view {
+ 
+    UITouch *anyTouch = event.allTouches.anyObject;
+    CGPoint touchLocation = [anyTouch locationInView:view];
+    ImGuiIO &io = ImGui::GetIO();
+    io.MousePos = ImVec2(touchLocation.x, touchLocation.y);
+
+    BOOL hasActiveTouch = NO;
+    for (UITouch *touch in event.allTouches) {
+        if (touch.phase != UITouchPhaseEnded && touch.phase != UITouchPhaseCancelled) {
+            hasActiveTouch = YES;
+            break;
+        }
+    }
+    io.MouseDown[0] = hasActiveTouch;
+}
+#endif
 
 -(id<MTLTexture>)loadTextureWithURL:(NSURL *)url {
 
