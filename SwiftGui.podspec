@@ -15,6 +15,8 @@ Pod::Spec.new do |spec|
     'Source/SwiftGui/Core/ImGuiWrapper.h',
     'Source/SwiftGui/Core/ImGuiStyleWrapper.h',
     'Source/SwiftGui/Core/TextEditorWrapper.h',
+    'Source/SwiftGuiiOS/SGRenderer.h',
+    'Source/SwiftGuiMac/SGRenderer.h'
   ]
 
 end
