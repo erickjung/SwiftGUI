@@ -13,7 +13,7 @@ import SwiftGui
 
 class ViewController: NSViewController {
 
-    var renderer: SGRenderer?
+    var renderer: GuiRenderer?
     var counterState = 0
     var radioState = 0
     var logo: GuiImage?
@@ -26,7 +26,7 @@ class ViewController: NSViewController {
 
             mtkView.device = MTLCreateSystemDefaultDevice()
 
-            self.renderer = SGRenderer(view: mtkView)
+            self.renderer = GuiRenderer(view: mtkView)
             self.renderer?.delegate = self
             mtkView.delegate = self.renderer
         }
@@ -47,7 +47,7 @@ class ViewController: NSViewController {
             return event
         }
 
-        self.renderer?.initializePlatform(false)
+        self.renderer?.initializePlatform()
 
         self.loadResources()
     }
@@ -83,7 +83,7 @@ class ViewController: NSViewController {
         logo = self.renderer?.loadTexture(withName: "swiftgui")
     }
 }
-extension ViewController: SGRendererDelegate {
+extension ViewController: GuiRendererDelegate {
 
     func setup() {
 

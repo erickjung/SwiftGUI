@@ -1,4 +1,4 @@
-#import "SGRenderer.h"
+#import "GuiRenderer.h"
 #import <Metal/Metal.h>
 
 #include "imgui.h"
@@ -8,14 +8,14 @@
 #include "imgui_impl_osx.h"
 #endif
 
-@interface SGRenderer ()
+@interface GuiRenderer ()
 @property (nonatomic, strong) id <MTLDevice> device;
 @property (nonatomic, strong) id <MTLCommandQueue> commandQueue;
 @property (nonatomic, strong) MTKTextureLoader *loader;
 @end
 
 
-@implementation SGRenderer
+@implementation GuiRenderer
 
 -(nonnull instancetype)initWithView:(nonnull MTKView *)view;
 {
@@ -85,7 +85,7 @@
 - (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size {
 }
 
--(void)initializePlatform:(BOOL)withDock {
+-(void)initializePlatform {
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(setup)]) {
 
@@ -95,11 +95,6 @@
     ImGui_ImplMetal_Init(_device);
 
     ImGui_ImplOSX_Init();
-    
-    if (withDock) {
-        ImGuiIO& io = ImGui::GetIO();
-        io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-    }
 }
 
 -(void)shutdownPlatform {

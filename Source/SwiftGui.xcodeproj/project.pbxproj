@@ -38,8 +38,7 @@
 		B65195B3246366A300E0EB6A /* imgui_impl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195AD246366A300E0EB6A /* imgui_impl_osx.h */; };
 		B65195B4246366A300E0EB6A /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195AE246366A300E0EB6A /* imgui_impl_metal.mm */; };
 		B65195B5246366A300E0EB6A /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195AF246366A300E0EB6A /* imgui_impl_osx.mm */; };
-		B65195B6246366A300E0EB6A /* SGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195B0246366A300E0EB6A /* SGRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65195B7246366A300E0EB6A /* SGRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195B1246366A300E0EB6A /* SGRenderer.mm */; };
+		B65195B7246366A300E0EB6A /* GuiRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195B1246366A300E0EB6A /* GuiRenderer.mm */; };
 		B65195B8246366A300E0EB6A /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195B2246366A300E0EB6A /* imgui_impl_metal.h */; };
 		B65195BD2463686900E0EB6A /* GuiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */; };
 		B65195BE2463686900E0EB6A /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
@@ -77,9 +76,8 @@
 		B65195E12463686900E0EB6A /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */; };
 		B65195EB2463698800E0EB6A /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195E92463698800E0EB6A /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195F3246369AD00E0EB6A /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195EF246369AD00E0EB6A /* imgui_impl_metal.mm */; };
-		B65195F4246369AD00E0EB6A /* SGRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195F0246369AD00E0EB6A /* SGRenderer.mm */; };
+		B65195F4246369AD00E0EB6A /* GuiRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65195F0246369AD00E0EB6A /* GuiRenderer.mm */; };
 		B65195F5246369AD00E0EB6A /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195F1246369AD00E0EB6A /* imgui_impl_metal.h */; };
-		B65195F6246369AD00E0EB6A /* SGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195F2246369AD00E0EB6A /* SGRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195F8246369D600E0EB6A /* GuiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */; };
 		B65195F9246369D600E0EB6A /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
 		B65195FA246369D600E0EB6A /* GuiNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C76122374532A008DB346 /* GuiNode+Extensions.swift */; };
@@ -174,6 +172,8 @@
 		B6C0A56A24672D1300FFF84D /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */; };
 		B6C0A56B24672D1600FFF84D /* TextEditorWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A56724672D1200FFF84D /* TextEditorWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6C0A56C24672D1D00FFF84D /* TextEditorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */; };
+		B6C0A56E2467F63D00FFF84D /* GuiRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A56D2467F63D00FFF84D /* GuiRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6C0A56F2467F63D00FFF84D /* GuiRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A56D2467F63D00FFF84D /* GuiRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,16 +226,14 @@
 		B65195AD246366A300E0EB6A /* imgui_impl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_osx.h; sourceTree = "<group>"; };
 		B65195AE246366A300E0EB6A /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_metal.mm; sourceTree = "<group>"; };
 		B65195AF246366A300E0EB6A /* imgui_impl_osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_osx.mm; sourceTree = "<group>"; };
-		B65195B0246366A300E0EB6A /* SGRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGRenderer.h; sourceTree = "<group>"; };
-		B65195B1246366A300E0EB6A /* SGRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGRenderer.mm; sourceTree = "<group>"; };
+		B65195B1246366A300E0EB6A /* GuiRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GuiRenderer.mm; sourceTree = "<group>"; };
 		B65195B2246366A300E0EB6A /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_metal.h; sourceTree = "<group>"; };
 		B65195E72463698800E0EB6A /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65195E92463698800E0EB6A /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B65195EA2463698800E0EB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65195EF246369AD00E0EB6A /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_metal.mm; sourceTree = "<group>"; };
-		B65195F0246369AD00E0EB6A /* SGRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGRenderer.mm; sourceTree = "<group>"; };
+		B65195F0246369AD00E0EB6A /* GuiRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GuiRenderer.mm; sourceTree = "<group>"; };
 		B65195F1246369AD00E0EB6A /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_metal.h; sourceTree = "<group>"; };
-		B65195F2246369AD00E0EB6A /* SGRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGRenderer.h; sourceTree = "<group>"; };
 		B651961D246369F800E0EB6A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B65198F82463865400E0EB6A /* SwiftGuiCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGuiCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B651992D246407AE00E0EB6A /* Sample01Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample01Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,6 +305,7 @@
 		B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImGuiStyleWrapper.mm; sourceTree = "<group>"; };
 		B6C0A56724672D1200FFF84D /* TextEditorWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorWrapper.h; sourceTree = "<group>"; };
 		B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextEditorWrapper.mm; sourceTree = "<group>"; };
+		B6C0A56D2467F63D00FFF84D /* GuiRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiRenderer.h; sourceTree = "<group>"; };
 		B6DF8B59237AB53300374675 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B6DF9A8923EAFCD800662401 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -363,13 +362,14 @@
 		B61DD3152466059100BCB30F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B61DD3162466059100BCB30F /* imgui */,
+				B6C0A56D2467F63D00FFF84D /* GuiRenderer.h */,
 				B6C0A5612466F7C900FFF84D /* ImGuiStyleWrapper.h */,
-				B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */,
 				B666D03F24660D71009D4010 /* ImGuiWrapper.h */,
-				B666D04024660D71009D4010 /* ImGuiWrapper.mm */,
 				B6C0A56724672D1200FFF84D /* TextEditorWrapper.h */,
+				B6C0A5622466F7C900FFF84D /* ImGuiStyleWrapper.mm */,
+				B666D04024660D71009D4010 /* ImGuiWrapper.mm */,
 				B6C0A56824672D1200FFF84D /* TextEditorWrapper.mm */,
+				B61DD3162466059100BCB30F /* imgui */,
 				B61DD3252466059100BCB30F /* thirdparty */,
 			);
 			path = Core;
@@ -417,8 +417,7 @@
 				B65195AD246366A300E0EB6A /* imgui_impl_osx.h */,
 				B65195AF246366A300E0EB6A /* imgui_impl_osx.mm */,
 				B651959F2463657800E0EB6A /* Info.plist */,
-				B65195B0246366A300E0EB6A /* SGRenderer.h */,
-				B65195B1246366A300E0EB6A /* SGRenderer.mm */,
+				B65195B1246366A300E0EB6A /* GuiRenderer.mm */,
 				B651959E2463657800E0EB6A /* SwiftGui.h */,
 			);
 			path = SwiftGuiMac;
@@ -429,8 +428,7 @@
 			children = (
 				B65195F1246369AD00E0EB6A /* imgui_impl_metal.h */,
 				B65195EF246369AD00E0EB6A /* imgui_impl_metal.mm */,
-				B65195F2246369AD00E0EB6A /* SGRenderer.h */,
-				B65195F0246369AD00E0EB6A /* SGRenderer.mm */,
+				B65195F0246369AD00E0EB6A /* GuiRenderer.mm */,
 				B65195E92463698800E0EB6A /* SwiftGui.h */,
 				B65195EA2463698800E0EB6A /* Info.plist */,
 			);
@@ -648,9 +646,9 @@
 				B61DD3552466059100BCB30F /* TextEditor.h in Headers */,
 				B6C0A5632466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */,
 				B65195A02463657800E0EB6A /* SwiftGui.h in Headers */,
+				B6C0A56E2467F63D00FFF84D /* GuiRenderer.h in Headers */,
 				B666D04124660D71009D4010 /* ImGuiWrapper.h in Headers */,
 				B61DD3312466059100BCB30F /* imstb_textedit.h in Headers */,
-				B65195B6246366A300E0EB6A /* SGRenderer.h in Headers */,
 				B65195B8246366A300E0EB6A /* imgui_impl_metal.h in Headers */,
 				B61DD32F2466059100BCB30F /* imgui.h in Headers */,
 				B61DD3332466059100BCB30F /* imconfig.h in Headers */,
@@ -668,10 +666,10 @@
 			files = (
 				B61DD3302466059100BCB30F /* imgui.h in Headers */,
 				B65195F5246369AD00E0EB6A /* imgui_impl_metal.h in Headers */,
+				B6C0A56F2467F63D00FFF84D /* GuiRenderer.h in Headers */,
 				B61DD3322466059100BCB30F /* imstb_textedit.h in Headers */,
 				B6C0A5642466F7C900FFF84D /* ImGuiStyleWrapper.h in Headers */,
 				B6C0A56B24672D1600FFF84D /* TextEditorWrapper.h in Headers */,
-				B65195F6246369AD00E0EB6A /* SGRenderer.h in Headers */,
 				B61DD3342466059100BCB30F /* imconfig.h in Headers */,
 				B61DD33C2466059100BCB30F /* imgui_internal.h in Headers */,
 				B65195EB2463698800E0EB6A /* SwiftGui.h in Headers */,
@@ -975,7 +973,7 @@
 				B65195E12463686900E0EB6A /* OrderedSet.swift in Sources */,
 				B65195B5246366A300E0EB6A /* imgui_impl_osx.mm in Sources */,
 				B65195B4246366A300E0EB6A /* imgui_impl_metal.mm in Sources */,
-				B65195B7246366A300E0EB6A /* SGRenderer.mm in Sources */,
+				B65195B7246366A300E0EB6A /* GuiRenderer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,7 +1037,7 @@
 				B61DD3362466059100BCB30F /* imgui_widgets.cpp in Sources */,
 				B651961C246369D600E0EB6A /* OrderedSet.swift in Sources */,
 				B651997F246413B900E0EB6A /* GuiCondition.swift in Sources */,
-				B65195F4246369AD00E0EB6A /* SGRenderer.mm in Sources */,
+				B65195F4246369AD00E0EB6A /* GuiRenderer.mm in Sources */,
 				B65195F3246369AD00E0EB6A /* imgui_impl_metal.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

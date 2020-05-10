@@ -24,7 +24,7 @@ class ViewController: MTKViewController {
         super.viewDidLoad()
 
         self.renderer?.delegate = self
-        self.renderer?.initializePlatform(false)
+        self.renderer?.initializePlatform()
     }
 
     override var representedObject: Any? {
@@ -50,7 +50,7 @@ extension ViewController {
     }
 }
 
-extension ViewController: SGRendererDelegate {
+extension ViewController: GuiRendererDelegate {
 
     func setup() {
         DefaultFontGroup().load()

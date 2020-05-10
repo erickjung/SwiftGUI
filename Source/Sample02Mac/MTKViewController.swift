@@ -13,7 +13,7 @@ import SwiftGui
 
 class MTKViewController: NSViewController {
 
-    var renderer: SGRenderer?
+    var renderer: GuiRenderer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class MTKViewController: NSViewController {
 
             mtkView.device = MTLCreateSystemDefaultDevice()
 
-            self.renderer = SGRenderer(view: mtkView)
+            self.renderer = GuiRenderer(view: mtkView)
             mtkView.delegate = self.renderer
         }
 

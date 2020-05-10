@@ -11,7 +11,7 @@ import SwiftGui
 
 class ViewController: UIViewController {
 
-    var renderer: SGRenderer?
+    var renderer: GuiRenderer?
     let mtkView = MTKView()
     var counterState = 0
     var radioState = 0
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
             mtkView.device = MTLCreateSystemDefaultDevice()
 
-            self.renderer = SGRenderer(view: mtkView)
+            self.renderer = GuiRenderer(view: mtkView)
             self.renderer?.delegate = self
             mtkView.delegate = self.renderer
         }
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: SGRendererDelegate {
+extension ViewController: GuiRendererDelegate {
 
     func setup() {
         DefaultFontGroup().load()

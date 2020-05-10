@@ -18,5 +18,5 @@ FOUNDATION_EXPORT const unsigned char SwiftGuiiOSVersionString[];
 #import "ImGuiWrapper.h"
 #import "ImGuiStyleWrapper.h"
 #import "TextEditorWrapper.h"
-#import "SGRenderer.h"
+#import "GuiRenderer.h"
 

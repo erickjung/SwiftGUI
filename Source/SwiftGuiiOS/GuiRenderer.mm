@@ -1,17 +1,17 @@
-#import "SGRenderer.h"
+#import "GuiRenderer.h"
 #import <Metal/Metal.h>
 #import <UIKit/UIKit.h>
 
 #include "imgui.h"
 #include "imgui_impl_metal.h"
 
-@interface SGRenderer ()
+@interface GuiRenderer ()
 @property (nonatomic, strong) id <MTLDevice> device;
 @property (nonatomic, strong) id <MTLCommandQueue> commandQueue;
 @property (nonatomic, strong) MTKTextureLoader *loader;
 @end
 
-@implementation SGRenderer
+@implementation GuiRenderer
 
 -(nonnull instancetype)initWithView:(nonnull MTKView *)view;
 {
