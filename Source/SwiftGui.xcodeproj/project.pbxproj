@@ -172,8 +172,8 @@
 		B6C0A5762467F9EA00FFF84D /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A5722467F9EA00FFF84D /* imgui_impl_metal.h */; };
 		B6C0A5782467FAE500FFF84D /* GuiRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A5772467FAE500FFF84D /* GuiRenderer.mm */; };
 		B6C0A5792467FAE500FFF84D /* GuiRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A5772467FAE500FFF84D /* GuiRenderer.mm */; };
-		B6C0A57C2467FBE600FFF84D /* imgui_impl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A57A2467FBE600FFF84D /* imgui_impl_osx.h */; };
-		B6C0A57D2467FBE600FFF84D /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A57B2467FBE600FFF84D /* imgui_impl_osx.mm */; };
+		B6C0A5802468002700FFF84D /* imgui_impl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C0A57E2468002700FFF84D /* imgui_impl_osx.h */; };
+		B6C0A5812468002700FFF84D /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6C0A57F2468002700FFF84D /* imgui_impl_osx.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,8 +301,8 @@
 		B6C0A5712467F9E900FFF84D /* imgui_impl_metal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_metal.mm; sourceTree = "<group>"; };
 		B6C0A5722467F9EA00FFF84D /* imgui_impl_metal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_metal.h; sourceTree = "<group>"; };
 		B6C0A5772467FAE500FFF84D /* GuiRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GuiRenderer.mm; sourceTree = "<group>"; };
-		B6C0A57A2467FBE600FFF84D /* imgui_impl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_osx.h; sourceTree = "<group>"; };
-		B6C0A57B2467FBE600FFF84D /* imgui_impl_osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_osx.mm; sourceTree = "<group>"; };
+		B6C0A57E2468002700FFF84D /* imgui_impl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_osx.h; sourceTree = "<group>"; };
+		B6C0A57F2468002700FFF84D /* imgui_impl_osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_osx.mm; sourceTree = "<group>"; };
 		B6DF8B59237AB53300374675 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B6DF9A8923EAFCD800662401 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -411,6 +411,8 @@
 		B651959D2463657800E0EB6A /* SwiftGuiMac */ = {
 			isa = PBXGroup;
 			children = (
+				B6C0A57E2468002700FFF84D /* imgui_impl_osx.h */,
+				B6C0A57F2468002700FFF84D /* imgui_impl_osx.mm */,
 				B651959E2463657800E0EB6A /* SwiftGui.h */,
 				B651959F2463657800E0EB6A /* Info.plist */,
 			);
@@ -605,8 +607,6 @@
 			children = (
 				B6C0A5722467F9EA00FFF84D /* imgui_impl_metal.h */,
 				B6C0A5712467F9E900FFF84D /* imgui_impl_metal.mm */,
-				B6C0A57A2467FBE600FFF84D /* imgui_impl_osx.h */,
-				B6C0A57B2467FBE600FFF84D /* imgui_impl_osx.mm */,
 			);
 			path = render;
 			sourceTree = "<group>";
@@ -652,11 +652,11 @@
 				B666D04124660D71009D4010 /* ImGuiWrapper.h in Headers */,
 				B61DD3312466059100BCB30F /* imstb_textedit.h in Headers */,
 				B61DD32F2466059100BCB30F /* imgui.h in Headers */,
+				B6C0A5802468002700FFF84D /* imgui_impl_osx.h in Headers */,
 				B61DD3332466059100BCB30F /* imconfig.h in Headers */,
 				B61DD33D2466059100BCB30F /* imstb_rectpack.h in Headers */,
 				B6C0A56924672D1300FFF84D /* TextEditorWrapper.h in Headers */,
 				B6C0A5752467F9EA00FFF84D /* imgui_impl_metal.h in Headers */,
-				B6C0A57C2467FBE600FFF84D /* imgui_impl_osx.h in Headers */,
 				B61DD33B2466059100BCB30F /* imgui_internal.h in Headers */,
 				B61DD3372466059100BCB30F /* imstb_truetype.h in Headers */,
 			);
@@ -927,7 +927,6 @@
 				B65195C12463686900E0EB6A /* Button.swift in Sources */,
 				B65195C22463686900E0EB6A /* CheckBox.swift in Sources */,
 				B65195C32463686900E0EB6A /* Color.swift in Sources */,
-				B6C0A57D2467FBE600FFF84D /* imgui_impl_osx.mm in Sources */,
 				B65199902464148600E0EB6A /* GuiColorProperty.swift in Sources */,
 				B6519993246414A600E0EB6A /* GuiStyleProperty.swift in Sources */,
 				B65195C42463686900E0EB6A /* Column.swift in Sources */,
@@ -945,6 +944,7 @@
 				B65195CB2463686900E0EB6A /* Input.swift in Sources */,
 				B651997E246413B900E0EB6A /* GuiCondition.swift in Sources */,
 				B65195CC2463686900E0EB6A /* List.swift in Sources */,
+				B6C0A5812468002700FFF84D /* imgui_impl_osx.mm in Sources */,
 				B65195CD2463686900E0EB6A /* Menu.swift in Sources */,
 				B6519999246414DF00E0EB6A /* GuiEdge.swift in Sources */,
 				B65195CE2463686900E0EB6A /* Perform.swift in Sources */,
@@ -1152,7 +1152,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiMac;
 				PRODUCT_NAME = SwiftGui;
@@ -1185,7 +1185,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiMac;
 				PRODUCT_NAME = SwiftGui;
@@ -1211,7 +1211,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiiOS;
 				PRODUCT_NAME = SwiftGui;
@@ -1240,7 +1240,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.SwiftGuiiOS;
 				PRODUCT_NAME = SwiftGui;
@@ -1267,7 +1267,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1289,7 +1289,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1311,7 +1311,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample02Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1333,7 +1333,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample02Mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1353,7 +1353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1375,7 +1375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8.3;
+				MARKETING_VERSION = 0.8.4;
 				OTHER_SWIFT_FLAGS = "-Xcc -Wno-incomplete-umbrella";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erickjung.SwiftGui.Sample01iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

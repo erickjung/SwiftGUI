@@ -81,7 +81,7 @@ Window("SwiftGUI") {
 To integrate `SwiftGui` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "erickjung/SwiftGUI" "0.8.0"
+github "erickjung/SwiftGUI" "0.8.4"
 ```
 
 For `OSX` project, run:
@@ -101,7 +101,7 @@ carthage update --platform iOS
 To integrate `SwiftGui` into your Xcode project using Cocoapods, specify it in your `Podfile`:
 
 ```ogdl
-pod 'SwiftGui', '~> 0.8.0'
+pod 'SwiftGui', '~> 0.8.4'
 ```
 
 run:
