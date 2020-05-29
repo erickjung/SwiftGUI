@@ -13,13 +13,13 @@ public class Image: GuiNode,
                     BorderColorModifier,
                     TintColorModifier {
 
+    public var size: GuiSize?
     public var borderColor: GuiColor?
     public var tintColor: GuiColor?
 
     public var imageId: GuiImage?
     public var uv0: GuiSize
     public var uv1: GuiSize
-    public var size: GuiSize?
 
     public init(imageId: GuiImage?,
                 uv0: GuiSize = .zero,

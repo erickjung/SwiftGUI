@@ -11,10 +11,10 @@ import Foundation
 public class ForEach<T:Sequence>: GuiView {
 
     private var data: T
-    private var onLoop: (T.Element) -> GuiView
+    private var onLoop: (T.Element) -> GuiView?
 
     public init(_ data: T,
-                onLoop: @escaping (T.Element) -> GuiView) {
+                onLoop: @escaping (T.Element) -> GuiView?) {
 
         self.data = data
         self.onLoop = onLoop
@@ -24,7 +24,7 @@ public class ForEach<T:Sequence>: GuiView {
 
         data.forEach {
 
-            onLoop($0).render()
+            onLoop($0)?.render()
         }
     }
 }

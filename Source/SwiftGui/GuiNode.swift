@@ -9,6 +9,7 @@
 public class GuiNode: GuiView,
                       IdentifierValue,
                       HoverEvent,
+                      SnapModifier,
                       PaddingModifier,
                       FontModifier,
                       TextColorModifier {
@@ -16,6 +17,7 @@ public class GuiNode: GuiView,
     public var onHover: (() -> GuiView?)?
 
     public var id: String?
+    public var snapWidth: Bool?
     public var padding: GuiEdge?
     public var paddingValue: Double?
     public var fontIndex: Int?
@@ -61,11 +63,19 @@ private extension GuiNode {
 
             ImGuiWrapper.pushFont(font)
         }
+
+        if self.snapWidth != nil {
+            ImGuiWrapper.pushItemWidth(-1)
+        }
     }
 
     func posRendering() {
 
         self.checkHovered()
+
+        if self.snapWidth != nil {
+            ImGuiWrapper.popItemWidth()
+        }
 
         if self.fontIndex != nil {
             ImGuiWrapper.popFont()

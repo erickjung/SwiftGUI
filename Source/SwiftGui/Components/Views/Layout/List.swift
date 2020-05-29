@@ -8,10 +8,11 @@
 
 import Foundation
 
-public class List<T>: GuiNode {
+public class List<T>: GuiNode, SizeModifier {
+
+    public var size: GuiSize?
 
     public var itemHeight: Float
-    public var size: GuiSize
     public var border: Bool
     public var options: GuiWindowConfig
 
@@ -20,14 +21,12 @@ public class List<T>: GuiNode {
 
     public init(buffer: [T],
                 itemHeight: Float = -1,
-                size: GuiSize = .zero,
                 border: Bool = false,
                 options: GuiWindowConfig = .none,
                 onLoop: @escaping ((Int, T) -> GuiView?)) {
 
         self.buffer = buffer
         self.itemHeight = itemHeight
-        self.size = size
         self.border = border
         self.options = options
         self.onLoop = onLoop
@@ -35,7 +34,7 @@ public class List<T>: GuiNode {
 
     public override func drawComponent() {
 
-        if ImGuiWrapper.beginChild(self.id ?? "##list", size: self.size, border: self.border, flags: self.options.rawValue) {
+        if ImGuiWrapper.beginChild(self.id ?? "##list", size: self.size ?? .zero, border: self.border, flags: self.options.rawValue) {
 
             if let clipper = ImGuiWrapper.listClipperCreate(0, itemsHeight: self.itemHeight) {
 

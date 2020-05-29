@@ -407,13 +407,15 @@ private extension ViewController {
 
         CollapsingHeader("Plot") {
 
-            Plot(type: .line, label: "Frame Times", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2], size: CGSize(width: 0, height: 80))
+            Plot(type: .line, label: "Frame Times", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2])
+                .size(CGSize(width: 0, height: 80))
                 .backgroundColor(.gray)
                 .activeColor(.blue)
                 .hoveredColor(.green)
                 .textColor(.orange)
 
-            Plot(type: .histogram, label: "Histogram", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2], size: CGSize(width: 0, height: 80))
+            Plot(type: .histogram, label: "Histogram", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2])
+                .size(CGSize(width: 0, height: 80))
                 .backgroundColor(.gray)
                 .activeColor(.blue)
                 .hoveredColor(.green)

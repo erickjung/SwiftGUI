@@ -9,6 +9,7 @@
 import Foundation
 
 public class Plot: GuiNode,
+                   SizeModifier,
                    BackgroundColorModifier,
                    ActiveColorModifier,
                    HoveredColorModifier {
@@ -18,6 +19,7 @@ public class Plot: GuiNode,
         case histogram
     }
 
+    public var size: GuiSize?
     public var backgroundColor: GuiColor?
     public var activeColor: GuiColor?
     public var hoveredColor: GuiColor?
@@ -28,7 +30,6 @@ public class Plot: GuiNode,
     public var overlayText: String
     public var minScale: Float
     public var maxScale: Float
-    public var size: GuiSize
     public var stride: Int
 
     public private(set) var type: PlotType
@@ -40,7 +41,6 @@ public class Plot: GuiNode,
                 overlayText: String = "",
                 minScale: Float = Float.greatestFiniteMagnitude,
                 maxScale: Float = Float.greatestFiniteMagnitude,
-                size: GuiSize = .zero,
                 stride: Int = MemoryLayout<Float>.size) {
 
         self.type = type
@@ -50,7 +50,6 @@ public class Plot: GuiNode,
         self.overlayText = overlayText
         self.minScale = minScale
         self.maxScale = maxScale
-        self.size = size
         self.stride = stride
     }
 
@@ -81,7 +80,7 @@ public class Plot: GuiNode,
                                    overlayText: self.overlayText,
                                    minScale: self.minScale,
                                    maxScale: self.maxScale,
-                                   graphSize: self.size,
+                                   graphSize: self.size ?? .zero,
                                    stride: Int32(self.stride))
 
         case .histogram:
@@ -93,7 +92,7 @@ public class Plot: GuiNode,
                                        overlayText: self.overlayText,
                                        minScale: self.minScale,
                                        maxScale: self.maxScale,
-                                       graphSize: self.size,
+                                       graphSize: self.size ?? .zero,
                                        stride: Int32(self.stride))
         }
 

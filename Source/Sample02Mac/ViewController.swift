@@ -57,16 +57,16 @@ extension ViewController: GuiRendererDelegate {
         DarculaTheme().apply()
     }
 
-    func todoInput() -> GuiNode {
+    func todoInput() -> GuiView {
 
         Group {
 
             Text("Task Description:")
 
-            InputText(textState: States.inputTask, placeHolder: "ex. buy milk") {
+            TextField(textState: States.inputTask, placeHolder: "ex. buy milk") {
                 States.inputTask = $0
             }
-            .width(-1)
+            .snap()
 
             Button("Create") {
 
@@ -82,9 +82,9 @@ extension ViewController: GuiRendererDelegate {
         .padding(.top, value: 10)
     }
 
-    func confirmationPopup(name: String) -> GuiNode {
+    func confirmationPopup(name: String) -> GuiView {
 
-        Popup(id: name) {
+        Popup {
 
             Text("Remove this task?")
 
@@ -92,7 +92,7 @@ extension ViewController: GuiRendererDelegate {
 
                 Button("No") {
 
-                    PopupCloseCall()
+                    Popup.close()
                 }
 
                 Button("Yes") {
@@ -101,11 +101,12 @@ extension ViewController: GuiRendererDelegate {
                 }
             }
         }
+        .identifier(name)
     }
 
-    func cell(name: String, value: Bool, color: GuiColor) -> GuiNode {
+    func cell(name: String, value: Bool, color: GuiColor) -> GuiView {
 
-        Group(id: name) {
+        Group {
 
             HStack {
 
@@ -120,28 +121,29 @@ extension ViewController: GuiRendererDelegate {
 
                 } else {
 
-                    TextDisabled(name)
+                    Text(name)
+                        .textColor(.gray)
                 }
             }
 
             Button("remove") {
 
-                PopupOpenCall(name)
+                Popup.open(name)
             }
-            .color(.button, color: color)
-            .color(.text, color: .white)
+            .backgroundColor(color)
 
             confirmationPopup(name: name)
 
-            Separator()
+            Divider()
         }
+        .identifier(name)
     }
 
-    func todoList() -> GuiNode {
+    func todoList() -> GuiView {
 
         CollapsingHeader("TODO", options: .defaultOpen) {
 
-            List(id: "##todo", size: GuiSize(width: 0, height: 150)) {
+            SubWindow {
 
                 ForEach(items) { val in
 
@@ -152,14 +154,16 @@ extension ViewController: GuiRendererDelegate {
                     return nil
                 }
             }
+            .size(GuiSize(width: 0, height: 150))
+            .identifier("##todo")
         }
     }
 
-    func doneList() -> GuiNode {
+    func doneList() -> GuiView {
 
         CollapsingHeader("DONE", options: .defaultOpen) {
 
-            List(id: "##done") {
+            SubWindow {
 
                 ForEach(items) { val in
 
@@ -170,10 +174,11 @@ extension ViewController: GuiRendererDelegate {
                     return nil
                 }
             }
+            .identifier("##done")
         }
     }
 
-    func mainView() -> GuiNode {
+    func mainView() -> GuiView {
 
         Window("TODO", options: .noTitleBar) {
 
@@ -184,7 +189,6 @@ extension ViewController: GuiRendererDelegate {
         .position(CGPoint(x: 0, y: 0), condition: .always)
         .size(CGSize(width: self.view.frame.width,
                      height: self.view.frame.height), condition: .always)
-        .property(.windowRounding, set: 0)
         .font(DefaultFontGroup.Types.FiraCode_18)
     }
 

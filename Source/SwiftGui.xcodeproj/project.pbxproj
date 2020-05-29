@@ -69,6 +69,8 @@
 		B61DD3562466059100BCB30F /* TextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD32D2466059100BCB30F /* TextEditor.h */; };
 		B6495BF52481AC5B006F4E87 /* HoverEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6495BF42481AC5B006F4E87 /* HoverEvent.swift */; };
 		B6495BF62481AC5B006F4E87 /* HoverEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6495BF42481AC5B006F4E87 /* HoverEvent.swift */; };
+		B6495BF92481CD17006F4E87 /* SnapModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6495BF82481CD17006F4E87 /* SnapModifier.swift */; };
+		B6495BFA2481CD17006F4E87 /* SnapModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6495BF82481CD17006F4E87 /* SnapModifier.swift */; };
 		B65195A02463657800E0EB6A /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B651959E2463657800E0EB6A /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195A52463660500E0EB6A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A42463660500E0EB6A /* AppKit.framework */; };
 		B65195A82463660C00E0EB6A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A62463660C00E0EB6A /* Metal.framework */; };
@@ -290,6 +292,7 @@
 		B61DD3282466059100BCB30F /* TextEditor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextEditor.cpp; sourceTree = "<group>"; };
 		B61DD32D2466059100BCB30F /* TextEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditor.h; sourceTree = "<group>"; };
 		B6495BF42481AC5B006F4E87 /* HoverEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverEvent.swift; sourceTree = "<group>"; };
+		B6495BF82481CD17006F4E87 /* SnapModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapModifier.swift; sourceTree = "<group>"; };
 		B651959C2463657800E0EB6A /* SwiftGui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B651959E2463657800E0EB6A /* SwiftGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B651959F2463657800E0EB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -711,6 +714,7 @@
 				B6AFF6AC248159D5003067D6 /* FontModifier.swift */,
 				B6AFF6AF24815AE3003067D6 /* PaddingModifier.swift */,
 				B6B114C9247B0E7C0036CB3E /* SizeModifier.swift */,
+				B6495BF82481CD17006F4E87 /* SnapModifier.swift */,
 				B6BDDCFA2471DEE600B8F26B /* WindowPositionModifier.swift */,
 				B6BDDCFD2471DEEF00B8F26B /* WindowSizeModifier.swift */,
 			);
@@ -1164,6 +1168,7 @@
 				B61DD3412466059100BCB30F /* imgui_draw.cpp in Sources */,
 				B6519981246413D500E0EB6A /* GuiInputTextConfig.swift in Sources */,
 				B6AFF69424811DD3003067D6 /* Column.swift in Sources */,
+				B6495BF92481CD17006F4E87 /* SnapModifier.swift in Sources */,
 				B61DD3392466059100BCB30F /* imgui.cpp in Sources */,
 				B6519975246412C600E0EB6A /* GuiConfig.swift in Sources */,
 				B6BDDCFE2471DEEF00B8F26B /* WindowSizeModifier.swift in Sources */,
@@ -1244,6 +1249,7 @@
 				B651999A246414DF00E0EB6A /* GuiEdge.swift in Sources */,
 				B6E16A5124748CC7000D6202 /* ComboBox.swift in Sources */,
 				B61DD34C2466059100BCB30F /* TextEditor.cpp in Sources */,
+				B6495BFA2481CD17006F4E87 /* SnapModifier.swift in Sources */,
 				B604E210247F1517006B8FB4 /* Perform.swift in Sources */,
 				B6AFF69C248147CA003067D6 /* ColumnWidth.swift in Sources */,
 				B6AFF6AB248153EF003067D6 /* HoveredColorModifier.swift in Sources */,
