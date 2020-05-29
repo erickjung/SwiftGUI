@@ -8,16 +8,8 @@
 
 import Foundation
 
-public class GuiNodeList: GuiView {
+public class Empty: GuiView {
 
-    let children: [GuiView]
-
-    init(children: [GuiView]) {
-        self.children = children
-    }
-
-    public func render() {
-
-        self.children.forEach { $0.render() }
-    }
+    public init() {}
+    public func render() {}
 }

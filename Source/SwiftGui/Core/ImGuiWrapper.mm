@@ -322,6 +322,14 @@
     return ImGui::BeginPopup(strId.UTF8String, flags);
 }
 
++ (bool)beginPopupModal:(NSString *)strId open:(bool *_Nonnull)open flags:(int)flags {
+
+    bool _value = *open;
+    bool res = ImGui::BeginPopupModal(strId.UTF8String, &_value, flags);
+    *open = _value;
+    return res;
+}
+
 + (void)endPopup {
 
     ImGui::EndPopup();

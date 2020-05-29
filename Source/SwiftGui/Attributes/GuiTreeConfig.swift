@@ -18,7 +18,7 @@ public struct GuiTreeConfig: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none                 = GuiTreeConfig(rawValue: 0)
+    public static let none                 = GuiTreeConfig([])
 
     /// Draw as selected
     public static let selected             = GuiTreeConfig(rawValue: 1 << 0)

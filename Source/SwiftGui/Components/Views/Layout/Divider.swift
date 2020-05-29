@@ -8,16 +8,12 @@
 
 import Foundation
 
-public class GuiNodeList: GuiView {
+public class Divider: GuiView {
 
-    let children: [GuiView]
-
-    init(children: [GuiView]) {
-        self.children = children
-    }
+    public init() {}
 
     public func render() {
 
-        self.children.forEach { $0.render() }
+        ImGuiWrapper.separator()
     }
 }

@@ -18,7 +18,7 @@ public struct GuiTabItemConfig: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none                         = GuiTabItemConfig(rawValue: 0)
+    public static let none                         = GuiTabItemConfig([])
     public static let unsavedDocument              = GuiTabItemConfig(rawValue: 1 << 0)
     public static let setSelected                  = GuiTabItemConfig(rawValue: 1 << 1)
     public static let noCloseWithMiddleMouseButton = GuiTabItemConfig(rawValue: 1 << 2)

@@ -18,7 +18,7 @@ public struct GuiDockConfig: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none                   = GuiDockConfig(rawValue: 0)
+    public static let none                   = GuiDockConfig([])
     public static let keepAliveOnly          = GuiDockConfig(rawValue: 1 << 0)
     public static let noDockingInCentralNode = GuiDockConfig(rawValue: 1 << 2)
     public static let passthruCentralNode    = GuiDockConfig(rawValue: 1 << 3)

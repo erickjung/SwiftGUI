@@ -8,16 +8,20 @@
 
 import Foundation
 
-public class GuiNodeList: GuiView {
+public class Perform: GuiView {
 
-    let children: [GuiView]
+    private let onPerform: (() -> GuiView?)?
 
-    init(children: [GuiView]) {
-        self.children = children
+    public init(onPerform: (() -> GuiView?)? = nil) {
+
+        self.onPerform = onPerform
     }
 
     public func render() {
 
-        self.children.forEach { $0.render() }
+        if let child = self.onPerform?() {
+
+            child.render()
+        }
     }
 }

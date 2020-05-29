@@ -18,7 +18,7 @@ public struct GuiConfig: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none                    = GuiConfig(rawValue: 0)
+    public static let none                    = GuiConfig([])
 
     /// Master keyboard navigation enable flag.
     public static let navEnableKeyboard       = GuiConfig(rawValue: 1 << 0)

@@ -18,7 +18,7 @@ public struct GuiSelectable: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none             = GuiSelectable(rawValue: 0)
+    public static let none             = GuiSelectable([])
 
     /// Clicking this don't close parent popup window
     public static let dontClosePopups  = GuiSelectable(rawValue: 1 << 0)

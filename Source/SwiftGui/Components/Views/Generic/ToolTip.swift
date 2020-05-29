@@ -8,16 +8,19 @@
 
 import Foundation
 
-public class GuiNodeList: GuiView {
+public class Tooltip: GuiView {
 
-    let children: [GuiView]
+    private let child: GuiView
 
-    init(children: [GuiView]) {
-        self.children = children
+    public init(@GuiBuilder child: () -> GuiView) {
+
+        self.child = child()
     }
 
     public func render() {
 
-        self.children.forEach { $0.render() }
+        ImGuiWrapper.beginTooltip()
+        self.child.render()
+        ImGuiWrapper.endTooltip()
     }
 }

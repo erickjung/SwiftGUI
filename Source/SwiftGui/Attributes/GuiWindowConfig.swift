@@ -18,7 +18,7 @@ public struct GuiWindowConfig: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none                      = GuiWindowConfig(rawValue: 0)
+    public static let none                      = GuiWindowConfig([])
 
     /// Disable title-bar
     public static let noTitleBar                = GuiWindowConfig(rawValue: 1 << 0)

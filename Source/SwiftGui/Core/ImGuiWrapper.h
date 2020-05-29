@@ -63,6 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (bool)collapsingHeader:(NSString *_Nonnull)label flags:(int)flags;
 + (bool)collapsingHeader:(NSString *_Nonnull)label open:(bool *_Nonnull)open flags:(int)flags;
 + (bool)beginPopup:(NSString *)strId flags:(int)flags;
++ (bool)beginPopupModal:(NSString *)strId open:(bool *_Nonnull)open flags:(int)flags;
 + (void)endPopup;
 + (void)openPopup:(NSString *)strId;
 + (void)closeCurrentPopup;

@@ -18,7 +18,7 @@ public struct GuiInputTextConfig: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none                = GuiInputTextConfig(rawValue: 0)
+    public static let none                = GuiInputTextConfig([])
 
     /// Allow 0123456789.+-*/
     public static let charsDecimal        = GuiInputTextConfig(rawValue: 1 << 0)

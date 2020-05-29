@@ -18,7 +18,7 @@ public struct GuiTabBarConfig: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let none                         = GuiTabBarConfig(rawValue: 0)
+    public static let none                         = GuiTabBarConfig([])
     public static let reorderable                  = GuiTabBarConfig(rawValue: 1 << 0)
     public static let autoSelectNewTabs            = GuiTabBarConfig(rawValue: 1 << 1)
     public static let tabListPopupButton           = GuiTabBarConfig(rawValue: 1 << 2)
