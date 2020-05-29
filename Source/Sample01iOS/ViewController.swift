@@ -384,13 +384,15 @@ private extension ViewController {
 
         CollapsingHeader("Plot") {
 
-            Plot(type: .line, label: "Frame Times", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2], size: CGSize(width: 0, height: 80))
+            Plot(type: .line, label: "Frame Times", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2])
+                .size(CGSize(width: 0, height: 80))
                 .backgroundColor(.gray)
                 .activeColor(.blue)
                 .hoveredColor(.green)
                 .textColor(.orange)
 
-            Plot(type: .histogram, label: "Histogram", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2], size: CGSize(width: 0, height: 80))
+            Plot(type: .histogram, label: "Histogram", values: [0.6, 0.1, 1.0, 0.5, 0.92, 0.1, 0.2])
+                .size(CGSize(width: 0, height: 80))
                 .backgroundColor(.gray)
                 .activeColor(.blue)
                 .hoveredColor(.green)
@@ -470,10 +472,14 @@ private extension ViewController {
             self.testPlot()
             self.testTabBar()
             self.testTree()
+
+            NewLine()
+            NewLine()
+            NewLine()
         }
         .position(CGPoint(x: 0, y: (0 + 20)), condition: .always)
         .size(CGSize(width: self.view.frame.width,
                      height: self.view.frame.height - 20), condition: .always)
-        .font(DefaultFontGroup.Types.FiraCode_14)
+        .font(DefaultFontGroup.Types.FiraCode_18)
     }
 }

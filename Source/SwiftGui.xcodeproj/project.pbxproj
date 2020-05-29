@@ -71,6 +71,8 @@
 		B6495BF62481AC5B006F4E87 /* HoverEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6495BF42481AC5B006F4E87 /* HoverEvent.swift */; };
 		B6495BF92481CD17006F4E87 /* SnapModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6495BF82481CD17006F4E87 /* SnapModifier.swift */; };
 		B6495BFA2481CD17006F4E87 /* SnapModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6495BF82481CD17006F4E87 /* SnapModifier.swift */; };
+		B6495BFD2481D01D006F4E87 /* SwiftGui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195E72463698800E0EB6A /* SwiftGui.framework */; };
+		B6495BFE2481D01D006F4E87 /* SwiftGui.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65195E72463698800E0EB6A /* SwiftGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B65195A02463657800E0EB6A /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B651959E2463657800E0EB6A /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195A52463660500E0EB6A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A42463660500E0EB6A /* AppKit.framework */; };
 		B65195A82463660C00E0EB6A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A62463660C00E0EB6A /* Metal.framework */; };
@@ -237,19 +239,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B6495BFB2481CFFF006F4E87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67E1C44236BB20400216EA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B65195E62463698800E0EB6A;
+			remoteInfo = SwiftGuiiOS;
+		};
+		B6495BFF2481D01D006F4E87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67E1C44236BB20400216EA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B65195E62463698800E0EB6A;
+			remoteInfo = SwiftGuiiOS;
+		};
 		B651993D246407BB00E0EB6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B67E1C44236BB20400216EA2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B651959B2463657800E0EB6A;
 			remoteInfo = SwiftGuiMac;
-		};
-		B651996F2464103C00E0EB6A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B67E1C44236BB20400216EA2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B65195E62463698800E0EB6A;
-			remoteInfo = SwiftGuiiOS;
 		};
 		B65199712464104600E0EB6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -259,6 +268,20 @@
 			remoteInfo = SwiftGuiMac;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6495C012481D01E006F4E87 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B6495BFE2481D01D006F4E87 /* SwiftGui.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B604E1D5247DBF64006B8FB4 /* ListBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBox.swift; sourceTree = "<group>"; };
@@ -439,6 +462,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6495BFD2481D01D006F4E87 /* SwiftGui.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,11 +1012,13 @@
 				B651995724640F8700E0EB6A /* Sources */,
 				B651995824640F8700E0EB6A /* Frameworks */,
 				B651995924640F8700E0EB6A /* Resources */,
+				B6495C012481D01E006F4E87 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B65199702464103C00E0EB6A /* PBXTargetDependency */,
+				B6495BFC2481CFFF006F4E87 /* PBXTargetDependency */,
+				B6495C002481D01D006F4E87 /* PBXTargetDependency */,
 			);
 			name = Sample01iOS;
 			productName = Sample01iOS;
@@ -1006,7 +1032,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Erick Jung";
 				TargetAttributes = {
 					B651959B2463657800E0EB6A = {
@@ -1358,15 +1384,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B6495BFC2481CFFF006F4E87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B65195E62463698800E0EB6A /* SwiftGuiiOS */;
+			targetProxy = B6495BFB2481CFFF006F4E87 /* PBXContainerItemProxy */;
+		};
+		B6495C002481D01D006F4E87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B65195E62463698800E0EB6A /* SwiftGuiiOS */;
+			targetProxy = B6495BFF2481D01D006F4E87 /* PBXContainerItemProxy */;
+		};
 		B651993E246407BB00E0EB6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B651959B2463657800E0EB6A /* SwiftGuiMac */;
 			targetProxy = B651993D246407BB00E0EB6A /* PBXContainerItemProxy */;
-		};
-		B65199702464103C00E0EB6A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B65195E62463698800E0EB6A /* SwiftGuiiOS */;
-			targetProxy = B651996F2464103C00E0EB6A /* PBXContainerItemProxy */;
 		};
 		B65199722464104600E0EB6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1541,6 +1572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sample01Mac/Sample01Mac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Sample01Mac/Info.plist;
@@ -1563,6 +1595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sample01Mac/Sample01Mac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Sample01Mac/Info.plist;
@@ -1585,6 +1618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sample02Mac/Sample02Mac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Sample02Mac/Info.plist;
@@ -1607,6 +1641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sample02Mac/Sample02Mac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Sample02Mac/Info.plist;
@@ -1629,6 +1664,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sample01iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1651,6 +1687,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Sample01iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
