@@ -112,17 +112,30 @@ pod install
 
 ## Samples
 
-### Sample01 (macOS)
-
-![sample01](Docs/sample01-osx.gif)
-
-### Sample 02 (macOS) - Simple TODO application
-
-![sample02](Docs/sample02-osx.gif)
-
-### Screenshot 01 (iOS)
-
-![sample03](Docs/sample01-ios.jpg)
+<table>
+ <tr>
+  <th>
+    <img src="Docs/sample01-osx.gif"/>
+  </th>
+  <th>
+    <img src="Docs/sample02-osx.gif"/>
+  </th>
+  <th>
+    <img src="Docs/sample01-ios.jpg"/>
+  </th>
+ </tr>
+ <tr>
+  <th>
+   <a href="https://github.com/erickjung/SwiftGUI/tree/master/Source/Sample01Mac">macOS Sample 01</a>
+  </th>
+  <th>
+   <a href="https://github.com/erickjung/SwiftGUI/tree/master/Source/Sample02Mac">macOS Sample 02</a>
+  </th>
+  <th>
+   <a href="https://github.com/erickjung/SwiftGUI/tree/master/Source/Sample01iOS">iOS Sample 01</a>
+  </th>
+ </tr>
+</table>
 
 ## Contributing
 
