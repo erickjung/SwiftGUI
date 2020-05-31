@@ -43,6 +43,8 @@
 		B604E20D247F12E1006B8FB4 /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604E20B247F12E1006B8FB4 /* TextEditor.swift */; };
 		B604E20F247F1517006B8FB4 /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604E20E247F1517006B8FB4 /* Perform.swift */; };
 		B604E210247F1517006B8FB4 /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604E20E247F1517006B8FB4 /* Perform.swift */; };
+		B61927462483CCDE00BA7B22 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61927452483CCDE00BA7B22 /* TextLabel.swift */; };
+		B61927472483CCDE00BA7B22 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61927452483CCDE00BA7B22 /* TextLabel.swift */; };
 		B61DD32F2466059100BCB30F /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3172466059100BCB30F /* imgui.h */; };
 		B61DD3302466059100BCB30F /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3172466059100BCB30F /* imgui.h */; };
 		B61DD3312466059100BCB30F /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = B61DD3182466059100BCB30F /* imstb_textedit.h */; };
@@ -302,6 +304,7 @@
 		B604E208247F114D006B8FB4 /* SubWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubWindow.swift; sourceTree = "<group>"; };
 		B604E20B247F12E1006B8FB4 /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		B604E20E247F1517006B8FB4 /* Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perform.swift; sourceTree = "<group>"; };
+		B61927452483CCDE00BA7B22 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		B61DD3172466059100BCB30F /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
 		B61DD3182466059100BCB30F /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
 		B61DD3192466059100BCB30F /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
@@ -838,21 +841,22 @@
 		B6E16A4B247483C6000D6202 /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				B604E207247F0E82006B8FB4 /* Tree */,
-				B604E1F6247F0AF8006B8FB4 /* TabBar */,
 				B604E1F5247F09EF006B8FB4 /* RadioButton */,
+				B604E1F6247F0AF8006B8FB4 /* TabBar */,
+				B604E207247F0E82006B8FB4 /* Tree */,
 				B67E4C19246CBD8500A91946 /* Button.swift */,
 				B67E4C1C246CBE0A00A91946 /* CheckBox.swift */,
 				B6E16A4C24748988000D6202 /* ColorEdit.swift */,
-				B604E1E6247ED026006B8FB4 /* Plot.swift */,
 				B6E16A4F24748CC7000D6202 /* ComboBox.swift */,
 				B68A9EDB247AAF700073B8A3 /* Drag.swift */,
 				B6B114C6247B0DEF0036CB3E /* Image.swift */,
 				B604E1D5247DBF64006B8FB4 /* ListBox.swift */,
-				B67E4C1F246CC50500A91946 /* Text.swift */,
-				B6B114D6247C5F7D0036CB3E /* TextField.swift */,
+				B604E1E6247ED026006B8FB4 /* Plot.swift */,
 				B604E1F2247F08A9006B8FB4 /* Slider.swift */,
+				B67E4C1F246CC50500A91946 /* Text.swift */,
 				B604E20B247F12E1006B8FB4 /* TextEditor.swift */,
+				B6B114D6247C5F7D0036CB3E /* TextField.swift */,
+				B61927452483CCDE00BA7B22 /* TextLabel.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -1180,6 +1184,7 @@
 				B6AFF6B3248163DE003067D6 /* SelectionColorModifier.swift in Sources */,
 				B6AFF6B62481701D003067D6 /* IdentifierValue.swift in Sources */,
 				B6AFF6A124814C34003067D6 /* NewLine.swift in Sources */,
+				B61927462483CCDE00BA7B22 /* TextLabel.swift in Sources */,
 				B65195C02463686900E0EB6A /* GuiView.swift in Sources */,
 				B6AFF6A424814CAD003067D6 /* Spacing.swift in Sources */,
 				B604E1E0247DCB46006B8FB4 /* MenuGroup.swift in Sources */,
@@ -1342,6 +1347,7 @@
 				B651961B246369D600E0EB6A /* Extensions.swift in Sources */,
 				B6AFF69F2481482F003067D6 /* ColumnNext.swift in Sources */,
 				B61DD3362466059100BCB30F /* imgui_widgets.cpp in Sources */,
+				B61927472483CCDE00BA7B22 /* TextLabel.swift in Sources */,
 				B6AFF6AE248159D5003067D6 /* FontModifier.swift in Sources */,
 				B604E203247F0DAF006B8FB4 /* Tree.swift in Sources */,
 				B6BDDCFF2471DEEF00B8F26B /* WindowSizeModifier.swift in Sources */,

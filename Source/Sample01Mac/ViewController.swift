@@ -105,6 +105,16 @@ private extension ViewController {
         }
     }
 
+    func testTextLabel() -> GuiView {
+
+        CollapsingHeader("TextLabel") {
+
+            TextLabel(label: "label", value: "value")
+            TextLabel(label: "label", value: "value")
+                .textColor(.yellow)
+        }
+    }
+
     func testButton() -> GuiView {
 
         CollapsingHeader("Button") {
@@ -475,6 +485,7 @@ private extension ViewController {
             }
 
             self.testText()
+            self.testTextLabel()
             self.testButton()
             self.testCheckbox()
             self.testComboBox()
