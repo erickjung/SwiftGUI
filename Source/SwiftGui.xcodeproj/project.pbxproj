@@ -89,7 +89,6 @@
 		B65195DE2463686900E0EB6A /* FontGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A158CC237C1C9300E3F016 /* FontGroup.swift */; };
 		B65195DF2463686900E0EB6A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347B2379473B00F4129B /* Theme.swift */; };
 		B65195E02463686900E0EB6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */; };
-		B65195E12463686900E0EB6A /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */; };
 		B65195EB2463698800E0EB6A /* SwiftGui.h in Headers */ = {isa = PBXBuildFile; fileRef = B65195E92463698800E0EB6A /* SwiftGui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65195F8246369D600E0EB6A /* GuiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */; };
 		B65195F9246369D600E0EB6A /* GuiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C6F236BB23C00216EA2 /* GuiNode.swift */; };
@@ -101,7 +100,6 @@
 		B6519619246369D600E0EB6A /* FontGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A158CC237C1C9300E3F016 /* FontGroup.swift */; };
 		B651961A246369D600E0EB6A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9347B2379473B00F4129B /* Theme.swift */; };
 		B651961B246369D600E0EB6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */; };
-		B651961C246369D600E0EB6A /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */; };
 		B651961E246369F800E0EB6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B651961D246369F800E0EB6A /* UIKit.framework */; };
 		B651961F246369FD00E0EB6A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A62463660C00E0EB6A /* Metal.framework */; };
 		B6519620246369FD00E0EB6A /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65195A72463660C00E0EB6A /* MetalKit.framework */; };
@@ -370,7 +368,6 @@
 		B666D04024660D71009D4010 /* ImGuiWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImGuiWrapper.mm; sourceTree = "<group>"; };
 		B67E1C50236BB20400216EA2 /* SwiftGui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGui.h; sourceTree = "<group>"; };
 		B67E1C51236BB20400216EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
 		B67E1C6D236BB23C00216EA2 /* GuiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuiView.swift; sourceTree = "<group>"; };
 		B67E1C6E236BB23C00216EA2 /* GuiBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuiBuilder.swift; sourceTree = "<group>"; };
 		B67E1C6F236BB23C00216EA2 /* GuiNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuiNode.swift; sourceTree = "<group>"; };
@@ -707,7 +704,6 @@
 			isa = PBXGroup;
 			children = (
 				B6E3BE8B236ED5BF00C1E1CF /* Extensions.swift */,
-				B67E1C5A236BB23C00216EA2 /* OrderedSet.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1257,7 +1253,6 @@
 				B65195E02463686900E0EB6A /* Extensions.swift in Sources */,
 				B6495BF52481AC5B006F4E87 /* HoverEvent.swift in Sources */,
 				B6C0A5652466F7C900FFF84D /* ImGuiStyleWrapper.mm in Sources */,
-				B65195E12463686900E0EB6A /* OrderedSet.swift in Sources */,
 				B67E4C20246CC50500A91946 /* Text.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1352,7 +1347,6 @@
 				B604E203247F0DAF006B8FB4 /* Tree.swift in Sources */,
 				B6BDDCFF2471DEEF00B8F26B /* WindowSizeModifier.swift in Sources */,
 				B6AFF6B4248163DE003067D6 /* SelectionColorModifier.swift in Sources */,
-				B651961C246369D600E0EB6A /* OrderedSet.swift in Sources */,
 				B6C0A5742467F9EA00FFF84D /* imgui_impl_metal.mm in Sources */,
 				B651997F246413B900E0EB6A /* GuiCondition.swift in Sources */,
 			);

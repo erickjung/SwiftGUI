@@ -14,9 +14,6 @@ import Foundation
 import AppKit
 
 public typealias GuiColor = NSColor
-public typealias GuiPoint = CGPoint
-public typealias GuiSize = CGSize
-public typealias GuiImage = AnyObject
 
 #else
 
@@ -24,11 +21,12 @@ import AVFoundation
 import UIKit
 
 public typealias GuiColor = UIColor
+
+#endif
+
 public typealias GuiPoint = CGPoint
 public typealias GuiSize = CGSize
 public typealias GuiImage = AnyObject
-
-#endif
 
 public extension String {
 
