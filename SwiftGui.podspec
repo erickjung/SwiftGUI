@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.author                = { "Erick Jung" => "erickjung@gmail.com" }
   spec.ios.deployment_target = "11.0"
   spec.osx.deployment_target = "10.13"
-  spec.source                = { :git => "https://github.com/erickjung/SwiftGUI.git", :tag => "0.9.1" }
+  spec.source                = { :git => "https://github.com/erickjung/SwiftGUI.git", :tag => "0.9.2" }
   spec.source_files          = 'Source/SwiftGui/**/*.{h,m,mm,cpp,swift}'
   spec.osx.source_files      = 'Source/SwiftGuiMac/**/*.{h,m,mm,cpp,swift}'
   spec.swift_version         = '5.0'
