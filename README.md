@@ -110,6 +110,21 @@ run:
 pod install
 ```
 
+## Using SwiftGUI
+
+<table>
+ <tr>
+  <th>
+    <a href="https://github.com/Farfetch/mockingbird"><img src="https://github.com/Farfetch/mockingbird/blob/master/docs/screenshot.png"/></a>
+  </th>
+ </tr>
+ <tr>
+  <th>
+   <a href="https://github.com/Farfetch/mockingbird">Mockingbird</a> 
+  </th>
+ </tr>
+</table>
+
 ## Samples
 
 <table>
